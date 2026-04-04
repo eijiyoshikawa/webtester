@@ -3048,11 +3048,7 @@ select {
    rec-divider
    -------------------------------------------------------------------------- */
 .rec-divider {
-  background: var(--pink);
-  height: 200px;
-  position: relative;
-  margin: 0 80px;
-  border-radius: 0 0 50% 50% / 0 0 100% 100%;
+  display: none;
 }
 
 /* --------------------------------------------------------------------------
