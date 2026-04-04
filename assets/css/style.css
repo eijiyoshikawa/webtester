@@ -3497,3 +3497,288 @@ select {
     font-size: 1.4rem;
   }
 }
+
+/* ==========================================================================
+   Contact Page Styles — /contact/
+   ========================================================================== */
+
+.cnt-page {
+  padding: 120px 0 80px;
+  background: var(--white);
+}
+
+.cnt-page__header {
+  margin-bottom: 60px;
+}
+
+.cnt-page__title {
+  font-family: var(--font-en);
+  font-size: 2.5rem;
+  font-weight: 300;
+  color: var(--label);
+  letter-spacing: 0.12em;
+  text-transform: lowercase;
+  margin-bottom: 16px;
+}
+
+.cnt-page__subtitle {
+  font-family: var(--font-jp);
+  font-size: 0.85rem;
+  color: var(--label);
+  letter-spacing: 0.12em;
+  padding-bottom: 10px;
+  border-bottom: 2px solid var(--pink-light);
+  display: inline-block;
+}
+
+.cnt-page__grid {
+  display: grid;
+  grid-template-columns: 1fr 320px;
+  gap: 60px;
+  align-items: start;
+}
+
+/* Form Card */
+.cnt-page__form-card {
+  background: var(--white);
+  border-radius: 12px;
+  padding: 50px;
+  box-shadow: 0 2px 20px rgba(0, 0, 0, 0.04);
+}
+
+.cnt-page__intro {
+  font-size: 0.9rem;
+  line-height: 2;
+  color: var(--text);
+  margin-bottom: 30px;
+}
+
+.cnt-page__divider {
+  border: none;
+  border-top: 1px solid #e0dcd8;
+  margin: 0 0 30px;
+}
+
+/* Form fields */
+.cnt-form__group {
+  margin-bottom: 30px;
+}
+
+.cnt-form__label {
+  display: block;
+  font-size: 0.85rem;
+  color: var(--text);
+  letter-spacing: 0.05em;
+  margin-bottom: 8px;
+}
+
+.cnt-form__required {
+  color: var(--label);
+}
+
+.cnt-form__input,
+.cnt-form__select,
+.cnt-form__textarea {
+  width: 100%;
+  padding: 14px 16px;
+  background: #f5f2ef;
+  border: none;
+  border-bottom: 1px solid #ddd;
+  font-family: var(--font-jp);
+  font-size: 0.9rem;
+  color: var(--text);
+  outline: none;
+  transition: border-color 0.3s ease;
+  border-radius: 0;
+  appearance: none;
+  -webkit-appearance: none;
+}
+
+.cnt-form__select {
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='8' viewBox='0 0 12 8'%3E%3Cpath d='M1 1l5 5 5-5' stroke='%23999' stroke-width='1.5' fill='none'/%3E%3C/svg%3E");
+  background-repeat: no-repeat;
+  background-position: right 16px center;
+  padding-right: 40px;
+}
+
+.cnt-form__textarea {
+  resize: vertical;
+  min-height: 180px;
+}
+
+.cnt-form__input:focus,
+.cnt-form__select:focus,
+.cnt-form__textarea:focus {
+  border-color: var(--pink);
+}
+
+.cnt-form__footer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 24px;
+  margin-top: 40px;
+}
+
+.cnt-form__privacy {
+  font-size: 0.85rem;
+  color: var(--text-light);
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.cnt-form__privacy input[type="radio"] {
+  width: 18px;
+  height: 18px;
+  accent-color: var(--pink);
+}
+
+.cnt-form__privacy a {
+  color: var(--text);
+  text-decoration: underline;
+}
+
+.cnt-form__submit {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  background: var(--pink);
+  color: var(--white);
+  border: none;
+  border-radius: 50px;
+  padding: 14px 40px;
+  font-family: var(--font-jp);
+  font-size: 0.9rem;
+  letter-spacing: 0.1em;
+  cursor: pointer;
+  transition: background 0.3s ease, transform 0.3s ease;
+}
+
+.cnt-form__submit:hover {
+  background: #b89a92;
+  transform: translateY(-2px);
+}
+
+.cnt-form__submit-line {
+  display: inline-block;
+  width: 30px;
+  height: 1px;
+  background: rgba(255,255,255,0.5);
+}
+
+.cnt-form__submit-dot {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  border: 1px solid rgba(255,255,255,0.5);
+  margin-left: -4px;
+}
+
+/* Sidebar */
+.cnt-page__sidebar {
+  padding-top: 20px;
+}
+
+.cnt-page__sidebar-logo {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  margin-bottom: 24px;
+}
+
+.cnt-page__sidebar-nu {
+  font-family: var(--font-en);
+  font-size: 2.5rem;
+  font-weight: 300;
+  color: var(--gray);
+  line-height: 1;
+}
+
+.cnt-page__sidebar-nu .degree {
+  font-size: 0.4em;
+  vertical-align: super;
+}
+
+.cnt-page__sidebar-name {
+  display: flex;
+  flex-direction: column;
+  font-size: 0.75rem;
+  color: var(--gray);
+  letter-spacing: 0.08em;
+  line-height: 1.6;
+}
+
+.cnt-page__sidebar-name-en {
+  font-family: var(--font-en);
+  font-size: 0.7rem;
+  letter-spacing: 0.1em;
+}
+
+.cnt-page__sidebar-phone {
+  display: block;
+  font-family: var(--font-en);
+  font-size: 1.6rem;
+  font-weight: 300;
+  color: var(--label);
+  letter-spacing: 0.08em;
+  margin: 24px 0;
+  text-decoration: none;
+}
+
+.cnt-page__sidebar-follow {
+  font-size: 0.85rem;
+  color: var(--text);
+  letter-spacing: 0.08em;
+  margin-bottom: 16px;
+}
+
+.cnt-page__sidebar-sns-link {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  border: 1px solid var(--label);
+  color: var(--label);
+  transition: background 0.3s ease, color 0.3s ease;
+}
+
+.cnt-page__sidebar-sns-link:hover {
+  background: var(--label);
+  color: var(--white);
+  opacity: 1;
+}
+
+.cnt-page__sidebar-sns-link svg {
+  width: 20px;
+  height: 20px;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .cnt-page {
+    padding: 100px 0 60px;
+  }
+
+  .cnt-page__grid {
+    grid-template-columns: 1fr;
+    gap: 40px;
+  }
+
+  .cnt-page__form-card {
+    padding: 30px 20px;
+  }
+
+  .cnt-form__footer {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 20px;
+  }
+
+  .cnt-form__submit {
+    width: 100%;
+    justify-content: center;
+  }
+}
