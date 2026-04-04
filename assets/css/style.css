@@ -2681,3 +2681,114 @@ select {
     min-width: auto;
   }
 }
+
+/* ==========================================================================
+   Blog Page Styles — /blog/
+   ========================================================================== */
+
+.page-band--cream {
+  background: var(--pink-bg);
+}
+
+.blog-page {
+  padding: 80px 0 120px;
+  background: var(--white);
+}
+
+.blog-page__header {
+  margin-bottom: 60px;
+}
+
+.blog-page__title {
+  font-family: var(--font-en);
+  font-size: 2.5rem;
+  font-weight: 300;
+  color: var(--label);
+  letter-spacing: 0.12em;
+  text-transform: lowercase;
+  line-height: 1.2;
+  margin-bottom: 16px;
+}
+
+.blog-page__subtitle {
+  font-family: var(--font-jp);
+  font-size: 0.85rem;
+  color: var(--label);
+  letter-spacing: 0.12em;
+  padding-bottom: 10px;
+  border-bottom: 2px solid var(--pink-light);
+  display: inline-block;
+}
+
+/* Blog card grid */
+.blog-page__grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 50px 40px;
+}
+
+.blog-card {
+  display: block;
+}
+
+.blog-card__image {
+  width: 100%;
+  aspect-ratio: 4 / 3;
+  background: #f0ebe7;
+  margin-bottom: 16px;
+}
+
+.blog-card__image--2 {
+  background: linear-gradient(135deg, #d4a89a 0%, #c4978c 40%, #b8a090 100%);
+}
+
+.blog-card__image--6 {
+  background: linear-gradient(135deg, #a8c4a0 0%, #8bab82 40%, #6d9464 100%);
+}
+
+.blog-card__title {
+  font-family: var(--font-jp);
+  font-size: 0.9rem;
+  font-weight: 400;
+  line-height: 1.8;
+  color: var(--text);
+  margin-bottom: 8px;
+}
+
+.blog-card__date {
+  font-family: var(--font-en);
+  font-size: 0.85rem;
+  font-weight: 300;
+  letter-spacing: 0.1em;
+  color: var(--label);
+}
+
+@media (max-width: 1024px) {
+  .blog-page__grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 40px 30px;
+  }
+}
+
+@media (max-width: 768px) {
+  .blog-page {
+    padding: 50px 0 80px;
+  }
+
+  .blog-page__title {
+    font-size: 1.8rem;
+  }
+
+  .blog-page__header {
+    margin-bottom: 40px;
+  }
+
+  .blog-page__grid {
+    grid-template-columns: 1fr;
+    gap: 40px;
+  }
+
+  .blog-card__image {
+    aspect-ratio: 16 / 9;
+  }
+}
