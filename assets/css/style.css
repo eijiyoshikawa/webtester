@@ -2792,3 +2792,708 @@ select {
     aspect-ratio: 16 / 9;
   }
 }
+
+/* ==========================================================================
+   Recruit Page
+   ========================================================================== */
+
+/* --------------------------------------------------------------------------
+   rec-hero
+   -------------------------------------------------------------------------- */
+.rec-hero {
+  padding: 120px 0 80px;
+  display: grid;
+  grid-template-columns: 1fr 1.2fr;
+  gap: 40px;
+  align-items: center;
+  max-width: var(--container-max);
+  margin: 0 auto;
+}
+
+.rec-hero__title {
+  font-family: var(--font-en);
+  font-size: 2.5rem;
+  font-weight: 300;
+  color: var(--label);
+  text-transform: lowercase;
+  line-height: 1.3;
+}
+
+.rec-hero__subtitle {
+  font-size: 0.85rem;
+  color: var(--label);
+  letter-spacing: 0.2em;
+  padding-bottom: 8px;
+  border-bottom: 2px solid var(--pink-light);
+  display: inline-block;
+  margin-top: 12px;
+}
+
+.rec-hero__photo {
+  width: 100%;
+  height: 450px;
+  background: linear-gradient(135deg, var(--pink-light), var(--pink-bg));
+  object-fit: cover;
+  border-radius: 4px;
+}
+
+/* --------------------------------------------------------------------------
+   rec-message
+   -------------------------------------------------------------------------- */
+.rec-message {
+  padding: 80px 0 100px;
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.rec-message__heading {
+  font-size: 1.5rem;
+  letter-spacing: 0.2em;
+  line-height: 2.2;
+  color: var(--text);
+  font-weight: 400;
+  margin-bottom: 40px;
+}
+
+.rec-message__body {
+  font-size: 0.9rem;
+  line-height: 2.2;
+  color: var(--text);
+}
+
+/* --------------------------------------------------------------------------
+   rec-workstyle
+   -------------------------------------------------------------------------- */
+.rec-workstyle {
+  background: var(--pink);
+  padding: 100px 40px 120px;
+  position: relative;
+  overflow: hidden;
+}
+
+.rec-workstyle::after {
+  content: '';
+  position: absolute;
+  bottom: -1px;
+  left: -5%;
+  width: 110%;
+  height: 80px;
+  background: var(--white);
+  border-radius: 50% 50% 0 0;
+}
+
+.rec-workstyle__title {
+  font-family: var(--font-en);
+  font-size: 2.5rem;
+  font-weight: 300;
+  color: var(--white);
+  letter-spacing: 0.12em;
+  text-transform: lowercase;
+}
+
+.rec-workstyle__subtitle {
+  color: var(--white);
+  letter-spacing: 0.15em;
+  font-size: 0.9rem;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.5);
+  padding-bottom: 8px;
+  display: inline-block;
+  margin-top: 16px;
+}
+
+.rec-workstyle__logo {
+  position: absolute;
+  right: 80px;
+  top: 50%;
+  transform: translateY(-50%);
+  font-family: var(--font-en);
+  font-size: 10rem;
+  color: var(--white);
+  opacity: 0.07;
+  font-weight: 300;
+  pointer-events: none;
+  line-height: 1;
+}
+
+/* --------------------------------------------------------------------------
+   rec-point
+   -------------------------------------------------------------------------- */
+.rec-point {
+  padding: 100px 0;
+  max-width: var(--container-max);
+  margin: 0 auto;
+}
+
+.rec-point__header {
+  display: grid;
+  grid-template-columns: 300px 1fr;
+  gap: 40px;
+  align-items: start;
+  margin-bottom: 60px;
+}
+
+.rec-point__label {
+  font-family: var(--font-en);
+  font-size: 2rem;
+  color: var(--label);
+  font-weight: 300;
+  letter-spacing: 0.15em;
+  text-transform: lowercase;
+}
+
+.rec-point__label-line {
+  width: 80px;
+  height: 2px;
+  background: var(--pink-light);
+  margin: 12px 0;
+}
+
+.rec-point__number {
+  font-family: var(--font-en);
+  font-size: 8rem;
+  font-weight: 300;
+  color: var(--pink-light);
+  line-height: 1;
+  opacity: 0.7;
+}
+
+.rec-point__heading {
+  font-size: 1.4rem;
+  color: var(--label);
+  line-height: 1.8;
+  letter-spacing: 0.05em;
+  font-weight: 400;
+}
+
+.rec-point__desc {
+  font-size: 0.9rem;
+  line-height: 2.2;
+  color: var(--text);
+  margin-top: 24px;
+}
+
+.rec-point__photos {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+}
+
+.rec-point__photo {
+  width: 100%;
+  aspect-ratio: 4 / 3;
+  background: linear-gradient(135deg, var(--pink-light), var(--pink-bg));
+  border-radius: 4px;
+  object-fit: cover;
+}
+
+.rec-point__circles {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+  margin-top: -60px;
+  position: relative;
+  z-index: 1;
+}
+
+.rec-point__circle {
+  width: 220px;
+  height: 220px;
+  border-radius: 50%;
+  background: var(--pink);
+  color: var(--white);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  font-size: 1rem;
+  letter-spacing: 0.08em;
+  line-height: 1.6;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+/* --------------------------------------------------------------------------
+   rec-divider
+   -------------------------------------------------------------------------- */
+.rec-divider {
+  background: var(--pink);
+  height: 200px;
+  position: relative;
+  margin: 0 80px;
+  border-radius: 0 0 50% 50% / 0 0 100% 100%;
+}
+
+/* --------------------------------------------------------------------------
+   rec-jobs
+   -------------------------------------------------------------------------- */
+.rec-jobs {
+  background: var(--gray);
+  padding: 80px 0;
+  text-align: center;
+}
+
+.rec-jobs__title {
+  color: var(--white);
+  font-size: 1.1rem;
+  letter-spacing: 0.15em;
+  margin-bottom: 40px;
+}
+
+.rec-jobs__buttons {
+  display: flex;
+  justify-content: center;
+  gap: 40px;
+}
+
+.rec-jobs__btn {
+  background: var(--white);
+  border-radius: 50px;
+  padding: 24px 80px;
+  font-size: 1.2rem;
+  letter-spacing: 0.15em;
+  color: var(--text);
+  border: 1px solid #ddd;
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  cursor: pointer;
+  transition: box-shadow 0.3s ease, transform 0.3s ease;
+  text-decoration: none;
+  font-family: var(--font-jp);
+}
+
+.rec-jobs__btn:hover {
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+  transform: translateY(-2px);
+}
+
+.rec-jobs__btn-chevron {
+  font-size: 1.2rem;
+  color: var(--gray);
+}
+
+/* --------------------------------------------------------------------------
+   rec-info
+   -------------------------------------------------------------------------- */
+.rec-info {
+  padding: 100px 0;
+  max-width: var(--container-max);
+  margin: 0 auto;
+}
+
+.rec-info__heading {
+  font-family: var(--font-en);
+  font-size: 2.2rem;
+  font-weight: 300;
+  color: var(--label);
+  letter-spacing: 0.08em;
+  text-transform: lowercase;
+  display: inline;
+}
+
+.rec-info__heading-jp {
+  font-size: 0.9rem;
+  color: var(--gray);
+  letter-spacing: 0.15em;
+  margin-left: 24px;
+}
+
+.rec-info__card {
+  background: var(--white);
+  border-radius: 16px;
+  padding: 60px;
+  box-shadow: 0 2px 20px rgba(0, 0, 0, 0.04);
+  margin-top: 40px;
+}
+
+.rec-info__job-title {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  font-size: 1.3rem;
+  letter-spacing: 0.1em;
+  margin-bottom: 40px;
+}
+
+.rec-info__job-dot {
+  width: 16px;
+  height: 16px;
+  border-radius: 50%;
+  border: 2px solid var(--label);
+  flex-shrink: 0;
+}
+
+.rec-info__job-content {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 40px;
+}
+
+.rec-info__job-photo {
+  width: 100%;
+  aspect-ratio: 3 / 4;
+  background: linear-gradient(135deg, var(--pink-light), var(--pink-bg));
+  border-radius: 8px;
+  object-fit: cover;
+}
+
+.rec-info__welcome {
+  background: #f5f2ef;
+  border-radius: 12px;
+  padding: 30px;
+}
+
+.rec-info__welcome-title {
+  font-size: 0.95rem;
+  color: var(--label);
+  letter-spacing: 0.12em;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.rec-info__welcome-title::after {
+  content: '';
+  flex: 1;
+  height: 1px;
+  background: var(--pink-light);
+  margin-left: 16px;
+  position: relative;
+}
+
+.rec-info__check {
+  display: flex;
+  align-items: flex-start;
+  gap: 12px;
+  margin-top: 20px;
+}
+
+.rec-info__check-icon {
+  width: 28px;
+  height: 28px;
+  border-radius: 50%;
+  border: 2px solid var(--gray);
+  color: var(--gray);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  font-size: 0.75rem;
+}
+
+.rec-info__check-label {
+  font-family: var(--font-en);
+  font-size: 0.85rem;
+  letter-spacing: 0.1em;
+  color: var(--gray);
+  margin-bottom: 8px;
+}
+
+.rec-info__check-text {
+  font-size: 0.85rem;
+  line-height: 1.9;
+  color: var(--text);
+}
+
+/* --------------------------------------------------------------------------
+   rec-info__comment (senior comment)
+   -------------------------------------------------------------------------- */
+.rec-info__comment {
+  border-radius: 12px;
+  padding: 30px 40px;
+  margin-top: 40px;
+  color: var(--white);
+}
+
+.rec-info__comment--nurse {
+  background: var(--pink);
+}
+
+.rec-info__comment--therapist {
+  background: var(--gray);
+}
+
+.rec-info__comment-badge {
+  background: var(--pink-light);
+  color: var(--white);
+  display: inline-block;
+  padding: 6px 20px;
+  border-radius: 20px;
+  font-size: 0.8rem;
+  letter-spacing: 0.08em;
+  margin-bottom: 16px;
+}
+
+.rec-info__comment-inner {
+  display: flex;
+  gap: 24px;
+  align-items: flex-start;
+}
+
+.rec-info__comment-photo {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.2);
+  flex-shrink: 0;
+}
+
+.rec-info__comment-heading {
+  font-size: 1rem;
+  font-weight: 500;
+  margin-bottom: 12px;
+}
+
+.rec-info__comment-text {
+  font-size: 0.85rem;
+  line-height: 1.9;
+  opacity: 0.9;
+}
+
+/* --------------------------------------------------------------------------
+   rec-info__accordion
+   -------------------------------------------------------------------------- */
+.rec-info__accordion {
+  text-align: center;
+  margin-top: 40px;
+}
+
+.rec-info__accordion-btn {
+  background: #f0ede9;
+  border: none;
+  border-radius: 50px;
+  padding: 16px 60px;
+  font-size: 0.95rem;
+  letter-spacing: 0.1em;
+  color: var(--text);
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+  gap: 12px;
+  font-family: var(--font-jp);
+  transition: background 0.3s ease;
+}
+
+.rec-info__accordion-btn:hover {
+  background: #e8e4e0;
+}
+
+/* --------------------------------------------------------------------------
+   rec-apply
+   -------------------------------------------------------------------------- */
+.rec-apply {
+  background: var(--gray);
+  padding: 80px 0;
+  text-align: center;
+}
+
+.rec-apply__title {
+  color: var(--white);
+  font-size: 1.1rem;
+  letter-spacing: 0.08em;
+  line-height: 1.8;
+  margin-bottom: 40px;
+}
+
+.rec-apply__cards {
+  display: flex;
+  justify-content: center;
+  gap: 40px;
+  margin-bottom: 40px;
+}
+
+.rec-apply__card {
+  background: var(--white);
+  border-radius: 16px;
+  padding: 40px;
+  text-align: center;
+  min-width: 280px;
+}
+
+.rec-apply__card-icon {
+  font-size: 3rem;
+  margin-bottom: 16px;
+  color: var(--text-light);
+}
+
+.rec-apply__card-text {
+  font-size: 0.95rem;
+  letter-spacing: 0.08em;
+  line-height: 1.6;
+  color: var(--text);
+}
+
+.rec-apply__cta {
+  display: inline-block;
+  background: var(--label);
+  color: var(--white);
+  border: none;
+  border-radius: 50px;
+  padding: 18px 80px;
+  font-size: 1rem;
+  letter-spacing: 0.15em;
+  cursor: pointer;
+  margin-bottom: 24px;
+  font-family: var(--font-jp);
+  text-decoration: none;
+  transition: opacity 0.3s ease;
+}
+
+.rec-apply__cta:hover {
+  opacity: 0.85;
+}
+
+.rec-apply__phone {
+  background: #777;
+  border-radius: 50px;
+  padding: 20px 60px;
+  display: inline-flex;
+  align-items: center;
+  gap: 24px;
+  color: var(--white);
+  text-decoration: none;
+}
+
+.rec-apply__phone-label {
+  font-size: 0.85rem;
+  letter-spacing: 0.08em;
+}
+
+.rec-apply__phone-number {
+  font-family: var(--font-en);
+  font-size: 1.8rem;
+  font-weight: 500;
+  letter-spacing: 0.08em;
+}
+
+/* --------------------------------------------------------------------------
+   Recruit Page - Responsive
+   -------------------------------------------------------------------------- */
+@media (max-width: 768px) {
+  .rec-hero {
+    grid-template-columns: 1fr;
+    padding: 80px 20px 40px;
+  }
+
+  .rec-hero__photo {
+    height: 300px;
+  }
+
+  .rec-message {
+    padding: 40px 20px 60px;
+  }
+
+  .rec-message__heading {
+    font-size: 1.1rem;
+  }
+
+  .rec-workstyle {
+    padding: 60px 20px 80px;
+  }
+
+  .rec-workstyle__logo {
+    font-size: 5rem;
+    right: 20px;
+  }
+
+  .rec-point {
+    padding: 60px 20px;
+  }
+
+  .rec-point__header {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+
+  .rec-point__number {
+    font-size: 5rem;
+  }
+
+  .rec-point__photos {
+    grid-template-columns: 1fr;
+  }
+
+  .rec-point__circles {
+    grid-template-columns: 1fr;
+    margin-top: -30px;
+  }
+
+  .rec-point__circle {
+    width: 180px;
+    height: 180px;
+    font-size: 0.9rem;
+  }
+
+  .rec-divider {
+    margin: 0 20px;
+    height: 120px;
+  }
+
+  .rec-jobs {
+    padding: 60px 20px;
+  }
+
+  .rec-jobs__buttons {
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+  }
+
+  .rec-jobs__btn {
+    padding: 20px 40px;
+    font-size: 1rem;
+  }
+
+  .rec-info {
+    padding: 60px 20px;
+  }
+
+  .rec-info__card {
+    padding: 30px 20px;
+  }
+
+  .rec-info__job-content {
+    grid-template-columns: 1fr;
+  }
+
+  .rec-info__heading-jp {
+    display: block;
+    margin-left: 0;
+    margin-top: 8px;
+  }
+
+  .rec-info__comment {
+    padding: 24px 20px;
+  }
+
+  .rec-info__comment-inner {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  .rec-apply {
+    padding: 60px 20px;
+  }
+
+  .rec-apply__cards {
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+  }
+
+  .rec-apply__card {
+    min-width: auto;
+    width: 100%;
+    max-width: 320px;
+  }
+
+  .rec-apply__phone {
+    padding: 16px 32px;
+    gap: 16px;
+  }
+
+  .rec-apply__phone-number {
+    font-size: 1.4rem;
+  }
+}
