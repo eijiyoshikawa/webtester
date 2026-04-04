@@ -1,0 +1,412 @@
+/* ==========================================================================
+   Service Page — service.css
+   Supplements style.css for chillna.co.jp /service
+   ========================================================================== */
+
+/* ---------- 1. svc-hero ---------- */
+.svc-hero {
+  background: var(--pink);
+  padding: 120px 0 80px;
+  position: relative;
+  overflow: hidden;
+}
+
+.svc-hero::before,
+.svc-hero::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  width: 60px;
+  background: var(--pink-light);
+  opacity: 0.6;
+}
+
+.svc-hero::before {
+  left: 0;
+}
+
+.svc-hero::after {
+  right: 0;
+}
+
+.svc-hero .container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 40px;
+  position: relative;
+}
+
+.svc-hero__title {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 2.8rem;
+  font-weight: 300;
+  color: var(--white);
+  letter-spacing: 0.12em;
+  text-transform: lowercase;
+}
+
+.svc-hero__logo {
+  position: absolute;
+  right: 80px;
+  top: 50%;
+  transform: translateY(-50%);
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 6rem;
+  color: var(--white);
+  opacity: 0.9;
+  font-weight: 300;
+  line-height: 1;
+}
+
+/* ---------- 2. svc-photo ---------- */
+.svc-photo {
+  width: 100%;
+  position: relative;
+}
+
+.svc-photo__img {
+  width: 100%;
+  height: 400px;
+  background: linear-gradient(135deg, #d4a89a 0%, #c4978c 40%, #b8a090 100%);
+  object-fit: cover;
+  display: block;
+}
+
+.svc-photo__overlay {
+  background: var(--white);
+  border-radius: 12px;
+  padding: 40px;
+  margin-top: -60px;
+  position: relative;
+  z-index: 1;
+  max-width: 1200px;
+  margin-left: auto;
+  margin-right: auto;
+  box-shadow: 0 4px 24px rgba(0, 0, 0, 0.06);
+}
+
+/* ---------- 3. svc-nursing ---------- */
+.svc-nursing {
+  padding: 80px 0;
+}
+
+.svc-nursing__header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 16px;
+}
+
+.svc-nursing__header-left {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
+.svc-nursing__dot {
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  border: 2px solid var(--label);
+  flex-shrink: 0;
+}
+
+.svc-nursing__label {
+  font-size: 1.2rem;
+  font-weight: 500;
+  color: var(--text);
+}
+
+.svc-nursing__tagline {
+  font-family: 'Cormorant Garamond', serif;
+  color: var(--label);
+  font-size: 1.1rem;
+  letter-spacing: 0.05em;
+  border-left: 2px solid var(--label);
+  padding-left: 16px;
+  margin-left: auto;
+}
+
+.svc-nursing__body {
+  margin-top: 40px;
+  font-size: 0.9rem;
+  line-height: 2.2;
+  color: var(--text);
+}
+
+/* ---------- 4. svc-details ---------- */
+.svc-details {
+  display: grid;
+  grid-template-columns: 1fr 380px;
+  gap: 0;
+}
+
+.svc-details__main {
+  padding: 60px 40px 60px 0;
+}
+
+.svc-details__heading {
+  color: var(--label);
+  font-size: 1rem;
+  letter-spacing: 0.15em;
+  padding-bottom: 12px;
+  border-bottom: 1px solid var(--label);
+  margin-bottom: 30px;
+}
+
+.svc-details__list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.svc-details__list li {
+  padding: 10px 0;
+  font-size: 0.9rem;
+  line-height: 1.8;
+  letter-spacing: 0.03em;
+}
+
+.svc-details__sidebar {
+  background: var(--pink);
+  padding: 40px 30px;
+  color: var(--white);
+}
+
+.svc-details__sidebar-heading {
+  color: rgba(255, 255, 255, 0.7);
+  font-size: 0.9rem;
+  letter-spacing: 0.12em;
+  padding-bottom: 10px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.3);
+  margin-bottom: 20px;
+  margin-top: 40px;
+}
+
+.svc-details__sidebar-heading:first-child {
+  margin-top: 0;
+}
+
+.svc-details__sidebar-content {
+  font-size: 0.9rem;
+  letter-spacing: 0.1em;
+  line-height: 2;
+}
+
+/* ---------- 5. svc-message ---------- */
+.svc-message {
+  padding: 100px 0;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 60px;
+  align-items: center;
+}
+
+.svc-message__text {
+  font-size: 1.1rem;
+  line-height: 2.2;
+  color: var(--label);
+  letter-spacing: 0.08em;
+  font-weight: 300;
+}
+
+.svc-message__photo {
+  width: 100%;
+  height: 400px;
+  background: linear-gradient(135deg, #d4a89a 0%, #c4978c 40%, #b8a090 100%);
+  border-radius: 0;
+}
+
+/* ---------- 6. svc-policy ---------- */
+.svc-policy {
+  padding: 100px 0;
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+.svc-policy__title {
+  text-align: center;
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 2.2rem;
+  font-weight: 300;
+  color: var(--label);
+  letter-spacing: 0.1em;
+  text-transform: lowercase;
+  padding-bottom: 8px;
+  border-bottom: 1px solid var(--label);
+  display: inline-block;
+}
+
+.svc-policy__title-wrap {
+  text-align: center;
+}
+
+.svc-policy__intro {
+  margin-top: 40px;
+  font-size: 0.9rem;
+  line-height: 2.2;
+  color: var(--text);
+  text-align: left;
+}
+
+.svc-policy__subtitle {
+  margin-top: 60px;
+  font-size: 1rem;
+  letter-spacing: 0.15em;
+  padding-bottom: 8px;
+  border-bottom: 2px solid var(--pink-light);
+  display: inline-block;
+}
+
+/* ---------- 7. svc-policy__cards ---------- */
+.svc-cards-row--3 {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 40px;
+}
+
+.svc-cards-row--2 {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 40px;
+  max-width: 66%;
+  margin: 40px auto 0;
+}
+
+.svc-card {
+  text-align: center;
+}
+
+.svc-card__icon {
+  width: 160px;
+  height: 160px;
+  border-radius: 50%;
+  background: #f5f0ed;
+  margin: 0 auto 24px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.svc-card__icon svg,
+.svc-card__icon img {
+  width: 80px;
+  height: 80px;
+  color: var(--text-light);
+}
+
+.svc-card__title {
+  color: var(--label);
+  font-size: 0.95rem;
+  letter-spacing: 0.08em;
+  margin-bottom: 12px;
+  font-weight: 500;
+}
+
+.svc-card__title::after {
+  content: '';
+  display: block;
+  width: 40px;
+  height: 1px;
+  background: var(--pink-light);
+  margin: 12px auto 0;
+}
+
+.svc-card__text {
+  font-size: 0.85rem;
+  line-height: 1.9;
+  color: var(--text);
+  max-width: 280px;
+  margin: 0 auto;
+}
+
+/* ---------- 8. svc-promise ---------- */
+.svc-promise {
+  padding: 80px 0;
+  background: var(--cream);
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 60px;
+  align-items: center;
+}
+
+.svc-promise__left {
+  font-size: 1.2rem;
+  color: var(--label);
+  line-height: 2;
+  letter-spacing: 0.05em;
+  font-weight: 300;
+}
+
+.svc-promise__right {
+  font-size: 1.1rem;
+  color: var(--text);
+  line-height: 2;
+  letter-spacing: 0.03em;
+  border-left: 2px solid var(--pink-light);
+  padding-left: 24px;
+}
+
+/* ---------- 9. Responsive ---------- */
+@media (max-width: 768px) {
+
+  /* svc-hero */
+  .svc-hero {
+    padding: 80px 0 50px;
+  }
+
+  .svc-hero::before,
+  .svc-hero::after {
+    width: 30px;
+  }
+
+  .svc-hero__title {
+    font-size: 1.8rem;
+  }
+
+  .svc-hero__logo {
+    font-size: 3rem;
+    right: 20px;
+  }
+
+  /* svc-photo */
+  .svc-photo__img {
+    height: 250px;
+  }
+
+  /* svc-details */
+  .svc-details {
+    grid-template-columns: 1fr;
+  }
+
+  .svc-details__main {
+    padding: 40px 0;
+  }
+
+  /* svc-message */
+  .svc-message {
+    grid-template-columns: 1fr;
+    gap: 30px;
+  }
+
+  .svc-message__photo {
+    height: 280px;
+  }
+
+  /* svc-policy cards */
+  .svc-cards-row--3 {
+    grid-template-columns: 1fr;
+  }
+
+  .svc-cards-row--2 {
+    grid-template-columns: 1fr;
+    max-width: 100%;
+  }
+
+  /* svc-promise */
+  .svc-promise {
+    grid-template-columns: 1fr;
+    gap: 30px;
+  }
+}
