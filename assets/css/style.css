@@ -196,7 +196,7 @@ select {
   padding: 0 40px;
 }
 
-/* Logo: あんじゅ hiragana text logo */
+/* Logo: anju text logo */
 .header__logo {
   display: flex;
   align-items: center;
@@ -204,12 +204,13 @@ select {
 }
 
 .header__logo-text {
-  font-family: var(--font-jp);
-  font-size: 1.4rem;
-  font-weight: 700;
+  font-family: var(--font-en);
+  font-size: 1.5rem;
+  font-weight: 400;
   color: var(--label);
-  letter-spacing: 0.12em;
+  letter-spacing: 0.08em;
   line-height: 1;
+  text-transform: lowercase;
 }
 
 .header__logo-text .degree {
@@ -503,12 +504,13 @@ select {
 }
 
 .hero__logo-text {
-  font-family: var(--font-jp);
-  font-size: 1.4rem;
-  font-weight: 700;
+  font-family: var(--font-en);
+  font-size: 1.5rem;
+  font-weight: 400;
   color: var(--white);
   line-height: 1;
-  letter-spacing: 0.12em;
+  letter-spacing: 0.08em;
+  text-transform: lowercase;
 }
 
 /* Hero scroll indicator */
@@ -868,12 +870,13 @@ select {
 }
 
 .our-service__logo-bg-text {
-  font-family: var(--font-jp);
-  font-size: 8rem;
-  font-weight: 700;
+  font-family: var(--font-en);
+  font-size: 12rem;
+  font-weight: 300;
   color: rgba(255, 255, 255, 0.08);
   line-height: 1;
-  letter-spacing: 0.15em;
+  letter-spacing: 0.05em;
+  text-transform: lowercase;
   user-select: none;
 }
 
@@ -998,12 +1001,13 @@ select {
 }
 
 .nu-banner__logo {
-  font-family: var(--font-jp);
-  font-size: 5rem;
-  font-weight: 700;
+  font-family: var(--font-en);
+  font-size: 7rem;
+  font-weight: 300;
   color: #ccc;
   line-height: 1;
-  letter-spacing: 0.15em;
+  letter-spacing: 0.05em;
+  text-transform: lowercase;
   margin-bottom: 10px;
 }
 
@@ -1429,11 +1433,12 @@ select {
 }
 
 .footer__logo {
-  font-family: var(--font-jp);
-  font-size: 2.2rem;
-  font-weight: 700;
+  font-family: var(--font-en);
+  font-size: 2.5rem;
+  font-weight: 300;
   color: var(--gray);
-  letter-spacing: 0.12em;
+  letter-spacing: 0.05em;
+  text-transform: lowercase;
   margin-bottom: 12px;
 }
 
@@ -2211,13 +2216,14 @@ select {
 }
 
 .svc-hero__logo-text {
-  font-family: var(--font-jp);
-  font-size: 3.5rem;
+  font-family: var(--font-en);
+  font-size: 5rem;
   color: var(--white);
   opacity: 0.9;
-  font-weight: 700;
+  font-weight: 300;
   line-height: 1;
-  letter-spacing: 0.15em;
+  letter-spacing: 0.05em;
+  text-transform: lowercase;
 }
 
 /* ---------- 2. svc-photo ---------- */
@@ -2923,12 +2929,13 @@ select {
   right: 80px;
   top: 50%;
   transform: translateY(-50%);
-  font-family: var(--font-jp);
-  font-size: 6rem;
+  font-family: var(--font-en);
+  font-size: 10rem;
   color: var(--white);
   opacity: 0.07;
-  font-weight: 700;
-  letter-spacing: 0.15em;
+  font-weight: 300;
+  letter-spacing: 0.05em;
+  text-transform: lowercase;
   pointer-events: none;
   line-height: 1;
 }
@@ -3720,12 +3727,13 @@ select {
 }
 
 .cnt-page__sidebar-nu {
-  font-family: var(--font-jp);
-  font-size: 1.8rem;
-  font-weight: 700;
+  font-family: var(--font-en);
+  font-size: 2rem;
+  font-weight: 300;
   color: var(--gray);
   line-height: 1;
-  letter-spacing: 0.12em;
+  letter-spacing: 0.05em;
+  text-transform: lowercase;
 }
 
 .cnt-page__sidebar-name {
