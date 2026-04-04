@@ -3,13 +3,12 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>service | 東京 台東区（浅草）| 訪問看護ステーションちるな</title>
-  <meta name="description" content="訪問看護ステーションちるなのサービス内容。健康状態の観察、在宅リハビリテーション、認知症ケア、終末期看護など。">
+  <title>サービス内容 | 訪問看護ステーションちるな</title>
+  <meta name="description" content="訪問看護ステーションちるなのサービス内容。東京都台東区浅草を拠点に、質の高い訪問看護サービスを提供しています。">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400&family=Noto+Sans+JP:wght@300;400;500;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="../assets/css/style.css">
-  <link rel="stylesheet" href="../assets/css/service.css">
 </head>
 <body>
 
@@ -26,7 +25,10 @@
         <a href="/blog/" class="header__nav-item header__nav-link">blog</a>
         <a href="/recruit/" class="header__nav-item header__nav-link">recruit</a>
       </nav>
-      <a href="/contact/" class="header__contact">contact<span class="contact-circle"></span></a>
+      <a href="/contact/" class="header__contact">
+        contact
+        <span class="contact-circle"></span>
+      </a>
       <button class="header__hamburger" id="hamburger" aria-label="メニューを開く">
         <span></span><span></span><span></span>
       </button>
@@ -36,7 +38,9 @@
   <!-- ========== RIGHT SIDEBAR ========== -->
   <aside class="sidebar-recruit">
     <div class="sidebar-recruit__badge">求 人 情 報</div>
-    <div class="sidebar-recruit__text"><span class="en">r e c r u i t</span><br>メンバー募集中</div>
+    <div class="sidebar-recruit__text">
+      <span class="en">r e c r u i t</span><br>メンバー募集中
+    </div>
     <a href="/recruit/" class="sidebar-recruit__arrow" aria-label="採用情報へ">→</a>
   </aside>
   <div class="sidebar-sns">
@@ -51,41 +55,46 @@
     </a>
   </div>
 
-  <!-- ========== SERVICE HERO ========== -->
-  <section class="svc-hero">
-    <div class="container">
-      <h1 class="svc-hero__title fade-in">our service</h1>
+  <!-- ========== SERVICE HERO BANNER ========== -->
+  <section class="svc-hero fade-in">
+    <div class="svc-hero__bar svc-hero__bar--left"></div>
+    <div class="svc-hero__bar svc-hero__bar--right"></div>
+    <div class="svc-hero__inner">
+      <h1 class="svc-hero__title">our service</h1>
+      <div class="svc-hero__logo">
+        <span class="svc-hero__logo-text">nu<span class="degree">°</span></span>
+      </div>
     </div>
-    <span class="svc-hero__logo">nu<span class="degree">°</span></span>
   </section>
 
   <!-- ========== MAIN PHOTO ========== -->
-  <section class="svc-photo">
-    <div class="svc-photo__img"></div>
+  <section class="svc-photo fade-in">
+    <div class="svc-photo__image"></div>
+    <div class="svc-photo__card"></div>
   </section>
 
   <!-- ========== 訪問看護事業 ========== -->
-  <section class="svc-nursing">
+  <section class="svc-nursing fade-in">
     <div class="container">
-      <div class="svc-nursing__header fade-in">
-        <div class="svc-nursing__header-left">
+      <div class="svc-nursing__header">
+        <div class="svc-nursing__label">
           <span class="svc-nursing__dot"></span>
-          <span class="svc-nursing__label">訪問看護事業</span>
+          <span class="svc-nursing__label-text">訪問看護事業</span>
         </div>
-        <p class="svc-nursing__tagline">住み慣れた地域で、誰もが質の高い安心に包まれ、自分らしく生きる未来を実現します</p>
+        <p class="svc-nursing__lead">住み慣れた地域で、誰もが質の高い安心に包まれ、自分らしく生きる未来を実現します</p>
       </div>
-      <p class="svc-nursing__body fade-in">
-        浅草を拠点に「訪問看護ステーションちるな」を運営。住み慣れた自宅で療養生活が送れるよう、医師や他の医療専門職、ケアマネジャーなどと連携し、訪問看護サービスを提供しています。救命センターや緩和ケア病棟での経験豊富なスタッフが揃っており、医療ケアを提供することで利用者さんの療養生活をサポートするほか、地域住民に向けて医療や健康に関する相談ができる地域の健康相談室としてもステーションの活動の幅を広げています。
-      </p>
+      <div class="svc-nursing__body">
+        <p class="svc-nursing__desc">私たちは東京都台東区浅草を拠点に「訪問看護ステーション ちるな」を運営しています。看護師やセラピストが、ご自宅や施設を訪問し、主治医の指示に基づいた看護ケアやリハビリテーションを提供しています。赤ちゃんからお年寄りまで、病気や障がいがあっても住み慣れた地域で、その人らしい生活が送れるよう、多職種と連携しながら療養生活を支援いたします。24時間365日の緊急対応体制を整え、ご利用者さまとご家族の安心を支えています。</p>
+      </div>
     </div>
   </section>
 
-  <!-- ========== SERVICE DETAILS ========== -->
-  <section class="svc-details">
+  <!-- ========== SERVICE DETAILS + SIDEBAR ========== -->
+  <section class="svc-details fade-in">
     <div class="container">
-      <div class="svc-details__grid fade-in">
+      <div class="svc-details__grid">
         <div class="svc-details__main">
-          <h2 class="svc-details__heading">訪問看護の内容</h2>
+          <h3 class="svc-details__heading">訪問看護の内容</h3>
           <ul class="svc-details__list">
             <li>・健康状態の観察（血圧・体温・呼吸の測定、病状の観察）</li>
             <li>・日常生活の看護（清潔・排泄・食事など）</li>
@@ -98,38 +107,38 @@
           </ul>
         </div>
         <div class="svc-details__sidebar">
-          <h3 class="svc-details__sidebar-heading">在籍スタッフ数</h3>
-          <div class="svc-details__sidebar-content">
-            <p>看 護 師 ： 1 1 名</p>
-            <p>セ ラ ピ ス ト ： 4 名</p>
-            <p>事 務 員 ： 2 名</p>
+          <div class="svc-details__sidebar-block">
+            <h4 class="svc-details__sidebar-heading">在籍スタッフ数</h4>
+            <p class="svc-details__sidebar-text">看護師：11名</p>
+            <p class="svc-details__sidebar-text">セラピスト：4名</p>
+            <p class="svc-details__sidebar-text">事務員：2名</p>
           </div>
-          <h3 class="svc-details__sidebar-heading">営業日及び営業時間</h3>
-          <div class="svc-details__sidebar-content">
-            <p>9 : 0 0 - 1 8 : 0 0 ／ 緊 急 対 応　2 4 時 間 3 6 5 日</p>
+          <div class="svc-details__sidebar-block">
+            <h4 class="svc-details__sidebar-heading">営業日及び営業時間</h4>
+            <p class="svc-details__sidebar-text">9:00-18:00 / 緊急対応 24時間365日</p>
           </div>
-          <h3 class="svc-details__sidebar-heading">訪問看護提供地域</h3>
-          <div class="svc-details__sidebar-content">
-            <p>台東区 ／ 墨田区 ／ 荒川区 ／ 文京区</p>
-            <p>他、相談に応じて</p>
+          <div class="svc-details__sidebar-block">
+            <h4 class="svc-details__sidebar-heading">訪問看護提供地域</h4>
+            <p class="svc-details__sidebar-text">台東区 / 墨田区 / 荒川区 / 文京区</p>
+            <p class="svc-details__sidebar-text">他、相談に応じて</p>
           </div>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- ========== MESSAGE ========== -->
-  <section class="svc-message">
+  <!-- ========== TEXT + PHOTO MESSAGE ========== -->
+  <section class="svc-message fade-in">
     <div class="container">
-      <div class="svc-message__grid fade-in">
+      <div class="svc-message__grid">
         <div class="svc-message__text">
-          <p>一度きりの人生、</p>
-          <p>自分を大切にやりたいことに</p>
-          <p>どんどん挑戦してください。</p>
-          <br>
-          <p>もしも、</p>
-          <p>やりたいことが見つからない人は、</p>
-          <p>見つかるまで色んな経験をしてください。</p>
+          <p class="svc-message__line">一度きりの人生、</p>
+          <p class="svc-message__line">自分を大切にやりたいことに</p>
+          <p class="svc-message__line">どんどん挑戦してください。</p>
+          <div class="svc-message__gap"></div>
+          <p class="svc-message__line">もしも、</p>
+          <p class="svc-message__line">やりたいことが見つからない人は、</p>
+          <p class="svc-message__line">見つかるまで色んな経験をしてください。</p>
         </div>
         <div class="svc-message__photo"></div>
       </div>
@@ -137,62 +146,104 @@
   </section>
 
   <!-- ========== OUR POLICY ========== -->
-  <section class="svc-policy">
+  <section class="svc-policy fade-in">
     <div class="container">
-      <h2 class="svc-policy__title fade-in">our policy</h2>
-      <p class="svc-policy__intro fade-in">
-        私たちは、医療者が笑顔で、健康的に働けることが、より良い医療を生み出すと信じています。その想いのもと、一人ひとりが誠実に学び、前向きに成長し続けます。
-      </p>
-      <p class="svc-policy__subtitle fade-in">行動指針</p>
+      <div class="svc-policy__header">
+        <h2 class="svc-policy__title">our policy</h2>
+        <div class="svc-policy__title-line"></div>
+      </div>
+      <p class="svc-policy__text">私たちは、「医療者が幸せであれば、より良い医療が届けられる」と信じています。一人ひとりが誠実に向き合い、成長を楽しみ、支え合うことで、利用者さまにも仲間にも信頼される存在であり続けます。</p>
+      <div class="svc-policy__sub-header">
+        <h3 class="svc-policy__subtitle">行動指針</h3>
+        <div class="svc-policy__subtitle-line"></div>
+      </div>
+    </div>
+  </section>
 
-      <div class="svc-policy__cards fade-in">
-        <div class="svc-policy__row svc-policy__row--3">
-          <div class="svc-card">
-            <div class="svc-card__icon">
-              <svg viewBox="0 0 80 80" fill="none"><circle cx="40" cy="20" r="8" stroke="currentColor" stroke-width="1.5"/><path d="M24 55c0-9 7-16 16-16s16 7 16 16" stroke="currentColor" stroke-width="1.5"/><rect x="50" y="30" width="12" height="16" rx="2" stroke="currentColor" stroke-width="1.5"/><path d="M53 34h6M53 38h6M53 42h4" stroke="currentColor" stroke-width="1.2"/><circle cx="30" cy="42" r="4" stroke="currentColor" stroke-width="1.2"/><path d="M30 46v6" stroke="currentColor" stroke-width="1.2"/></svg>
-            </div>
-            <h3 class="svc-card__title">誠実に向き合い、<br>質を守る。</h3>
-            <p class="svc-card__text">「まあいいか」ではなく「これで良いのか」を問い続けます。判断・行動の細部に心を込め、信頼される質の高い医療を届けます。</p>
+  <!-- ========== POLICY CARDS ========== -->
+  <section class="svc-policy__cards fade-in">
+    <div class="container">
+      <div class="svc-policy__cards-grid">
+        <!-- Card 1 -->
+        <div class="svc-policy__card">
+          <div class="svc-policy__card-icon">
+            <svg viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <circle cx="32" cy="18" r="8" stroke="#C4A8A0" stroke-width="2"/>
+              <path d="M16 52c0-8.837 7.163-16 16-16s16 7.163 16 16" stroke="#C4A8A0" stroke-width="2" stroke-linecap="round"/>
+              <path d="M30 38v8M34 38v8M26 42h12" stroke="#C4A8A0" stroke-width="1.5" stroke-linecap="round"/>
+            </svg>
           </div>
-          <div class="svc-card">
-            <div class="svc-card__icon">
-              <svg viewBox="0 0 80 80" fill="none"><path d="M20 60h8v-12h8v-12h8v-8h8v32" stroke="currentColor" stroke-width="1.5" stroke-linejoin="round"/><path d="M44 28l-4-4 4-4" stroke="currentColor" stroke-width="1.2"/><rect x="36" y="44" width="6" height="6" stroke="currentColor" stroke-width="1.2"/><path d="M38 47l2 2" stroke="currentColor" stroke-width="1"/><rect x="36" y="52" width="6" height="6" stroke="currentColor" stroke-width="1.2"/><path d="M39 55l-1 1" stroke="currentColor" stroke-width="1"/></svg>
-            </div>
-            <h3 class="svc-card__title">成長を楽しみ、<br>昨日より少し良い自分へ。</h3>
-            <p class="svc-card__text">失敗を恐れず、変化をチャンスに変えます。成長や学びを楽しむ姿勢が、毎日をもっと輝かせます。</p>
-          </div>
-          <div class="svc-card">
-            <div class="svc-card__icon">
-              <svg viewBox="0 0 80 80" fill="none"><circle cx="40" cy="36" r="12" stroke="currentColor" stroke-width="1.5"/><path d="M40 28c-2 0-4 2-4 4s4 8 4 8 4-6 4-8-2-4-4-4z" stroke="currentColor" stroke-width="1.2"/><path d="M40 48v8M36 52h8" stroke="currentColor" stroke-width="1.2"/><circle cx="40" cy="36" r="4" stroke="currentColor" stroke-width="1"/></svg>
-            </div>
-            <h3 class="svc-card__title">自分の頭で考え、<br>行動する。</h3>
-            <p class="svc-card__text">指示を待つのではなく「どうすれば良くなるか」を考え、自ら動きます。その一歩がチームを動かし、医療の未来をつくります。</p>
-          </div>
+          <h4 class="svc-policy__card-title">誠実に向き合い、質を守る。</h4>
+          <div class="svc-policy__card-line"></div>
+          <p class="svc-policy__card-desc">「まあいいか」ではなく「これで良いのか」を問い続けます。判断・行動の細部に心を込め、信頼される質の高い医療を届けます。</p>
         </div>
-        <div class="svc-policy__row svc-policy__row--2">
-          <div class="svc-card">
-            <div class="svc-card__icon">
-              <svg viewBox="0 0 80 80" fill="none"><rect x="20" y="22" width="20" height="28" rx="3" stroke="currentColor" stroke-width="1.5"/><circle cx="30" cy="32" r="3" stroke="currentColor" stroke-width="1.2"/><path d="M25 40h10M25 44h7" stroke="currentColor" stroke-width="1.2"/><path d="M42 26c0 0-4 8-4 14s4 10 4 10" stroke="currentColor" stroke-width="1.2"/><circle cx="46" cy="30" r="6" stroke="currentColor" stroke-width="1.2"/><path d="M46 28v4h3" stroke="currentColor" stroke-width="1"/></svg>
-            </div>
-            <h3 class="svc-card__title">仲間を想い、<br>支え合う。</h3>
-            <p class="svc-card__text">困ったときは頼り、誰かが困っていたら手を差し伸べる。互いの笑顔を守り合うことで、信頼と温かさのあるチームを育てます。</p>
+        <!-- Card 2 -->
+        <div class="svc-policy__card">
+          <div class="svc-policy__card-icon">
+            <svg viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <rect x="14" y="10" width="20" height="28" rx="2" stroke="#C4A8A0" stroke-width="2"/>
+              <path d="M19 18h10M19 23h10M19 28h6" stroke="#C4A8A0" stroke-width="1.5" stroke-linecap="round"/>
+              <path d="M38 54V34l6-6 6 6v20" stroke="#C4A8A0" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+              <path d="M38 44h12" stroke="#C4A8A0" stroke-width="1.5" stroke-linecap="round"/>
+            </svg>
           </div>
-          <div class="svc-card">
-            <div class="svc-card__icon">
-              <svg viewBox="0 0 80 80" fill="none"><rect x="18" y="34" width="30" height="18" rx="4" stroke="currentColor" stroke-width="1.5"/><circle cx="28" cy="56" r="4" stroke="currentColor" stroke-width="1.2"/><circle cx="38" cy="56" r="4" stroke="currentColor" stroke-width="1.2"/><rect x="28" y="28" width="10" height="8" rx="2" stroke="currentColor" stroke-width="1.2"/><path d="M33 24v4" stroke="currentColor" stroke-width="1.5"/><path d="M29 26h8" stroke="currentColor" stroke-width="1.2"/><path d="M50 38h6M50 42h6M50 46h6" stroke="currentColor" stroke-width="1"/></svg>
-            </div>
-            <h3 class="svc-card__title">自分らしく働き、<br>可能性を広げる。</h3>
-            <p class="svc-card__text">"医療者だから"と諦めず、挑戦し続けることで未来の選択肢を広げます。努力を重ねた先にこそ、自分らしい自由な働き方が待っています。</p>
+          <h4 class="svc-policy__card-title">成長を楽しみ、昨日より少し良い自分へ。</h4>
+          <div class="svc-policy__card-line"></div>
+          <p class="svc-policy__card-desc">失敗を恐れず、変化をチャンスに変えます。成長や学びを楽しむ姿勢が、毎日をもっと輝かせます。</p>
+        </div>
+        <!-- Card 3 -->
+        <div class="svc-policy__card">
+          <div class="svc-policy__card-icon">
+            <svg viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M32 56s-16-12-16-24a16 16 0 0 1 32 0c0 12-16 24-16 24z" stroke="#C4A8A0" stroke-width="2"/>
+              <path d="M28 28c0-1.5 1-4 4-4s4 2.5 4 4-1 4-4 4-4-2.5-4-4z" stroke="#C4A8A0" stroke-width="2"/>
+              <path d="M32 22v-4M26 28h-4M38 28h4M32 34v4" stroke="#C4A8A0" stroke-width="1.5" stroke-linecap="round"/>
+            </svg>
           </div>
+          <h4 class="svc-policy__card-title">自分の頭で考え、行動する。</h4>
+          <div class="svc-policy__card-line"></div>
+          <p class="svc-policy__card-desc">指示を待つのではなく「どうすれば良くなるか」を考え、自ら動きます。その一歩がチームを動かし、医療の未来をつくります。</p>
+        </div>
+        <!-- Card 4 -->
+        <div class="svc-policy__card">
+          <div class="svc-policy__card-icon">
+            <svg viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <circle cx="24" cy="32" r="12" stroke="#C4A8A0" stroke-width="2"/>
+              <path d="M24 26c-3 0-6 2.5-6 6s3 6 6 6" stroke="#C4A8A0" stroke-width="1.5" stroke-linecap="round"/>
+              <path d="M36 20v-4h12v16H36" stroke="#C4A8A0" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+              <path d="M40 16v-4M40 24h4" stroke="#C4A8A0" stroke-width="1.5" stroke-linecap="round"/>
+              <rect x="36" y="40" width="16" height="14" rx="2" stroke="#C4A8A0" stroke-width="2"/>
+              <path d="M40 46h8M40 50h5" stroke="#C4A8A0" stroke-width="1.5" stroke-linecap="round"/>
+            </svg>
+          </div>
+          <h4 class="svc-policy__card-title">仲間を想い、支え合う。</h4>
+          <div class="svc-policy__card-line"></div>
+          <p class="svc-policy__card-desc">困ったときは頼り、誰かが困っていたら手を差し伸べる。互いの笑顔を守り合うことで、信頼と温かさのあるチームを育てます。</p>
+        </div>
+        <!-- Card 5 -->
+        <div class="svc-policy__card">
+          <div class="svc-policy__card-icon">
+            <svg viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <rect x="8" y="28" width="48" height="24" rx="4" stroke="#C4A8A0" stroke-width="2"/>
+              <path d="M20 28v-8a4 4 0 0 1 4-4h16a4 4 0 0 1 4 4v8" stroke="#C4A8A0" stroke-width="2"/>
+              <circle cx="20" cy="40" r="4" stroke="#C4A8A0" stroke-width="1.5"/>
+              <circle cx="44" cy="40" r="4" stroke="#C4A8A0" stroke-width="1.5"/>
+              <path d="M28 40h8" stroke="#C4A8A0" stroke-width="1.5" stroke-linecap="round"/>
+              <path d="M32 12v4M26 14l2 3M38 14l-2 3" stroke="#C4A8A0" stroke-width="1.5" stroke-linecap="round"/>
+            </svg>
+          </div>
+          <h4 class="svc-policy__card-title">自分らしく働き、可能性を広げる。</h4>
+          <div class="svc-policy__card-line"></div>
+          <p class="svc-policy__card-desc">"医療者だから"と諦めず、挑戦し続けることで未来の選択肢を広げます。努力を重ねた先にこそ、自分らしい自由な働き方が待っています。</p>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- ========== PROMISE ========== -->
-  <section class="svc-promise">
+  <!-- ========== PROMISE BANNER ========== -->
+  <section class="svc-promise fade-in">
     <div class="container">
-      <div class="svc-promise__grid fade-in">
+      <div class="svc-promise__grid">
         <div class="svc-promise__left">
           <p>プロフェッショナルの価値を最大化し、</p>
           <p>好きな医療を追求できる環境を整え</p>
@@ -205,7 +256,7 @@
     </div>
   </section>
 
-  <!-- ========== CONTACT (shared) ========== -->
+  <!-- ========== CONTACT ========== -->
   <section class="contact-section" id="contact-section">
     <div class="container">
       <div class="contact-section__inner fade-in">
@@ -222,13 +273,16 @@
           </div>
         </div>
         <div class="contact-section__map">
-          <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3239.8!2d139.786!3d35.712!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x60188ec3a3e9b4a7%3A0x0!2z5p2x5Lqs6YO95Y-w5p2x5Yy65p2-44GM6LC3!5e0!3m2!1sja!2sjp!4v1700000000000" width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy" title="訪問看護ステーションちるな 所在地"></iframe>
+          <iframe
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3239.8!2d139.786!3d35.712!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x60188ec3a3e9b4a7%3A0x0!2z5p2x5Lqs6YO95Y-w5p2x5Yy65p2-44GM6LC3!5e0!3m2!1sja!2sjp!4v1700000000000"
+            width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy"
+            title="訪問看護ステーションちるな 所在地"></iframe>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- ========== FOOTER (shared) ========== -->
+  <!-- ========== FOOTER ========== -->
   <footer class="footer">
     <div class="footer__brand">
       <span class="footer__logo">nu<span class="degree">°</span></span>
@@ -242,12 +296,13 @@
       <a href="/blog/" class="footer__nav-item">blog</a>
       <a href="/recruit/" class="footer__nav-item">recruit</a>
       <a href="/contact/" class="footer__nav-item">contact</a>
-      <a href="#" class="footer__nav-item">privacy-policy</a>
+      <a href="/privacy-policy/" class="footer__nav-item">privacy-policy</a>
     </nav>
     <p class="footer__copyright">&copy; Chillna inc. All Rights Reserved.</p>
   </footer>
 
-  <a href="#" class="back-to-top" id="backToTop" aria-label="ページトップへ戻る">
+  <!-- Back to Top -->
+  <a href="#header" class="back-to-top" id="backToTop" aria-label="ページトップへ戻る">
     <svg viewBox="0 0 24 24" fill="none"><path d="M12 19V5M5 12l7-7 7 7" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
   </a>
 

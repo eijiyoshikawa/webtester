@@ -2141,3 +2141,427 @@ select {
     font-size: 0.8rem;
   }
 }
+
+/* ==========================================================================
+   Service Page Styles — /service/
+   ========================================================================== */
+
+/* ---------- 1. svc-hero ---------- */
+.svc-hero {
+  background: var(--pink);
+  padding: 120px 0 80px;
+  position: relative;
+  overflow: hidden;
+}
+
+.svc-hero__bar {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  width: 60px;
+  background: var(--pink-light);
+  opacity: 0.6;
+}
+
+.svc-hero__bar--left { left: 0; }
+.svc-hero__bar--right { right: 0; }
+
+.svc-hero__inner {
+  max-width: var(--container-max, 1200px);
+  margin: 0 auto;
+  padding: 0 40px;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.svc-hero__title {
+  font-family: var(--font-en, 'Cormorant Garamond', serif);
+  font-size: 2.8rem;
+  font-weight: 300;
+  color: var(--white);
+  letter-spacing: 0.12em;
+  text-transform: lowercase;
+}
+
+.svc-hero__logo {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.svc-hero__logo-text {
+  font-family: var(--font-en, 'Cormorant Garamond', serif);
+  font-size: 6rem;
+  color: var(--white);
+  opacity: 0.9;
+  font-weight: 300;
+  line-height: 1;
+}
+
+.svc-hero__logo-text .degree {
+  font-size: 0.4em;
+  vertical-align: super;
+}
+
+/* ---------- 2. svc-photo ---------- */
+.svc-photo {
+  width: 100%;
+  position: relative;
+}
+
+.svc-photo__image {
+  width: 100%;
+  height: 400px;
+  background: linear-gradient(135deg, #d4a89a 0%, #c4978c 40%, #b8a090 100%);
+  display: block;
+}
+
+.svc-photo__card {
+  background: var(--white);
+  border-radius: 12px;
+  padding: 40px;
+  margin-top: -60px;
+  position: relative;
+  z-index: 1;
+  max-width: var(--container-max, 1200px);
+  margin-left: auto;
+  margin-right: auto;
+  box-shadow: 0 4px 24px rgba(0, 0, 0, 0.06);
+}
+
+/* ---------- 3. svc-nursing ---------- */
+.svc-nursing {
+  padding: 80px 0;
+}
+
+.svc-nursing__header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 24px;
+  margin-bottom: 16px;
+}
+
+.svc-nursing__label {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  flex-shrink: 0;
+}
+
+.svc-nursing__dot {
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  border: 2px solid var(--label);
+  flex-shrink: 0;
+}
+
+.svc-nursing__label-text {
+  font-size: 1.2rem;
+  font-weight: 500;
+  color: var(--text);
+  letter-spacing: 0.08em;
+}
+
+.svc-nursing__lead {
+  font-family: var(--font-en, 'Cormorant Garamond', serif);
+  color: var(--label);
+  font-size: 1rem;
+  letter-spacing: 0.05em;
+  border-left: 2px solid var(--label);
+  padding-left: 16px;
+  line-height: 1.8;
+}
+
+.svc-nursing__body {
+  margin-top: 40px;
+}
+
+.svc-nursing__desc {
+  font-size: 0.9rem;
+  line-height: 2.2;
+  color: var(--text);
+}
+
+/* ---------- 4. svc-details ---------- */
+.svc-details {
+  padding: 0 0 80px;
+}
+
+.svc-details__grid {
+  display: grid;
+  grid-template-columns: 1fr 380px;
+  gap: 0;
+}
+
+.svc-details__main {
+  padding: 60px 40px 60px 0;
+}
+
+.svc-details__heading {
+  color: var(--label);
+  font-family: var(--font-jp, 'Noto Sans JP', sans-serif);
+  font-size: 1rem;
+  font-weight: 500;
+  letter-spacing: 0.15em;
+  padding-bottom: 12px;
+  border-bottom: 1px solid var(--label);
+  margin-bottom: 30px;
+}
+
+.svc-details__list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.svc-details__list li {
+  padding: 10px 0;
+  font-size: 0.9rem;
+  line-height: 1.8;
+  letter-spacing: 0.03em;
+}
+
+.svc-details__sidebar {
+  background: var(--pink);
+  padding: 40px 30px;
+  color: var(--white);
+}
+
+.svc-details__sidebar-block {
+  margin-bottom: 36px;
+}
+
+.svc-details__sidebar-block:last-child {
+  margin-bottom: 0;
+}
+
+.svc-details__sidebar-heading {
+  color: rgba(255, 255, 255, 0.75);
+  font-family: var(--font-jp, 'Noto Sans JP', sans-serif);
+  font-size: 0.9rem;
+  font-weight: 500;
+  letter-spacing: 0.12em;
+  padding-bottom: 10px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.3);
+  margin-bottom: 16px;
+}
+
+.svc-details__sidebar-text {
+  font-size: 0.9rem;
+  letter-spacing: 0.1em;
+  line-height: 2;
+}
+
+/* ---------- 5. svc-message ---------- */
+.svc-message {
+  padding: 100px 0;
+}
+
+.svc-message__grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 60px;
+  align-items: center;
+}
+
+.svc-message__text {
+  color: var(--label);
+  letter-spacing: 0.08em;
+  font-weight: 300;
+}
+
+.svc-message__line {
+  font-size: 1.1rem;
+  line-height: 2.2;
+}
+
+.svc-message__gap {
+  height: 24px;
+}
+
+.svc-message__photo {
+  width: 100%;
+  height: 400px;
+  background: linear-gradient(135deg, #d4a89a 0%, #c4978c 40%, #b8a090 100%);
+}
+
+/* ---------- 6. svc-policy ---------- */
+.svc-policy {
+  padding: 100px 0 40px;
+}
+
+.svc-policy__header {
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+.svc-policy__title {
+  font-family: var(--font-en, 'Cormorant Garamond', serif);
+  font-size: 2.2rem;
+  font-weight: 300;
+  color: var(--label);
+  letter-spacing: 0.1em;
+  text-transform: lowercase;
+}
+
+.svc-policy__title-line {
+  width: 100%;
+  max-width: 300px;
+  height: 1px;
+  background: var(--label);
+  margin: 8px auto 0;
+}
+
+.svc-policy__text {
+  font-size: 0.9rem;
+  line-height: 2.2;
+  color: var(--text);
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+.svc-policy__sub-header {
+  text-align: center;
+  margin-top: 60px;
+}
+
+.svc-policy__subtitle {
+  font-size: 1rem;
+  letter-spacing: 0.15em;
+  color: var(--text);
+}
+
+.svc-policy__subtitle-line {
+  width: 80px;
+  height: 2px;
+  background: var(--pink-light);
+  margin: 8px auto 0;
+}
+
+/* ---------- 7. svc-policy__cards ---------- */
+.svc-policy__cards {
+  padding: 40px 0 80px;
+}
+
+.svc-policy__cards-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 40px;
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+/* Make cards 4 and 5 center on 2nd row */
+.svc-policy__card:nth-child(4),
+.svc-policy__card:nth-child(5) {
+  /* handled by grid wrapping naturally */
+}
+
+.svc-policy__card {
+  text-align: center;
+}
+
+.svc-policy__card-icon {
+  width: 160px;
+  height: 160px;
+  border-radius: 50%;
+  background: #f5f0ed;
+  margin: 0 auto 24px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.svc-policy__card-icon svg {
+  width: 64px;
+  height: 64px;
+}
+
+.svc-policy__card-title {
+  color: var(--label);
+  font-size: 0.95rem;
+  letter-spacing: 0.08em;
+  font-weight: 500;
+  margin-bottom: 12px;
+  line-height: 1.6;
+}
+
+.svc-policy__card-line {
+  width: 40px;
+  height: 1px;
+  background: var(--pink-light);
+  margin: 0 auto 16px;
+}
+
+.svc-policy__card-desc {
+  font-size: 0.85rem;
+  line-height: 1.9;
+  color: var(--text);
+  max-width: 280px;
+  margin: 0 auto;
+}
+
+/* ---------- 8. svc-promise ---------- */
+.svc-promise {
+  padding: 80px 0;
+  background: var(--cream);
+}
+
+.svc-promise__grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 60px;
+  align-items: center;
+}
+
+.svc-promise__left {
+  font-size: 1.2rem;
+  color: var(--label);
+  line-height: 2;
+  letter-spacing: 0.05em;
+  font-weight: 300;
+}
+
+.svc-promise__right {
+  font-size: 1.1rem;
+  color: var(--text);
+  line-height: 2;
+  letter-spacing: 0.03em;
+  border-left: 2px solid var(--pink-light);
+  padding-left: 24px;
+}
+
+/* ---------- 9. Responsive ---------- */
+@media (max-width: 768px) {
+  .svc-hero {
+    padding: 80px 0 50px;
+  }
+
+  .svc-hero__bar { width: 30px; }
+
+  .svc-hero__title { font-size: 1.8rem; }
+
+  .svc-hero__logo-text { font-size: 3rem; }
+
+  .svc-hero__inner { flex-direction: column; gap: 20px; align-items: flex-start; }
+
+  .svc-photo__image { height: 250px; }
+
+  .svc-nursing__header { flex-direction: column; align-items: flex-start; gap: 16px; }
+
+  .svc-details__grid { grid-template-columns: 1fr; }
+
+  .svc-details__main { padding: 40px 0; }
+
+  .svc-message__grid { grid-template-columns: 1fr; gap: 30px; }
+
+  .svc-message__photo { height: 280px; }
+
+  .svc-policy__cards-grid { grid-template-columns: 1fr; }
+
+  .svc-promise__grid { grid-template-columns: 1fr; gap: 30px; }
+}
