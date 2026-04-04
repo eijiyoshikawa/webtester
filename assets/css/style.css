@@ -196,23 +196,19 @@ select {
   padding: 0 40px;
 }
 
-/* Logo: "nu°" in a thin bordered square */
+/* Logo: あんじゅ hiragana text logo */
 .header__logo {
   display: flex;
   align-items: center;
-  justify-content: center;
-  width: 50px;
-  height: 50px;
-  border: 1px solid #ccc;
   flex-shrink: 0;
 }
 
 .header__logo-text {
-  font-family: var(--font-en);
-  font-size: 1.25rem;
-  font-weight: 300;
-  color: #999;
-  letter-spacing: 0.02em;
+  font-family: var(--font-jp);
+  font-size: 1.4rem;
+  font-weight: 700;
+  color: var(--label);
+  letter-spacing: 0.12em;
   line-height: 1;
 }
 
@@ -507,17 +503,12 @@ select {
 }
 
 .hero__logo-text {
-  font-family: var(--font-en);
+  font-family: var(--font-jp);
   font-size: 1.4rem;
-  font-weight: 300;
+  font-weight: 700;
   color: var(--white);
   line-height: 1;
-}
-
-.hero__logo-text .degree {
-  font-size: 0.55em;
-  vertical-align: super;
-  margin-left: 1px;
+  letter-spacing: 0.12em;
 }
 
 /* Hero scroll indicator */
@@ -877,17 +868,13 @@ select {
 }
 
 .our-service__logo-bg-text {
-  font-family: var(--font-en);
-  font-size: 14rem;
-  font-weight: 300;
+  font-family: var(--font-jp);
+  font-size: 8rem;
+  font-weight: 700;
   color: rgba(255, 255, 255, 0.08);
   line-height: 1;
+  letter-spacing: 0.15em;
   user-select: none;
-}
-
-.our-service__logo-bg-text .degree {
-  font-size: 0.4em;
-  vertical-align: super;
 }
 
 /* ==========================================================================
@@ -1011,12 +998,12 @@ select {
 }
 
 .nu-banner__logo {
-  font-family: 'Cormorant Garamond', serif;
-  font-size: 8rem;
-  font-weight: 300;
+  font-family: var(--font-jp);
+  font-size: 5rem;
+  font-weight: 700;
   color: #ccc;
   line-height: 1;
-  letter-spacing: 0.05em;
+  letter-spacing: 0.15em;
   margin-bottom: 10px;
 }
 
@@ -1442,11 +1429,11 @@ select {
 }
 
 .footer__logo {
-  font-family: 'Cormorant Garamond', serif;
-  font-size: 3rem;
-  font-weight: 300;
-  color: #aaa;
-  letter-spacing: 0.05em;
+  font-family: var(--font-jp);
+  font-size: 2.2rem;
+  font-weight: 700;
+  color: var(--gray);
+  letter-spacing: 0.12em;
   margin-bottom: 12px;
 }
 
@@ -2193,17 +2180,13 @@ select {
 }
 
 .svc-hero__logo-text {
-  font-family: var(--font-en, 'Cormorant Garamond', serif);
-  font-size: 6rem;
+  font-family: var(--font-jp);
+  font-size: 3.5rem;
   color: var(--white);
   opacity: 0.9;
-  font-weight: 300;
+  font-weight: 700;
   line-height: 1;
-}
-
-.svc-hero__logo-text .degree {
-  font-size: 0.4em;
-  vertical-align: super;
+  letter-spacing: 0.15em;
 }
 
 /* ---------- 2. svc-photo ---------- */
@@ -2906,11 +2889,12 @@ select {
   right: 80px;
   top: 50%;
   transform: translateY(-50%);
-  font-family: var(--font-en);
-  font-size: 10rem;
+  font-family: var(--font-jp);
+  font-size: 6rem;
   color: var(--white);
   opacity: 0.07;
-  font-weight: 300;
+  font-weight: 700;
+  letter-spacing: 0.15em;
   pointer-events: none;
   line-height: 1;
 }
@@ -3698,16 +3682,12 @@ select {
 }
 
 .cnt-page__sidebar-nu {
-  font-family: var(--font-en);
-  font-size: 2.5rem;
-  font-weight: 300;
+  font-family: var(--font-jp);
+  font-size: 1.8rem;
+  font-weight: 700;
   color: var(--gray);
   line-height: 1;
-}
-
-.cnt-page__sidebar-nu .degree {
-  font-size: 0.4em;
-  vertical-align: super;
+  letter-spacing: 0.12em;
 }
 
 .cnt-page__sidebar-name {
