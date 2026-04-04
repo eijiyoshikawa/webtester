@@ -2128,6 +2128,37 @@ select {
     height: 32px;
     font-size: 0.8rem;
   }
+
+  /* Service page 480px */
+  .svc-hero__title { font-size: 1.4rem; }
+  .svc-hero__logo-text { font-size: 2rem; }
+  .svc-details__sidebar { padding: 30px 20px; }
+  .svc-policy__title { font-size: 1.6rem; }
+  .svc-policy__cards-grid { gap: 30px; }
+  .svc-point__circle { width: 140px; height: 140px; font-size: 0.8rem; }
+
+  /* Recruit page 480px */
+  .rec-hero__title { font-size: 1.8rem; }
+  .rec-hero__photo { height: 200px; }
+  .rec-message__heading { font-size: 0.95rem; letter-spacing: 0.1em; }
+  .rec-workstyle__title { font-size: 1.6rem; }
+  .rec-workstyle__logo { font-size: 3rem; right: 10px; }
+  .rec-point__number { font-size: 3.5rem; }
+  .rec-point__heading { font-size: 1.1rem; }
+  .rec-point__circle { width: 150px; height: 150px; font-size: 0.8rem; }
+  .rec-info__heading { font-size: 1.5rem; }
+  .rec-info__job-title { font-size: 1rem; }
+  .rec-apply__phone { flex-direction: column; gap: 8px; padding: 16px 24px; }
+  .rec-apply__phone-number { font-size: 1.2rem; }
+
+  /* Contact page 480px */
+  .cnt-page__title { font-size: 1.6rem; }
+  .cnt-form__footer { gap: 16px; }
+  .cnt-form__submit { padding: 12px 30px; font-size: 0.8rem; }
+
+  /* News/Blog 480px */
+  .news-page__title { font-size: 1.4rem; }
+  .blog-page__title { font-size: 1.4rem; }
 }
 
 /* ==========================================================================
@@ -2785,13 +2816,16 @@ select {
    rec-hero
    -------------------------------------------------------------------------- */
 .rec-hero {
-  padding: 120px 0 80px;
+  padding: 120px 40px 80px;
+  max-width: var(--container-max);
+  margin: 0 auto;
+}
+
+.rec-hero__grid {
   display: grid;
   grid-template-columns: 1fr 1.2fr;
   gap: 40px;
   align-items: center;
-  max-width: var(--container-max);
-  margin: 0 auto;
 }
 
 .rec-hero__title {
@@ -3365,12 +3399,16 @@ select {
    -------------------------------------------------------------------------- */
 @media (max-width: 768px) {
   .rec-hero {
-    grid-template-columns: 1fr;
     padding: 80px 20px 40px;
   }
 
+  .rec-hero__grid {
+    grid-template-columns: 1fr;
+    gap: 24px;
+  }
+
   .rec-hero__photo {
-    height: 300px;
+    height: 250px;
   }
 
   .rec-message {
@@ -3770,5 +3808,22 @@ select {
   .cnt-form__submit {
     width: 100%;
     justify-content: center;
+  }
+}
+
+@media (max-width: 1024px) {
+  .cnt-page__grid {
+    grid-template-columns: 1fr 260px;
+    gap: 40px;
+  }
+
+  .rec-hero__grid {
+    gap: 30px;
+  }
+
+  .rec-point__circle {
+    width: 180px;
+    height: 180px;
+    font-size: 0.85rem;
   }
 }
