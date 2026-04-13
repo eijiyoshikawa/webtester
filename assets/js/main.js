@@ -104,15 +104,24 @@
   // --- Statement Text Splitting ---
   var statementText = document.getElementById('statement-text');
   if (statementText) {
-    var text = statementText.textContent;
-    statementText.textContent = '';
-    for (var i = 0; i < text.length; i++) {
-      var span = document.createElement('span');
-      span.className = 'char';
-      span.textContent = text[i];
-      span.style.transitionDelay = (i * 40) + 'ms';
-      statementText.appendChild(span);
-    }
+    var nodes = Array.from(statementText.childNodes);
+    statementText.innerHTML = '';
+    var charIndex = 0;
+    nodes.forEach(function (node) {
+      if (node.nodeType === 1 && node.tagName === 'BR') {
+        statementText.appendChild(document.createElement('br'));
+      } else if (node.nodeType === 3) {
+        var text = node.textContent;
+        for (var i = 0; i < text.length; i++) {
+          var span = document.createElement('span');
+          span.className = 'char';
+          span.textContent = text[i];
+          span.style.transitionDelay = (charIndex * 40) + 'ms';
+          statementText.appendChild(span);
+          charIndex++;
+        }
+      }
+    });
   }
 
   // --- FAQ Accordion ---
