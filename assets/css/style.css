@@ -16,28 +16,8 @@ body {
   color: #141414;
 }
 
-body::before{
-	background: url("../img/sub_bg.png") no-repeat center;
-	background-size: cover;
-	position: absolute;
-	content: "";
-	width: 34%;
-	height: 0;
-	padding-top: 24%;
-	right: 8%;
-	z-index: -1;
-}
-#top::before{
-	background: url("../img/body_bg.png") no-repeat center;
-	background-size: contain;
-	position: absolute;
-	content: "";
-	width: 33%;
-	height: 0;
-	padding-top: 75%;
-	right: 5%;
-	z-index: -1;
-}
+body::before{ display: none; }
+#top::before{ display: none; }
 
 img { max-width: 100%; height: auto; }
 ul { padding: 0; }
@@ -100,17 +80,21 @@ header .header_inner #pc_navi nav ul.pc_nav_li li a:hover::after { width: 100%; 
 .kv .slider::after{ position: absolute; content: ""; width: 100%; height: 120px; background: linear-gradient(rgba(255, 255, 255, 0) 0%, #fff 100%); bottom: 0; left: 0; z-index: 3; }
 .kv .scroll{ position: absolute; bottom: 8%; left: 5%; z-index: 10; }
 
-/* background rectangle animation */
-.kv_bg_anim{ position: absolute; top: 0; left: 0; width: 100%; height: 100%; z-index: 0; overflow: hidden; pointer-events: none; }
-.rect{ position: absolute; border: 2px solid rgba(31, 86, 204, 0.08); border-radius: 2px; }
-.rect1{ width: 120px; height: 80px; top: 10%; left: 5%; animation: floatRect1 12s ease-in-out infinite; }
-.rect2{ width: 200px; height: 140px; top: 60%; right: 8%; animation: floatRect2 15s ease-in-out infinite; border-color: rgba(31, 204, 177, 0.06); }
-.rect3{ width: 80px; height: 120px; top: 30%; left: 70%; animation: floatRect3 10s ease-in-out infinite; }
-.rect4{ width: 160px; height: 60px; top: 75%; left: 15%; animation: floatRect1 18s ease-in-out infinite reverse; border-color: rgba(31, 204, 177, 0.08); }
-.rect5{ width: 100px; height: 180px; top: 5%; right: 20%; animation: floatRect2 14s ease-in-out infinite; }
-.rect6{ width: 250px; height: 100px; top: 45%; left: 2%; animation: floatRect3 16s ease-in-out infinite; border-color: rgba(31, 86, 204, 0.05); }
-.rect7{ width: 70px; height: 70px; top: 85%; left: 55%; animation: floatRect1 11s ease-in-out infinite; }
-.rect8{ width: 180px; height: 120px; top: 20%; right: 3%; animation: floatRect2 13s ease-in-out infinite reverse; border-color: rgba(31, 204, 177, 0.07); }
+/* background rectangle animation - site-wide */
+.site_bg_anim{ position: fixed; top: 0; left: 0; width: 100%; height: 100%; z-index: -1; overflow: hidden; pointer-events: none; }
+.rect{ position: absolute; border: 2px solid rgba(31, 86, 204, 0.07); border-radius: 3px; }
+.rect1{ width: 140px; height: 90px; top: 8%; left: 3%; animation: floatRect1 14s ease-in-out infinite; }
+.rect2{ width: 220px; height: 160px; top: 55%; right: 5%; animation: floatRect2 18s ease-in-out infinite; border-color: rgba(31, 204, 177, 0.06); }
+.rect3{ width: 90px; height: 130px; top: 25%; left: 65%; animation: floatRect3 11s ease-in-out infinite; }
+.rect4{ width: 180px; height: 70px; top: 72%; left: 12%; animation: floatRect1 20s ease-in-out infinite reverse; border-color: rgba(31, 204, 177, 0.07); }
+.rect5{ width: 110px; height: 200px; top: 3%; right: 15%; animation: floatRect2 16s ease-in-out infinite; }
+.rect6{ width: 280px; height: 110px; top: 40%; left: 1%; animation: floatRect3 19s ease-in-out infinite; border-color: rgba(31, 86, 204, 0.05); }
+.rect7{ width: 75px; height: 75px; top: 82%; left: 50%; animation: floatRect1 13s ease-in-out infinite; }
+.rect8{ width: 200px; height: 140px; top: 18%; right: 2%; animation: floatRect2 15s ease-in-out infinite reverse; border-color: rgba(31, 204, 177, 0.06); }
+.rect9{ width: 60px; height: 160px; top: 45%; left: 88%; animation: floatRect3 17s ease-in-out infinite; border-color: rgba(31, 86, 204, 0.04); }
+.rect10{ width: 170px; height: 50px; top: 90%; left: 30%; animation: floatRect1 22s ease-in-out infinite reverse; border-color: rgba(31, 204, 177, 0.05); }
+.rect11{ width: 130px; height: 130px; top: 15%; left: 40%; animation: floatRect2 21s ease-in-out infinite; border-color: rgba(31, 86, 204, 0.04); }
+.rect12{ width: 240px; height: 80px; top: 65%; right: 25%; animation: floatRect3 24s ease-in-out infinite reverse; border-color: rgba(31, 204, 177, 0.05); }
 
 @keyframes floatRect1 {
   0%, 100% { transform: translate(0, 0) rotate(0deg); }
@@ -298,8 +282,8 @@ footer .copyright{ padding-top: 30px; border-top: 1px solid #D5D5D5; margin-top:
 	header .header_inner #logo a img { width: 100%; }
 	.inner{ margin: 0 16px; padding: 50px 0; }
 	a.btn{ margin: 40px auto 0; font-size: 16px; }
-	#top::before { background: url(../img/bg_sp.png) no-repeat center; background-size: cover; width: 66%; height: 0; padding-top: 205%; }
-	body::before { background: url("../img/sp_sub_bg.png") no-repeat center; background-size: cover; width: 60%; height: 0; padding-top: 70%; right: 5%; }
+	#top::before { display: none; }
+	body::before { display: none; }
 	.kv{ padding-top: 70px; }
 	.kv .slick-slide img{ height: 50vh; }
 	.kv .slick-center{ transform: scale(1.02); }
@@ -307,7 +291,8 @@ footer .copyright{ padding-top: 30px; border-top: 1px solid #D5D5D5; margin-top:
 	.kv .kv_txt{ text-align: right; bottom: 50px; padding: 0 16px; }
 	.kv .kv_txt h2{ font-size: 50px; }
 	.kv .kv_txt p{ font-size: 18px; letter-spacing: 0.04em; }
-	.rect{ display: none; }
+	.rect{ border-width: 1px; }
+	.rect5, .rect6, .rect9, .rect11, .rect12{ display: none; }
 	.kv .scroll{ left: 20px; }
 	.kv .slider::after{ width: 100%; margin-bottom: 0; bottom: 0; }
 	.about .text_area, .about .img_area, .service .wrap .img_area, .work_li li, .ttl_area, .news_main, .contact .inner.wrap .cta_box, footer .inner .wrap .nav, footer .inner .wrap .sns{ width: 100%; }
