@@ -47,13 +47,24 @@ li { list-style: none; }
 .wrap{ display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; }
 .en{ font-family: "Sora", sans-serif; font-optical-sizing: auto; }
 
+/* scroll animations */
+.fadein { opacity: 0; transform: translateY(40px); transition: opacity 0.8s ease, transform 0.8s ease; }
+.fadein.scrollin { opacity: 1; transform: translateY(0); }
+.fadein-left { opacity: 0; transform: translateX(-40px); transition: opacity 0.8s ease, transform 0.8s ease; }
+.fadein-left.scrollin { opacity: 1; transform: translateX(0); }
+.fadein-right { opacity: 0; transform: translateX(40px); transition: opacity 0.8s ease, transform 0.8s ease; }
+.fadein-right.scrollin { opacity: 1; transform: translateX(0); }
+
 /*-------header-------------------------------------*/
-header { position: fixed; top: 0; height: 100px; width: 100%; margin: 0 auto; z-index: 100; }
+header { position: fixed; top: 0; height: 100px; width: 100%; margin: 0 auto; z-index: 100; background: rgba(255,255,255,0); backdrop-filter: blur(0px); transition: background 0.4s ease, backdrop-filter 0.4s ease, box-shadow 0.4s ease; }
+header.is-scrolled { background: rgba(255,255,255,0.95); backdrop-filter: blur(10px); box-shadow: 0 2px 20px rgba(0,0,0,0.06); }
 header .header_inner { max-width: 1240px; width: 100%; margin: 0 auto; position: relative; top: 50%; transform: translateY(-50%); display: flex; justify-content: space-between; align-items: center; flex-wrap: nowrap; }
 header .header_inner #logo { width: 200px; margin: auto 0; }
 header .header_inner #pc_navi { width: 45%; }
 header .header_inner #pc_navi nav ul.pc_nav_li { display: flex; justify-content: space-between; flex-wrap: nowrap; padding: 0; margin: 0; align-items: center; }
-header .header_inner #pc_navi nav ul.pc_nav_li li a { font-family: "Sora", sans-serif; color: #1F56CC; display: block; font-weight: bold; font-size: 16px; }
+header .header_inner #pc_navi nav ul.pc_nav_li li a { font-family: "Sora", sans-serif; color: #1F56CC; display: block; font-weight: bold; font-size: 16px; position: relative; transition: color 0.3s ease; }
+header .header_inner #pc_navi nav ul.pc_nav_li li a::after { content: ""; position: absolute; bottom: -4px; left: 0; width: 0; height: 2px; background: linear-gradient(90deg, #1F56CC 0%, #1FCCB1 100%); transition: width 0.3s ease; }
+header .header_inner #pc_navi nav ul.pc_nav_li li a:hover::after { width: 100%; }
 
 /*-------kv-------------------------------------*/
 .kv{ padding-top: 100px; position: relative; }
@@ -76,19 +87,26 @@ header .header_inner #pc_navi nav ul.pc_nav_li li a { font-family: "Sora", sans-
 .about .text_area p{ font-size: 18px; }
 
 .btn{ margin-top: 60px; font-size: 18px; display: inline-block; background: linear-gradient(90deg, #1F56CC 0%, #1FCCB1 100%); -webkit-background-clip: text; -webkit-text-fill-color: transparent; font-family: "Sora", sans-serif; font-weight: bold; position: relative; padding-left: 20px; }
-.btn::after{ position: absolute; content: ""; width: 9px; height: 9px; border-radius: 50%; background: linear-gradient(90deg, #1F56CC 0%, #1FCCB1 100%); left: 0; top: 50%; transform: translateY(-50%); }
+.btn::after{ position: absolute; content: ""; width: 9px; height: 9px; border-radius: 50%; background: linear-gradient(90deg, #1F56CC 0%, #1FCCB1 100%); left: 0; top: 50%; transform: translateY(-50%); transition: transform 0.3s ease; }
+.btn:hover::after { transform: translateY(-50%) scale(1.4); }
+.btn:hover { padding-left: 26px; }
 
 /*-------service-------------------------------------*/
 .service .wrap{ justify-content: flex-start; }
 .service .wrap .img_area{ width: 15%; height: 260px; margin-right: 50px; }
 .service .wrap .img_area img{ object-fit: cover; width: 100%; height: 260px; }
 .service .service_li{ margin-top: 40px; justify-content: space-between; }
-.service .service_li li{ width: calc(100% / 4 - 20px); text-align: center; background: #F4F4F4; padding: 10px 0; margin-bottom: 20px; }
+.service .service_li li{ width: calc(100% / 4 - 20px); text-align: center; background: #F4F4F4; padding: 10px 0; margin-bottom: 20px; transition: background 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease; }
+.service .service_li li:hover { background: linear-gradient(135deg, #1F56CC, #1FCCB1); color: #fff; transform: translateY(-3px); box-shadow: 0 8px 20px rgba(31,86,204,0.15); }
 
 .bg{ background-image: url('../img/top_bg.jpg'); background-attachment: fixed; background-size: cover; background-position: center; height: 400px; }
 /*-------work-------------------------------------*/
 .work_li{ margin-top: 20px; }
-.work_li li{ width: calc(100% / 3 - 15px); }
+.work_li li{ width: calc(100% / 3 - 15px); transition: transform 0.4s ease, box-shadow 0.4s ease; overflow: hidden; }
+.work_li li:hover { transform: translateY(-6px); box-shadow: 0 12px 30px rgba(0,0,0,0.1); }
+.work_li li .img_area { overflow: hidden; }
+.work_li li .img_area img { transition: transform 0.5s ease; }
+.work_li li:hover .img_area img { transform: scale(1.05); }
 .work_li li .text_area{ padding: 10px; }
 .work_li li .text_area h4{ font-weight: normal; font-size: 16px; padding-bottom: 20px; }
 .work_li li .text_area p{ font-size: 12px; }
@@ -103,7 +121,8 @@ header .header_inner #pc_navi nav ul.pc_nav_li li a { font-family: "Sora", sans-
 .news_wrap{ align-items: flex-start; }
 .ttl_area{ width: 20%; }
 .news_main{ width: 70%; }
-.news_main .news_li{ padding: 30px 0; border-bottom: 1px solid #F4F4F4; }
+.news_main .news_li{ padding: 30px 0; border-bottom: 1px solid #F4F4F4; transition: background 0.3s ease, padding-left 0.3s ease; }
+.news_main .news_li:hover { background: #FAFAFA; padding-left: 10px; }
 .news_main .news_li:nth-child(1){ border-top: 1px solid #F4F4F4; }
 .news_main .news_li .text_area.list .wrap{ margin-top: 0; }
 .news_main .news_li .text_area.list h4{ padding-top: 5px; font-weight: 600; }
@@ -116,6 +135,8 @@ header .header_inner #pc_navi nav ul.pc_nav_li li a { font-family: "Sora", sans-
 .contact .inner.wrap .cta_box.recruit{ margin-right: 75px; }
 .contact .inner.wrap .cta_box .clr_title{ font-size: 25px; display: inline-block; background: linear-gradient(90deg, #1F56CC 0%, #1FCCB1 100%); -webkit-background-clip: text; -webkit-text-fill-color: transparent; line-height: 1; letter-spacing: 0.05em; font-weight: 600; margin-bottom: 20px; }
 .contact .btn{ margin-top: 30px; }
+.contact .inner.wrap .cta_box { transition: transform 0.4s ease, box-shadow 0.4s ease; }
+.contact .inner.wrap .cta_box:hover { transform: translateY(-5px); box-shadow: 0 15px 40px rgba(31,86,204,0.12); }
 
 /*-------footer-------------------------------------*/
 footer{ background: #fff; }

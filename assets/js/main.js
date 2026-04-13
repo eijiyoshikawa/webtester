@@ -37,10 +37,19 @@
         });
     });
 
-    // Fade in on scroll
+    // Header scroll effect
+    $(window).scroll(function(){
+        if ($(window).scrollTop() > 50) {
+            $('header').addClass('is-scrolled');
+        } else {
+            $('header').removeClass('is-scrolled');
+        }
+    });
+
+    // Fade in on scroll (supports fadein, fadein-left, fadein-right)
     $(function() {
         $(window).scroll(function(){
-            $('.fadein').each(function(){
+            $('.fadein, .fadein-left, .fadein-right').each(function(){
                 var elemPos = $(this).offset().top;
                 var scroll = $(window).scrollTop();
                 var windowHeight = $(window).height();
