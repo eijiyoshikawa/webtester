@@ -80,19 +80,19 @@ header .header_inner #pc_navi nav ul.pc_nav_li li a:hover::after { width: 100%; 
 
 /* background rectangle animation - site-wide */
 .site_bg_anim{ position: fixed; top: 0; left: 0; width: 100%; height: 100%; z-index: -1; overflow: hidden; pointer-events: none; }
-.rect{ position: absolute; border: 2px solid rgba(31, 86, 204, 0.07); border-radius: 3px; }
+.rect{ position: absolute; border: 2px solid rgba(31, 86, 204, 0.18); border-radius: 3px; }
 .rect1{ width: 140px; height: 90px; top: 8%; left: 3%; animation: floatRect1 14s ease-in-out infinite; }
-.rect2{ width: 220px; height: 160px; top: 55%; right: 5%; animation: floatRect2 18s ease-in-out infinite; border-color: rgba(31, 204, 177, 0.06); }
+.rect2{ width: 220px; height: 160px; top: 55%; right: 5%; animation: floatRect2 18s ease-in-out infinite; border-color: rgba(31, 204, 177, 0.16); }
 .rect3{ width: 90px; height: 130px; top: 25%; left: 65%; animation: floatRect3 11s ease-in-out infinite; }
-.rect4{ width: 180px; height: 70px; top: 72%; left: 12%; animation: floatRect1 20s ease-in-out infinite reverse; border-color: rgba(31, 204, 177, 0.07); }
+.rect4{ width: 180px; height: 70px; top: 72%; left: 12%; animation: floatRect1 20s ease-in-out infinite reverse; border-color: rgba(31, 204, 177, 0.18); }
 .rect5{ width: 110px; height: 200px; top: 3%; right: 15%; animation: floatRect2 16s ease-in-out infinite; }
-.rect6{ width: 280px; height: 110px; top: 40%; left: 1%; animation: floatRect3 19s ease-in-out infinite; border-color: rgba(31, 86, 204, 0.05); }
+.rect6{ width: 280px; height: 110px; top: 40%; left: 1%; animation: floatRect3 19s ease-in-out infinite; border-color: rgba(31, 86, 204, 0.12); }
 .rect7{ width: 75px; height: 75px; top: 82%; left: 50%; animation: floatRect1 13s ease-in-out infinite; }
-.rect8{ width: 200px; height: 140px; top: 18%; right: 2%; animation: floatRect2 15s ease-in-out infinite reverse; border-color: rgba(31, 204, 177, 0.06); }
-.rect9{ width: 60px; height: 160px; top: 45%; left: 88%; animation: floatRect3 17s ease-in-out infinite; border-color: rgba(31, 86, 204, 0.04); }
-.rect10{ width: 170px; height: 50px; top: 90%; left: 30%; animation: floatRect1 22s ease-in-out infinite reverse; border-color: rgba(31, 204, 177, 0.05); }
-.rect11{ width: 130px; height: 130px; top: 15%; left: 40%; animation: floatRect2 21s ease-in-out infinite; border-color: rgba(31, 86, 204, 0.04); }
-.rect12{ width: 240px; height: 80px; top: 65%; right: 25%; animation: floatRect3 24s ease-in-out infinite reverse; border-color: rgba(31, 204, 177, 0.05); }
+.rect8{ width: 200px; height: 140px; top: 18%; right: 2%; animation: floatRect2 15s ease-in-out infinite reverse; border-color: rgba(31, 204, 177, 0.16); }
+.rect9{ width: 60px; height: 160px; top: 45%; left: 88%; animation: floatRect3 17s ease-in-out infinite; border-color: rgba(31, 86, 204, 0.10); }
+.rect10{ width: 170px; height: 50px; top: 90%; left: 30%; animation: floatRect1 22s ease-in-out infinite reverse; border-color: rgba(31, 204, 177, 0.14); }
+.rect11{ width: 130px; height: 130px; top: 15%; left: 40%; animation: floatRect2 21s ease-in-out infinite; border-color: rgba(31, 86, 204, 0.10); }
+.rect12{ width: 240px; height: 80px; top: 65%; right: 25%; animation: floatRect3 24s ease-in-out infinite reverse; border-color: rgba(31, 204, 177, 0.14); }
 
 @keyframes floatRect1 {
   0%, 100% { transform: translate(0, 0) rotate(0deg); }
