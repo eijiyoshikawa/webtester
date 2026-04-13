@@ -168,8 +168,9 @@ header .header_inner #pc_navi nav ul.pc_nav_li li a:hover::after { width: 100%; 
 .news .btn{ margin-top: 40px; }
 .news .inner{ padding-bottom: 140px; }
 /*-------contact-------------------------------------*/
-.contact{ background: url("../img/contact_bg.jpg") no-repeat center; background-size: cover; background-position: 50% 20%; }
-.contact .inner.wrap{ justify-content: center; padding: 160px 0; }
+.contact{ background: url("../img/page-visual_02.jpg") no-repeat center; background-size: cover; background-position: 50% 40%; background-attachment: fixed; position: relative; }
+.contact::before{ content: ""; position: absolute; top: 0; left: 0; width: 100%; height: 100%; background: rgba(10, 25, 50, 0.55); }
+.contact .inner.wrap{ justify-content: center; padding: 160px 0; position: relative; z-index: 1; }
 .contact .inner.wrap .cta_box{ width: 45%; padding: 80px 70px 75px; background: rgba(255,255,255,0.90); --x-gradient: linear-gradient(90deg, #1F56CC 0 30px, transparent 0 calc(100% - 30px), #1F56CC calc(100% - 30px)); --y-gradient: linear-gradient(#1F56CC 0 30px, transparent 0 calc(100% - 30px), #1F56CC calc(100% - 30px)); background-image: var(--x-gradient), var(--y-gradient), var(--x-gradient), var(--y-gradient); background-repeat: no-repeat; background-size: 100% 5px, 5px 100%, 100% 5px, 5px 100%; background-position: top, right, bottom, left; }
 .contact .inner.wrap .cta_box.recruit{ margin-right: 75px; }
 .contact .inner.wrap .cta_box .clr_title{ font-size: 25px; display: inline-block; background: linear-gradient(90deg, #1F56CC 0%, #1FCCB1 100%); -webkit-background-clip: text; -webkit-text-fill-color: transparent; line-height: 1; letter-spacing: 0.05em; font-weight: 600; margin-bottom: 20px; }
@@ -314,6 +315,7 @@ footer .copyright{ padding-top: 30px; border-top: 1px solid #D5D5D5; margin-top:
 	.news .btn_right.pc_none{ margin-top: 40px; }
 	.news_main .news_li{ padding: 20px 0; padding-left: 10px; }
 	.news_main .news_li .text_area.list h4{ font-size: 14px; }
+	.contact{ background-attachment: scroll; }
 	.contact .inner.wrap{ padding: 60px 0; }
 	.contact .inner.wrap .cta_box.recruit{ margin-right: 0; margin-bottom: 20px; }
 	.contact .inner.wrap .cta_box{ padding: 40px 24px 35px; }
