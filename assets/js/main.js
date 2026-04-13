@@ -1,19 +1,20 @@
 /* ============================================
    SUISEI STUDIO — main.js
-   Vanilla JS: cursor, scroll animations, text split
+   Vanilla JS: cursor, scroll animations, text split,
+   hamburger menu, FAQ accordion
    ============================================ */
 
 (function () {
   'use strict';
 
   // --- Custom Cursor ---
-  const cursor = document.querySelector('.cursor');
-  const follower = document.querySelector('.cursor-follower');
-  const isTouch = window.matchMedia('(hover: none)').matches;
+  var cursor = document.querySelector('.cursor');
+  var follower = document.querySelector('.cursor-follower');
+  var isTouch = window.matchMedia('(hover: none)').matches;
 
   if (!isTouch && cursor && follower) {
-    let mx = 0, my = 0;
-    let fx = 0, fy = 0;
+    var mx = 0, my = 0;
+    var fx = 0, fy = 0;
 
     document.addEventListener('mousemove', function (e) {
       mx = e.clientX;
@@ -31,17 +32,21 @@
     }
     requestAnimationFrame(followCursor);
 
-    var hoverTargets = document.querySelectorAll('a, button, .cta__button');
-    hoverTargets.forEach(function (el) {
-      el.addEventListener('mouseenter', function () {
-        cursor.classList.add('is-hover');
-        follower.classList.add('is-hover');
+    // Hover effect on interactive elements
+    function bindCursorHover() {
+      var hoverTargets = document.querySelectorAll('a, button, .cta__button, .guide__cta-button');
+      hoverTargets.forEach(function (el) {
+        el.addEventListener('mouseenter', function () {
+          cursor.classList.add('is-hover');
+          follower.classList.add('is-hover');
+        });
+        el.addEventListener('mouseleave', function () {
+          cursor.classList.remove('is-hover');
+          follower.classList.remove('is-hover');
+        });
       });
-      el.addEventListener('mouseleave', function () {
-        cursor.classList.remove('is-hover');
-        follower.classList.remove('is-hover');
-      });
-    });
+    }
+    bindCursorHover();
   }
 
   // --- Navigation Scroll Effect ---
@@ -56,8 +61,30 @@
     });
   }
 
+  // --- Hamburger Menu ---
+  var hamburger = document.getElementById('hamburger');
+  var mobileMenu = document.getElementById('mobile-menu');
+
+  if (hamburger && mobileMenu) {
+    hamburger.addEventListener('click', function () {
+      hamburger.classList.toggle('is-active');
+      mobileMenu.classList.toggle('is-open');
+      document.body.style.overflow = mobileMenu.classList.contains('is-open') ? 'hidden' : '';
+    });
+
+    // Close menu on link click
+    var menuLinks = mobileMenu.querySelectorAll('.mobile-menu__link');
+    menuLinks.forEach(function (link) {
+      link.addEventListener('click', function () {
+        hamburger.classList.remove('is-active');
+        mobileMenu.classList.remove('is-open');
+        document.body.style.overflow = '';
+      });
+    });
+  }
+
   // --- Hero Load Animation ---
-  window.addEventListener('DOMContentLoaded', function () {
+  document.addEventListener('DOMContentLoaded', function () {
     var heroLines = document.querySelectorAll('.hero__line');
     var heroSub = document.querySelector('.hero__sub');
 
@@ -87,6 +114,31 @@
       statementText.appendChild(span);
     }
   }
+
+  // --- FAQ Accordion ---
+  var faqQuestions = document.querySelectorAll('.faq__question');
+  faqQuestions.forEach(function (btn) {
+    btn.addEventListener('click', function () {
+      var answer = btn.nextElementSibling;
+      var isOpen = btn.getAttribute('aria-expanded') === 'true';
+
+      // Close all others in same category
+      var category = btn.closest('.faq__category');
+      if (category) {
+        category.querySelectorAll('.faq__question').forEach(function (otherBtn) {
+          if (otherBtn !== btn) {
+            otherBtn.setAttribute('aria-expanded', 'false');
+            var otherAnswer = otherBtn.nextElementSibling;
+            if (otherAnswer) otherAnswer.classList.remove('is-open');
+          }
+        });
+      }
+
+      // Toggle clicked
+      btn.setAttribute('aria-expanded', isOpen ? 'false' : 'true');
+      if (answer) answer.classList.toggle('is-open', !isOpen);
+    });
+  });
 
   // --- Scroll-Triggered Animations (IntersectionObserver) ---
   var animElements = document.querySelectorAll('[data-animate]');
@@ -120,5 +172,16 @@
       chars.forEach(function (c) { c.classList.add('is-visible'); });
     });
   }
+
+  // --- Smooth scroll for anchor links ---
+  document.querySelectorAll('a[href^="#"]').forEach(function (anchor) {
+    anchor.addEventListener('click', function (e) {
+      var target = document.querySelector(this.getAttribute('href'));
+      if (target) {
+        e.preventDefault();
+        target.scrollIntoView({ behavior: 'smooth' });
+      }
+    });
+  });
 
 })();
