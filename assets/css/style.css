@@ -106,6 +106,134 @@ img { display: block; max-width: 100%; }
   66% { transform: translate(-15vw, -5vh); }
 }
 
+/* --- Background Illustrations --- */
+.bg-illust {
+  position: fixed;
+  inset: 0;
+  pointer-events: none;
+  z-index: 0;
+  overflow: hidden;
+}
+.bg-illust svg {
+  position: absolute;
+  opacity: 0.04;
+}
+/* Dancers */
+.bg-illust__dancer--1 {
+  width: 80px;
+  top: 15%;
+  left: 5%;
+  color: #FF0055;
+  animation: illustFloat1 18s ease-in-out infinite, illustSpin 30s linear infinite;
+}
+.bg-illust__dancer--2 {
+  width: 60px;
+  top: 60%;
+  right: 8%;
+  color: #8B5CF6;
+  animation: illustFloat2 22s ease-in-out infinite, illustSpin 35s linear infinite reverse;
+}
+/* Notes */
+.bg-illust__note--1 {
+  width: 35px;
+  top: 30%;
+  right: 15%;
+  color: #00FFFF;
+  animation: illustFloat3 16s ease-in-out infinite;
+}
+.bg-illust__note--2 {
+  width: 50px;
+  bottom: 25%;
+  left: 10%;
+  color: #FF0055;
+  animation: illustFloat1 20s ease-in-out infinite;
+}
+/* Sound waves */
+.bg-illust__wave--1 {
+  width: 100px;
+  top: 45%;
+  left: 20%;
+  color: #8B5CF6;
+  animation: illustPulse 8s ease-in-out infinite, illustFloat2 25s ease-in-out infinite;
+}
+.bg-illust__wave--2 {
+  width: 70px;
+  top: 20%;
+  right: 25%;
+  color: #00FFFF;
+  animation: illustPulse 10s ease-in-out infinite, illustFloat3 20s ease-in-out infinite;
+}
+/* Equalizer */
+.bg-illust__eq--1 {
+  width: 60px;
+  bottom: 15%;
+  right: 12%;
+  color: #FF0055;
+  animation: illustFloat1 15s ease-in-out infinite;
+}
+/* Dots */
+.bg-illust__dots {
+  width: 180px;
+  bottom: 40%;
+  left: 3%;
+  color: #8B5CF6;
+  animation: illustFloat3 24s ease-in-out infinite;
+}
+
+@keyframes illustFloat1 {
+  0%, 100% { transform: translate(0, 0); }
+  25% { transform: translate(3vw, -4vh); }
+  50% { transform: translate(-2vw, 3vh); }
+  75% { transform: translate(4vw, 2vh); }
+}
+@keyframes illustFloat2 {
+  0%, 100% { transform: translate(0, 0); }
+  33% { transform: translate(-4vw, 5vh); }
+  66% { transform: translate(3vw, -3vh); }
+}
+@keyframes illustFloat3 {
+  0%, 100% { transform: translate(0, 0); }
+  33% { transform: translate(5vw, 3vh); }
+  66% { transform: translate(-3vw, -4vh); }
+}
+@keyframes illustSpin {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
+}
+@keyframes illustPulse {
+  0%, 100% { opacity: 0.04; }
+  50% { opacity: 0.08; }
+}
+
+/* --- Studio card images --- */
+.studio__card-img img,
+.studio__hero-img img {
+  width: 100%;
+  height: auto;
+  display: block;
+  object-fit: cover;
+}
+.studio__hero-img img {
+  aspect-ratio: 21/9;
+  object-fit: cover;
+}
+.studio__card-img img {
+  aspect-ratio: 4/3;
+  object-fit: cover;
+  transition: transform 0.5s;
+}
+.studio__card:hover .studio__card-img img {
+  transform: scale(1.03);
+}
+
+/* --- News card images --- */
+.news-card__img img {
+  width: 100%;
+  aspect-ratio: 4/3;
+  object-fit: cover;
+  display: block;
+}
+
 /* --- Navigation --- */
 .nav {
   position: fixed;
@@ -586,6 +714,11 @@ img { display: block; max-width: 100%; }
   font-size: 14px;
   font-weight: 400;
   -webkit-text-fill-color: #888;
+}
+.price__amount--student {
+  background: linear-gradient(135deg, #8B5CF6, #00FFFF);
+  -webkit-background-clip: text;
+  background-clip: text;
 }
 .price__details {
   list-style: none;
