@@ -1,146 +1,99 @@
 <!DOCTYPE html>
 <html lang="ja">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>お問い合わせ | 合同会社あんじゅ</title>
-  <meta name="description" content="合同会社あんじゅへのお問い合わせ。採用応募・サービスに関するご質問はこちらから。">
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400&family=Noto+Sans+JP:wght@300;400;500;700&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="../assets/css/style.css">
+<meta charset="UTF-8">
+<title>お問い合わせ | 翔星建設株式会社</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="../assets/css/style.css">
+<link rel="stylesheet" href="https://use.typekit.net/qfs1yzw.css">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Sora:wght@100..800&display=swap" rel="stylesheet">
 </head>
 <body>
-
-  <!-- ========== HEADER ========== -->
-  <header class="header" id="header">
-    <div class="header__inner">
-      <a href="/" class="header__logo"><span class="header__logo-text">anju</span></a>
-      <nav class="header__nav" id="globalNav">
-        <a href="/" class="header__nav-item header__nav-link">home</a>
-        <a href="/service/" class="header__nav-item header__nav-link">service</a>
-        <a href="/news/" class="header__nav-item header__nav-link">news</a>
-        <a href="/blog/" class="header__nav-item header__nav-link">blog</a>
-        <a href="/recruit/" class="header__nav-item header__nav-link">recruit</a>
-      </nav>
-      <a href="/contact/" class="header__contact header__contact--active">contact<span class="contact-circle"></span></a>
-      <button class="header__hamburger" id="hamburger" aria-label="メニューを開く"><span></span><span></span><span></span></button>
-    </div>
-  </header>
-
-  <!-- ========== SIDEBAR ========== -->
-  <aside class="sidebar-recruit">
-    <div class="sidebar-recruit__badge">求 人 情 報</div>
-    <div class="sidebar-recruit__text"><span class="en">r e c r u i t</span><br>メンバー募集中</div>
-    <a href="/recruit/" class="sidebar-recruit__arrow" aria-label="採用情報へ">→</a>
-  </aside>
-  <div class="sidebar-sns">
-    <a href="https://www.instagram.com/care.anju/" target="_blank" rel="noopener noreferrer" class="sidebar-sns__item" aria-label="Instagram"><svg viewBox="0 0 24 24" fill="none"><rect x="2" y="2" width="20" height="20" rx="5" stroke="currentColor" stroke-width="1.5"/><circle cx="12" cy="12" r="5" stroke="currentColor" stroke-width="1.5"/><circle cx="17.5" cy="6.5" r="1.5" fill="currentColor"/></svg></a>
-    <a href="#" target="_blank" rel="noopener noreferrer" class="sidebar-sns__item" aria-label="TikTok"><svg viewBox="0 0 24 24" fill="none"><path d="M9 12a4 4 0 1 0 4 4V4a5 5 0 0 0 5 5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
-    <a href="#" target="_blank" rel="noopener noreferrer" class="sidebar-sns__item" aria-label="LINE"><span style="font-size:0.6rem;font-weight:500;">LINE</span></a>
-  </div>
-
-  <!-- ========== CONTACT PAGE ========== -->
-  <section class="cnt-page">
-    <div class="container">
-      <div class="cnt-page__header fade-in">
-        <h1 class="cnt-page__title">contact</h1>
-        <p class="cnt-page__subtitle">お問い合わせ</p>
-      </div>
-
-      <div class="cnt-page__grid fade-in">
-        <!-- Form -->
-        <div class="cnt-page__form-card">
-          <p class="cnt-page__intro">この度は、弊社にご興味を持っていただきありがとうございます。<br>本フォームは、履歴書の代わりとなるため、お手数ですがご回答の程宜しくお願い致します。</p>
-          <hr class="cnt-page__divider">
-
-          <form class="cnt-form" action="#" method="post">
-            <div class="cnt-form__group">
-              <label class="cnt-form__label" for="subject">ご用件 <span class="cnt-form__required">*</span></label>
-              <select class="cnt-form__select" id="subject" name="subject" required>
-                <option value="採用応募について">採用応募について</option>
-                <option value="サービスについて">サービスについて</option>
-                <option value="その他">その他</option>
-              </select>
-            </div>
-            <div class="cnt-form__group">
-              <label class="cnt-form__label" for="name">お名前 <span class="cnt-form__required">*</span></label>
-              <input class="cnt-form__input" type="text" id="name" name="name" required>
-            </div>
-            <div class="cnt-form__group">
-              <label class="cnt-form__label" for="email">メールアドレス <span class="cnt-form__required">*</span></label>
-              <input class="cnt-form__input" type="email" id="email" name="email" required>
-            </div>
-            <div class="cnt-form__group">
-              <label class="cnt-form__label" for="company">社名</label>
-              <input class="cnt-form__input" type="text" id="company" name="company">
-            </div>
-            <div class="cnt-form__group">
-              <label class="cnt-form__label" for="message">お問い合わせ内容 <span class="cnt-form__required">*</span></label>
-              <textarea class="cnt-form__textarea" id="message" name="message" rows="8" required></textarea>
-            </div>
-            <div class="cnt-form__footer">
-              <label class="cnt-form__privacy">
-                <input type="radio" name="privacy" required>
-                <a href="#">プライバシーポリシー</a>に同意する
-              </label>
-              <button type="submit" class="cnt-form__submit">
-                送信する
-                <span class="cnt-form__submit-line"></span>
-                <span class="cnt-form__submit-dot"></span>
-              </button>
-            </div>
-          </form>
-        </div>
-
-        <!-- Sidebar Info -->
-        <div class="cnt-page__sidebar">
-          <div class="cnt-page__sidebar-logo">
-            <span class="cnt-page__sidebar-nu">anju</span>
-            <div class="cnt-page__sidebar-name">
-              <span>合同会社 あんじゅ</span>
-              <span class="cnt-page__sidebar-name-en">Anju LLC.</span>
-            </div>
-          </div>
-          <hr class="cnt-page__divider">
-          <a href="tel:0367959937" class="cnt-page__sidebar-phone">03-6795-9937</a>
-          <p class="cnt-page__sidebar-follow">フォローはこちら</p>
-          <div class="cnt-page__sidebar-sns">
-            <a href="https://www.instagram.com/care.anju/" target="_blank" rel="noopener noreferrer" class="cnt-page__sidebar-sns-link" aria-label="Instagram">
-              <svg viewBox="0 0 24 24" fill="none"><rect x="2" y="2" width="20" height="20" rx="5" stroke="currentColor" stroke-width="1.5"/><circle cx="12" cy="12" r="5" stroke="currentColor" stroke-width="1.5"/><circle cx="17.5" cy="6.5" r="1.5" fill="currentColor"/></svg>
-            </a>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- ========== CONTACT SHARED ========== -->
-  <section class="contact-section">
-    <div class="container">
-      <div class="contact-section__inner fade-in">
-        <div class="contact-section__text">
-          <h2 class="contact-section__heading">contact</h2>
-          <p class="contact-section__subheading">お問い合わせ</p>
-          <p class="contact-section__description">弊社へのご質問（会社情報、サービス等）は、こちらからお問い合わせください。</p>
-          <div class="contact-section__btn"><a href="/contact/" class="btn-cta btn-cta--white"><span class="btn-cta__label">お問い合わせフォームはこちら</span><span class="btn-cta__line"></span><span class="btn-cta__dot"></span></a></div>
-        </div>
-        <div class="contact-section__map"><iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3239.8!2d139.786!3d35.712!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x60188ec3a3e9b4a7%3A0x0!2z5p2x5Lqs6YO95Y-w5p2x5Yy65p2-44GM6LC3!5e0!3m2!1sja!2sjp!4v1700000000000" width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy" title="所在地"></iframe></div>
-      </div>
-    </div>
-  </section>
-
-  <!-- ========== FOOTER ========== -->
-  <footer class="footer">
-    <div class="footer__brand"><span class="footer__logo">anju</span><span class="footer__name-jp">合同会社 あんじゅ</span><span class="footer__name-en">Anju LLC.</span></div>
-    <nav class="footer__nav">
-      <a href="/" class="footer__nav-item">home</a><a href="/service/" class="footer__nav-item">service</a><a href="/news/" class="footer__nav-item">news</a><a href="/blog/" class="footer__nav-item">blog</a><a href="/recruit/" class="footer__nav-item">recruit</a><a href="/contact/" class="footer__nav-item">contact</a><a href="#" class="footer__nav-item">privacy-policy</a>
-    </nav>
-    <p class="footer__copyright">&copy; Anju LLC. All Rights Reserved.</p>
-  </footer>
-
-  <a href="#" class="back-to-top" id="backToTop" aria-label="ページトップへ戻る"><svg viewBox="0 0 24 24" fill="none"><path d="M12 19V5M5 12l7-7 7 7" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
-
-  <script src="../assets/js/main.js"></script>
+<header class="header">
+<div class="header_inner">
+<h1 id="logo"><a href="../"><img src="../assets/img/logo_black.png" alt="翔星建設株式会社"></a></h1>
+<div id="pc_navi"><div class="nav_header"><nav><ul class="pc_nav_li en">
+<li><a href="../about/">ABOUT US</a></li><li><a href="../news/">NEWS</a></li><li><a href="../works/">WORKS</a></li><li><a href="../recruit/">RECRUIT</a></li><li><a href="../contact/">CONTACT</a></li>
+</ul></nav></div></div>
+<div id="nav-wrapper" class="nav-wrapper">
+<div class="hamburger" id="js-hamburger"><span class="hamburger__line hamburger__line--1"></span><span class="hamburger__line hamburger__line--2"></span><span class="hamburger__line hamburger__line--3"></span></div>
+<nav class="sp-nav"><ul>
+<li><a href="../">TOP</a></li><li><a href="../about/">ABOUT US</a></li><li><a href="../news/">NEWS</a></li><li><a href="../works/">WORKS</a></li><li><a href="../recruit/">RECRUIT</a></li><li><a href="../contact/">CONTACT</a></li><li><a href="../privacypolicy/">PRIVACYPOLICY</a></li>
+</ul></nav>
+<div class="black-bg" id="js-black-bg"></div>
+</div>
+</div>
+</header>
+<div class="sub_kv">
+<div class="inner">
+<h2 class="en">CONTACT</h2>
+<p>お問い合わせ</p>
+</div>
+</div>
+<div class="sub_main contact_page">
+<div class="inner">
+<div class="form_main">
+<div class="form">
+<p class="center">下記フォームに必要事項をご入力の上、送信してください。</p>
+<div class="wpcf7">
+<p class="form_name">お問い合わせ種別</p>
+<select class="wpcf7-select">
+<option value="">選択してください</option>
+<option value="施工依頼">施工依頼</option>
+<option value="協業について">協業について</option>
+<option value="不動産について">不動産について</option>
+<option value="その他">その他</option>
+</select>
+<p class="form_name">お名前</p>
+<input type="text" class="wpcf7-text" placeholder="例）山田 太郎">
+<p class="form_name">メールアドレス</p>
+<input type="email" class="wpcf7-text" placeholder="例）info@example.com">
+<p class="form_name">電話番号</p>
+<input type="tel" class="wpcf7-text" placeholder="例）0742-23-6768">
+<p class="form_name">お問い合わせ内容</p>
+<textarea class="wpcf7-text" rows="8" placeholder="お問い合わせ内容をご記入ください"></textarea>
+<div class="wpcf7-acceptance">
+<label><input type="checkbox"> <a href="../privacypolicy/" style="display:inline">プライバシーポリシー</a>に同意する</label>
+</div>
+<p class="center"><input type="submit" value="送信する" class="wpcf7-submit"></p>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="contact">
+<div class="wrap inner">
+<div class="cta_box recruit">
+<h2 class="clr_title en">RECRUIT</h2>
+<p>採用に関するお問い合わせは<br>こちらからお気軽にご連絡ください。</p>
+<a href="../recruit/" class="btn">MORE</a>
+</div>
+<div class="cta_box">
+<h2 class="clr_title en">CONTACT</h2>
+<p>会社関係、協業業者、施工依頼、<br>その他お問い合わせはこちらからご連絡ください。</p>
+<a href="../contact/" class="btn">MORE</a>
+</div>
+</div>
+</div>
+<footer>
+<div class="inner">
+<div class="logo"><a href="../"><img src="../assets/img/logo_black.png" alt="翔星建設株式会社"></a></div>
+<div class="wrap">
+<div class="nav"><p class="grey">SITE MAP</p>
+<ul><li><a href="../">TOP</a></li><li><a href="../about/">ABOUT US</a></li><li><a href="../works/">WORKS</a></li><li><a href="../news/">NEWS</a></li></ul>
+<ul><li><a href="../recruit/">RECRUIT</a></li><li><a href="../contact/">CONTACT</a></li><li><a href="../privacypolicy/">PRIVACYPOLICY</a></li></ul>
+</div>
+<div class="sns"><p class="grey">SNS</p>
+<a href="https://www.instagram.com/shoseikensetsu_nara/">shoseikensetsu</a>
+<a href="https://www.tiktok.com/@shosei.kensetsu/" class="tiktok">shosei.kensetsu</a>
+</div>
+</div>
+<div class="copyright en"><p>Copyright(c) ShoseiKensetsu All Rights Reserved.</p></div>
+</div>
+</footer>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+<script src="../assets/js/main.js"></script>
 </body>
 </html>
