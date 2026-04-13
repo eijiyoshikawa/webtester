@@ -25,9 +25,30 @@
 
 <!-- Navigation -->
 <nav class="nav" id="nav">
-  <div class="nav__logo">SUISEI</div>
+  <a href="./" class="nav__logo">SUISEI</a>
+  <ul class="nav__menu" id="nav-menu">
+    <li><a href="#studio" class="nav__link">STUDIO</a></li>
+    <li><a href="./info/" class="nav__link">NEWS</a></li>
+    <li><a href="./riyou/" class="nav__link">GUIDE</a></li>
+    <li><a href="#faq" class="nav__link">FAQ</a></li>
+  </ul>
   <a href="https://system.suiseistudio.com/" target="_blank" rel="noopener" class="nav__reserve">RESERVE</a>
+  <button class="hamburger" id="hamburger" aria-label="メニュー">
+    <span class="hamburger__line"></span>
+    <span class="hamburger__line"></span>
+    <span class="hamburger__line"></span>
+  </button>
 </nav>
+<!-- Mobile Menu Overlay -->
+<div class="mobile-menu" id="mobile-menu">
+  <ul class="mobile-menu__list">
+    <li><a href="#studio" class="mobile-menu__link">STUDIO</a></li>
+    <li><a href="./info/" class="mobile-menu__link">NEWS</a></li>
+    <li><a href="./riyou/" class="mobile-menu__link">GUIDE</a></li>
+    <li><a href="#faq" class="mobile-menu__link">FAQ</a></li>
+    <li><a href="https://system.suiseistudio.com/" target="_blank" rel="noopener" class="mobile-menu__link mobile-menu__link--reserve">RESERVE</a></li>
+  </ul>
+</div>
 
 <!-- Hero -->
 <section class="hero" id="hero">
