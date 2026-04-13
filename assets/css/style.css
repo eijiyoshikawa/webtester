@@ -1212,10 +1212,19 @@ img { display: block; max-width: 100%; }
 }
 
 /* --- Responsive --- */
+@media (max-width: 1024px) {
+  .nav__menu { display: none; }
+  .hamburger { display: flex; }
+  .nav__reserve { margin-right: 48px; }
+}
+@media (min-width: 1025px) {
+  .hamburger { display: none; }
+  .mobile-menu { display: none !important; }
+}
 @media (max-width: 768px) {
   .nav { padding: 16px 20px; }
   .nav__logo { font-size: 15px; letter-spacing: 0.2em; }
-  .nav__reserve { padding: 10px 20px; font-size: 11px; }
+  .nav__reserve { padding: 10px 20px; font-size: 11px; margin-right: 48px; }
 
   .hero__side { right: 16px; font-size: 11px; }
   .hero__scroll { bottom: 24px; }
@@ -1224,6 +1233,21 @@ img { display: block; max-width: 100%; }
   .statement { padding: 80px 0; }
   .statement__marquee { margin-bottom: 48px; }
   .statement__content { padding: 0 24px; }
+
+  .studio { padding: 80px 24px; }
+  .studio__grid {
+    grid-template-columns: 1fr;
+    gap: 40px;
+  }
+  .studio__hero-img { margin-bottom: 48px; }
+
+  .price { padding: 80px 24px; }
+  .price__row { padding: 16px 20px; }
+  .price__amount { font-size: 24px; }
+
+  .faq { padding: 80px 24px; }
+  .faq__question { padding: 16px 20px; font-size: 14px; }
+  .faq__answer p { padding: 0 20px 16px; }
 
   .location {
     flex-direction: column;
@@ -1254,6 +1278,25 @@ img { display: block; max-width: 100%; }
   .orb--1 { width: 300px; height: 300px; }
   .orb--2 { width: 250px; height: 250px; }
   .orb--3 { width: 200px; height: 200px; }
+
+  /* News page mobile */
+  .news-page { padding: 60px 24px 80px; }
+  .news-card {
+    grid-template-columns: 1fr;
+    gap: 16px;
+  }
+  .news-card__img .placeholder-img { aspect-ratio: 16/9; }
+
+  /* Guide page mobile */
+  .guide { padding: 60px 24px 80px; }
+  .guide__block { padding-left: 16px; }
+  .guide__cta-button { padding: 20px 32px; }
+
+  /* Page footer mobile */
+  .page-footer { padding: 40px 24px 32px; }
+  .page-footer__nav { flex-direction: column; gap: 20px; }
+  .page-footer__links { flex-wrap: wrap; gap: 16px; }
+  .page-footer__info { flex-direction: column; gap: 12px; text-align: center; }
 }
 
 /* --- Reduced Motion --- */
