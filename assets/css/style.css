@@ -256,86 +256,113 @@ footer .copyright{ padding-top: 30px; border-top: 1px solid #D5D5D5; margin-top:
 .content figure{ margin: 50px 0; }
 @media (max-width: 767px) {
 	.sp_none{ display: none; }
-	header { height: 70px; }
-	header .header_inner { height: 70px; }
-	header .header_inner #logo a { width: 10rem; }
-	header .header_inner #logo a img { width: 100%; margin-left: 1rem; }
-	.inner{ margin: 0 20px; padding: 60px 0; }
-	a.btn{ margin: 50px auto 0; }
+	header { height: 60px; }
+	header .header_inner { height: 60px; padding: 0 15px; }
+	header .header_inner #logo { width: 150px; }
+	header .header_inner #logo a { width: 100%; }
+	header .header_inner #logo a img { width: 100%; }
+	.inner{ margin: 0 16px; padding: 50px 0; }
+	a.btn{ margin: 40px auto 0; font-size: 16px; }
 	#top::before { background: url(../img/bg_sp.png) no-repeat center; background-size: cover; width: 66%; height: 0; padding-top: 205%; }
 	body::before { background: url("../img/sp_sub_bg.png") no-repeat center; background-size: cover; width: 60%; height: 0; padding-top: 70%; right: 5%; }
-	.kv{ padding-top: 200px; }
-	.kv .kv_txt{ text-align: right; bottom: 90px; }
-	.kv .kv_txt h2{ font-size: 85px; }
-	.kv .kv_txt p{ font-size: 25px; }
+	.kv{ padding-top: 80px; }
+	.kv .kv_txt{ text-align: right; bottom: 60px; padding: 0 16px; }
+	.kv .kv_txt h2{ font-size: 60px; }
+	.kv .kv_txt p{ font-size: 20px; letter-spacing: 0.04em; }
 	.kv .scroll{ left: 20px; }
 	.kv .slider::after{ width: 100%; margin-bottom: 0; bottom: 0; }
 	.about .text_area, .about .img_area, .service .wrap .img_area, .work_li li, .ttl_area, .news_main, .contact .inner.wrap .cta_box, footer .inner .wrap .nav, footer .inner .wrap .sns{ width: 100%; }
-	.title{ font-size: 46px; }
-	.about{ padding-top: 120px; }
-	.about .text_area{ padding-left: 20%; }
-	.about .text_area p{ font-size: 15px; }
-	.about h2.title{ left: -35%; top: 120px; }
-	.about .img_area{ padding-top: 60px; }
-	.service .wrap .img_area img, .service .wrap .img_area{ height: 160px; }
-	.service .wrap .img_area{ margin-right: 0; }
-	.service .title{ padding: 60px 0 22px; }
-	.service .service_li li{ width: calc(100% / 2 - 5px); margin-bottom: 10px; border-left: 2px solid #E0E0E0; }
-	.bg{ height: 300px; margin: 70px 0; background-attachment: inherit; }
-	.work_li{ margin-top: 30px; }
-	.work_li li{ margin-bottom: 50px; }
+	.title{ font-size: 36px; border-bottom: none; padding-bottom: 8px; }
+	.about{ padding-top: 60px; }
+	.about .text_area{ padding-left: 0; }
+	.about .text_area p{ font-size: 14px; line-height: 2; }
+	.about h2.title{ position: relative; rotate: 0deg; left: 0; top: 0; margin-bottom: 20px; }
+	.about .img_area{ padding-top: 40px; }
+	.service .wrap .img_area img, .service .wrap .img_area{ height: 120px; }
+	.service .wrap .img_area{ margin-right: 0; margin-bottom: 20px; }
+	.service .title{ padding: 30px 0 15px; }
+	.service .service_li li{ width: calc(100% / 2 - 5px); margin-bottom: 8px; border-left: 2px solid #E0E0E0; font-size: 13px; padding: 8px 0; }
+	.bg{ height: 200px; margin: 40px 0; background-attachment: inherit; }
+	.work_li{ margin-top: 20px; }
+	.work_li li{ margin-bottom: 30px; border-bottom: 1px solid #EBEBEB; padding-bottom: 20px; }
+	.work_li li .text_area h4{ font-size: 15px; padding-bottom: 10px; }
 	.work a.btn{ margin-top: 0; }
-	.news_main{ margin-top: 30px; }
-	.news .btn_right.pc_none{ margin-top: 60px; }
-	.contact .inner.wrap .cta_box.recruit{ margin-right: 0; margin-bottom: 30px; }
-	.contact .inner.wrap .cta_box{ padding: 60px 30px 50px; }
-	footer .inner .logo{ width: 265px; }
-	footer .inner .wrap .nav ul li{ margin-bottom: 30px; width: 50%; }
+	.news_main{ margin-top: 20px; }
+	.news .btn_right.pc_none{ margin-top: 40px; }
+	.news_main .news_li{ padding: 20px 0; padding-left: 10px; }
+	.news_main .news_li .text_area.list h4{ font-size: 14px; }
+	.contact .inner.wrap{ padding: 60px 0; }
+	.contact .inner.wrap .cta_box.recruit{ margin-right: 0; margin-bottom: 20px; }
+	.contact .inner.wrap .cta_box{ padding: 40px 24px 35px; }
+	.contact .inner.wrap .cta_box .clr_title{ font-size: 20px; }
+	.contact .inner.wrap .cta_box p{ font-size: 13px; }
+	footer .inner .logo{ width: 200px; }
+	footer .inner .wrap .nav ul li{ margin-bottom: 20px; width: 50%; font-size: 13px; }
 	footer .inner .wrap .nav ul:nth-child(3){ margin-top: 0; }
-	footer .inner .wrap .sns{ padding-top: 30px; }
-	.sub_main .inner{ padding-bottom: 200px; }
-	.sub_kv h2{ font-size: 36px; }
-	.sub_kv p{ font-size: 16px; padding-left: 80px; }
-	.sub_kv p::before{ width: 70px; }
-	.sub_kv.privacy .inner{ padding-top: 140px; }
-	.msg .wrap .text_area h3{ font-size: 40px; white-space: nowrap; }
-	.msg .wrap .text_area .msg_ttl p{ font-size: 18px; }
+	footer .inner .wrap .sns{ padding-top: 20px; }
+	footer .inner .wrap .sns a{ font-size: 13px; }
+	footer .copyright{ margin-top: 40px; }
+	.sub_main .inner{ padding-bottom: 100px; padding-top: 60px; }
+	.sub_kv .inner{ padding-top: 100px; }
+	.sub_kv h2{ font-size: 32px; }
+	.sub_kv p{ font-size: 14px; padding-left: 60px; margin-top: 12px; }
+	.sub_kv p::before{ width: 50px; }
+	.sub_kv.privacy .inner{ padding-top: 100px; }
+	.msg .wrap .text_area h3{ font-size: 32px; white-space: nowrap; }
+	.msg .wrap .text_area .msg_ttl{ margin-bottom: 30px; }
+	.msg .wrap .text_area .msg_ttl p{ font-size: 15px; }
 	.msg .wrap .text_area, .msg .wrap .img_area{ width: 100%; }
-	.msg .wrap .img_area{ padding-top: 60px; }
+	.msg .wrap .text_area p{ font-size: 14px; }
+	.msg .wrap .img_area{ padding-top: 40px; }
+	.philosophy{ padding-top: 100px; }
 	.philosophy .wrap div{ width: 100%; text-align: center; }
-	.philosophy .wrap div:nth-child(2){ padding-top: 120px; }
-	.philosophy .wrap div p{ font-size: 24px; }
-	.philosophy .bg_txt{ font-size: 95px; top: 21%; }
-	.company table{ width: 100%; }
-	.company h2.title{ position: inherit; rotate: 0deg; top: 0; left: 0; font-size: 30px; }
-	.company table th, .company table td{ display: block; padding-left: 0; padding-right: 0; }
-	.company table th{ border-bottom: none; padding-bottom: 0; padding-top: 30px; }
-	.company table td{ padding-top: 10px; }
-	.sub_kv.single h2{ font-size: 20px; }
-	.single_main .inner{ padding-top: 75px; }
+	.philosophy .wrap div:nth-child(2){ padding-top: 60px; }
+	.philosophy .wrap div p{ font-size: 20px; }
+	.philosophy .wrap div p.color{ font-size: 20px; }
+	.philosophy .bg_txt{ font-size: 70px; top: 21%; }
+	.company{ margin-top: 80px; }
+	.company table{ width: 100%; padding-left: 0; }
+	.company h2.title{ position: inherit; rotate: 0deg; top: 0; left: 0; font-size: 28px; margin-bottom: 20px; }
+	.company table th, .company table td{ display: block; padding-left: 0; padding-right: 0; font-size: 14px; }
+	.company table th{ border-bottom: none; padding-bottom: 0; padding-top: 25px; font-size: 14px; }
+	.company table td{ padding-top: 8px; padding-bottom: 15px; }
+	.sub_kv.single .inner{ padding-top: 80px; }
+	.sub_kv.single h2{ font-size: 18px; }
+	.single_main .inner{ padding-top: 40px; }
+	.single_main .inner .head_ttl{ padding-bottom: 20px; margin-bottom: 30px; }
+	.single_main .inner .head_ttl h4{ font-size: 18px; }
 	.work_single .head_ttl .icatch, .work_single .head_ttl .ttl_content{ width: 100%; }
+	.work_single .head_ttl .ttl_content{ margin-top: 20px; }
 	.sub_main .news_main{ width: 100%; }
 	.message .wrap .text_area, .message .wrap .img_area{ width: 100%; }
-	.message .wrap .text_area h3.msg_ttl{ font-size: 46px; }
-	.message .wrap .text_area h4{ font-size: 14px; }
-	.sub_main .message .inner{ padding-bottom: 120px; }
-	.overview{ padding: 60px 0; }
-	.overview .table:nth-child(2){ margin-top: 30px; }
-	.overview .table{ width: 100%; padding: 30px 18px; }
-	.overview table th, .overview table td{ display: block; padding-left: 0; padding-right: 0; border-top: none; }
-	.overview table th{ border-bottom: none; padding-bottom: 0; padding-top: 30px; width: auto; }
-	.overview table td{ padding-top: 10px; }
-	.benefit h3{ font-size: 18px; padding-bottom: 20px; }
-	.benefit .benefit_list{ width: 100%; margin-bottom: 20px; }
-	.entry a{ padding: 60px 40px 190px; font-size: 70px; text-align: center; }
-	.entry a::after{ top: 65%; right: 35%; }
-	.sub_kv.not-found p{ padding-left: 35px; }
+	.message .wrap .text_area h3.msg_ttl{ font-size: 36px; }
+	.message .wrap .text_area h4{ font-size: 16px; margin-bottom: 15px; }
+	.message .wrap .text_area p{ font-size: 14px; }
+	.message .wrap .img_area{ order: -1; margin-bottom: 30px; }
+	.sub_main .message .inner{ padding-bottom: 60px; }
+	.overview{ padding: 40px 0; }
+	.overview .inner{ padding: 0 16px; }
+	.overview .table:nth-child(2){ margin-top: 20px; }
+	.overview .table{ width: 100%; padding: 24px 16px; }
+	.overview .table p.border{ font-size: 17px; }
+	.overview table th, .overview table td{ display: block; padding-left: 0; padding-right: 0; border-top: none; font-size: 14px; }
+	.overview table th{ border-bottom: none; padding-bottom: 0; padding-top: 20px; width: auto; }
+	.overview table td{ padding-top: 6px; padding-bottom: 10px; }
+	.benefit{ padding: 50px 0 0; }
+	.benefit .inner{ padding: 0 16px; }
+	.benefit h3{ font-size: 18px; padding-bottom: 15px; }
+	.benefit .benefit_list{ width: 100%; margin-bottom: 12px; padding: 20px 0; border-top-width: 2px; }
+	.entry{ padding: 0 16px; }
+	.entry a{ padding: 40px 30px 120px; font-size: 48px; text-align: center; display: block; }
+	.entry a::after{ width: 60px; height: 60px; top: auto; bottom: 30px; right: 50%; transform: translateX(50%); }
+	.sub_kv.not-found p{ padding-left: 35px; font-size: 13px; }
 	.sub_kv.not-found p::before{ width: 23px; }
-	.btn_top{ margin-top: 80px; }
+	.btn_top{ margin-top: 60px; padding: 10px 60px; font-size: 14px; }
 	.form{ width: 100%; }
-	.sub_main.contact_page .inner{ padding-top: 60px; }
+	.sub_main.contact_page .inner{ padding-top: 40px; }
 	div.wpcf7 input.wpcf7-submit{ width: 100%; }
-	div.wpcf7 p.center{ padding-bottom: 80px; }
+	div.wpcf7 p.center{ padding-bottom: 60px; font-size: 13px; }
+	div.wpcf7 p.form_name{ font-size: 13px; padding-top: 25px; }
 	.wrap .cta_item{ width: 100%; }
 }
 @media (min-width: 768px) {
@@ -366,7 +393,7 @@ input[type="text"]:focus, input[type="email"]:focus, textarea{ outline: none; }
 
 /*-------ハンバーガーメニュー-------------------------------------*/
 @media (max-width: 1024px){
-.hamburger { position: absolute; right: 20px; top: 20px; width: 30px; height: 45px; cursor: pointer; z-index: 300; }
+.hamburger { position: absolute; right: 16px; top: 15px; width: 30px; height: 40px; cursor: pointer; z-index: 300; }
 .hamburger__line { position: absolute; width: 35px; height: 2px; right: 0; background-color: #1F56CC; transition: all 0.5s; }
 .hamburger__line--1 { top: 3px; }
 .hamburger__line--2 { top: 11px; }
@@ -374,10 +401,10 @@ input[type="text"]:focus, input[type="email"]:focus, textarea{ outline: none; }
 .open .hamburger__line--1 { top: 5px; left: 5px; transform: translateY(6px) rotate(-150deg); }
 .open .hamburger__line--2 { opacity: 0; }
 .open .hamburger__line--3 { top: 17px; left: 5px; transform: translateY(-6px) rotate(150deg); }
-.sp-nav { position: fixed; right: -100%; top: 0; width: 75%; height: 100vh; background-color: #fff; transition: all 0.5s; z-index: 200; padding-left: 30px; padding-right: 30px; padding-top: 80px; font-size: 18px; overflow-y: auto; }
+.sp-nav { position: fixed; right: -100%; top: 0; width: 80%; height: 100vh; background-color: #fff; transition: all 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94); z-index: 200; padding-left: 30px; padding-right: 30px; padding-top: 80px; font-size: 18px; overflow-y: auto; box-shadow: -5px 0 30px rgba(0,0,0,0.1); }
 .sp-nav a{ font-size: 16px; display: block; text-decoration: none; transition: color .4s ease; }
 .sp-nav ul { list-style: none; padding: 0; }
-.sp-nav ul li{ position: relative; margin-bottom: 35px; padding-left: 20px; }
+.sp-nav ul li{ position: relative; margin-bottom: 25px; padding-left: 20px; padding-bottom: 10px; border-bottom: 1px solid #F0F0F0; }
 .sp-nav ul li::before{ position: absolute; content: ""; width: 9px; height: 9px; border-radius: 50%; background: linear-gradient(90deg, #1F56CC 0%, #1FCCB1 100%); left: 0; top: 50%; transform: translateY(-50%); }
 .open .sp-nav { right: 0; }
 .black-bg { position: fixed; left: 0; top: 0; width: 100vw; height: 100vh; z-index: 100; background-color: #000; opacity: 0; visibility: hidden; transition: all 0.5s; cursor: pointer; }
