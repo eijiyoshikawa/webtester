@@ -68,20 +68,23 @@
         });
     });
 
-    // Hamburger menu
+    // Fullscreen menu
     window.onload = function () {
         var nav = document.getElementById('nav-wrapper');
         var hamburger = document.getElementById('js-hamburger');
-        var blackBg = document.getElementById('js-black-bg');
         if (hamburger) {
             hamburger.addEventListener('click', function () {
                 nav.classList.toggle('open');
+                document.body.style.overflow = nav.classList.contains('open') ? 'hidden' : '';
             });
         }
-        if (blackBg) {
-            blackBg.addEventListener('click', function () {
+        // Close menu when a nav link is clicked
+        var spLinks = document.querySelectorAll('.sp-nav a');
+        spLinks.forEach(function(link) {
+            link.addEventListener('click', function() {
                 nav.classList.remove('open');
+                document.body.style.overflow = '';
             });
-        }
+        });
     };
 })(jQuery);
