@@ -1,25 +1,22 @@
 (function($) {
-    // Slick slider
+    // Slick slider - 3 slides with depth effect
     $(function () {
         $(".slider").slick({
             arrows: false,
             autoplay: true,
-            adaptiveHeight: true,
+            autoplaySpeed: 4000,
+            speed: 800,
             centerMode: true,
-            centerPadding: "10%",
+            centerPadding: "12%",
             dots: false,
-            slidesToShow: 3,
+            slidesToShow: 1,
+            slidesToScroll: 1,
+            focusOnSelect: true,
+            cssEase: "cubic-bezier(0.25, 0.46, 0.45, 0.94)",
             responsive: [{
                 breakpoint: 768,
                 settings: {
-                    slidesToShow: 2,
-                    slidesToScroll: 1
-                }
-            }, {
-                breakpoint: 480,
-                settings: {
-                    slidesToShow: 1,
-                    slidesToScroll: 1
+                    centerPadding: "8%"
                 }
             }]
         });
