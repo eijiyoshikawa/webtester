@@ -1,18 +1,4 @@
-/**
- * 翔星建設株式会社 - Main JavaScript
- */
 (function($) {
-    // Hamburger menu
-    $(function () {
-        $('#nav-toggle').on('click', function() {
-            $('body').toggleClass('open');
-        });
-    });
-
-    $('#gloval-nav a[href]').on('click', function(event) {
-        $('#nav-toggle').trigger('click');
-    });
-
     // Slick slider
     $(function () {
         $(".slider").slick({
@@ -27,13 +13,13 @@
                 breakpoint: 768,
                 settings: {
                     slidesToShow: 2,
-                    slidesToScroll: 1,
+                    slidesToScroll: 1
                 }
             }, {
                 breakpoint: 480,
                 settings: {
                     slidesToShow: 1,
-                    slidesToScroll: 1,
+                    slidesToScroll: 1
                 }
             }]
         });
@@ -65,12 +51,11 @@
         });
     });
 
-    // Hamburger menu toggle
+    // Hamburger menu
     window.onload = function () {
         var nav = document.getElementById('nav-wrapper');
         var hamburger = document.getElementById('js-hamburger');
         var blackBg = document.getElementById('js-black-bg');
-
         if (hamburger) {
             hamburger.addEventListener('click', function () {
                 nav.classList.toggle('open');
