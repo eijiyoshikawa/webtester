@@ -896,6 +896,295 @@ img { display: block; max-width: 100%; }
   to { height: 60px; }
 }
 
+/* --- Sub Page Header --- */
+.sub-hero {
+  position: relative;
+  height: 40vh;
+  min-height: 280px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  z-index: 1;
+}
+.sub-hero__grain {
+  position: absolute;
+  top: -50%; left: -50%;
+  width: 200%; height: 200%;
+  background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='0.04'/%3E%3C/svg%3E");
+  background-size: 256px 256px;
+  opacity: 0.5;
+  animation: grain 0.5s steps(6) infinite;
+  pointer-events: none;
+}
+.sub-hero__content {
+  text-align: center;
+  position: relative;
+  z-index: 2;
+}
+.sub-hero__label {
+  display: block;
+  font-family: "Space Grotesk", sans-serif;
+  font-size: 13px;
+  letter-spacing: 0.3em;
+  color: #666;
+  margin-bottom: 12px;
+}
+.sub-hero__title {
+  font-family: "Sora", "Hiragino Sans", sans-serif;
+  font-size: clamp(28px, 6vw, 48px);
+  font-weight: 700;
+  background: linear-gradient(135deg, #FF0055, #8B5CF6, #00FFFF);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+/* --- News Page --- */
+.news-page {
+  padding: 80px 40px 120px;
+  z-index: 1;
+  position: relative;
+}
+.news-page__inner {
+  max-width: 900px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  gap: 48px;
+}
+.news-card {
+  display: grid;
+  grid-template-columns: 280px 1fr;
+  gap: 32px;
+  align-items: start;
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 0.6s, transform 0.6s;
+}
+.news-card.is-visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+.news-card__img {
+  overflow: hidden;
+}
+.news-card__img .placeholder-img {
+  aspect-ratio: 4/3;
+}
+.news-card__date {
+  font-family: "Space Grotesk", sans-serif;
+  font-size: 13px;
+  letter-spacing: 0.15em;
+  color: #666;
+  display: block;
+  margin-bottom: 8px;
+}
+.news-card__title {
+  font-family: "Sora", sans-serif;
+  font-size: 18px;
+  font-weight: 700;
+  line-height: 1.6;
+  margin-bottom: 12px;
+}
+.news-card__text {
+  font-size: 14px;
+  line-height: 1.8;
+  color: #999;
+}
+
+/* --- Guide Page --- */
+.guide {
+  padding: 80px 40px 120px;
+  z-index: 1;
+  position: relative;
+}
+.guide__inner {
+  max-width: 800px;
+  margin: 0 auto;
+}
+.guide__section {
+  margin-bottom: 80px;
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 0.6s, transform 0.6s;
+}
+.guide__section.is-visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+.guide__section-bar {
+  padding: 16px 24px;
+  background: linear-gradient(135deg, rgba(255,0,85,0.15), rgba(139,92,246,0.15));
+  border-left: 3px solid #FF0055;
+  margin-bottom: 32px;
+}
+.guide__section-title {
+  font-family: "Sora", sans-serif;
+  font-size: 18px;
+  font-weight: 700;
+  letter-spacing: 0.05em;
+}
+.guide__block {
+  margin-bottom: 32px;
+  padding-left: 24px;
+}
+.guide__subtitle {
+  font-size: 15px;
+  font-weight: 700;
+  margin-bottom: 12px;
+  color: #ddd;
+}
+.guide__block p {
+  font-size: 14px;
+  line-height: 1.9;
+  color: #aaa;
+}
+.guide__block ul {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  margin-top: 8px;
+}
+.guide__block li {
+  font-size: 14px;
+  line-height: 1.8;
+  color: #aaa;
+  padding-left: 16px;
+  position: relative;
+}
+.guide__block li::before {
+  content: '・';
+  position: absolute;
+  left: 0;
+  color: #FF0055;
+}
+.guide__cta-btn {
+  display: inline-block;
+  margin-top: 16px;
+  font-family: "Space Grotesk", sans-serif;
+  font-size: 14px;
+  letter-spacing: 0.1em;
+  padding: 12px 28px;
+  background: linear-gradient(135deg, #FF0055, #8B5CF6);
+  color: #fff;
+  transition: opacity 0.3s;
+}
+.guide__cta-btn:hover { opacity: 0.85; }
+.guide__cta {
+  text-align: center;
+  padding: 60px 0;
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 0.6s, transform 0.6s;
+}
+.guide__cta.is-visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+.guide__cta-button {
+  display: inline-flex;
+  align-items: center;
+  gap: 16px;
+  padding: 24px 48px;
+  border: 2px solid transparent;
+  background-origin: border-box;
+  background-clip: padding-box, border-box;
+  background-image:
+    linear-gradient(#000, #000),
+    linear-gradient(135deg, #FF0055, #8B5CF6);
+  font-family: "Space Grotesk", sans-serif;
+  font-size: clamp(18px, 3vw, 28px);
+  font-weight: 800;
+  letter-spacing: 0.1em;
+  color: #fff;
+  position: relative;
+  overflow: hidden;
+  transition: transform 0.3s;
+}
+.guide__cta-button::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(135deg, #FF0055, #8B5CF6);
+  opacity: 0;
+  transition: opacity 0.4s;
+  z-index: 0;
+}
+.guide__cta-button:hover::before { opacity: 1; }
+.guide__cta-button span {
+  position: relative;
+  z-index: 1;
+}
+.guide__cta-arrow {
+  transition: transform 0.3s;
+}
+.guide__cta-button:hover .guide__cta-arrow {
+  transform: translateX(8px);
+}
+
+/* --- Page Footer (subpages) --- */
+.page-footer {
+  border-top: 1px solid #1a1a1a;
+  padding: 60px 40px 40px;
+  z-index: 1;
+  position: relative;
+}
+.page-footer__inner {
+  max-width: 900px;
+  margin: 0 auto;
+}
+.page-footer__nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin-bottom: 40px;
+}
+.page-footer__logo {
+  font-family: "Space Grotesk", sans-serif;
+  font-weight: 700;
+  font-size: 16px;
+  letter-spacing: 0.2em;
+  color: #fff;
+}
+.page-footer__links {
+  list-style: none;
+  display: flex;
+  gap: 24px;
+}
+.page-footer__links a {
+  font-family: "Space Grotesk", sans-serif;
+  font-size: 12px;
+  letter-spacing: 0.15em;
+  color: #666;
+  transition: color 0.3s;
+}
+.page-footer__links a:hover { color: #fff; }
+.page-footer__info {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 32px;
+  font-size: 12px;
+  color: #555;
+}
+.page-footer__info a {
+  font-family: "Space Grotesk", sans-serif;
+  font-size: 12px;
+  letter-spacing: 0.2em;
+  color: #666;
+  transition: color 0.3s;
+}
+.page-footer__info a:hover { color: #FF0055; }
+.page-footer__copy {
+  font-family: "Space Grotesk", sans-serif;
+  font-size: 11px;
+  letter-spacing: 0.2em;
+  color: #333;
+  text-align: center;
+}
+
 /* --- Gradient Section Dividers --- */
 .statement::before {
   content: '';
