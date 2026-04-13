@@ -436,6 +436,271 @@ img { display: block; max-width: 100%; }
   transform: translateY(0);
 }
 
+/* --- Studio --- */
+.studio {
+  position: relative;
+  padding: 120px 40px;
+  z-index: 1;
+}
+.studio__header, .price__header, .faq__header {
+  text-align: center;
+  margin-bottom: 60px;
+}
+.studio__label, .price__label, .faq__label {
+  display: block;
+  font-family: "Space Grotesk", sans-serif;
+  font-size: 13px;
+  letter-spacing: 0.3em;
+  color: #666;
+  margin-bottom: 8px;
+}
+.studio__title, .price__title, .faq__title {
+  font-family: "Space Grotesk", sans-serif;
+  font-size: clamp(40px, 8vw, 80px);
+  font-weight: 800;
+  letter-spacing: 0.05em;
+  background: linear-gradient(135deg, #FF0055 0%, #8B5CF6 50%, #00FFFF 100%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+.studio__hero-img {
+  max-width: 1000px;
+  margin: 0 auto 80px;
+}
+.studio__grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 48px 40px;
+  max-width: 1000px;
+  margin: 0 auto;
+}
+.studio__card {
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 0.6s, transform 0.6s;
+}
+.studio__card.is-visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+.studio__card-img {
+  margin-bottom: 20px;
+  overflow: hidden;
+}
+.studio__card-img .placeholder-img {
+  transition: transform 0.5s;
+}
+.studio__card:hover .studio__card-img .placeholder-img {
+  transform: scale(1.03);
+}
+.studio__card-num {
+  font-family: "Space Grotesk", sans-serif;
+  font-size: 13px;
+  font-weight: 700;
+  letter-spacing: 0.2em;
+  color: #FF0055;
+  display: block;
+  margin-bottom: 4px;
+}
+.studio__card-title {
+  font-family: "Space Grotesk", sans-serif;
+  font-size: clamp(20px, 3vw, 28px);
+  font-weight: 800;
+  letter-spacing: 0.05em;
+  margin-bottom: 12px;
+}
+.studio__card-text {
+  font-size: 14px;
+  line-height: 1.9;
+  color: #aaa;
+}
+
+/* --- Price --- */
+.price {
+  position: relative;
+  padding: 100px 40px;
+  z-index: 1;
+}
+.price::before {
+  content: '';
+  position: absolute;
+  top: 0; left: 10%;
+  width: 80%;
+  height: 1px;
+  background: linear-gradient(90deg, transparent, #FF0055, #8B5CF6, transparent);
+}
+.price__table-wrap {
+  max-width: 600px;
+  margin: 0 auto;
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 0.6s, transform 0.6s;
+}
+.price__table-wrap.is-visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+.price__note {
+  text-align: center;
+  font-size: 14px;
+  color: #888;
+  margin-bottom: 24px;
+  letter-spacing: 0.05em;
+}
+.price__table {
+  border: 1px solid #333;
+  margin-bottom: 32px;
+}
+.price__row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 28px;
+  border-bottom: 1px solid #222;
+}
+.price__row:last-child { border-bottom: none; }
+.price__row--header {
+  background: rgba(255,255,255,0.03);
+}
+.price__row--header span {
+  font-family: "Space Grotesk", sans-serif;
+  font-size: 14px;
+  letter-spacing: 0.1em;
+  color: #ccc;
+}
+.price__row--main span:first-child {
+  font-size: 14px;
+  color: #888;
+}
+.price__amount {
+  font-family: "Space Grotesk", sans-serif;
+  font-size: 32px;
+  font-weight: 800;
+  background: linear-gradient(135deg, #FF0055, #8B5CF6);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+.price__amount small {
+  font-size: 14px;
+  font-weight: 400;
+  -webkit-text-fill-color: #888;
+}
+.price__details {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+.price__details li {
+  font-size: 13px;
+  color: #666;
+  padding-left: 16px;
+  position: relative;
+}
+.price__details li::before {
+  content: '※';
+  position: absolute;
+  left: 0;
+  color: #FF0055;
+}
+
+/* --- FAQ --- */
+.faq {
+  position: relative;
+  padding: 100px 40px;
+  z-index: 1;
+}
+.faq::before {
+  content: '';
+  position: absolute;
+  top: 0; left: 10%;
+  width: 80%;
+  height: 1px;
+  background: linear-gradient(90deg, transparent, #8B5CF6, #00FFFF, transparent);
+}
+.faq__category {
+  max-width: 800px;
+  margin: 0 auto 60px;
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 0.6s, transform 0.6s;
+}
+.faq__category.is-visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+.faq__category-title {
+  font-family: "Sora", sans-serif;
+  font-size: 16px;
+  font-weight: 700;
+  letter-spacing: 0.05em;
+  padding: 16px 24px;
+  background: linear-gradient(135deg, rgba(255,0,85,0.15), rgba(139,92,246,0.15));
+  border-left: 3px solid #FF0055;
+  margin-bottom: 0;
+}
+.faq__item {
+  border-bottom: 1px solid #222;
+}
+.faq__question {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 24px;
+  background: none;
+  border: none;
+  color: #ddd;
+  font-family: "Sora", sans-serif;
+  font-size: 15px;
+  text-align: left;
+  transition: color 0.3s;
+  gap: 16px;
+}
+.faq__question:hover { color: #fff; }
+.faq__icon {
+  position: relative;
+  width: 16px;
+  height: 16px;
+  flex-shrink: 0;
+}
+.faq__icon::before, .faq__icon::after {
+  content: '';
+  position: absolute;
+  background: #888;
+  transition: transform 0.3s;
+}
+.faq__icon::before {
+  top: 50%; left: 0;
+  width: 100%; height: 1px;
+  transform: translateY(-50%);
+}
+.faq__icon::after {
+  top: 0; left: 50%;
+  width: 1px; height: 100%;
+  transform: translateX(-50%);
+}
+.faq__question[aria-expanded="true"] .faq__icon::after {
+  transform: translateX(-50%) rotate(90deg);
+  opacity: 0;
+}
+.faq__answer {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.4s ease, padding 0.4s ease;
+}
+.faq__answer.is-open {
+  max-height: 300px;
+}
+.faq__answer p {
+  padding: 0 24px 20px;
+  font-size: 14px;
+  line-height: 1.8;
+  color: #999;
+}
+
 /* --- Location --- */
 .location {
   position: relative;
