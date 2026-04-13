@@ -152,7 +152,11 @@ header .header_inner #pc_navi nav ul.pc_nav_li li a:hover::after { width: 100%; 
 .service .service_li li:not(:hover){ border-left: 2px solid #E0E0E0; }
 .service .service_li li:hover { background: linear-gradient(135deg, #1F56CC, #1FCCB1); color: #fff; transform: translateY(-3px); box-shadow: 0 8px 20px rgba(31,86,204,0.15); }
 
-.bg{ background-image: url('../img/top_bg.jpg'); background-attachment: fixed; background-size: cover; background-position: center; height: 400px; }
+/* photo marquee slideshow */
+.bg_marquee{ overflow: hidden; height: 350px; position: relative; }
+.bg_marquee_track{ display: flex; width: max-content; animation: marqueeSlide 30s linear infinite; }
+.bg_marquee_track img{ height: 350px; width: auto; object-fit: cover; margin-right: 10px; }
+@keyframes marqueeSlide { 0% { transform: translateX(0); } 100% { transform: translateX(-50%); } }
 /*-------work-------------------------------------*/
 .work_li{ margin-top: 20px; }
 .work_li li{ width: calc(100% / 3 - 15px); transition: transform 0.4s ease, box-shadow 0.4s ease; overflow: hidden; border-bottom: 2px solid #E8E8E8; }
@@ -317,7 +321,8 @@ footer .copyright{ padding-top: 30px; border-top: 1px solid #D5D5D5; margin-top:
 	.service .wrap .img_area{ margin-right: 0; margin-bottom: 20px; }
 	.service .title{ padding: 30px 0 15px; }
 	.service .service_li li{ width: calc(100% / 2 - 5px); margin-bottom: 8px; border-left: 2px solid #E0E0E0; font-size: 13px; padding: 8px 0; }
-	.bg{ height: 200px; margin: 40px 0; background-attachment: inherit; }
+	.bg_marquee{ height: 200px; margin: 30px 0; }
+	.bg_marquee_track img{ height: 200px; }
 	.work_li{ margin-top: 20px; }
 	.work_li li{ margin-bottom: 30px; border-bottom: 1px solid #EBEBEB; padding-bottom: 20px; }
 	.work_li li .text_area h4{ font-size: 15px; padding-bottom: 10px; }
