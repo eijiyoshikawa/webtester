@@ -2,79 +2,58 @@
 <html lang="ja">
 <head>
 <meta charset="UTF-8">
-<title>404 | 翔星建設株式会社</title>
+<title>404 | SUISEI STUDIO</title>
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<link rel="stylesheet" href="./assets/css/style.css">
-<link rel="stylesheet" href="https://use.typekit.net/qfs1yzw.css">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Sora:wght@100..800&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;700;800&family=Sora:wght@300;400;700&display=swap" rel="stylesheet">
+<style>
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+  body {
+    background: #000;
+    color: #fff;
+    font-family: "Sora", sans-serif;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    text-align: center;
+    padding: 40px;
+  }
+  .code {
+    font-family: "Space Grotesk", sans-serif;
+    font-size: clamp(100px, 25vw, 300px);
+    font-weight: 800;
+    line-height: 1;
+    color: transparent;
+    -webkit-text-stroke: 2px rgba(255,255,255,0.15);
+    margin-bottom: 24px;
+  }
+  .message {
+    font-size: 14px;
+    letter-spacing: 0.2em;
+    color: #666;
+    margin-bottom: 48px;
+  }
+  .back {
+    display: inline-block;
+    font-family: "Space Grotesk", sans-serif;
+    font-weight: 700;
+    font-size: 13px;
+    letter-spacing: 0.15em;
+    padding: 14px 32px;
+    background: linear-gradient(135deg, #FF0055, #8B5CF6);
+    color: #fff;
+    text-decoration: none;
+    transition: opacity 0.3s;
+  }
+  .back:hover { opacity: 0.85; }
+</style>
 </head>
 <body>
-<div class="site_bg_anim">
-<div class="rect rect1"></div><div class="rect rect2"></div><div class="rect rect3"></div>
-<div class="rect rect4"></div><div class="rect rect5"></div><div class="rect rect6"></div>
-<div class="rect rect7"></div><div class="rect rect8"></div><div class="rect rect9"></div>
-<div class="rect rect10"></div><div class="rect rect11"></div><div class="rect rect12"></div>
-</div>
-<header class="header">
-<div class="header_inner">
-<h1 id="logo"><a href="./"><img src="./assets/img/logo_black.png" alt="翔星建設株式会社"></a></h1>
-<div id="pc_navi"><div class="nav_header"><nav><ul class="pc_nav_li en">
-<li><a href="./about/">ABOUT US</a></li>
-<li><a href="./news/">NEWS</a></li>
-<li><a href="./works/">WORKS</a></li>
-<li><a href="./recruit/">RECRUIT</a></li>
-<li><a href="./contact/">CONTACT</a></li>
-</ul></nav></div></div>
-<div id="nav-wrapper" class="nav-wrapper">
-<div class="hamburger" id="js-hamburger"><span class="hamburger__line hamburger__line--1"></span><span class="hamburger__line hamburger__line--2"></span><span class="hamburger__line hamburger__line--3"></span></div>
-<nav class="sp-nav"><ul>
-<li><a href="./">TOP</a></li>
-<li><a href="./about/">ABOUT US</a></li>
-<li><a href="./news/">NEWS</a></li>
-<li><a href="./works/">WORKS</a></li>
-<li><a href="./recruit/">RECRUIT</a></li>
-<li><a href="./contact/">CONTACT</a></li>
-<li><a href="./privacypolicy/">PRIVACYPOLICY</a></li>
-</ul></nav>
-<div class="black-bg" id="js-black-bg"></div>
-</div>
-</div>
-</header>
-<div class="sub_kv not-found">
-<div class="inner">
-<h2 class="en">404</h2>
-<p>お探しのページが見つかりませんでした</p>
-</div>
-</div>
-<div class="sub_main">
-<div class="inner">
-<div class="cta_main">
-<p>申し訳ございません。<br class="pc_none">お探しのページは見つかりませんでした。<br>ご指定されたページは削除されたか、<br class="pc_none">移動した可能性があります。<br>お手数ですが、トップページより<br class="pc_none">目的のページをお探しください。</p>
-<a href="./" class="btn_top">TOPへ戻る</a>
-</div>
-</div>
-</div>
-<footer>
-<div class="inner">
-<div class="logo"><a href="./"><img src="./assets/img/logo_black.png" alt="翔星建設株式会社"></a></div>
-<div class="wrap">
-<div class="nav">
-<p class="grey">SITE MAP</p>
-<ul><li><a href="./">TOP</a></li><li><a href="./about/">ABOUT US</a></li><li><a href="./works/">WORKS</a></li><li><a href="./news/">NEWS</a></li></ul>
-<ul><li><a href="./recruit/">RECRUIT</a></li><li><a href="./contact/">CONTACT</a></li><li><a href="./privacypolicy/">PRIVACYPOLICY</a></li></ul>
-</div>
-<div class="sns">
-<p class="grey">SNS</p>
-<a href="https://www.instagram.com/shoseikensetsu_nara/">shoseikensetsu</a>
-<a href="https://www.tiktok.com/@shosei.kensetsu/" class="tiktok">shosei.kensetsu</a>
-</div>
-</div>
-<div class="copyright en"><p>Copyright(c) ShoseiKensetsu All Rights Reserved.</p></div>
-</div>
-</footer>
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
-<script src="./assets/js/main.js"></script>
+  <div class="code">404</div>
+  <p class="message">PAGE NOT FOUND</p>
+  <a href="./" class="back">BACK TO TOP</a>
 </body>
 </html>
