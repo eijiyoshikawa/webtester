@@ -778,12 +778,11 @@ img { display: block; max-width: 100%; }
 /* --- CTA / Reserve --- */
 .cta {
   position: relative;
-  min-height: 100vh;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  padding: 80px 40px;
+  padding: 120px 40px 80px;
   z-index: 1;
 }
 .cta__button {
@@ -845,8 +844,7 @@ img { display: block; max-width: 100%; }
 
 /* --- Footer --- */
 .footer {
-  margin-top: auto;
-  padding-top: 80px;
+  padding-top: 60px;
   text-align: center;
   display: flex;
   flex-direction: column;
@@ -1267,7 +1265,7 @@ img { display: block; max-width: 100%; }
     max-width: 100%;
   }
 
-  .cta { min-height: 80vh; padding: 60px 20px; }
+  .cta { padding: 80px 20px 60px; }
   .cta__button {
     width: 95vw;
     padding: 40px 24px;
