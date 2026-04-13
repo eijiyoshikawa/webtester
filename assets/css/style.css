@@ -48,12 +48,32 @@ li { list-style: none; }
 .en{ font-family: "Sora", sans-serif; font-optical-sizing: auto; }
 
 /* scroll animations */
-.fadein { opacity: 0; transform: translateY(40px); transition: opacity 0.8s ease, transform 0.8s ease; }
+.fadein { opacity: 0; transform: translateY(40px); transition: opacity 0.8s cubic-bezier(0.25, 0.46, 0.45, 0.94), transform 0.8s cubic-bezier(0.25, 0.46, 0.45, 0.94); }
 .fadein.scrollin { opacity: 1; transform: translateY(0); }
-.fadein-left { opacity: 0; transform: translateX(-40px); transition: opacity 0.8s ease, transform 0.8s ease; }
+.fadein-left { opacity: 0; transform: translateX(-50px); transition: opacity 0.8s cubic-bezier(0.25, 0.46, 0.45, 0.94), transform 0.8s cubic-bezier(0.25, 0.46, 0.45, 0.94); }
 .fadein-left.scrollin { opacity: 1; transform: translateX(0); }
-.fadein-right { opacity: 0; transform: translateX(40px); transition: opacity 0.8s ease, transform 0.8s ease; }
+.fadein-right { opacity: 0; transform: translateX(50px); transition: opacity 0.8s cubic-bezier(0.25, 0.46, 0.45, 0.94), transform 0.8s cubic-bezier(0.25, 0.46, 0.45, 0.94); }
 .fadein-right.scrollin { opacity: 1; transform: translateX(0); }
+.fadein-scale { opacity: 0; transform: scale(0.92); transition: opacity 0.8s ease, transform 0.8s ease; }
+.fadein-scale.scrollin { opacity: 1; transform: scale(1); }
+.delay1 { transition-delay: 0.15s; }
+.delay2 { transition-delay: 0.3s; }
+.delay3 { transition-delay: 0.45s; }
+.delay4 { transition-delay: 0.6s; }
+
+/* KV entrance animation */
+@keyframes kvSlideUp {
+  from { opacity: 0; transform: translateY(30px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+@keyframes kvFadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+@keyframes lineGrow {
+  from { width: 0; }
+  to { width: 140px; }
+}
 
 /*-------header-------------------------------------*/
 header { position: fixed; top: 0; height: 100px; width: 100%; margin: 0 auto; z-index: 100; background: rgba(255,255,255,0); backdrop-filter: blur(0px); transition: background 0.4s ease, backdrop-filter 0.4s ease, box-shadow 0.4s ease; }
@@ -70,8 +90,9 @@ header .header_inner #pc_navi nav ul.pc_nav_li li a:hover::after { width: 100%; 
 .kv{ padding-top: 100px; position: relative; }
 .kv .slick-slide{ margin: 0 10px; }
 .kv .kv_txt{ line-height: 1; max-width: 1084px; margin: 0 auto; position: relative; bottom: 110px; }
-.kv .kv_txt h2{ font-size: 135px; display: inline-block; background: linear-gradient(90deg, #1F56CC 0%, #1FCCB1 100%); -webkit-background-clip: text; -webkit-text-fill-color: transparent; }
-.kv .kv_txt p{ font-weight: bold; font-size: 40px; letter-spacing: 0.08em; }
+.kv .kv_txt h2{ font-size: 135px; display: inline-block; background: linear-gradient(90deg, #1F56CC 0%, #1FCCB1 100%); -webkit-background-clip: text; -webkit-text-fill-color: transparent; animation: kvSlideUp 1s cubic-bezier(0.25, 0.46, 0.45, 0.94) 0.5s both; }
+.kv .kv_txt p{ font-weight: bold; font-size: 40px; letter-spacing: 0.08em; animation: kvSlideUp 1s cubic-bezier(0.25, 0.46, 0.45, 0.94) 0.8s both; }
+.kv .scroll { animation: kvFadeIn 1s ease 1.5s both; }
 .kv .slick-dots{ right: 5%; text-align: right; }
 .slick-dots li { margin: 0 4px; width: 60px!important; }
 .slick-dots li button:before { content:''; width: 60px!important; }
@@ -157,9 +178,9 @@ footer .sns a.tiktok::before{ background: url("../img/tiktok_icon.png") no-repea
 footer .copyright{ padding-top: 30px; border-top: 1px solid #D5D5D5; margin-top: 80px; font-size: 10px; color: #B2B2B2; text-align: right; }
 /*-------サブページ共通KV-------------------------------------*/
 .sub_kv .inner{ padding-top: 180px; padding-bottom: 0; }
-.sub_kv h2{ font-size: 70px; display: inline-block; background: linear-gradient(90deg, #1F56CC 0%, #1FCCB1 100%); -webkit-background-clip: text; -webkit-text-fill-color: transparent; letter-spacing: 0.05em; line-height: 1.2; }
-.sub_kv p{ font-size: 20px; padding-left: 160px; margin-top: 20px; position: relative; line-height: 1; }
-.sub_kv p::before{ position: absolute; content: ""; width: 140px; height: 1px; background: #707070; left: 0; top: 50%; transform: translateY(-50%); }
+.sub_kv h2{ font-size: 70px; display: inline-block; background: linear-gradient(90deg, #1F56CC 0%, #1FCCB1 100%); -webkit-background-clip: text; -webkit-text-fill-color: transparent; letter-spacing: 0.05em; line-height: 1.2; animation: kvSlideUp 0.8s cubic-bezier(0.25, 0.46, 0.45, 0.94) 0.2s both; }
+.sub_kv p{ font-size: 20px; padding-left: 160px; margin-top: 20px; position: relative; line-height: 1; animation: kvSlideUp 0.8s ease 0.5s both; }
+.sub_kv p::before{ position: absolute; content: ""; height: 1px; background: #707070; left: 0; top: 50%; transform: translateY(-50%); animation: lineGrow 0.6s ease 0.8s both; }
 .breadcrumb .inner.wrap{ justify-content: flex-start; font-weight: bold; font-size: 12px; padding: 50px 0; }
 .breadcrumb .inner.wrap a{ text-decoration: underline; }
 .breadcrumb .inner.wrap p{ margin: 0; padding-left: 50px; position: relative; font-weight: normal; }
@@ -184,11 +205,13 @@ footer .copyright{ padding-top: 30px; border-top: 1px solid #D5D5D5; margin-top:
 .philosophy .wrap div{ width: 50%; }
 .philosophy .wrap div p{ font-size: 30px; padding-top: 30px; font-weight: bold; }
 .philosophy .wrap div p.color{ display: inline-block; background: linear-gradient(90deg, #1F56CC 0%, #1FCCB1 100%); -webkit-background-clip: text; -webkit-text-fill-color: transparent; letter-spacing: 0.05em; font-size: 25px; font-weight: 600; }
-.philosophy .bg_txt{ color: #FAFAFA; font-size: 190px; position: absolute; top: 19%; width: 100%; left: 0; white-space: nowrap; font-weight: bold; overflow: hidden; }
+.philosophy .bg_txt{ color: #FAFAFA; font-size: 190px; position: absolute; top: 19%; width: 100%; left: 0; white-space: nowrap; font-weight: bold; overflow: hidden; animation: marquee 20s linear infinite; }
+@keyframes marquee { 0% { transform: translateX(0); } 100% { transform: translateX(-50%); } }
 .sub_main .work_li li{ margin-bottom: 60px; }
 .sub_main .news_main{ margin-left: auto; width: 75%; }
 /*-------問い合わせ・プライバシー-------------------------------------*/
-.btn_top{ padding: 10px 100px; color: #1F56CC; text-align: center; border: 1px solid #1F56CC; display: inline-block; margin-top: 100px; }
+.btn_top{ padding: 10px 100px; color: #1F56CC; text-align: center; border: 1px solid #1F56CC; display: inline-block; margin-top: 100px; transition: background 0.3s ease, color 0.3s ease, transform 0.3s ease; }
+.btn_top:hover { background: #1F56CC; color: #fff; transform: translateY(-2px); }
 .content_main h5{ font-size: 16px; padding-top: 60px; font-weight: normal; }
 
 /*-------詳細ページ-------------------------------------*/
@@ -226,7 +249,9 @@ footer .copyright{ padding-top: 30px; border-top: 1px solid #D5D5D5; margin-top:
 .benefit .benefit_list{ width: 32%; padding: 25px 0; text-align: center; border: 1px solid #E8E8E8; border-top: 3px solid #1F56CC; transition: transform 0.3s ease, box-shadow 0.3s ease; }
 .benefit .benefit_list:hover { transform: translateY(-4px); box-shadow: 0 8px 20px rgba(31,86,204,0.1); }
 .benefit .benefit_list img{ width: 45%; }
-.entry a{ font-size: 87px; font-weight: bold; color: #fff; padding: 40px 72px; background: linear-gradient(90deg, #1F56CC 0%, #1FCCB1 100%); position: relative; line-height: 1; }
+.entry a{ font-size: 87px; font-weight: bold; color: #fff; padding: 40px 72px; background: linear-gradient(90deg, #1F56CC 0%, #1FCCB1 100%); position: relative; line-height: 1; background-size: 200% 100%; transition: background-position 0.5s ease, transform 0.3s ease; }
+.entry a:hover { background-position: 100% 0; transform: scale(1.02); }
+@keyframes pulse { 0%, 100% { box-shadow: 0 0 0 0 rgba(31,86,204,0.3); } 50% { box-shadow: 0 0 0 15px rgba(31,86,204,0); } }
 .entry a::after{ background: url("../img/arrow.png") no-repeat center; background-size: cover; position: absolute; content: ""; width: 100px; height: 100px; right: 72px; top: 50%; transform: translateY(-50%); }
 .content figure{ margin: 50px 0; }
 @media (max-width: 767px) {

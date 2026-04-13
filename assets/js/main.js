@@ -46,14 +46,25 @@
         }
     });
 
-    // Fade in on scroll (supports fadein, fadein-left, fadein-right)
+    // Fade in on scroll (supports all fadein variants)
+    var animSelectors = '.fadein, .fadein-left, .fadein-right, .fadein-scale';
     $(function() {
+        // Check on load for elements already in view
+        $(animSelectors).each(function(){
+            var elemPos = $(this).offset().top;
+            var scroll = $(window).scrollTop();
+            var windowHeight = $(window).height();
+            if (scroll > elemPos - windowHeight + 100){
+                $(this).addClass('scrollin');
+            }
+        });
+        // Check on scroll
         $(window).scroll(function(){
-            $('.fadein, .fadein-left, .fadein-right').each(function(){
+            $(animSelectors).each(function(){
                 var elemPos = $(this).offset().top;
                 var scroll = $(window).scrollTop();
                 var windowHeight = $(window).height();
-                if (scroll > elemPos - windowHeight + 150){
+                if (scroll > elemPos - windowHeight + 100){
                     $(this).addClass('scrollin');
                 }
             });
