@@ -116,7 +116,7 @@ img { display: block; max-width: 100%; }
 }
 .bg-illust svg {
   position: absolute;
-  opacity: 0.04;
+  opacity: 0.12;
 }
 /* Dancers */
 .bg-illust__dancer--1 {
@@ -201,8 +201,8 @@ img { display: block; max-width: 100%; }
   to { transform: rotate(360deg); }
 }
 @keyframes illustPulse {
-  0%, 100% { opacity: 0.04; }
-  50% { opacity: 0.08; }
+  0%, 100% { opacity: 0.12; }
+  50% { opacity: 0.22; }
 }
 
 /* --- Studio card images --- */
