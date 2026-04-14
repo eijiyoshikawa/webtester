@@ -96,6 +96,17 @@
   }
   window.addEventListener('scroll', highlightNav, { passive: true });
 
+  // ========== Hero Slideshow ==========
+  var slides = document.querySelectorAll('.hero__slide');
+  if (slides.length > 1) {
+    var currentSlide = 0;
+    setInterval(function() {
+      slides[currentSlide].classList.remove('hero__slide--active');
+      currentSlide = (currentSlide + 1) % slides.length;
+      slides[currentSlide].classList.add('hero__slide--active');
+    }, 5000);
+  }
+
   // ========== Initialize ==========
   handleScroll();
 })();

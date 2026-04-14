@@ -8,21 +8,23 @@
    CSS Custom Properties
    -------------------------------------------------------------------------- */
 :root {
-  --pink: #C4A8A0;
-  --pink-light: #D4BCB5;
-  --pink-bg: #EDE4E0;
-  --gray: #A9A4A0;
-  --gray-dark: #7A7673;
-  --cream: #FAF7F4;
+  --pink: #E8B4B8;        /* soft rose */
+  --pink-light: #F0CDD0;  /* lighter rose */
+  --pink-bg: #FBF0F1;     /* very light rose bg */
+  --mint: #B8D8D0;         /* soft mint green */
+  --lavender: #C8B8D8;     /* soft lavender */
+  --sky: #B8D0E8;          /* soft sky blue */
+  --peach: #F0D8C8;        /* soft peach */
+  --gray: #9A9A9A;
+  --gray-dark: #6A6A6A;
+  --cream: #FAFAF8;        /* slightly warmer white */
   --white: #FFFFFF;
-  --label: #C4978C;
-  --text: #444;
+  --label: #D4869A;        /* rose accent for labels - more vibrant */
+  --text: #3A3A3A;         /* slightly softer black */
   --text-light: #888;
-  --text-dark: #333;
 
   --font-en: 'Cormorant Garamond', serif;
   --font-jp: 'Noto Sans JP', sans-serif;
-
   --header-h: 80px;
   --container-max: 1200px;
   --container-wide: 1400px;
@@ -437,15 +439,12 @@ select {
 .hero__bg {
   position: absolute;
   inset: 0;
-  background:
-    linear-gradient(
-      160deg,
-      rgba(180, 160, 155, 0.75) 0%,
-      rgba(196, 168, 160, 0.65) 30%,
-      rgba(170, 148, 140, 0.7) 60%,
-      rgba(140, 120, 115, 0.8) 100%
-    ),
-    url('https://images.unsplash.com/photo-1576091160399-112ba8d25d1d?w=1400&h=800&fit=crop') center/cover no-repeat;
+  background: linear-gradient(160deg,
+    rgba(232,180,184,0.7) 0%,
+    rgba(184,216,208,0.6) 30%,
+    rgba(200,184,216,0.65) 60%,
+    rgba(184,208,232,0.7) 100%
+  ), url('https://images.unsplash.com/photo-1576091160399-112ba8d25d1d?w=1400&h=800&fit=crop') center/cover no-repeat;
   z-index: 0;
 }
 
@@ -471,7 +470,7 @@ select {
 
 .hero__content {
   position: relative;
-  z-index: 1;
+  z-index: 2;
   color: var(--white);
   padding: 0 40px;
 }
@@ -551,7 +550,7 @@ select {
    6. Philosophy Section
    ========================================================================== */
 .philosophy {
-  background-color: var(--pink);
+  background-color: var(--mint);
   padding: 100px 0;
   color: var(--white);
 }
@@ -649,7 +648,7 @@ select {
    7. Mission / Vision Section
    ========================================================================== */
 .mission-vision {
-  background-color: #B5B0AC;
+  background-color: var(--lavender);
   padding: 100px 0;
   color: var(--white);
 }
@@ -727,7 +726,7 @@ select {
    8. News Section
    ========================================================================== */
 .news {
-  background-color: #A9A4A0;
+  background-color: var(--sky);
   padding: 80px 0;
   color: var(--white);
 }
@@ -819,9 +818,9 @@ select {
    9. Our Service Section
    ========================================================================== */
 .our-service {
-  background-color: var(--pink);
+  background-color: var(--peach);
   padding: 100px 0;
-  color: var(--white);
+  color: var(--text);
   position: relative;
   overflow: hidden;
 }
@@ -3840,4 +3839,37 @@ select {
     height: 180px;
     font-size: 0.85rem;
   }
+}
+
+/* ========== Hero Slideshow ========== */
+.hero__slideshow {
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+}
+
+.hero__slide {
+  position: absolute;
+  inset: 0;
+  background-size: cover;
+  background-position: center;
+  opacity: 0;
+  transition: opacity 1.5s ease-in-out;
+}
+
+.hero__slide--active {
+  opacity: 1;
+}
+
+.hero__overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    160deg,
+    rgba(232,180,184,0.65) 0%,
+    rgba(184,216,208,0.55) 30%,
+    rgba(200,184,216,0.6) 60%,
+    rgba(184,208,232,0.65) 100%
+  );
+  z-index: 1;
 }
