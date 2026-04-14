@@ -1000,7 +1000,7 @@ select {
   font-family: var(--font-en);
   font-size: 7rem;
   font-weight: 300;
-  color: #ccc;
+  color: var(--pink-light);
   line-height: 1;
   letter-spacing: 0.05em;
   text-transform: lowercase;
@@ -1511,7 +1511,7 @@ select {
   width: 48px;
   height: 48px;
   border-radius: 50%;
-  background-color: var(--pink);
+  background-color: var(--label);
   color: var(--white);
   display: flex;
   align-items: center;
@@ -2487,7 +2487,7 @@ select {
   width: 160px;
   height: 160px;
   border-radius: 50%;
-  background: #f5f0ed;
+  background: var(--pink-bg);
   margin: 0 auto 24px;
   display: flex;
   align-items: center;
@@ -2511,7 +2511,7 @@ select {
 .svc-policy__card-line {
   width: 40px;
   height: 1px;
-  background: var(--pink-light);
+  background: var(--lavender);
   margin: 0 auto 16px;
 }
 
@@ -2752,7 +2752,7 @@ select {
 .blog-card__image {
   width: 100%;
   aspect-ratio: 4 / 3;
-  background: url('https://images.unsplash.com/photo-1576091160550-2173dba999ef?w=500&h=400&fit=crop') center/cover no-repeat;
+  background: var(--peach);
   margin-bottom: 16px;
 }
 
