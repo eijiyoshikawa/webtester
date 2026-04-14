@@ -19,11 +19,10 @@
         <span class="header__logo-text">anju</span>
       </a>
       <nav class="header__nav" id="globalNav">
-        <a href="/" class="header__nav-item header__nav-link is-active">home</a>
-        <a href="/service/" class="header__nav-item header__nav-link">service</a>
-        <a href="/news/" class="header__nav-item header__nav-link">news</a>
+        <a href="#home" class="header__nav-item header__nav-link is-active">home</a>
+        <a href="#service" class="header__nav-item header__nav-link">service</a>
+        <a href="#news" class="header__nav-item header__nav-link">news</a>
         <a href="/blog/" class="header__nav-item header__nav-link">blog</a>
-        <a href="/recruit/" class="header__nav-item header__nav-link">recruit</a>
       </nav>
       <a href="/contact/" class="header__contact">
         contact
@@ -35,14 +34,7 @@
     </div>
   </header>
 
-  <!-- ========== RIGHT SIDEBAR ========== -->
-  <aside class="sidebar-recruit">
-    <div class="sidebar-recruit__badge">求 人 情 報</div>
-    <div class="sidebar-recruit__text">
-      <span class="en">r e c r u i t</span><br>メンバー募集中
-    </div>
-    <a href="/recruit/" class="sidebar-recruit__arrow" aria-label="採用情報へ">→</a>
-  </aside>
+  <!-- ========== SNS SIDEBAR ========== -->
   <div class="sidebar-sns">
     <a href="https://www.instagram.com/care.anju/" target="_blank" rel="noopener noreferrer" class="sidebar-sns__item" aria-label="Instagram">
       <svg viewBox="0 0 24 24" fill="none"><rect x="2" y="2" width="20" height="20" rx="5" stroke="currentColor" stroke-width="1.5"/><circle cx="12" cy="12" r="5" stroke="currentColor" stroke-width="1.5"/><circle cx="17.5" cy="6.5" r="1.5" fill="currentColor"/></svg>
@@ -60,7 +52,7 @@
     <div class="hero__bg"></div>
     <div class="hero__content">
       <h1 class="hero__title fade-in">care anju</h1>
-      <p class="hero__subtitle fade-in fade-in--delay1">安心と活力のある暮らしを、<br>あなたのもとへ</p>
+      <p class="hero__subtitle fade-in fade-in--delay1">「安心と活力のある暮らしを、<br>あなたのもとへ」</p>
       <div class="hero__logo fade-in fade-in--delay2">
         <span class="hero__logo-text">anju</span>
       </div>
@@ -120,7 +112,7 @@
       <div class="news__header fade-in">
         <span class="news__label">news</span>
         <span class="news__label-divider">|</span>
-        <span class="news__label-jp">新着情報</span>
+        <span class="news__label-jp">お知らせ</span>
       </div>
       <ul class="news__list fade-in">
         <li class="news__item">
@@ -161,7 +153,7 @@
       <div class="service-detail__inner fade-in">
         <div class="service-detail__content">
           <span class="service-detail__label">グループホーム事業</span>
-          <p class="service-detail__text">障害者共同生活援助を行っています。大岡山・大森南の2拠点で運営しています。</p>
+          <p class="service-detail__text">障害者共同生活援助を行っています。大田区を拠点に運営しています。</p>
           <div class="service-detail__cta">
             <a href="/service/" class="cta-link">
               <span class="cta-link__circle">→</span>
@@ -174,7 +166,7 @@
       <div class="service-detail__inner fade-in">
         <div class="service-detail__content">
           <span class="service-detail__label">訪問看護ステーション</span>
-          <p class="service-detail__text">2025年4月開設。健康観察・生活環境補助などのサービスを提供しています。</p>
+          <p class="service-detail__text">大田区にて訪問看護事業を運営しています。健康観察・生活環境補助などのサービスを提供しています。</p>
           <div class="service-detail__cta">
             <a href="/service/" class="cta-link">
               <span class="cta-link__circle">→</span>
@@ -187,23 +179,10 @@
     </div>
   </section>
 
-  <!-- ========== NU BANNER ========== -->
+  <!-- ========== ANJU BANNER ========== -->
   <section class="nu-banner">
     <div class="nu-banner__logo">anju</div>
     <div class="nu-banner__sub">Anju LLC.</div>
-  </section>
-
-  <!-- ========== RECRUIT TEXT ========== -->
-  <section class="recruit-text">
-    <p class="recruit-text__message fade-in">あんじゅで一緒に<br>働きませんか？<br>グループホームと訪問看護の<br>各事業でスタッフを募集しています。</p>
-    <div class="fade-in">
-      <a href="/recruit/" class="btn-cta">
-        <span class="btn-cta__arrow">→</span>
-        <span class="btn-cta__label">詳しくはこちら</span>
-        <span class="btn-cta__line"></span>
-        <span class="btn-cta__dot"></span>
-      </a>
-    </div>
   </section>
 
   <!-- ========== MESSAGE ========== -->
@@ -249,7 +228,7 @@
               <td>合同会社あんじゅ</td>
             </tr>
             <tr>
-              <th>設 立</th>
+              <th>設立</th>
               <td>2015年10月</td>
             </tr>
             <tr>
@@ -261,19 +240,15 @@
               <td>〒141-0031 東京都品川区西五反田2-22-6 アトラスタワー五反田2107号室</td>
             </tr>
             <tr>
+              <th>電話番号</th>
+              <td>050-8887-7676</td>
+            </tr>
+            <tr>
               <th>事業内容</th>
               <td>グループホーム事業（大田区）/ 訪問看護事業（大田区）</td>
             </tr>
           </tbody>
         </table>
-      </div>
-      <div class="fade-in" style="text-align:center;">
-        <a href="#" class="btn-cta">
-          <span class="btn-cta__arrow">→</span>
-          <span class="btn-cta__label">詳しくはこちら</span>
-          <span class="btn-cta__line"></span>
-          <span class="btn-cta__dot"></span>
-        </a>
       </div>
     </div>
   </section>
@@ -304,29 +279,6 @@
     </div>
   </section>
 
-  <!-- ========== RECRUIT FULL ========== -->
-  <section class="recruit-section" id="recruit-section">
-    <div class="container">
-      <div class="recruit-section__inner fade-in">
-        <div class="recruit-section__photo"></div>
-        <div class="recruit-section__body">
-          <div class="recruit-section__label">
-            <span class="recruit-section__label-text">採 用 求 人 募 集</span>
-            <span class="recruit-section__label-line"></span>
-          </div>
-          <h2 class="recruit-section__heading">あんじゅでは、<br>一緒に働くメンバーを募集しています。</h2>
-          <p class="recruit-section__desc">グループホーム・訪問看護の各事業で<br>一緒に働くスタッフを募集しています。</p>
-          <div class="recruit-section__btn">
-            <a href="/recruit/" class="btn-cta btn-cta--onDark">
-              <span class="btn-cta__arrow">→</span>
-              <span class="btn-cta__label">詳しくはこちら</span>
-            </a>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-
   <!-- ========== FOOTER ========== -->
   <footer class="footer">
     <div class="footer__brand">
@@ -335,13 +287,12 @@
       <span class="footer__name-en">Anju LLC.</span>
     </div>
     <nav class="footer__nav">
-      <a href="/" class="footer__nav-item">home</a>
+      <a href="#home" class="footer__nav-item">home</a>
       <a href="/service/" class="footer__nav-item">service</a>
-      <a href="/news/" class="footer__nav-item">news</a>
+      <a href="#news" class="footer__nav-item">news</a>
       <a href="/blog/" class="footer__nav-item">blog</a>
-      <a href="/recruit/" class="footer__nav-item">recruit</a>
       <a href="/contact/" class="footer__nav-item">contact</a>
-      <a href="#" class="footer__nav-item">privacy-policy</a>
+      <a href="/privacy-policy/" class="footer__nav-item">privacy-policy</a>
     </nav>
     <p class="footer__copyright">&copy; Anju LLC. All Rights Reserved.</p>
   </footer>
