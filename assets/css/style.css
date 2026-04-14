@@ -8,20 +8,20 @@
    CSS Custom Properties
    -------------------------------------------------------------------------- */
 :root {
-  --pink: #E8B4B8;        /* soft rose */
-  --pink-light: #F0CDD0;  /* lighter rose */
-  --pink-bg: #FBF0F1;     /* very light rose bg */
-  --mint: #B8D8D0;         /* soft mint green */
-  --lavender: #C8B8D8;     /* soft lavender */
-  --sky: #B8D0E8;          /* soft sky blue */
-  --peach: #F0D8C8;        /* soft peach */
-  --gray: #9A9A9A;
-  --gray-dark: #6A6A6A;
-  --cream: #FAFAF8;        /* slightly warmer white */
+  --pink: #E8B4A8;        /* warm coral rose */
+  --pink-light: #F2D0C4;  /* light warm rose */
+  --pink-bg: #FDF3EF;     /* very light warm bg */
+  --mint: #C4D8C0;         /* warm sage green */
+  --lavender: #D4C8B8;     /* warm sand/beige */
+  --sky: #C8D8D0;          /* warm pale green-gray */
+  --peach: #F0D8C0;        /* warm peach */
+  --cream: #FAF8F5;        /* warm cream */
   --white: #FFFFFF;
-  --label: #D4869A;        /* rose accent for labels - more vibrant */
-  --text: #3A3A3A;         /* slightly softer black */
-  --text-light: #888;
+  --gray: #8A8580;         /* warm gray */
+  --gray-dark: #5A5550;    /* warm dark gray */
+  --label: #C07860;        /* warm terracotta accent */
+  --text: #3A3530;         /* warm dark brown */
+  --text-light: #8A8580;
 
   --font-en: 'Cormorant Garamond', serif;
   --font-jp: 'Noto Sans JP', sans-serif;
@@ -1262,7 +1262,7 @@ select {
    -------------------------------------------- */
 
 .contact-section {
-  background: linear-gradient(135deg, var(--pink) 0%, var(--lavender) 100%);
+  background: linear-gradient(135deg, var(--pink) 0%, var(--peach) 50%, var(--mint) 100%);
   padding: 100px 20px;
 }
 
@@ -2169,7 +2169,7 @@ select {
 
 /* ---------- 1. svc-hero ---------- */
 .svc-hero {
-  background: linear-gradient(135deg, var(--mint), var(--sky));
+  background: linear-gradient(135deg, var(--peach), var(--mint));
   padding: 120px 0 80px;
   position: relative;
   overflow: hidden;
@@ -3866,10 +3866,11 @@ select {
   inset: 0;
   background: linear-gradient(
     160deg,
-    rgba(232,180,184,0.65) 0%,
-    rgba(184,216,208,0.55) 30%,
-    rgba(200,184,216,0.6) 60%,
-    rgba(184,208,232,0.65) 100%
+    rgba(232,180,168,0.6) 0%,
+    rgba(196,216,192,0.5) 25%,
+    rgba(240,216,192,0.55) 50%,
+    rgba(200,216,208,0.5) 75%,
+    rgba(192,120,96,0.35) 100%
   );
   z-index: 1;
 }
