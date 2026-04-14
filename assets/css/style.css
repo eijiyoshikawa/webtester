@@ -825,7 +825,7 @@ img { display: block; max-width: 100%; }
   transition: max-height 0.4s ease, padding 0.4s ease;
 }
 .faq__answer.is-open {
-  max-height: 300px;
+  max-height: 500px;
 }
 .faq__answer p {
   padding: 0 24px 20px;
