@@ -444,7 +444,7 @@ select {
     rgba(184,216,208,0.6) 30%,
     rgba(200,184,216,0.65) 60%,
     rgba(184,208,232,0.7) 100%
-  ), url('https://images.unsplash.com/photo-1576091160399-112ba8d25d1d?w=1400&h=800&fit=crop') center/cover no-repeat;
+  ), url('../images/allstaff001.jpg') center/cover no-repeat;
   z-index: 0;
 }
 
@@ -622,15 +622,15 @@ select {
   aspect-ratio: 4 / 3;
   border-radius: 8px;
   overflow: hidden;
-  background: url('https://images.unsplash.com/photo-1576765608535-5f04d1e3f289?w=600&h=450&fit=crop') center/cover no-repeat;
+  background: url('../images/allstaff002.jpg') center/cover no-repeat;
 }
 
 .philosophy__image:nth-child(2) {
-  background-image: url('https://images.unsplash.com/photo-1581579438747-104c53d7fbc4?w=400&h=300&fit=crop');
+  background-image: url('../images/kango001.JPG');
 }
 
 .philosophy__image:nth-child(3) {
-  background-image: url('https://images.unsplash.com/photo-1559839734-2b71ea197ec2?w=400&h=300&fit=crop');
+  background-image: url('../images/oomoriminami004.JPG');
 }
 
 .philosophy__image--large {
@@ -693,12 +693,12 @@ select {
   aspect-ratio: 16 / 9;
   border-radius: 8px;
   overflow: hidden;
-  background: url('https://images.unsplash.com/photo-1516574187841-cb9cc2ca948b?w=700&h=400&fit=crop') center/cover no-repeat;
+  background: url('../images/nishikamata001.jpeg') center/cover no-repeat;
   margin-top: auto;
 }
 
 .mission-vision__col:nth-child(2) .mission-vision__image {
-  background-image: url('https://images.unsplash.com/photo-1491438590914-bc09fcaaf77a?w=700&h=400&fit=crop');
+  background-image: url('../images/oookayama001.png');
 }
 
 .mission-vision__image img {
@@ -953,7 +953,7 @@ select {
   aspect-ratio: 4 / 3;
   border-radius: 12px;
   overflow: hidden;
-  background: url('https://images.unsplash.com/photo-1576091160550-2173dba999ef?w=600&h=450&fit=crop') center/cover no-repeat;
+  background: url('../images/oomoriminami001.JPG') center/cover no-repeat;
 }
 
 .service-detail__image img {
@@ -1089,7 +1089,7 @@ select {
 .message-section__photo {
   flex: 0 0 360px;
   height: 480px;
-  background: url('https://images.unsplash.com/photo-1573497019940-1c28c88b4f3e?w=500&h=660&fit=crop&crop=face') center/cover no-repeat;
+  background: url('../images/taikiyoshida.JPG') center/cover no-repeat;
   border-radius: 8px;
   overflow: hidden;
 }
@@ -1348,7 +1348,7 @@ select {
   border-radius: 50%;
   overflow: hidden;
   flex-shrink: 0;
-  background: url('https://images.unsplash.com/photo-1582213782179-e0d53f98f2ca?w=500&h=500&fit=crop') center/cover no-repeat;
+  background: url('../images/allstaff004.JPG') center/cover no-repeat;
 }
 
 .recruit-section__photo img {
@@ -2232,7 +2232,7 @@ select {
 .svc-photo__image {
   width: 100%;
   height: 400px;
-  background: linear-gradient(135deg, rgba(196,168,160,0.3), rgba(180,160,155,0.4)), url('https://images.unsplash.com/photo-1576091160550-2173dba999ef?w=1200&h=600&fit=crop') center/cover no-repeat;
+  background: linear-gradient(135deg, rgba(196,168,160,0.3), rgba(180,160,155,0.4)), url('../images/kango002.JPG') center/cover no-repeat;
   display: block;
 }
 
@@ -2404,7 +2404,7 @@ select {
 .svc-message__photo {
   width: 100%;
   height: 400px;
-  background: url('https://images.unsplash.com/photo-1594824476967-48c8b964ac31?w=600&h=800&fit=crop') center/cover no-repeat;
+  background: url('../images/staff001.JPG') center/cover no-repeat;
 }
 
 /* ---------- 6. svc-policy ---------- */
@@ -2752,28 +2752,28 @@ select {
 .blog-card__image {
   width: 100%;
   aspect-ratio: 4 / 3;
-  background: var(--peach);
+  background: url('../images/oomoriminami006.JPG') center/cover no-repeat;
   margin-bottom: 16px;
 }
 
 .blog-card:nth-child(3) .blog-card__image {
-  background-image: url('https://images.unsplash.com/photo-1581579438747-104c53d7fbc4?w=500&h=400&fit=crop');
+  background-image: url('../images/kango003.JPG');
 }
 
 .blog-card:nth-child(4) .blog-card__image {
-  background-image: url('https://images.unsplash.com/photo-1516574187841-cb9cc2ca948b?w=500&h=400&fit=crop');
+  background-image: url('../images/oookayama002.png');
 }
 
 .blog-card:nth-child(5) .blog-card__image {
-  background-image: url('https://images.unsplash.com/photo-1594824476967-48c8b964ac31?w=500&h=400&fit=crop');
+  background-image: url('../images/oomoriminami008.JPG');
 }
 
 .blog-card__image--2 {
-  background: url('https://images.unsplash.com/photo-1529156069898-49953e39b3ac?w=500&h=400&fit=crop') center/cover no-repeat;
+  background: url('../images/allstaff006.JPG') center/cover no-repeat;
 }
 
 .blog-card__image--6 {
-  background: url('https://images.unsplash.com/photo-1497366216548-37526070297c?w=500&h=400&fit=crop') center/cover no-repeat;
+  background: url('../images/nishikamata003.jpeg') center/cover no-repeat;
 }
 
 .blog-card__title {
@@ -2865,7 +2865,7 @@ select {
 .rec-hero__photo {
   width: 100%;
   height: 450px;
-  background: url('https://images.unsplash.com/photo-1582213782179-e0d53f98f2ca?w=800&h=600&fit=crop') center/cover no-repeat;
+  background: url('../images/allstaff004.JPG') center/cover no-repeat;
   border-radius: 4px;
 }
 
@@ -3015,16 +3015,16 @@ select {
 .rec-point__photo {
   width: 100%;
   aspect-ratio: 4 / 3;
-  background: url('https://images.unsplash.com/photo-1576765608535-5f04d1e3f289?w=500&h=400&fit=crop') center/cover no-repeat;
+  background: url('../images/staff100.jpeg') center/cover no-repeat;
   border-radius: 4px;
 }
 
 .rec-point__photo:nth-child(2) {
-  background-image: url('https://images.unsplash.com/photo-1516574187841-cb9cc2ca948b?w=500&h=400&fit=crop');
+  background-image: url('../images/sachiko003.PNG');
 }
 
 .rec-point__photo:nth-child(3) {
-  background-image: url('https://images.unsplash.com/photo-1573497019940-1c28c88b4f3e?w=500&h=400&fit=crop');
+  background-image: url('../images/nishikamata005.jpeg');
 }
 
 .rec-point__circles {
@@ -3169,7 +3169,7 @@ select {
 .rec-info__job-photo {
   width: 100%;
   aspect-ratio: 3 / 4;
-  background: url('https://images.unsplash.com/photo-1576765608535-5f04d1e3f289?w=500&h=660&fit=crop') center/cover no-repeat;
+  background: url('../images/sachikotanaka001.JPG') center/cover no-repeat;
   border-radius: 8px;
 }
 
@@ -3270,12 +3270,12 @@ select {
   width: 80px;
   height: 80px;
   border-radius: 50%;
-  background: url('https://images.unsplash.com/photo-1559839734-2b71ea197ec2?w=160&h=160&fit=crop&crop=face') center/cover no-repeat;
+  background: url('../images/aragaki002.JPG') center/cover no-repeat;
   flex-shrink: 0;
 }
 
 .rec-info__comment--therapist .rec-info__comment-photo {
-  background-image: url('https://images.unsplash.com/photo-1612349317150-e413f6a5b16d?w=160&h=160&fit=crop&crop=face');
+  background-image: url('../images/fujita.JPG');
 }
 
 .rec-info__comment-heading {
