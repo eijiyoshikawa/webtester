@@ -412,6 +412,9 @@ export default function Home() {
             <img
               src="/images/esco_LP/esco_logo.png"
               alt="ESCO PROMOTION 株式会社エスコプロモーション"
+              width="140"
+              height="32"
+              decoding="async"
             />
           </a>
           <div style={{ display: "flex", alignItems: "center", gap: 4 }}>
@@ -484,6 +487,10 @@ export default function Home() {
                 className={`hero-img-pc${i === slideIndex ? " active" : ""}`}
                 src={src}
                 alt="エスコプロモーション"
+                // @ts-expect-error - fetchpriority attr (lowercase) valid HTML
+                fetchpriority={i === 0 ? "high" : "low"}
+                loading={i === 0 ? "eager" : "lazy"}
+                decoding="async"
               />
             ))}
           </div>
@@ -491,6 +498,10 @@ export default function Home() {
             className="hero-img-sp"
             src="/images/esco_LP/hero.jpg"
             alt="エスコプロモーション"
+            // @ts-expect-error - fetchpriority attr (lowercase) valid HTML
+            fetchpriority="high"
+            loading="eager"
+            decoding="async"
           />
           <div className="hero-scroll" aria-hidden="true">
             <span>SCROLL</span>
@@ -544,6 +555,7 @@ export default function Home() {
                 alt=""
                 role="presentation"
                 loading="lazy"
+                decoding="async"
               />
             ))}
           </div>
@@ -584,7 +596,7 @@ export default function Home() {
               data-aos="fade-up"
               data-aos-delay="100"
             >
-              <img src="/images/esco_LP/message.jpg" alt="エスコのチーム" />
+              <img src="/images/esco_LP/message.jpg" alt="エスコのチーム" loading="lazy" decoding="async" />
             </div>
           </div>
         </section>
@@ -593,7 +605,7 @@ export default function Home() {
         <section className="ceo-sec" id="ceo">
           <div className="ceo-inner">
             <div className="ceo-photo" data-converge="left">
-              <img src="/images/esco_LP/ceo.jpg" alt="代表取締役 山田 太郎" />
+              <img src="/images/esco_LP/ceo.jpg" alt="代表取締役 山田 太郎" loading="lazy" decoding="async" />
             </div>
             <div className="ceo-body" data-converge="right">
               <span className="sec-label">CEO MESSAGE</span>
@@ -789,7 +801,7 @@ export default function Home() {
                 data-converge={i % 2 === 0 ? "left" : "right"}
               >
                 <div className="merit-photo">
-                  <img src={m.photo} alt={m.alt} />
+                  <img src={m.photo} alt={m.alt} loading="lazy" decoding="async" />
                   <span className="merit-num-bg">{m.num}</span>
                 </div>
                 <div className="merit-body">
@@ -823,7 +835,7 @@ export default function Home() {
                   data-d={i + 1}
                 >
                   <div className="voice-photo">
-                    <img src={v.photo} alt={v.name} />
+                    <img src={v.photo} alt={v.name} loading="lazy" decoding="async" />
                   </div>
                   <div className="voice-body">
                     <span className="voice-tag">{v.tag}</span>
