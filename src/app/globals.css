@@ -104,9 +104,10 @@ button { font-family: inherit; cursor: pointer; border: none; background: none; 
   justify-content: space-between;
 }
 .header-logo img {
-  height: 38px;
+  height: 32px;
   width: auto;
-  mix-blend-mode: multiply;
+  object-fit: contain;
+  display: block;
 }
 .header-cta {
   display: inline-flex;

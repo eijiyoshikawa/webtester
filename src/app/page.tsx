@@ -25,16 +25,16 @@ const LineIcon = ({ size = 18 }: { size?: number }) => (
 );
 
 const heroPcImages = [
-  "/images/esco_LP/esco_top3.svg",
-  "/images/esco_LP/esco_top1.svg",
-  "/images/esco_LP/esco_top2.svg",
+  "/images/esco_LP/esco_top3.jpg",
+  "/images/esco_LP/esco_top1.jpg",
+  "/images/esco_LP/esco_top2.jpg",
 ];
 
 const galleryImgs = [
-  "/images/esco_LP/gallery-01.svg",
-  "/images/esco_LP/gallery-02.svg",
-  "/images/esco_LP/gallery-03.svg",
-  "/images/esco_LP/gallery-04.svg",
+  "/images/esco_LP/gallery-01.jpg",
+  "/images/esco_LP/gallery-02.jpg",
+  "/images/esco_LP/gallery-03.jpg",
+  "/images/esco_LP/gallery-04.jpg",
 ];
 
 const faqItems: { q: string; a: string }[] = [
@@ -74,7 +74,7 @@ const meritItems: {
 }[] = [
   {
     num: "01",
-    photo: "/images/esco_LP/merit-01.svg",
+    photo: "/images/esco_LP/merit-01.jpg",
     alt: "収入",
     title: "頑張りが、そのまま\n給料に反映される",
     body: "月給24万円スタート＋インセンティブ制度。賞与年2回・昇給ありで上限なく稼げます。入社1年以内に月収35万円を超えるメンバーも多数います。「給料が上がらない」という悩みとはここで永遠にお別れできます。",
@@ -82,7 +82,7 @@ const meritItems: {
   },
   {
     num: "02",
-    photo: "/images/esco_LP/merit-02.svg",
+    photo: "/images/esco_LP/merit-02.jpg",
     alt: "研修",
     title: "未経験でも安心の\n研修・サポート体制",
     body: "入社後は先輩が毎日フォロー。学歴・経歴不問で、素直に学べる方なら必ず活躍できます。基本研修は1〜2ヶ月。飲食・販売・倉庫から転職した社員が多数活躍中です。",
@@ -90,7 +90,7 @@ const meritItems: {
   },
   {
     num: "03",
-    photo: "/images/esco_LP/merit-03.svg",
+    photo: "/images/esco_LP/merit-03.jpg",
     alt: "休日",
     title: "直行直帰OK・\n年間休日120日",
     body: "完全週休2日制も選択可能。年末年始・GW・お盆休暇あり。関西エリア内の勤務なので遠方への転勤もありません。体力を消耗する仕事とは違い、オフもしっかり確保できます。",
@@ -100,7 +100,7 @@ const meritItems: {
 
 const voiceItems = [
   {
-    photo: "/images/esco_LP/voice-01.svg",
+    photo: "/images/esco_LP/voice-01.jpg",
     name: "佐藤 健太",
     meta: "27歳・入社2年目／前職: 居酒屋店長",
     tag: "MEMBER 01",
@@ -111,7 +111,7 @@ const voiceItems = [
     salary: "42",
   },
   {
-    photo: "/images/esco_LP/voice-02.svg",
+    photo: "/images/esco_LP/voice-02.jpg",
     name: "田中 美咲",
     meta: "24歳・入社1年目／前職: アパレル販売",
     tag: "MEMBER 02",
@@ -122,7 +122,7 @@ const voiceItems = [
     salary: "38",
   },
   {
-    photo: "/images/esco_LP/voice-03.svg",
+    photo: "/images/esco_LP/voice-03.jpg",
     name: "鈴木 翔",
     meta: "31歳・入社3年目／現: チームリーダー",
     tag: "MEMBER 03",
@@ -410,7 +410,7 @@ export default function Home() {
         <div className="header">
           <a href="#" className="header-logo" aria-label="ESCO PROMOTION">
             <img
-              src="/images/esco_LP/esco_logo.svg"
+              src="/images/esco_LP/esco_logo.png"
               alt="ESCO PROMOTION 株式会社エスコプロモーション"
             />
           </a>
@@ -489,7 +489,7 @@ export default function Home() {
           </div>
           <img
             className="hero-img-sp"
-            src="/images/esco_LP/hero.svg"
+            src="/images/esco_LP/hero.jpg"
             alt="エスコプロモーション"
           />
           <div className="hero-scroll" aria-hidden="true">
@@ -584,7 +584,7 @@ export default function Home() {
               data-aos="fade-up"
               data-aos-delay="100"
             >
-              <img src="/images/esco_LP/merit-03.svg" alt="エスコのチーム" />
+              <img src="/images/esco_LP/message.jpg" alt="エスコのチーム" />
             </div>
           </div>
         </section>
@@ -593,7 +593,7 @@ export default function Home() {
         <section className="ceo-sec" id="ceo">
           <div className="ceo-inner">
             <div className="ceo-photo" data-converge="left">
-              <img src="/images/esco_LP/ceo.svg" alt="代表取締役 山田 太郎" />
+              <img src="/images/esco_LP/ceo.jpg" alt="代表取締役 山田 太郎" />
             </div>
             <div className="ceo-body" data-converge="right">
               <span className="sec-label">CEO MESSAGE</span>
