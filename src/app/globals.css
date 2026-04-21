@@ -14,6 +14,15 @@
   --sub: #777777;
   --white: #ffffff;
   --inner: 1060px;
+
+  /* Gradient tokens */
+  --grad-primary: linear-gradient(135deg, #06c755 0%, #3DA629 100%);
+  --grad-primary-r: linear-gradient(135deg, #3DA629 0%, #06c755 100%);
+  --grad-deep: linear-gradient(135deg, #2B8A1A 0%, #3DA629 50%, #06c755 100%);
+  --grad-vivid: linear-gradient(135deg, #2B8A1A 0%, #3DA629 45%, #06c755 100%);
+  --grad-text: linear-gradient(100deg, #2B8A1A 0%, #3DA629 50%, #06c755 100%);
+  --grad-dark: linear-gradient(180deg, #0a0a0a 0%, #161616 50%, #0a0a0a 100%);
+  --grad-sheen: linear-gradient(135deg, rgba(255,255,255,0.18) 0%, rgba(255,255,255,0) 50%);
 }
 
 /* ---------- Reset ---------- */
@@ -1872,4 +1881,315 @@ button { font-family: inherit; cursor: pointer; border: none; background: none; 
     transition-duration: 0.01ms !important;
     scroll-behavior: auto !important;
   }
+}
+
+/* ============================================================
+   ✨ GRADIENT THEME — sharp, modern accent overlay
+   Keep content/structure, upgrade color treatment with gradients.
+   ============================================================ */
+
+/* ----- Primary CTAs ----- */
+.header-cta {
+  background: var(--grad-primary);
+}
+.btn-primary {
+  background: var(--grad-primary);
+  box-shadow: 0 6px 22px rgba(6, 199, 85, 0.30), 0 1px 2px rgba(0, 0, 0, 0.06);
+  position: relative;
+  overflow: hidden;
+}
+.btn-primary::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: var(--grad-sheen);
+  opacity: 0;
+  transition: opacity 0.3s;
+  pointer-events: none;
+}
+.btn-primary:hover::before { opacity: 1; }
+.btn-primary:hover {
+  box-shadow: 0 10px 32px rgba(6, 199, 85, 0.42), 0 0 28px rgba(6, 199, 85, 0.18);
+}
+
+.btn-line-lg {
+  background: var(--grad-primary);
+  box-shadow: 0 10px 36px rgba(6, 199, 85, 0.38), 0 0 0 1px rgba(255, 255, 255, 0.04) inset;
+  position: relative;
+  overflow: hidden;
+}
+.btn-line-lg::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: var(--grad-sheen);
+  opacity: 0;
+  transition: opacity 0.3s;
+  pointer-events: none;
+}
+.btn-line-lg:hover::before { opacity: 1; }
+.btn-line-lg:hover {
+  box-shadow: 0 14px 44px rgba(6, 199, 85, 0.5), 0 0 40px rgba(157, 240, 106, 0.25);
+}
+
+.btn-submit {
+  background: var(--grad-primary-r);
+  box-shadow: 0 6px 18px rgba(61, 166, 41, 0.28);
+  position: relative;
+  overflow: hidden;
+}
+.btn-submit::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: var(--grad-sheen);
+  opacity: 0;
+  transition: opacity 0.3s;
+  pointer-events: none;
+}
+.btn-submit:hover::before { opacity: 1; }
+.btn-submit:hover {
+  box-shadow: 0 10px 28px rgba(61, 166, 41, 0.42), 0 0 24px rgba(6, 199, 85, 0.2);
+}
+
+.fixed-bar {
+  background: var(--grad-primary);
+  box-shadow: 0 -4px 22px rgba(0, 0, 0, 0.18), 0 -1px 0 rgba(255, 255, 255, 0.08) inset;
+}
+
+/* Scroll progress: already gradient, strengthen */
+.scroll-progress {
+  background: linear-gradient(90deg, #2B8A1A 0%, #3DA629 50%, #06c755 100%);
+  box-shadow: 0 0 8px rgba(6, 199, 85, 0.5);
+}
+
+/* ----- Gradient text for emphasized keywords ----- */
+.hero-text-sec h1 em,
+.message-text h2 span,
+.compare-cta p em,
+.exit-modal-body h3 em,
+.ceo-body h2 em {
+  background: var(--grad-text);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+  -webkit-text-fill-color: transparent;
+  font-weight: 900;
+}
+
+/* ----- NUMBERS / CAREER salary / VOICE salary / Trust badge number ----- */
+.num-item .num,
+.voice-salary .val,
+.trust-badge .num {
+  background: var(--grad-text);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+  -webkit-text-fill-color: transparent;
+}
+/* default career salary = gradient, but highlight step must stay white */
+.career-step:not(.highlight) .career-salary {
+  background: var(--grad-text);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+  -webkit-text-fill-color: transparent;
+}
+
+/* ----- Section label: gradient text + gradient left bar ----- */
+.sec-label {
+  border-left: none;
+  position: relative;
+  padding-left: 18px;
+  background: var(--grad-primary);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+  -webkit-text-fill-color: transparent;
+}
+.sec-label::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 3px;
+  height: 14px;
+  border-radius: 2px;
+  background: var(--grad-primary);
+}
+.sec.bg-dark .sec-label,
+.line-cta-sec .kicker {
+  background: linear-gradient(135deg, #9df06a 0%, #06c755 100%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+  -webkit-text-fill-color: transparent;
+}
+.sec.bg-dark .sec-label::before {
+  background: linear-gradient(135deg, #9df06a 0%, #06c755 100%);
+}
+
+/* ----- MERIT tag / VOICE tag / FLOW num badge / REQ tag / Exit kicker ----- */
+.merit-body .tag {
+  background: var(--grad-primary);
+  box-shadow: 0 8px 24px rgba(6, 199, 85, 0.38), 0 0 0 1px rgba(255, 255, 255, 0.08) inset;
+}
+.voice-tag,
+.flow-num,
+.field .req {
+  background: var(--grad-primary);
+}
+.exit-modal-kicker {
+  background: var(--grad-primary);
+  color: #fff;
+}
+
+/* ----- Benefit icon / Ideal check ----- */
+.benefit-icon {
+  background: var(--grad-primary);
+  color: #fff;
+  box-shadow: 0 6px 18px rgba(6, 199, 85, 0.28);
+}
+.ideal-check {
+  background: var(--grad-primary);
+  box-shadow: 0 4px 14px rgba(6, 199, 85, 0.28);
+}
+
+/* ----- COMPARE espro side: deep gradient ----- */
+.compare-side.espro {
+  background: linear-gradient(135deg, #1f5a15 0%, #2B8A1A 30%, #3DA629 70%, #06c755 100%);
+  position: relative;
+  overflow: hidden;
+}
+.compare-side.espro::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(circle at 80% 0%, rgba(255, 255, 255, 0.12) 0%, transparent 50%);
+  pointer-events: none;
+}
+
+/* ----- CAREER highlight step: gradient ----- */
+.career-step.highlight {
+  background: linear-gradient(135deg, #1f5a15 0%, #2B8A1A 30%, #3DA629 70%, #06c755 100%);
+  border-color: transparent;
+  box-shadow: 0 12px 32px rgba(6, 199, 85, 0.28);
+  position: relative;
+  overflow: hidden;
+}
+.career-step.highlight::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(circle at 70% 0%, rgba(255, 255, 255, 0.14) 0%, transparent 55%);
+  pointer-events: none;
+}
+
+/* ----- LINE CTA section: richer dark gradient + stronger glow ----- */
+.line-cta-sec {
+  background: var(--grad-dark);
+}
+.line-cta-sec::before {
+  background:
+    radial-gradient(circle at 15% 45%, rgba(61, 166, 41, 0.28) 0%, transparent 55%),
+    radial-gradient(circle at 85% 55%, rgba(6, 199, 85, 0.22) 0%, transparent 55%),
+    radial-gradient(circle at 50% 120%, rgba(157, 240, 106, 0.12) 0%, transparent 60%);
+}
+
+/* ----- HERO bottom fade: also carry a hint of green ----- */
+.hero::after {
+  background: linear-gradient(
+    to bottom,
+    transparent 0%,
+    rgba(10, 60, 20, 0.4) 60%,
+    #0a0a0a 100%
+  );
+}
+
+/* ----- Header CTA subtle glow ----- */
+.header-cta {
+  box-shadow: 0 4px 14px rgba(6, 199, 85, 0.22);
+}
+.header-cta:hover {
+  box-shadow: 0 6px 20px rgba(6, 199, 85, 0.38);
+}
+
+/* ----- Back to top: dark gradient + green hover glow ----- */
+.back-top {
+  background: linear-gradient(135deg, #1a1a1a 0%, #2a2a2a 100%);
+}
+.back-top:hover {
+  background: var(--grad-primary);
+  box-shadow: 0 10px 28px rgba(6, 199, 85, 0.45);
+}
+
+/* ----- Trust badge: gradient border accent ----- */
+.trust-badge {
+  position: relative;
+  background: #fff;
+  border: 1px solid transparent;
+  background-clip: padding-box;
+}
+.trust-badge::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  padding: 1px;
+  border-radius: inherit;
+  background: var(--grad-primary);
+  -webkit-mask:
+    linear-gradient(#fff 0 0) content-box,
+    linear-gradient(#fff 0 0);
+  -webkit-mask-composite: xor;
+          mask-composite: exclude;
+  pointer-events: none;
+}
+
+/* ----- Background blobs: richer color blends ----- */
+.bg-anim .blob { opacity: 0.14; }
+.bg-anim .blob-1 {
+  background: radial-gradient(circle at 30% 30%, #06c755 0%, #3DA629 60%, transparent 100%);
+}
+.bg-anim .blob-2 {
+  background: radial-gradient(circle at 70% 30%, #9df06a 0%, #3DA629 70%, transparent 100%);
+}
+.bg-anim .blob-3 {
+  background: radial-gradient(circle at 50% 50%, #2B8A1A 0%, #06c755 70%, transparent 100%);
+}
+
+/* ----- MERIT num-bg: hint of gradient ----- */
+.merit-num-bg {
+  background: var(--grad-primary);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+  -webkit-text-fill-color: transparent;
+  opacity: 0.18;
+}
+
+/* ----- FAQ Q mark: gradient ----- */
+.faq-q-mark {
+  background: var(--grad-primary);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+  -webkit-text-fill-color: transparent;
+}
+
+/* ----- Focus ring: gradient-aware ----- */
+.field input:focus,
+.field select:focus,
+.field textarea:focus {
+  border-color: #3DA629;
+  box-shadow: 0 0 0 3px rgba(61, 166, 41, 0.14), 0 0 0 1px rgba(6, 199, 85, 0.6) inset;
+}
+
+/* ----- Hero scroll indicator: gradient text ----- */
+.hero-scroll span {
+  background: linear-gradient(135deg, rgba(255, 255, 255, 0.9), rgba(157, 240, 106, 0.8));
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+  -webkit-text-fill-color: transparent;
 }
