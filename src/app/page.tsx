@@ -98,6 +98,88 @@ const meritItems: {
   },
 ];
 
+const voiceItems = [
+  {
+    photo: "/images/esco_LP/voice-01.svg",
+    name: "佐藤 健太",
+    meta: "27歳・入社2年目／前職: 居酒屋店長",
+    tag: "MEMBER 01",
+    q1: "入社のきっかけは?",
+    a1: "前職は居酒屋で月給22万円。どれだけ働いても給料が変わらず、将来に不安を感じていました。LINE相談で「未経験でも稼げる」と聞き、話だけでもと面談に行ったのがきっかけです。",
+    q2: "今の仕事のやりがい",
+    a2: "お客様に感謝されるのはもちろん、努力が月収に直結するので毎月の達成感がすごい。今は後輩の育成も任されていて、責任ある立場を早く経験できています。",
+    salary: "42",
+  },
+  {
+    photo: "/images/esco_LP/voice-02.svg",
+    name: "田中 美咲",
+    meta: "24歳・入社1年目／前職: アパレル販売",
+    tag: "MEMBER 02",
+    q1: "未経験で不安はなかった?",
+    a1: "正直とても不安でした。でも研修が丁寧で、先輩も毎日フォローしてくれるので3ヶ月で独り立ちできました。女性も活躍しやすい環境です。",
+    q2: "入社して変わったこと",
+    a2: "収入が倍近く増えて、貯金もできるようになりました。休日もちゃんと取れるので、プライベートも充実しています。同世代より一歩先を行けている実感があります。",
+    salary: "38",
+  },
+  {
+    photo: "/images/esco_LP/voice-03.svg",
+    name: "鈴木 翔",
+    meta: "31歳・入社3年目／現: チームリーダー",
+    tag: "MEMBER 03",
+    q1: "前職から転職した理由",
+    a1: "倉庫の仕分け作業を5年やっていて、体力的にも経済的にも限界でした。知り合いの紹介でエスコを知り、30歳からでも挑戦できると聞いて決断しました。",
+    q2: "キャリアアップの実感",
+    a2: "入社1年で月収40万円を達成、3年目でチームリーダーに。マネジメントも任されるようになり、将来の幹部候補として育ててもらっています。",
+    salary: "55",
+  },
+];
+
+const aDayItems = [
+  { time: "09:30", title: "出社・朝礼", desc: "当日の担当会場・目標を共有。チームで士気を上げて1日をスタート。" },
+  { time: "10:00", title: "商品学習・準備", desc: "新製品の知識インプットやトークの練習。イベントで使う資料や備品を準備。" },
+  { time: "12:00", title: "ランチタイム", desc: "先輩・同期とランチ。ざっくばらんに相談できる時間です。" },
+  { time: "13:00", title: "会場へ移動", desc: "担当のイベント会場へ直行。関西エリア内なので長距離移動はありません。" },
+  { time: "14:00", title: "接客・アポイント獲得", desc: "来場者に省エネ機器のメリットを分かりやすく説明。興味を持った方にアポイントを取得。" },
+  { time: "17:00", title: "事務所に帰社", desc: "会場を片付けて帰社。チーム全員で結果をシェア。" },
+  { time: "18:00", title: "日報・翌日準備", desc: "1日の学びを日報にまとめる。翌日の目標も設定してルーティン化。" },
+  { time: "19:00", title: "退勤", desc: "残業はほぼナシ。直行直帰が可能な日もあります。" },
+];
+
+const benefits = [
+  { title: "各種社会保険完備", desc: "健康・厚生年金・雇用・労災すべて完備。" },
+  { title: "交通費全額支給", desc: "通勤・イベント移動費は全額会社負担。" },
+  { title: "研修制度", desc: "入社後1〜2ヶ月の基本研修＋OJT。" },
+  { title: "資格取得支援", desc: "電気・省エネ関連資格の受験料を会社が負担。" },
+  { title: "社員旅行", desc: "年1回、国内外の人気スポットへ。" },
+  { title: "決算賞与", desc: "業績に応じた決算賞与あり。" },
+  { title: "インセンティブ", desc: "成果に応じて毎月インセンティブを還元。" },
+  { title: "制服貸与", desc: "イベント用の制服を貸与。クリーニング代も負担。" },
+];
+
+const careerSteps = [
+  { year: "YEAR 0", role: "新入社員", salary: "24", desc: "研修期間。商品知識・接客・基本トークを身につける。" },
+  { year: "YEAR 1", role: "営業スタッフ", salary: "35", desc: "独り立ちしインセンティブを獲得。平均月収35万円〜。", highlight: true },
+  { year: "YEAR 3", role: "チームリーダー", salary: "50", desc: "後輩の育成・チーム管理も担当。月収50万円も可能。" },
+  { year: "YEAR 5+", role: "マネージャー", salary: "70", desc: "エリア統括・幹部候補。月収70万円以上の実績多数。" },
+];
+
+const idealPoints = [
+  "素直に学べる方",
+  "人と話すことが好きな方",
+  "稼ぎたい想いが強い方",
+  "チームで協力できる方",
+  "前向きに挑戦できる方",
+  "成長意欲のある方",
+];
+
+const flowSteps = [
+  { num: "01", title: "応募", duration: "1分", desc: "LINEまたは応募フォームから。履歴書は不要です。" },
+  { num: "02", title: "LINE面談", duration: "30分", desc: "担当者とカジュアルに会話。疑問を解消できます。" },
+  { num: "03", title: "一次面接", duration: "60分", desc: "現場マネージャーと対面。仕事内容を詳しく説明。" },
+  { num: "04", title: "最終面接", duration: "60分", desc: "代表面接。お互いのマッチングを最終確認。" },
+  { num: "05", title: "内定", duration: "最短1週間", desc: "内定から入社日まで柔軟に調整可能です。" },
+];
+
 export default function Home() {
   const [slideIndex, setSlideIndex] = useState(0);
   const [scrolled, setScrolled] = useState(false);
@@ -308,6 +390,37 @@ export default function Home() {
           </div>
         </section>
 
+        {/* ====== CEO MESSAGE ====== */}
+        <section className="ceo-sec">
+          <div className="ceo-inner">
+            <div className="ceo-photo" data-aos="fade-up">
+              <img src="/images/esco_LP/ceo.svg" alt="代表取締役 山田 太郎" />
+            </div>
+            <div className="ceo-body" data-aos="fade-up" data-aos-delay="100">
+              <span className="sec-label">CEO MESSAGE</span>
+              <h2>
+                社員一人ひとりの
+                <br />
+                <em>「人生の豊かさ」</em>が、
+                <br />
+                会社の未来をつくる。
+              </h2>
+              <p>
+                私自身、若い頃は「頑張っても報われない環境」で悩んでいました。だからこそエスコプロモーションでは、
+                努力した人がきちんと収入を得られる仕組みを整えています。
+              </p>
+              <p>
+                学歴や経歴ではなく、素直さと向上心。それさえあれば、どんなバックグラウンドの方でも活躍できます。
+                あなたの可能性を、私たちと一緒に広げていきませんか。
+              </p>
+              <div className="ceo-sign">
+                <span className="role">代表取締役</span>
+                <span className="name">山田 太郎</span>
+              </div>
+            </div>
+          </div>
+        </section>
+
         {/* ====== NUMBERS ====== */}
         <section className="sec bg-gray">
           <div className="inner">
@@ -488,6 +601,156 @@ export default function Home() {
           </div>
         </section>
 
+        {/* ====== VOICE ====== */}
+        <section className="sec">
+          <div className="inner">
+            <div style={{ textAlign: "center" }} data-aos="fade-up">
+              <span className="sec-label">VOICE</span>
+              <h2>
+                先輩社員の声
+              </h2>
+            </div>
+            <div className="voice-grid">
+              {voiceItems.map((v, i) => (
+                <article
+                  key={v.name}
+                  className="voice-card"
+                  data-aos="fade-up"
+                  data-aos-delay={i * 80}
+                >
+                  <div className="voice-photo">
+                    <img src={v.photo} alt={v.name} />
+                  </div>
+                  <div className="voice-body">
+                    <span className="voice-tag">{v.tag}</span>
+                    <h3 className="voice-name">{v.name}</h3>
+                    <p className="voice-meta">{v.meta}</p>
+                    <p className="voice-q">{v.q1}</p>
+                    <p className="voice-a">{v.a1}</p>
+                    <p className="voice-q">{v.q2}</p>
+                    <p className="voice-a">{v.a2}</p>
+                    <div className="voice-salary">
+                      <span className="label">現在の月収</span>
+                      <span className="val">
+                        {v.salary}<span>万円</span>
+                      </span>
+                    </div>
+                  </div>
+                </article>
+              ))}
+            </div>
+          </div>
+        </section>
+
+        {/* ====== A DAY ====== */}
+        <section className="sec bg-gray">
+          <div className="inner">
+            <div style={{ textAlign: "center" }} data-aos="fade-up">
+              <span className="sec-label">A DAY</span>
+              <h2>営業スタッフの1日</h2>
+            </div>
+            <div className="aday-wrap" data-aos="fade-up">
+              {aDayItems.map((item) => (
+                <div key={item.time} className="aday-item">
+                  <div className="aday-time">{item.time}</div>
+                  <div className="aday-dot" aria-hidden="true" />
+                  <div className="aday-content">
+                    <h3>{item.title}</h3>
+                    <p>{item.desc}</p>
+                  </div>
+                </div>
+              ))}
+            </div>
+          </div>
+        </section>
+
+        {/* ====== BENEFITS ====== */}
+        <section className="sec">
+          <div className="inner">
+            <div style={{ textAlign: "center" }} data-aos="fade-up">
+              <span className="sec-label">BENEFITS</span>
+              <h2>福利厚生・待遇</h2>
+            </div>
+            <div className="benefits-grid" data-aos="fade-up">
+              {benefits.map((b) => (
+                <div key={b.title} className="benefit-item">
+                  <div className="benefit-icon" aria-hidden="true">
+                    <svg
+                      viewBox="0 0 24 24"
+                      fill="none"
+                      stroke="currentColor"
+                      strokeWidth="2"
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
+                    >
+                      <polyline points="20 6 9 17 4 12" />
+                    </svg>
+                  </div>
+                  <h3>{b.title}</h3>
+                  <p>{b.desc}</p>
+                </div>
+              ))}
+            </div>
+          </div>
+        </section>
+
+        {/* ====== CAREER ====== */}
+        <section className="sec bg-gray">
+          <div className="inner">
+            <div style={{ textAlign: "center" }} data-aos="fade-up">
+              <span className="sec-label">CAREER PATH</span>
+              <h2>
+                入社後のキャリアパス
+              </h2>
+            </div>
+            <div className="career-wrap" data-aos="fade-up">
+              {careerSteps.map((c) => (
+                <div
+                  key={c.year}
+                  className={`career-step${c.highlight ? " highlight" : ""}`}
+                >
+                  <div className="career-year">{c.year}</div>
+                  <div className="career-role">{c.role}</div>
+                  <div className="career-salary">
+                    {c.salary}
+                    <span>万円〜</span>
+                  </div>
+                  <p className="career-desc">{c.desc}</p>
+                </div>
+              ))}
+            </div>
+          </div>
+        </section>
+
+        {/* ====== IDEAL CANDIDATE ====== */}
+        <section className="sec">
+          <div className="inner">
+            <div style={{ textAlign: "center" }} data-aos="fade-up">
+              <span className="sec-label">IDEAL</span>
+              <h2>こんな方を求めています</h2>
+            </div>
+            <div className="ideal-list" data-aos="fade-up">
+              {idealPoints.map((p, i) => (
+                <div key={i} className="ideal-item">
+                  <div className="ideal-check" aria-hidden="true">
+                    <svg
+                      viewBox="0 0 24 24"
+                      fill="none"
+                      stroke="currentColor"
+                      strokeWidth="3"
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
+                    >
+                      <polyline points="20 6 9 17 4 12" />
+                    </svg>
+                  </div>
+                  <span className="ideal-text">{p}</span>
+                </div>
+              ))}
+            </div>
+          </div>
+        </section>
+
         {/* ====== LINE CTA ====== */}
         <section className="line-cta-sec">
           <div className="inner">
@@ -575,6 +838,26 @@ export default function Home() {
                   </tr>
                 </tbody>
               </table>
+            </div>
+          </div>
+        </section>
+
+        {/* ====== FLOW (selection steps) ====== */}
+        <section className="sec bg-gray">
+          <div className="inner">
+            <div style={{ textAlign: "center" }} data-aos="fade-up">
+              <span className="sec-label">FLOW</span>
+              <h2>応募から内定までの流れ</h2>
+            </div>
+            <div className="flow-wrap" data-aos="fade-up">
+              {flowSteps.map((s) => (
+                <div key={s.num} className="flow-step">
+                  <span className="flow-num">STEP {s.num}</span>
+                  <div className="flow-title">{s.title}</div>
+                  <div className="flow-duration">所要: {s.duration}</div>
+                  <p className="flow-desc">{s.desc}</p>
+                </div>
+              ))}
             </div>
           </div>
         </section>
