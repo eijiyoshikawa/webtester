@@ -989,14 +989,24 @@ img { display: block; max-width: 100%; }
   gap: 24px;
 }
 .footer__instagram {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
   font-family: "Space Grotesk", sans-serif;
-  font-size: 12px;
-  letter-spacing: 0.2em;
-  color: #666;
-  transition: color 0.3s;
+  font-size: 14px;
+  letter-spacing: 0.15em;
+  color: #fff;
+  padding: 14px 32px;
+  border: 1px solid #444;
+  transition: border-color 0.3s, color 0.3s, background 0.3s;
+}
+.footer__ig-icon {
+  flex-shrink: 0;
 }
 .footer__instagram:hover {
+  border-color: #FF0055;
   color: #FF0055;
+  background: rgba(255,0,85,0.05);
 }
 .footer__copy {
   font-family: "Space Grotesk", sans-serif;
