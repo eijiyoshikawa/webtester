@@ -24,17 +24,10 @@ const LineIcon = ({ size = 18 }: { size?: number }) => (
   </svg>
 );
 
-const heroPcImages = [
-  "/images/esco_LP/esco_top3.jpg",
+const coverImages = [
   "/images/esco_LP/esco_top1.jpg",
   "/images/esco_LP/esco_top2.jpg",
-];
-
-const galleryImgs = [
-  "/images/esco_LP/gallery-01.jpg",
-  "/images/esco_LP/gallery-02.jpg",
-  "/images/esco_LP/gallery-03.jpg",
-  "/images/esco_LP/gallery-04.jpg",
+  "/images/esco_LP/esco_top3.jpg",
 ];
 
 const faqItems: { q: string; a: string }[] = [
@@ -64,36 +57,29 @@ const faqItems: { q: string; a: string }[] = [
   },
 ];
 
-const meritItems: {
-  num: string;
-  photo: string;
-  alt: string;
-  title: string;
-  body: string;
-  tag: string;
-}[] = [
+const meritItems = [
   {
     num: "01",
     photo: "/images/esco_LP/merit-01.jpg",
     alt: "収入",
-    title: "頑張りが、そのまま\n給料に反映される",
-    body: "月給24万円スタート＋インセンティブ制度。賞与年2回・昇給ありで上限なく稼げます。入社1年以内に月収35万円を超えるメンバーも多数います。「給料が上がらない」という悩みとはここで永遠にお別れできます。",
+    title: "頑張りが、\nそのまま給料に。",
+    body: "月給24万円スタート＋インセンティブ制度。賞与年2回・昇給ありで上限なく稼げます。入社1年以内に月収35万円を超えるメンバーも多数います。",
     tag: "インセンティブ制度あり",
   },
   {
     num: "02",
     photo: "/images/esco_LP/merit-02.jpg",
     alt: "研修",
-    title: "未経験でも安心の\n研修・サポート体制",
-    body: "入社後は先輩が毎日フォロー。学歴・経歴不問で、素直に学べる方なら必ず活躍できます。基本研修は1〜2ヶ月。飲食・販売・倉庫から転職した社員が多数活躍中です。",
+    title: "未経験でも安心の\n研修・サポート。",
+    body: "入社後は先輩が毎日フォロー。学歴・経歴不問で、素直に学べる方なら必ず活躍できます。飲食・販売・倉庫からの転職者が多数活躍中。",
     tag: "1〜2ヶ月の研修制度",
   },
   {
     num: "03",
     photo: "/images/esco_LP/merit-03.jpg",
     alt: "休日",
-    title: "直行直帰OK・\n年間休日120日",
-    body: "完全週休2日制も選択可能。年末年始・GW・お盆休暇あり。関西エリア内の勤務なので遠方への転勤もありません。体力を消耗する仕事とは違い、オフもしっかり確保できます。",
+    title: "直行直帰OK・\n年間休日120日。",
+    body: "完全週休2日制も選択可能。年末年始・GW・お盆休暇あり。関西エリア内の勤務なので遠方への転勤もありません。",
     tag: "年間休日120日・転勤なし",
   },
 ];
@@ -102,29 +88,29 @@ const voiceItems = [
   {
     photo: "/images/esco_LP/voice-01.jpg",
     name: "佐藤 健太",
-    meta: "27歳・入社2年目／前職: 居酒屋店長",
+    meta: "27歳 ／ 入社2年目 ／ 前職: 居酒屋店長",
     tag: "MEMBER 01",
     q1: "入社のきっかけは?",
     a1: "前職は居酒屋で月給22万円。どれだけ働いても給料が変わらず、将来に不安を感じていました。LINE相談で「未経験でも稼げる」と聞き、話だけでもと面談に行ったのがきっかけです。",
     q2: "今の仕事のやりがい",
-    a2: "お客様に感謝されるのはもちろん、努力が月収に直結するので毎月の達成感がすごい。今は後輩の育成も任されていて、責任ある立場を早く経験できています。",
+    a2: "お客様に感謝されるのはもちろん、努力が月収に直結するので毎月の達成感がすごい。今は後輩の育成も任されています。",
     salary: "42",
   },
   {
     photo: "/images/esco_LP/voice-02.jpg",
     name: "田中 美咲",
-    meta: "24歳・入社1年目／前職: アパレル販売",
+    meta: "24歳 ／ 入社1年目 ／ 前職: アパレル販売",
     tag: "MEMBER 02",
     q1: "未経験で不安はなかった?",
     a1: "正直とても不安でした。でも研修が丁寧で、先輩も毎日フォローしてくれるので3ヶ月で独り立ちできました。女性も活躍しやすい環境です。",
     q2: "入社して変わったこと",
-    a2: "収入が倍近く増えて、貯金もできるようになりました。休日もちゃんと取れるので、プライベートも充実しています。同世代より一歩先を行けている実感があります。",
+    a2: "収入が倍近く増えて、貯金もできるようになりました。休日もちゃんと取れるので、プライベートも充実しています。",
     salary: "38",
   },
   {
     photo: "/images/esco_LP/voice-03.jpg",
     name: "鈴木 翔",
-    meta: "31歳・入社3年目／現: チームリーダー",
+    meta: "31歳 ／ 入社3年目 ／ 現: チームリーダー",
     tag: "MEMBER 03",
     q1: "前職から転職した理由",
     a1: "倉庫の仕分け作業を5年やっていて、体力的にも経済的にも限界でした。知り合いの紹介でエスコを知り、30歳からでも挑戦できると聞いて決断しました。",
@@ -180,6 +166,21 @@ const flowSteps = [
   { num: "05", title: "内定", duration: "最短1週間", desc: "内定から入社日まで柔軟に調整可能です。" },
 ];
 
+const tocItems: { n: string; label: string; en: string; href: string }[] = [
+  { n: "01", label: "数字で見るエスコ", en: "NUMBERS", href: "#ch-01" },
+  { n: "02", label: "他社との比較", en: "COMPARE", href: "#ch-02" },
+  { n: "03", label: "代表メッセージ", en: "MESSAGE", href: "#ch-03" },
+  { n: "04", label: "働く3つの理由", en: "MERIT", href: "#ch-04" },
+  { n: "05", label: "先輩社員の声", en: "VOICE", href: "#ch-05" },
+  { n: "06", label: "1日の流れ", en: "A DAY", href: "#ch-06" },
+  { n: "07", label: "福利厚生", en: "BENEFITS", href: "#ch-07" },
+  { n: "08", label: "キャリアパス", en: "CAREER", href: "#ch-08" },
+  { n: "09", label: "求める人物像", en: "IDEAL", href: "#ch-09" },
+  { n: "10", label: "募集要項", en: "RECRUITMENT", href: "#ch-10" },
+  { n: "11", label: "選考フロー", en: "FLOW", href: "#ch-11" },
+  { n: "12", label: "よくある質問", en: "FAQ", href: "#ch-12" },
+];
+
 export default function Home() {
   const [slideIndex, setSlideIndex] = useState(0);
   const [scrolled, setScrolled] = useState(false);
@@ -196,39 +197,17 @@ export default function Home() {
     position: "営業職(正社員)",
     message: "",
   });
-  const [status, setStatus] = useState<"idle" | "sending" | "done" | "error">(
-    "idle"
-  );
+  const [status, setStatus] = useState<"idle" | "sending" | "done" | "error">("idle");
 
-  // AOS init (with retry for CDN load timing)
-  useEffect(() => {
-    const tryInit = () => {
-      if (typeof window !== "undefined" && window.AOS) {
-        window.AOS.init({ duration: 600, once: true, offset: 40 });
-        return true;
-      }
-      return false;
-    };
-    if (tryInit()) return;
-    const id = setInterval(() => {
-      if (tryInit()) clearInterval(id);
-    }, 100);
-    const timeout = setTimeout(() => clearInterval(id), 5000);
-    return () => {
-      clearInterval(id);
-      clearTimeout(timeout);
-    };
-  }, []);
-
-  // Hero slider
+  // Cover slider
   useEffect(() => {
     const id = setInterval(() => {
-      setSlideIndex((prev) => (prev + 1) % heroPcImages.length);
-    }, 3000);
+      setSlideIndex((p) => (p + 1) % coverImages.length);
+    }, 4500);
     return () => clearInterval(id);
   }, []);
 
-  // Scroll-related: header shadow, progress bar, back-to-top visibility
+  // Scroll handling
   useEffect(() => {
     let raf = 0;
     const onScroll = () => {
@@ -237,7 +216,7 @@ export default function Home() {
         const y = window.scrollY;
         const h = document.documentElement.scrollHeight - window.innerHeight;
         setScrolled(y > 40);
-        setShowBackTop(y > 600);
+        setShowBackTop(y > 700);
         setProgress(h > 0 ? Math.min(100, (y / h) * 100) : 0);
         raf = 0;
       });
@@ -250,10 +229,10 @@ export default function Home() {
     };
   }, []);
 
-  // Converge-on-scroll (IntersectionObserver)
+  // Converge IO
   useEffect(() => {
     if (typeof window === "undefined") return;
-    const els = document.querySelectorAll<HTMLElement>("[data-converge]");
+    const els = document.querySelectorAll<HTMLElement>("[data-c]");
     if (!els.length) return;
     if (!("IntersectionObserver" in window)) {
       els.forEach((el) => el.classList.add("in"));
@@ -261,32 +240,31 @@ export default function Home() {
     }
     const io = new IntersectionObserver(
       (entries) => {
-        entries.forEach((entry) => {
-          if (entry.isIntersecting) {
-            entry.target.classList.add("in");
-            io.unobserve(entry.target);
+        entries.forEach((e) => {
+          if (e.isIntersecting) {
+            e.target.classList.add("in");
+            io.unobserve(e.target);
           }
         });
       },
-      { threshold: 0.15, rootMargin: "0px 0px -40px 0px" }
+      { threshold: 0.12, rootMargin: "0px 0px -40px 0px" }
     );
     els.forEach((el) => io.observe(el));
     return () => io.disconnect();
   }, []);
 
-  // CountUp on view (NUMBERS / CAREER)
+  // CountUp IO
   useEffect(() => {
     if (typeof window === "undefined") return;
     if (!("IntersectionObserver" in window)) return;
     const targets = document.querySelectorAll<HTMLElement>("[data-countup]");
-    if (!targets.length) return;
     const io = new IntersectionObserver(
       (entries) => {
         entries.forEach((entry) => {
           if (!entry.isIntersecting) return;
           const el = entry.target as HTMLElement;
           const end = Number(el.dataset.countup || "0");
-          const duration = 1200;
+          const duration = 1400;
           const start = performance.now();
           const render = (t: number) => {
             const p = Math.min(1, (t - start) / duration);
@@ -304,7 +282,7 @@ export default function Home() {
     return () => io.disconnect();
   }, []);
 
-  // Exit intent (desktop only, one-time per session)
+  // Exit intent (desktop)
   useEffect(() => {
     if (typeof window === "undefined") return;
     if (window.matchMedia("(max-width: 900px)").matches) return;
@@ -316,17 +294,14 @@ export default function Home() {
         document.removeEventListener("mouseleave", onLeave);
       }
     };
-    // delay binding so modal doesn't pop on immediate navigation
-    const t = setTimeout(() => {
-      document.addEventListener("mouseleave", onLeave);
-    }, 15000);
+    const t = setTimeout(() => document.addEventListener("mouseleave", onLeave), 15000);
     return () => {
       clearTimeout(t);
       document.removeEventListener("mouseleave", onLeave);
     };
   }, []);
 
-  // Close drawer on ESC + lock body scroll while open
+  // ESC to close overlays
   useEffect(() => {
     const onKey = (e: KeyboardEvent) => {
       if (e.key === "Escape") {
@@ -340,21 +315,12 @@ export default function Home() {
 
   const trackContact = () => {
     if (typeof window !== "undefined" && window.ttq) {
-      try {
-        window.ttq.track("Contact");
-      } catch {
-        /* noop */
-      }
+      try { window.ttq.track("Contact"); } catch { /* noop */ }
     }
   };
-
   const trackSubmit = () => {
     if (typeof window !== "undefined" && window.ttq) {
-      try {
-        window.ttq.track("SubmitForm");
-      } catch {
-        /* noop */
-      }
+      try { window.ttq.track("SubmitForm"); } catch { /* noop */ }
     }
   };
 
@@ -375,61 +341,27 @@ export default function Home() {
     }
   };
 
-  const tocItems: { label: string; en: string; href: string }[] = [
-    { label: "代表メッセージ", en: "CEO", href: "#ceo" },
-    { label: "数字で見るエスコ", en: "NUMBERS", href: "#numbers" },
-    { label: "選ばれる理由", en: "MERIT", href: "#merit" },
-    { label: "先輩社員の声", en: "VOICE", href: "#voice" },
-    { label: "1日の流れ", en: "A DAY", href: "#aday" },
-    { label: "福利厚生", en: "BENEFITS", href: "#benefits" },
-    { label: "キャリアパス", en: "CAREER", href: "#career" },
-    { label: "募集要項", en: "RECRUITMENT", href: "#recruitment" },
-    { label: "選考フロー", en: "FLOW", href: "#flow" },
-    { label: "よくある質問", en: "FAQ", href: "#faq" },
-    { label: "応募フォーム", en: "APPLY", href: "#apply" },
-  ];
 
   return (
     <>
-      {/* Background animated blobs */}
-      <div className="bg-anim" aria-hidden="true">
-        <div className="blob blob-1" />
-        <div className="blob blob-2" />
-        <div className="blob blob-3" />
-      </div>
+      {/* Background layers */}
+      <div className="aurora" aria-hidden="true" />
+      <div className="grain" aria-hidden="true" />
 
-      {/* Scroll progress bar */}
-      <div
-        className="scroll-progress"
-        style={{ width: `${progress}%` }}
-        aria-hidden="true"
-      />
+      {/* Scroll progress */}
+      <div className="progress" style={{ width: `${progress}%` }} aria-hidden="true" />
 
-      {/* ====== HEADER ====== */}
-      <header className={`lp-header${scrolled ? " scrolled" : ""}`}>
-        <div className="header">
-          <a href="#" className="header-logo" aria-label="ESCO PROMOTION">
-            <img
-              src="/images/esco_LP/esco_logo.png"
-              alt="ESCO PROMOTION 株式会社エスコプロモーション"
-              width="140"
-              height="32"
-              decoding="async"
-            />
+      {/* ====== NAV ====== */}
+      <header className={`nav${scrolled ? " scrolled" : ""}`}>
+        <div className="nav__inner">
+          <a href="#top" className="nav__brand" aria-label="ESCO PROMOTION">
+            <img src="/images/esco_LP/esco_logo.png" alt="ESCO PROMOTION" width="120" height="26" />
+            <span className="nav__brand-label">RECRUIT / 2026</span>
           </a>
-          <div style={{ display: "flex", alignItems: "center", gap: 4 }}>
-            <button
-              type="button"
-              className={`header-menu-btn${drawerOpen ? " open" : ""}`}
-              aria-label="メニューを開く"
-              aria-expanded={drawerOpen}
-              aria-controls="sp-drawer"
-              onClick={() => setDrawerOpen((v) => !v)}
-            >
-              <span />
-            </button>
+          <div className="nav__actions">
+            <a className="nav__link" href="#apply">ENTRY</a>
             <a
-              className="header-cta"
+              className="nav__cta"
               href={LINE_URL}
               target="_blank"
               rel="noopener noreferrer"
@@ -438,6 +370,16 @@ export default function Home() {
               <LineIcon size={14} />
               LINEで相談
             </a>
+            <button
+              type="button"
+              className={`menu-btn${drawerOpen ? " open" : ""}`}
+              aria-label="メニューを開く"
+              aria-expanded={drawerOpen}
+              aria-controls="sp-drawer"
+              onClick={() => setDrawerOpen((v) => !v)}
+            >
+              <span />
+            </button>
           </div>
         </div>
       </header>
@@ -445,31 +387,28 @@ export default function Home() {
       {/* SP drawer */}
       <div
         id="sp-drawer"
-        className={`sp-drawer${drawerOpen ? " open" : ""}`}
+        className={`drawer${drawerOpen ? " open" : ""}`}
         role="dialog"
         aria-label="ナビゲーションメニュー"
         aria-hidden={!drawerOpen}
       >
-        <nav>
+        <nav className="drawer__nav">
           {tocItems.map((item) => (
             <a
               key={item.href}
               href={item.href}
               onClick={() => setDrawerOpen(false)}
             >
-              {item.label}
-              <span className="en">{item.en}</span>
+              <span>{item.label}</span>
+              <span className="n">{item.n} / {item.en}</span>
             </a>
           ))}
           <a
-            className="drawer-cta"
+            className="drawer__cta"
             href={LINE_URL}
             target="_blank"
             rel="noopener noreferrer"
-            onClick={() => {
-              trackContact();
-              setDrawerOpen(false);
-            }}
+            onClick={() => { trackContact(); setDrawerOpen(false); }}
           >
             <LineIcon size={18} />
             LINEで相談する
@@ -477,406 +416,368 @@ export default function Home() {
         </nav>
       </div>
 
-      <main>
-        {/* ====== HERO ====== */}
-        <section className="hero" aria-label="キービジュアル">
-          <div className="hero-slides">
-            {heroPcImages.map((src, i) => (
-              <img
-                key={src}
-                className={`hero-img-pc${i === slideIndex ? " active" : ""}`}
-                src={src}
-                alt="エスコプロモーション"
-                // @ts-expect-error - fetchpriority attr (lowercase) valid HTML
-                fetchpriority={i === 0 ? "high" : "low"}
-                loading={i === 0 ? "eager" : "lazy"}
-                decoding="async"
-              />
-            ))}
+      <main id="top">
+        {/* ====== OPENING ====== */}
+        <section className="opening" aria-label="Hero">
+          <div className="opening__top">
+            <div className="opening__edition">
+              ESCO PROMOTION <b>— Recruit Edition 2026</b>
+            </div>
+            <div className="opening__year" aria-hidden="true">26</div>
           </div>
-          <img
-            className="hero-img-sp"
-            src="/images/esco_LP/hero.jpg"
-            alt="エスコプロモーション"
-            // @ts-expect-error - fetchpriority attr (lowercase) valid HTML
-            fetchpriority="high"
-            loading="eager"
-            decoding="async"
-          />
-          <div className="hero-scroll" aria-hidden="true">
-            <span>SCROLL</span>
-            <svg
-              width="18"
-              height="18"
-              viewBox="0 0 24 24"
-              fill="none"
-              strokeWidth="1.5"
-              strokeLinecap="round"
-              strokeLinejoin="round"
-            >
-              <path d="M12 5v14M5 12l7 7 7-7" />
-            </svg>
-          </div>
-        </section>
-
-        {/* ====== HERO TEXT ====== */}
-        <section className="hero-text-sec" data-aos="fade-up" data-aos-delay="100">
-          <h1>
+          <h1 className="opening__h" data-c="up">
             あなたの<em>「もっと稼ぎたい」</em>を、
             <br />
             現実にする会社。
           </h1>
-          <p className="hero-sub">
-            ESCO PROMOTION ／ 中途採用 ／ 営業職
-          </p>
-          <div className="trust-badges" data-aos="fade-up" data-aos-delay="200">
-            <span className="trust-badge">
-              <span className="num">14<span>年</span></span>創業からの実績
-            </span>
-            <span className="trust-badge">
-              <span className="num">92<span>%</span></span>3年定着率
-            </span>
-            <span className="trust-badge">
-              <span className="num">120<span>名</span></span>在籍社員
-            </span>
-            <span className="trust-badge">
-              <span className="num">100<span>%</span></span>未経験スタート
-            </span>
+          <div className="opening__meta" data-c="up" data-d="2">
+            <div>
+              <b>Position</b>
+              営業スタッフ（省エネ機器のイベント案内）
+            </div>
+            <div>
+              <b>Location</b>
+              大阪市中央区／関西一円
+            </div>
+            <div>
+              <b>Type</b>
+              正社員・中途採用
+            </div>
+            <div>
+              <b>Salary</b>
+              月収35万円〜（入社1年目実績）
+            </div>
+          </div>
+          <div className="opening__scroll" aria-hidden="true">
+            <span className="line" />
+            SCROLL
           </div>
         </section>
 
-        {/* ====== GALLERY ====== */}
-        <section className="gallery-sec" aria-label="ギャラリー">
-          <div className="gallery-wrap">
-            {[...galleryImgs, ...galleryImgs].map((src, i) => (
+        {/* ====== COVER (crossfade image) ====== */}
+        <section className="cover" aria-label="カバー">
+          <div className="cover__slides">
+            {coverImages.map((src, i) => (
+              <div
+                key={src}
+                className={`cover__slide${i === slideIndex ? " active" : ""}`}
+              >
+                <img
+                  src={src}
+                  alt="エスコプロモーション チーム"
+                  loading={i === 0 ? "eager" : "lazy"}
+                  decoding="async"
+                />
+              </div>
+            ))}
+          </div>
+          <div className="cover__vignette" />
+          <div className="cover__caption">
+            <b>FIG. 01</b> / TEAM AT WORK — Osaka Office
+          </div>
+          <div className="cover__frame">
+            {String(slideIndex + 1).padStart(2, "0")} / {String(coverImages.length).padStart(2, "0")}
+          </div>
+        </section>
+
+        {/* ====== INDEX (TOC) ====== */}
+        <section className="index-sec" aria-label="目次">
+          <div className="index-sec__wrap">
+            <div className="index-sec__head" data-c="left">
+              <h2>— Contents</h2>
+              <p>12 Chapters / 2026 Edition</p>
+            </div>
+            <div className="toc" data-c="right">
+              {tocItems.map((item) => (
+                <a key={item.href} href={item.href}>
+                  <span className="num">{item.n}</span>
+                  <span>{item.label}</span>
+                  <span className="en">{item.en}</span>
+                </a>
+              ))}
+            </div>
+          </div>
+        </section>
+
+        {/* ====== CH 01 — NUMBERS ====== */}
+        <section className="chapter" id="ch-01" aria-label="数字で見るエスコ">
+          <div className="chapter__head">
+            <div className="chapter__meta" data-c="left">
+              <div className="chapter__no">01</div>
+              <div className="chapter__label">Numbers</div>
+            </div>
+            <div data-c="right">
+              <h2 className="chapter__h">
+                数字で見る、<em>エスコの働き方</em>。
+              </h2>
+              <p className="chapter__lead">
+                月収・休日・初期費用の3指標で、「頑張った分だけ稼げる」を可視化します。
+              </p>
+            </div>
+          </div>
+          <div className="nums">
+            <div className="num" data-c="up">
+              <div className="num__label"><b>01</b> Monthly Income</div>
+              <div className="num__v">
+                <span data-countup="35">0</span>
+                <span className="u">万円〜</span>
+              </div>
+              <div className="num__name">入社1年目で目指せる月収</div>
+              <p className="num__desc">月給24万円＋インセンティブ。頑張り次第で青天井の収入。</p>
+            </div>
+            <div className="num" data-c="up" data-d="1">
+              <div className="num__label"><b>02</b> Annual Holidays</div>
+              <div className="num__v">
+                <span data-countup="120">0</span>
+                <span className="u">日</span>
+              </div>
+              <div className="num__name">年間休日</div>
+              <p className="num__desc">完全週休2日制も選択可能。年末年始・GW・お盆あり。</p>
+            </div>
+            <div className="num" data-c="up" data-d="2">
+              <div className="num__label"><b>03</b> Starting Cost</div>
+              <div className="num__v">
+                <span data-countup="0">0</span>
+                <span className="u">円</span>
+              </div>
+              <div className="num__name">必要な初期費用</div>
+              <p className="num__desc">未経験・学歴不問。研修費・道具代は全額会社負担。</p>
+            </div>
+          </div>
+        </section>
+
+        {/* ====== CH 02 — COMPARE ====== */}
+        <section className="chapter" id="ch-02" aria-label="他社との比較">
+          <div className="chapter__head">
+            <div className="chapter__meta" data-c="left">
+              <div className="chapter__no">02</div>
+              <div className="chapter__label">Compare</div>
+            </div>
+            <div data-c="right">
+              <h2 className="chapter__h">
+                同じ時間を使うなら、<em>稼げる仕事</em>を。
+              </h2>
+              <p className="chapter__lead">
+                飲食・販売・倉庫の一般的な給与モデルと、エスコプロモーションの実績を並べました。
+              </p>
+            </div>
+          </div>
+          <div className="vs">
+            <div className="vs__col vs__col--other" data-c="left">
+              <div className="vs__tag">OTHER — 他の仕事（例）</div>
+              <div className="vs__sub">飲食・販売・倉庫スタッフ</div>
+              <div className="vs__rows">
+                <div className="vs__row"><span className="vs__k">Monthly</span><span className="vs__v">18〜21万円</span></div>
+                <div className="vs__row"><span className="vs__k">Cap</span><span className="vs__v" style={{ fontSize: 18 }}>ほぼ固定</span></div>
+                <div className="vs__row"><span className="vs__k">Incentive</span><span className="vs__v" style={{ fontSize: 18 }}>なし</span></div>
+                <div className="vs__row"><span className="vs__k">5yrs Later</span><span className="vs__v" style={{ fontSize: 18 }}>ほぼ変わらず</span></div>
+              </div>
+            </div>
+            <div className="vs__divider" data-c="scale" data-d="1">VS</div>
+            <div className="vs__col vs__col--ours" data-c="right" data-d="2">
+              <div className="vs__tag">OURS — 当社</div>
+              <div className="vs__sub">エスコプロモーション・営業職</div>
+              <div className="vs__rows">
+                <div className="vs__row"><span className="vs__k">Monthly</span><span className="vs__v">35万円〜</span></div>
+                <div className="vs__row"><span className="vs__k">Cap</span><span className="vs__v" style={{ fontSize: 22 }}>青天井</span></div>
+                <div className="vs__row"><span className="vs__k">Incentive</span><span className="vs__v" style={{ fontSize: 22 }}>あり</span></div>
+                <div className="vs__row"><span className="vs__k">5yrs Later</span><span className="vs__v" style={{ fontSize: 22 }}>実力次第</span></div>
+              </div>
+            </div>
+          </div>
+          <div className="vs__note">
+            ※他社の月収は時給×8h×22日の目安。エスコの数値は入社1年目社員の平均実績です。
+          </div>
+          <div className="vs__cta" data-c="up">
+            <div className="vs__line">
+              同じ時間を使うなら、<em>稼げる仕事</em>を選ぶべきではないですか?
+            </div>
+            <a
+              className="btn-line"
+              href={LINE_URL}
+              target="_blank"
+              rel="noopener noreferrer"
+              onClick={trackContact}
+            >
+              <LineIcon size={20} />
+              LINEで詳しく聞いてみる
+            </a>
+          </div>
+        </section>
+
+        {/* ====== CH 03 — MESSAGE / CEO ====== */}
+        <section className="chapter" id="ch-03" aria-label="代表メッセージ">
+          <div className="chapter__head">
+            <div className="chapter__meta" data-c="left">
+              <div className="chapter__no">03</div>
+              <div className="chapter__label">Message</div>
+            </div>
+            <div data-c="right">
+              <h2 className="chapter__h">
+                代表メッセージ。
+              </h2>
+              <p className="chapter__lead">
+                社員一人ひとりの「人生の豊かさ」が、会社の未来をつくる。
+              </p>
+            </div>
+          </div>
+          <div className="msg">
+            <div className="msg__portrait" data-c="left">
               <img
-                key={`${src}-${i}`}
-                src={src}
-                alt=""
-                role="presentation"
+                src="/images/esco_LP/ceo.jpg"
+                alt="代表取締役 山田 太郎"
                 loading="lazy"
                 decoding="async"
               />
-            ))}
-          </div>
-        </section>
-
-        {/* ====== MESSAGE ====== */}
-        <section className="message-sec">
-          <div className="message-inner">
-            <div className="message-text" data-aos="fade-up">
-              <span className="sec-label">MESSAGE</span>
-              <h2>
-                「頑張る人が、
+            </div>
+            <div className="msg__body" data-c="right">
+              <div className="msg__quote">
+                頑張る人が、ちゃんと
                 <br />
-                ちゃんと<span>稼げる</span>会社」
-              </h2>
+                <em>稼げる会社</em>を
+                <br />
+                つくりたかった。
+              </div>
               <p>
-                飲食・販売・倉庫で一生懸命働いても、給料が変わらない。
-                <br />
-                そんな悔しさを持つあなたに届けたい。
-                <br />
-                エスコプロモーションは、あなたの努力が
-                <br />
-                そのまま収入になる環境を用意しています。
-              </p>
-              <a
-                className="btn-primary"
-                href={LINE_URL}
-                target="_blank"
-                rel="noopener noreferrer"
-                onClick={trackContact}
-              >
-                <LineIcon size={18} />
-                まずはLINEで話を聞く
-              </a>
-            </div>
-            <div
-              className="message-photo"
-              data-aos="fade-up"
-              data-aos-delay="100"
-            >
-              <img src="/images/esco_LP/message.jpg" alt="エスコのチーム" loading="lazy" decoding="async" />
-            </div>
-          </div>
-        </section>
-
-        {/* ====== CEO MESSAGE ====== */}
-        <section className="ceo-sec" id="ceo">
-          <div className="ceo-inner">
-            <div className="ceo-photo" data-converge="left">
-              <img src="/images/esco_LP/ceo.jpg" alt="代表取締役 山田 太郎" loading="lazy" decoding="async" />
-            </div>
-            <div className="ceo-body" data-converge="right">
-              <span className="sec-label">CEO MESSAGE</span>
-              <h2>
-                社員一人ひとりの
-                <br />
-                <em>「人生の豊かさ」</em>が、
-                <br />
-                会社の未来をつくる。
-              </h2>
-              <p>
-                私自身、若い頃は「頑張っても報われない環境」で悩んでいました。だからこそエスコプロモーションでは、
-                努力した人がきちんと収入を得られる仕組みを整えています。
+                私自身、若い頃は「頑張っても報われない環境」で悩んでいました。だからこそエスコプロモーションでは、努力した人がきちんと収入を得られる仕組みを整えています。
               </p>
               <p>
-                学歴や経歴ではなく、素直さと向上心。それさえあれば、どんなバックグラウンドの方でも活躍できます。
-                あなたの可能性を、私たちと一緒に広げていきませんか。
+                学歴や経歴ではなく、素直さと向上心。それさえあれば、どんなバックグラウンドの方でも活躍できます。あなたの可能性を、私たちと一緒に広げていきませんか。
               </p>
-              <div className="ceo-sign">
-                <span className="role">代表取締役</span>
-                <span className="name">山田 太郎</span>
+              <div className="msg__sign">
+                <span>CEO / 代表取締役</span>
+                <b>山田 太郎</b>
               </div>
             </div>
           </div>
         </section>
 
-        {/* ====== NUMBERS ====== */}
-        <section className="sec bg-gray" id="numbers">
-          <div className="inner">
-            <div style={{ textAlign: "center" }} data-aos="fade-up">
-              <span className="sec-label">NUMBERS</span>
+        {/* ====== CH 04 — MERIT (bento) ====== */}
+        <section className="chapter" id="ch-04" aria-label="働く3つの理由">
+          <div className="chapter__head">
+            <div className="chapter__meta" data-c="left">
+              <div className="chapter__no">04</div>
+              <div className="chapter__label">Merit</div>
             </div>
-            <div className="numbers-grid">
-              <div className="num-item" data-converge="left">
-                <span className="num">
-                  <span data-countup="35">0</span>
-                  <span>万円〜</span>
-                </span>
-                <span className="num-label">入社1年目で目指せる月収</span>
-                <p className="num-desc">
-                  月給24万円＋インセンティブ。
-                  <br />
-                  頑張り次第で青天井。
-                </p>
-              </div>
-              <div className="num-item" data-converge="scale" data-d="1">
-                <span className="num">
-                  <span data-countup="120">0</span>
-                  <span>日</span>
-                </span>
-                <span className="num-label">年間休日</span>
-                <p className="num-desc">
-                  完全週休2日制も選択可。
-                  <br />
-                  年末年始・GW・お盆あり。
-                </p>
-              </div>
-              <div className="num-item" data-converge="right" data-d="2">
-                <span className="num">
-                  <span data-countup="0">0</span>
-                  <span>円</span>
-                </span>
-                <span className="num-label">必要な初期費用</span>
-                <p className="num-desc">
-                  未経験・学歴不問。
-                  <br />
-                  研修費・道具代は全額会社負担。
-                </p>
-              </div>
-            </div>
-          </div>
-        </section>
-
-        {/* ====== COMPARE ====== */}
-        <section className="sec">
-          <div className="inner">
-            <div style={{ textAlign: "center" }} data-aos="fade-up">
-              <span className="sec-label">COMPARE</span>
-              <h2
-                style={{
-                  fontSize: "clamp(22px, 3.5vw, 36px)",
-                  lineHeight: 1.35,
-                }}
-              >
-                同じフルタイムでも、
-                <br />
-                月収にこれだけの差がある。
+            <div data-c="right">
+              <h2 className="chapter__h">
+                エスコで働く、<em>3つの理由</em>。
               </h2>
-            </div>
-
-            <div className="compare-wrap">
-              <div className="compare-side other" data-converge="left">
-                <div className="compare-top">
-                  <span className="tag">他の仕事(例)</span>
-                  <h3>飲食・販売・倉庫スタッフ</h3>
-                </div>
-                <div className="compare-row">
-                  <span className="cr-label">月収目安</span>
-                  <span className="cr-val">18〜21万円</span>
-                </div>
-                <div className="compare-row">
-                  <span className="cr-label">収入の上限</span>
-                  <span className="cr-val" style={{ fontSize: 14 }}>
-                    ほぼ固定
-                  </span>
-                </div>
-                <div className="compare-row">
-                  <span className="cr-label">インセンティブ</span>
-                  <span className="cr-val" style={{ fontSize: 14 }}>
-                    なし
-                  </span>
-                </div>
-                <div className="compare-row">
-                  <span className="cr-label">5年後の月収</span>
-                  <span className="cr-val" style={{ fontSize: 14 }}>
-                    ほぼ変わらず
-                  </span>
-                </div>
-              </div>
-
-              <div className="compare-vs" data-converge="scale" data-d="1">VS</div>
-
-              <div className="compare-side espro" data-converge="right" data-d="2">
-                <div className="compare-top">
-                  <span className="tag">当社</span>
-                  <h3>エスコプロモーション・営業職</h3>
-                </div>
-                <div className="compare-row">
-                  <span className="cr-label">月収目安</span>
-                  <span className="cr-val">35万円〜</span>
-                </div>
-                <div className="compare-row">
-                  <span className="cr-label">収入の上限</span>
-                  <span className="cr-val" style={{ fontSize: 16 }}>
-                    青天井
-                  </span>
-                </div>
-                <div className="compare-row">
-                  <span className="cr-label">インセンティブ</span>
-                  <span className="cr-val" style={{ fontSize: 16 }}>
-                    あり
-                  </span>
-                </div>
-                <div className="compare-row">
-                  <span className="cr-label">5年後の月収</span>
-                  <span className="cr-val" style={{ fontSize: 16 }}>
-                    実力次第
-                  </span>
-                </div>
-              </div>
-            </div>
-
-            <p className="compare-note">
-              ※他社の月収は時給×8h×22日の目安。エスコの数値は入社1年目社員の平均実績です。
-            </p>
-
-            <div className="compare-cta" data-aos="fade-up">
-              <p>
-                同じ時間を使うなら、
-                <br />
-                <em>稼げる仕事を選ぶべき</em>ではないですか?
+              <p className="chapter__lead">
+                収入・成長・ライフスタイル。どれか1つではなく、すべてを両立できる環境です。
               </p>
-              <a
-                className="btn-primary"
-                href={LINE_URL}
-                target="_blank"
-                rel="noopener noreferrer"
-                onClick={trackContact}
-              >
-                <LineIcon size={18} />
-                LINEで詳しく聞いてみる
-              </a>
             </div>
           </div>
+          <div className="bento">
+            {/* Large tile (Merit 01) */}
+            <article className="tile tile--large" data-c="up">
+              <div className="tile__img">
+                <img
+                  src={meritItems[0].photo}
+                  alt={meritItems[0].alt}
+                  loading="lazy"
+                  decoding="async"
+                />
+              </div>
+              <div className="tile__inner">
+                <div className="tile__num">{`MERIT / ${meritItems[0].num}`}</div>
+                <h3 className="tile__h">{meritItems[0].title}</h3>
+                <p className="tile__p">{meritItems[0].body}</p>
+                <span className="tile__tag">{meritItems[0].tag}</span>
+              </div>
+            </article>
+
+            {/* Small tiles */}
+            <article className="tile" data-c="up" data-d="1">
+              <div className="tile__num">{`MERIT / ${meritItems[1].num}`}</div>
+              <h3 className="tile__h">{meritItems[1].title}</h3>
+              <p className="tile__p">{meritItems[1].body}</p>
+              <span className="tile__tag">{meritItems[1].tag}</span>
+            </article>
+            <article className="tile" data-c="up" data-d="2">
+              <div className="tile__num">{`MERIT / ${meritItems[2].num}`}</div>
+              <h3 className="tile__h">{meritItems[2].title}</h3>
+              <p className="tile__p">{meritItems[2].body}</p>
+              <span className="tile__tag">{meritItems[2].tag}</span>
+            </article>
+          </div>
         </section>
 
-        {/* ====== MERIT ====== */}
-        <section className="sec bg-gray" style={{ padding: 0 }} id="merit">
-          <div className="merit-title-block">
-            <span className="sec-label">MERIT</span>
-            <h2>
-              エスコプロモーションで
-              <br />
-              働く3つの理由
-            </h2>
-          </div>
-
-          <div className="merit-list">
-            {meritItems.map((m, i) => (
-              <article
-                key={m.num}
-                className="merit-item"
-                data-converge={i % 2 === 0 ? "left" : "right"}
-              >
-                <div className="merit-photo">
-                  <img src={m.photo} alt={m.alt} loading="lazy" decoding="async" />
-                  <span className="merit-num-bg">{m.num}</span>
-                </div>
-                <div className="merit-body">
-                  <span className="sec-label">{`MERIT ${m.num}`}</span>
-                  <h3>{m.title}</h3>
-                  <p>{m.body}</p>
-                  <span className="tag">{m.tag}</span>
-                </div>
-              </article>
-            ))}
-          </div>
-        </section>
-
-        {/* ====== VOICE ====== */}
-        <section className="sec" id="voice">
-          <div className="inner">
-            <div style={{ textAlign: "center" }} data-aos="fade-up">
-              <span className="sec-label">VOICE</span>
-              <h2>
-                先輩社員の声
+        {/* ====== CH 05 — VOICE (horizontal scroller) ====== */}
+        <section className="chapter" id="ch-05" aria-label="先輩社員の声">
+          <div className="chapter__head">
+            <div className="chapter__meta" data-c="left">
+              <div className="chapter__no">05</div>
+              <div className="chapter__label">Voice</div>
+            </div>
+            <div data-c="right">
+              <h2 className="chapter__h">
+                異業種から転職した、<em>3人のリアル</em>。
               </h2>
+              <p className="chapter__lead">
+                飲食・販売・倉庫。前職はバラバラ。共通するのは「素直さ」だけでした。
+              </p>
             </div>
-            <div className="voice-grid">
-              {voiceItems.map((v, i) => {
-                const dir = i === 0 ? "left" : i === 1 ? "scale" : "right";
-                return (
-                <article
-                  key={v.name}
-                  className="voice-card"
-                  data-converge={dir}
-                  data-d={i + 1}
-                >
-                  <div className="voice-photo">
+          </div>
+          <div className="voice-strip">
+            <div className="voice-scroller">
+              {voiceItems.map((v) => (
+                <article key={v.name} className="voice-card" data-c="up">
+                  <div className="voice-card__img">
+                    <span className="voice-card__badge">{v.tag}</span>
                     <img src={v.photo} alt={v.name} loading="lazy" decoding="async" />
                   </div>
-                  <div className="voice-body">
-                    <span className="voice-tag">{v.tag}</span>
-                    <h3 className="voice-name">{v.name}</h3>
-                    <p className="voice-meta">{v.meta}</p>
-                    <p className="voice-q">{v.q1}</p>
-                    <p className="voice-a">{v.a1}</p>
-                    <p className="voice-q">{v.q2}</p>
-                    <p className="voice-a">{v.a2}</p>
-                    <div className="voice-salary">
-                      <span className="label">現在の月収</span>
-                      <span className="val">
-                        {v.salary}<span>万円</span>
-                      </span>
+                  <div className="voice-card__body">
+                    <div className="voice-card__name">{v.name}</div>
+                    <div className="voice-card__meta">{v.meta}</div>
+                    <div className="voice-card__qa">
+                      <div className="voice-card__q">Q. {v.q1}</div>
+                      <p className="voice-card__a">{v.a1}</p>
+                      <div className="voice-card__q">Q. {v.q2}</div>
+                      <p className="voice-card__a">{v.a2}</p>
+                    </div>
+                    <div className="voice-card__salary">
+                      <span className="k">Monthly Income</span>
+                      <span className="v">{v.salary}<span className="u">万円</span></span>
                     </div>
                   </div>
                 </article>
-                );
-              })}
+              ))}
             </div>
           </div>
+          <div className="voice-hint">横スクロールで全メンバーを見る</div>
         </section>
 
-        {/* ====== A DAY ====== */}
-        <section className="sec bg-gray" id="aday">
-          <div className="inner">
-            <div style={{ textAlign: "center" }} data-aos="fade-up">
-              <span className="sec-label">A DAY</span>
-              <h2>営業スタッフの1日</h2>
+        {/* ====== CH 06 — A DAY (sticky image + timeline) ====== */}
+        <section className="chapter" id="ch-06" aria-label="1日の流れ">
+          <div className="chapter__head">
+            <div className="chapter__meta" data-c="left">
+              <div className="chapter__no">06</div>
+              <div className="chapter__label">A Day</div>
             </div>
-            <div className="aday-wrap">
-              {aDayItems.map((item, i) => (
-                <div
-                  key={item.time}
-                  className="aday-item"
-                  data-converge={i % 2 === 0 ? "left-s" : "right-s"}
-                  data-d={Math.min(i + 1, 5)}
-                >
-                  <div className="aday-time">{item.time}</div>
-                  <div className="aday-dot" aria-hidden="true" />
-                  <div className="aday-content">
+            <div data-c="right">
+              <h2 className="chapter__h">
+                営業スタッフの、<em>1日の流れ</em>。
+              </h2>
+              <p className="chapter__lead">
+                9:30に出社して19:00に退勤。残業はほぼゼロ。具体的な働き方を時系列で。
+              </p>
+            </div>
+          </div>
+          <div className="aday">
+            <div className="aday__media" data-c="left">
+              <img
+                src="/images/esco_LP/message.jpg"
+                alt="1日の流れ"
+                loading="lazy"
+                decoding="async"
+              />
+            </div>
+            <div className="aday__list" data-c="right">
+              {aDayItems.map((item) => (
+                <div key={item.time} className="aday__item">
+                  <div className="aday__t">{item.time}</div>
+                  <div className="aday__c">
                     <h3>{item.title}</h3>
                     <p>{item.desc}</p>
                   </div>
@@ -886,128 +787,240 @@ export default function Home() {
           </div>
         </section>
 
-        {/* ====== BENEFITS ====== */}
-        <section className="sec" id="benefits">
-          <div className="inner">
-            <div style={{ textAlign: "center" }} data-aos="fade-up">
-              <span className="sec-label">BENEFITS</span>
-              <h2>福利厚生・待遇</h2>
+        {/* ====== CH 07 — BENEFITS ====== */}
+        <section className="chapter" id="ch-07" aria-label="福利厚生">
+          <div className="chapter__head">
+            <div className="chapter__meta" data-c="left">
+              <div className="chapter__no">07</div>
+              <div className="chapter__label">Benefits</div>
             </div>
-            <div className="benefits-grid">
-              {benefits.map((b, i) => (
+            <div data-c="right">
+              <h2 className="chapter__h">
+                安心して働ける、<em>福利厚生</em>。
+              </h2>
+              <p className="chapter__lead">
+                社会保険から社員旅行まで、長く働ける仕組みを揃えています。
+              </p>
+            </div>
+          </div>
+          <div className="benefits">
+            {benefits.map((b, i) => (
+              <div
+                key={b.title}
+                className="benefit"
+                data-c="up"
+                data-d={String(Math.min(i + 1, 6))}
+              >
+                <div className="benefit__ic" aria-hidden="true">
+                  <svg
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    strokeWidth="2"
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                  >
+                    <polyline points="20 6 9 17 4 12" />
+                  </svg>
+                </div>
+                <h3>{b.title}</h3>
+                <p>{b.desc}</p>
+              </div>
+            ))}
+          </div>
+        </section>
+
+        {/* ====== CH 08 — CAREER ====== */}
+        <section className="chapter" id="ch-08" aria-label="キャリアパス">
+          <div className="chapter__head">
+            <div className="chapter__meta" data-c="left">
+              <div className="chapter__no">08</div>
+              <div className="chapter__label">Career Path</div>
+            </div>
+            <div data-c="right">
+              <h2 className="chapter__h">
+                5年後の、<em>自分の姿</em>。
+              </h2>
+              <p className="chapter__lead">
+                入社0年目から5年以上まで、役職と月収の推移を公開しています。
+              </p>
+            </div>
+          </div>
+          <div className="career">
+            <div className="career__track">
+              {careerSteps.map((c, i) => (
                 <div
-                  key={b.title}
-                  className="benefit-item"
-                  data-converge="up"
-                  data-d={Math.min(i + 1, 6)}
+                  key={c.year}
+                  className={`career-step${c.highlight ? " career-step--hl" : ""}`}
+                  data-c="up"
+                  data-d={String(i + 1)}
                 >
-                  <div className="benefit-icon" aria-hidden="true">
-                    <svg
-                      viewBox="0 0 24 24"
-                      fill="none"
-                      stroke="currentColor"
-                      strokeWidth="2"
-                      strokeLinecap="round"
-                      strokeLinejoin="round"
-                    >
-                      <polyline points="20 6 9 17 4 12" />
-                    </svg>
+                  <div className="career-step__yr">{c.year}</div>
+                  <div className="career-step__role">{c.role}</div>
+                  <div className="career-step__v">
+                    <span data-countup={c.salary}>0</span>
+                    <span className="u">万円〜</span>
                   </div>
-                  <h3>{b.title}</h3>
-                  <p>{b.desc}</p>
+                  <p className="career-step__desc">{c.desc}</p>
                 </div>
               ))}
             </div>
           </div>
         </section>
 
-        {/* ====== CAREER ====== */}
-        <section className="sec bg-gray" id="career">
-          <div className="inner">
-            <div style={{ textAlign: "center" }} data-aos="fade-up">
-              <span className="sec-label">CAREER PATH</span>
-              <h2>
-                入社後のキャリアパス
-              </h2>
+        {/* ====== CH 09 — IDEAL ====== */}
+        <section className="chapter" id="ch-09" aria-label="求める人物像">
+          <div className="chapter__head">
+            <div className="chapter__meta" data-c="left">
+              <div className="chapter__no">09</div>
+              <div className="chapter__label">Ideal</div>
             </div>
-            <div className="career-wrap">
-              {careerSteps.map((c, i) => {
-                const dir =
-                  i === 0 ? "left" : i === 1 ? "left-s" : i === 2 ? "right-s" : "right";
-                return (
-                  <div
-                    key={c.year}
-                    className={`career-step${c.highlight ? " highlight" : ""}`}
-                    data-converge={dir}
-                    data-d={i + 1}
-                  >
-                    <div className="career-year">{c.year}</div>
-                    <div className="career-role">{c.role}</div>
-                    <div className="career-salary">
-                      <span data-countup={c.salary}>0</span>
-                      <span>万円〜</span>
-                    </div>
-                    <p className="career-desc">{c.desc}</p>
-                  </div>
-                );
-              })}
+            <div data-c="right">
+              <h2 className="chapter__h">
+                こんな方を、<em>求めています</em>。
+              </h2>
+              <p className="chapter__lead">
+                経歴やスキルより、素直さ・向上心・人とのコミュニケーション。
+              </p>
             </div>
           </div>
-        </section>
-
-        {/* ====== IDEAL CANDIDATE ====== */}
-        <section className="sec" id="ideal">
-          <div className="inner">
-            <div style={{ textAlign: "center" }} data-aos="fade-up">
-              <span className="sec-label">IDEAL</span>
-              <h2>こんな方を求めています</h2>
-            </div>
-            <div className="ideal-list">
+          <div className="ideal">
+            <div className="ideal__grid">
               {idealPoints.map((p, i) => (
                 <div
                   key={i}
                   className="ideal-item"
-                  data-converge={i % 2 === 0 ? "left-s" : "right-s"}
-                  data-d={Math.min(Math.floor(i / 2) + 1, 3)}
+                  data-c="up"
+                  data-d={String(Math.min(i + 1, 6))}
                 >
-                  <div className="ideal-check" aria-hidden="true">
-                    <svg
-                      viewBox="0 0 24 24"
-                      fill="none"
-                      stroke="currentColor"
-                      strokeWidth="3"
-                      strokeLinecap="round"
-                      strokeLinejoin="round"
-                    >
-                      <polyline points="20 6 9 17 4 12" />
-                    </svg>
-                  </div>
-                  <span className="ideal-text">{p}</span>
+                  <div className="ideal-item__n">{String(i + 1).padStart(2, "0")}</div>
+                  <div className="ideal-item__t">{p}</div>
                 </div>
               ))}
             </div>
           </div>
         </section>
 
-        {/* ====== LINE CTA ====== */}
-        <section className="line-cta-sec">
-          <div className="inner">
-            <span className="kicker" data-aos="fade-up">
-              CONTACT
-            </span>
-            <h2 data-aos="fade-up">
-              まずは気軽に
+        {/* ====== CH 10 — RECRUITMENT ====== */}
+        <section className="chapter" id="ch-10" aria-label="募集要項">
+          <div className="chapter__head">
+            <div className="chapter__meta" data-c="left">
+              <div className="chapter__no">10</div>
+              <div className="chapter__label">Recruitment</div>
+            </div>
+            <div data-c="right">
+              <h2 className="chapter__h">募集要項。</h2>
+              <p className="chapter__lead">
+                職種 / 仕事内容 / 応募資格 / 勤務地 / 勤務時間 / 休日 / 給与 / 雇用形態
+              </p>
+            </div>
+          </div>
+          <div className="spec" data-c="up">
+            <table className="spec__table">
+              <tbody>
+                <tr><th scope="row">Position / 職種</th><td>営業スタッフ(省エネ機器のイベント案内・アポイント獲得)</td></tr>
+                <tr><th scope="row">Work / 仕事内容</th><td>省エネ機器のイベントでの案内・アポイント獲得。まずは運営・接客からスタート。</td></tr>
+                <tr><th scope="row">Requirements / 応募資格</th><td>未経験OK(研修あり)／学歴・経歴不問／営業・接客経験があれば優遇<br />素直で前向きに学べる方・コミュニケーションが好きな方歓迎</td></tr>
+                <tr><th scope="row">Location / 勤務地</th><td>本社(大阪市中央区)／関西一円のイベント会場　直行直帰OK</td></tr>
+                <tr><th scope="row">Hours / 勤務時間</th><td>10:00〜19:00(休憩1時間)</td></tr>
+                <tr><th scope="row">Holidays / 休日</th><td>完全週休2日制 or 週休2日制(選択可)<br />年末年始・GW・お盆休暇あり／年間休日120日</td></tr>
+                <tr><th scope="row">Salary / 給与</th><td>月給24万円〜＋インセンティブ(経験・能力考慮)　賞与年2回／昇給あり</td></tr>
+                <tr><th scope="row">Type / 雇用形態</th><td>正社員</td></tr>
+              </tbody>
+            </table>
+          </div>
+        </section>
+
+        {/* ====== CH 11 — FLOW ====== */}
+        <section className="chapter" id="ch-11" aria-label="選考フロー">
+          <div className="chapter__head">
+            <div className="chapter__meta" data-c="left">
+              <div className="chapter__no">11</div>
+              <div className="chapter__label">Flow</div>
+            </div>
+            <div data-c="right">
+              <h2 className="chapter__h">
+                応募から内定まで、<em>最短1週間</em>。
+              </h2>
+              <p className="chapter__lead">
+                履歴書不要。まずはLINEで気軽に話すところから始まります。
+              </p>
+            </div>
+          </div>
+          <div className="flow">
+            {flowSteps.map((s, i) => (
+              <div
+                key={s.num}
+                className="flow-step"
+                data-c="up"
+                data-d={String(i + 1)}
+              >
+                <span className="flow-step__n">{s.num}</span>
+                <div className="flow-step__h">{s.title}</div>
+                <span className="flow-step__d">所要: {s.duration}</span>
+                <p className="flow-step__p">{s.desc}</p>
+              </div>
+            ))}
+          </div>
+        </section>
+
+        {/* ====== CH 12 — FAQ ====== */}
+        <section className="chapter" id="ch-12" aria-label="よくある質問">
+          <div className="chapter__head">
+            <div className="chapter__meta" data-c="left">
+              <div className="chapter__no">12</div>
+              <div className="chapter__label">FAQ</div>
+            </div>
+            <div data-c="right">
+              <h2 className="chapter__h">
+                よくある<em>質問</em>。
+              </h2>
+              <p className="chapter__lead">
+                検討中の方からよくいただく質問をまとめました。
+              </p>
+            </div>
+          </div>
+          <div className="faq" data-c="up">
+            {faqItems.map((item, i) => {
+              const open = openFaq === i;
+              return (
+                <div key={i} className={`faq-item${open ? " open" : ""}`}>
+                  <button
+                    type="button"
+                    className="faq-item__q"
+                    aria-expanded={open}
+                    aria-controls={`faq-a-${i}`}
+                    onClick={() => setOpenFaq(open ? null : i)}
+                  >
+                    <span className="faq-item__mark">Q.{String(i + 1).padStart(2, "0")}</span>
+                    <span className="faq-item__txt">{item.q}</span>
+                    <span className="faq-item__plus" aria-hidden="true" />
+                  </button>
+                  <div id={`faq-a-${i}`} className="faq-item__a" role="region">
+                    <div className="faq-item__a-inner">{item.a}</div>
+                  </div>
+                </div>
+              );
+            })}
+          </div>
+        </section>
+
+        {/* ====== BIG CTA BLOCK ====== */}
+        <section className="cta-block" aria-label="CTA">
+          <div className="cta-block__wrap">
+            <div className="cta-block__kicker" data-c="up">— CONTACT</div>
+            <h2 className="cta-block__h" data-c="up" data-d="1">
+              まずは気軽に、
               <br />
               話を聞いてみませんか?
             </h2>
-            <p data-aos="fade-up" data-aos-delay="80">
+            <p className="cta-block__p" data-c="up" data-d="2">
               「転職するか迷っている」「詳しく聞きたいだけ」でも大歓迎。
-              <br />
               選考とは関係なく、どんな質問にも答えます。
             </p>
-            <div data-aos="fade-up" data-aos-delay="120">
+            <div data-c="up" data-d="3">
               <a
-                className="btn-line-lg"
+                className="btn-line"
                 href={LINE_URL}
                 target="_blank"
                 rel="noopener noreferrer"
@@ -1020,170 +1033,25 @@ export default function Home() {
           </div>
         </section>
 
-        {/* ====== RECRUITMENT ====== */}
-        <section className="sec" id="recruitment">
-          <div className="inner">
-            <div style={{ textAlign: "center" }} data-aos="fade-up">
-              <span className="sec-label">RECRUITMENT</span>
-              <h2 data-aos="fade-up">募集要項</h2>
+        {/* ====== APPLY FORM ====== */}
+        <section className="chapter" id="apply" aria-label="応募フォーム">
+          <div className="chapter__head">
+            <div className="chapter__meta" data-c="left">
+              <div className="chapter__no">13</div>
+              <div className="chapter__label">Apply</div>
             </div>
-            <div className="recruit-wrap" data-aos="fade-up">
-              <table className="recruit-table">
-                <tbody>
-                  <tr>
-                    <th scope="row">職種</th>
-                    <td>営業スタッフ(省エネ機器のイベント案内・アポイント獲得)</td>
-                  </tr>
-                  <tr>
-                    <th scope="row">仕事内容</th>
-                    <td>
-                      省エネ機器のイベントでの案内・アポイント獲得。まずは運営・接客からスタート。
-                    </td>
-                  </tr>
-                  <tr>
-                    <th scope="row">応募資格</th>
-                    <td>
-                      未経験OK(研修あり)／学歴・経歴不問／営業・接客経験があれば優遇
-                      <br />
-                      素直で前向きに学べる方・コミュニケーションが好きな方歓迎
-                    </td>
-                  </tr>
-                  <tr>
-                    <th scope="row">勤務地</th>
-                    <td>本社(大阪市中央区)／関西一円のイベント会場　直行直帰OK</td>
-                  </tr>
-                  <tr>
-                    <th scope="row">勤務時間</th>
-                    <td>10:00〜19:00(休憩1時間)</td>
-                  </tr>
-                  <tr>
-                    <th scope="row">休日・休暇</th>
-                    <td>
-                      完全週休2日制 or 週休2日制(選択可)
-                      <br />
-                      年末年始・GW・お盆休暇あり／年間休日120日
-                    </td>
-                  </tr>
-                  <tr>
-                    <th scope="row">給与</th>
-                    <td>
-                      月給24万円〜＋インセンティブ(経験・能力考慮)　賞与年2回／昇給あり
-                    </td>
-                  </tr>
-                  <tr>
-                    <th scope="row">雇用形態</th>
-                    <td>正社員</td>
-                  </tr>
-                </tbody>
-              </table>
-            </div>
-          </div>
-        </section>
-
-        {/* ====== FLOW (selection steps) ====== */}
-        <section className="sec bg-gray" id="flow">
-          <div className="inner">
-            <div style={{ textAlign: "center" }} data-aos="fade-up">
-              <span className="sec-label">FLOW</span>
-              <h2>応募から内定までの流れ</h2>
-            </div>
-            <div className="flow-wrap">
-              {flowSteps.map((s, i) => {
-                const dir =
-                  i === 0 ? "left" :
-                  i === 1 ? "left-s" :
-                  i === 2 ? "scale" :
-                  i === 3 ? "right-s" : "right";
-                return (
-                <div
-                  key={s.num}
-                  className="flow-step"
-                  data-converge={dir}
-                  data-d={i + 1}
-                >
-                  <span className="flow-num">STEP {s.num}</span>
-                  <div className="flow-title">{s.title}</div>
-                  <div className="flow-duration">所要: {s.duration}</div>
-                  <p className="flow-desc">{s.desc}</p>
-                </div>
-                );
-              })}
-            </div>
-          </div>
-        </section>
-
-        {/* ====== FAQ ====== */}
-        <section className="sec bg-gray" id="faq">
-          <div className="inner">
-            <div style={{ textAlign: "center" }} data-aos="fade-up">
-              <span className="sec-label">FAQ</span>
-              <h2>よくある質問</h2>
-            </div>
-            <div className="faq-list" data-aos="fade-up">
-              {faqItems.map((item, i) => {
-                const open = openFaq === i;
-                return (
-                  <div
-                    key={i}
-                    className={`faq-item${open ? " open" : ""}`}
-                  >
-                    <button
-                      type="button"
-                      className="faq-q"
-                      aria-expanded={open}
-                      aria-controls={`faq-a-${i}`}
-                      onClick={() => setOpenFaq(open ? null : i)}
-                    >
-                      <span className="faq-q-mark">Q.</span>
-                      <span className="faq-qtxt">{item.q}</span>
-                      <svg
-                        className="faq-arrow"
-                        width="18"
-                        height="18"
-                        viewBox="0 0 24 24"
-                        fill="none"
-                        stroke="currentColor"
-                        strokeWidth="1.8"
-                        strokeLinecap="round"
-                        strokeLinejoin="round"
-                        aria-hidden="true"
-                      >
-                        <path d="M6 9l6 6 6-6" />
-                      </svg>
-                    </button>
-                    {open && (
-                      <div
-                        id={`faq-a-${i}`}
-                        className="faq-a"
-                        role="region"
-                      >
-                        {item.a}
-                      </div>
-                    )}
-                  </div>
-                );
-              })}
-            </div>
-          </div>
-        </section>
-
-        {/* ====== APPLY ====== */}
-        <section className="sec" id="apply">
-          <div className="inner">
-            <div style={{ textAlign: "center" }} data-aos="fade-up">
-              <span className="sec-label">APPLY</span>
-              <h2>応募フォーム</h2>
-            </div>
-            <div className="apply-box" data-aos="fade-up">
-              <p className="apply-lead">
-                「詳しく聞いてみたい」「迷っている」という方も大歓迎です。
-                <br />
-                お気軽にご応募ください。
+            <div data-c="right">
+              <h2 className="chapter__h">応募フォーム。</h2>
+              <p className="chapter__lead">
+                「詳しく聞いてみたい」「迷っている」という方も大歓迎です。お気軽にどうぞ。
               </p>
-
+            </div>
+          </div>
+          <div className="apply-wrap" data-c="up">
+            <div className="apply-box">
               {status === "done" ? (
                 <div className="apply-done" role="status" aria-live="polite">
-                  応募を受け付けました!担当者よりご連絡いたします。
+                  応募を受け付けました! 担当者よりご連絡いたします。
                 </div>
               ) : (
                 <form className="apply-form" onSubmit={onSubmit} noValidate>
@@ -1192,34 +1060,25 @@ export default function Home() {
                       エラーが発生しました。LINEよりお問い合わせください。
                     </div>
                   )}
-
                   <div className="form-row">
                     <div className="field">
-                      <label htmlFor="name">
-                        お名前<span className="req">必須</span>
-                      </label>
+                      <label htmlFor="name">Name <span className="req">必須</span></label>
                       <input
                         id="name"
                         type="text"
                         required
                         placeholder="山田 太郎"
                         value={form.name}
-                        onChange={(e) =>
-                          setForm({ ...form, name: e.target.value })
-                        }
+                        onChange={(e) => setForm({ ...form, name: e.target.value })}
                       />
                     </div>
                     <div className="field">
-                      <label htmlFor="age">
-                        年齢<span className="req">必須</span>
-                      </label>
+                      <label htmlFor="age">Age <span className="req">必須</span></label>
                       <select
                         id="age"
                         required
                         value={form.age}
-                        onChange={(e) =>
-                          setForm({ ...form, age: e.target.value })
-                        }
+                        onChange={(e) => setForm({ ...form, age: e.target.value })}
                       >
                         <option value="">選択してください</option>
                         <option value="20-24">20代前半(20〜24歳)</option>
@@ -1229,64 +1088,47 @@ export default function Home() {
                       </select>
                     </div>
                   </div>
-
                   <div className="field">
-                    <label htmlFor="tel">
-                      電話番号<span className="req">必須</span>
-                    </label>
+                    <label htmlFor="tel">Phone <span className="req">必須</span></label>
                     <input
                       id="tel"
                       type="tel"
                       required
                       placeholder="090-0000-0000"
                       value={form.tel}
-                      onChange={(e) =>
-                        setForm({ ...form, tel: e.target.value })
-                      }
+                      onChange={(e) => setForm({ ...form, tel: e.target.value })}
                     />
                   </div>
-
                   <div className="field">
-                    <label htmlFor="email">
-                      メールアドレス<span className="req">必須</span>
-                    </label>
+                    <label htmlFor="email">Email <span className="req">必須</span></label>
                     <input
                       id="email"
                       type="email"
                       required
                       placeholder="example@email.com"
                       value={form.email}
-                      onChange={(e) =>
-                        setForm({ ...form, email: e.target.value })
-                      }
+                      onChange={(e) => setForm({ ...form, email: e.target.value })}
                     />
                   </div>
-
                   <div className="field">
-                    <label htmlFor="position">希望職種</label>
+                    <label htmlFor="position">Position</label>
                     <select
                       id="position"
                       value={form.position}
-                      onChange={(e) =>
-                        setForm({ ...form, position: e.target.value })
-                      }
+                      onChange={(e) => setForm({ ...form, position: e.target.value })}
                     >
                       <option value="営業職(正社員)">営業職(正社員)</option>
                     </select>
                   </div>
-
                   <div className="field">
-                    <label htmlFor="message">メッセージ・ご質問(任意)</label>
+                    <label htmlFor="message">Message</label>
                     <textarea
                       id="message"
                       placeholder="ご質問があればお気軽にどうぞ。"
                       value={form.message}
-                      onChange={(e) =>
-                        setForm({ ...form, message: e.target.value })
-                      }
+                      onChange={(e) => setForm({ ...form, message: e.target.value })}
                     />
                   </div>
-
                   <button
                     type="submit"
                     className="btn-submit"
@@ -1294,7 +1136,6 @@ export default function Home() {
                   >
                     {status === "sending" ? "送信中..." : "この内容で応募する"}
                   </button>
-
                   <p className="privacy">
                     送信いただいた個人情報は採用目的のみに使用し、適切に管理いたします。
                   </p>
@@ -1307,29 +1148,35 @@ export default function Home() {
 
       {/* ====== FOOTER ====== */}
       <footer className="lp-footer">
-        <div className="f-logo">ESCO PROMOTION</div>
-        <div className="f-logo-ja">株式会社エスコプロモーション</div>
-        <div className="f-info">
-          <p>
-            <span>所在地</span>
-            大阪府大阪市中央区南船場4丁目6番1号 南船場秋山ビル
-          </p>
-          <p>
-            <span>電話番号</span>
-            06-4963-9778
-          </p>
-          <p>
-            <span>設立</span>
-            2011年4月
-          </p>
-          <p>
-            <span>事業内容</span>
-            省エネ・創エネ設備の販売・施工・保守、電気工事、電気通信事業
-          </p>
-        </div>
-        <div className="f-copy">
-          © {new Date().getFullYear()} ESCO PROMOTION Co., Ltd. All rights
-          reserved.
+        <div className="lp-footer__wrap">
+          <div className="lp-footer__top">
+            <div>
+              <div className="lp-footer__brand">ESCO PROMOTION</div>
+              <div className="lp-footer__brand-ja">株式会社エスコプロモーション</div>
+            </div>
+            <dl className="lp-footer__info">
+              <div>
+                <dt>Address</dt>
+                <dd>大阪府大阪市中央区南船場4丁目6番1号 南船場秋山ビル</dd>
+              </div>
+              <div>
+                <dt>Phone</dt>
+                <dd>06-4963-9778</dd>
+              </div>
+              <div>
+                <dt>Founded</dt>
+                <dd>2011年4月</dd>
+              </div>
+              <div>
+                <dt>Business</dt>
+                <dd>省エネ・創エネ設備の販売・施工・保守、電気工事、電気通信事業</dd>
+              </div>
+            </dl>
+          </div>
+          <div className="lp-footer__bottom">
+            <span>© {new Date().getFullYear()} ESCO PROMOTION Co., Ltd.</span>
+            <span>Recruit 2026 / All rights reserved.</span>
+          </div>
         </div>
       </footer>
 
@@ -1341,15 +1188,15 @@ export default function Home() {
           rel="noopener noreferrer"
           onClick={trackContact}
         >
-          <LineIcon size={24} />
+          <LineIcon size={20} />
           <span>
-            <span className="fb-main">まずはLINEで気軽に話を聞いてみる</span>
-            <span className="fb-sub">選考なし・返信1分・無料で相談できます</span>
+            <span className="fb-main">LINEで気軽に話を聞く</span>
+            <span className="fb-sub"> ／ 選考なし・返信1分・無料</span>
           </span>
         </a>
       </div>
 
-      {/* Back to top */}
+      {/* ====== BACK TO TOP ====== */}
       <button
         type="button"
         className={`back-top${showBackTop ? " show" : ""}`}
@@ -1369,21 +1216,21 @@ export default function Home() {
         </svg>
       </button>
 
-      {/* Exit intent modal */}
+      {/* ====== EXIT INTENT MODAL ====== */}
       <div
         className={`exit-modal${exitModalOpen ? " show" : ""}`}
         role="dialog"
         aria-modal="true"
-        aria-labelledby="exit-modal-title"
+        aria-labelledby="exit-h"
         aria-hidden={!exitModalOpen}
         onClick={(e) => {
           if (e.target === e.currentTarget) setExitModalOpen(false);
         }}
       >
-        <div className="exit-modal-body">
+        <div className="exit-modal__body">
           <button
             type="button"
-            className="exit-modal-close"
+            className="exit-modal__close"
             aria-label="閉じる"
             onClick={() => setExitModalOpen(false)}
           >
@@ -1401,26 +1248,22 @@ export default function Home() {
               <path d="M18 6L6 18M6 6l12 12" />
             </svg>
           </button>
-          <span className="exit-modal-kicker">LAST CHANCE</span>
-          <h3 id="exit-modal-title">
+          <span className="exit-modal__kicker">LAST CHANCE</span>
+          <h3 id="exit-h" className="exit-modal__h">
             まだ迷っていますか?
             <br />
             <em>1分の相談</em>で、全てが解決します。
           </h3>
-          <p>
+          <p className="exit-modal__p">
             選考前提ではありません。「詳しく聞きたいだけ」でも大歓迎です。
-            <br />
             LINEで匿名のままご質問いただけます。
           </p>
           <a
-            className="btn-line-lg"
+            className="btn-line"
             href={LINE_URL}
             target="_blank"
             rel="noopener noreferrer"
-            onClick={() => {
-              trackContact();
-              setExitModalOpen(false);
-            }}
+            onClick={() => { trackContact(); setExitModalOpen(false); }}
           >
             <LineIcon size={22} />
             LINEで無料相談する
