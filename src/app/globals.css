@@ -19,6 +19,12 @@
 /* ---------- Reset ---------- */
 * { margin: 0; padding: 0; box-sizing: border-box; }
 
+/* AOS fallback: if AOS JS fails to initialize, keep content visible */
+html:not(.aos-initialized) [data-aos] {
+  opacity: 1 !important;
+  transform: none !important;
+}
+
 html {
   scroll-behavior: smooth;
   scroll-padding-top: 60px;

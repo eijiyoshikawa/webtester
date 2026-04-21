@@ -115,9 +115,22 @@ export default function Home() {
   );
 
   useEffect(() => {
-    if (typeof window !== "undefined" && window.AOS) {
-      window.AOS.init({ duration: 600, once: true, offset: 40 });
-    }
+    const tryInit = () => {
+      if (typeof window !== "undefined" && window.AOS) {
+        window.AOS.init({ duration: 600, once: true, offset: 40 });
+        return true;
+      }
+      return false;
+    };
+    if (tryInit()) return;
+    const id = setInterval(() => {
+      if (tryInit()) clearInterval(id);
+    }, 100);
+    const timeout = setTimeout(() => clearInterval(id), 5000);
+    return () => {
+      clearInterval(id);
+      clearTimeout(timeout);
+    };
   }, []);
 
   useEffect(() => {
