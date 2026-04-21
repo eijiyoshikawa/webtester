@@ -184,6 +184,10 @@ export default function Home() {
   const [slideIndex, setSlideIndex] = useState(0);
   const [scrolled, setScrolled] = useState(false);
   const [openFaq, setOpenFaq] = useState<number | null>(null);
+  const [drawerOpen, setDrawerOpen] = useState(false);
+  const [showBackTop, setShowBackTop] = useState(false);
+  const [progress, setProgress] = useState(0);
+  const [exitModalOpen, setExitModalOpen] = useState(false);
   const [form, setForm] = useState({
     name: "",
     age: "",
@@ -196,6 +200,7 @@ export default function Home() {
     "idle"
   );
 
+  // AOS init (with retry for CDN load timing)
   useEffect(() => {
     const tryInit = () => {
       if (typeof window !== "undefined" && window.AOS) {
@@ -215,6 +220,7 @@ export default function Home() {
     };
   }, []);
 
+  // Hero slider
   useEffect(() => {
     const id = setInterval(() => {
       setSlideIndex((prev) => (prev + 1) % heroPcImages.length);
@@ -222,10 +228,114 @@ export default function Home() {
     return () => clearInterval(id);
   }, []);
 
+  // Scroll-related: header shadow, progress bar, back-to-top visibility
   useEffect(() => {
-    const onScroll = () => setScrolled(window.scrollY > 40);
-    window.addEventListener("scroll", onScroll);
-    return () => window.removeEventListener("scroll", onScroll);
+    let raf = 0;
+    const onScroll = () => {
+      if (raf) return;
+      raf = requestAnimationFrame(() => {
+        const y = window.scrollY;
+        const h = document.documentElement.scrollHeight - window.innerHeight;
+        setScrolled(y > 40);
+        setShowBackTop(y > 600);
+        setProgress(h > 0 ? Math.min(100, (y / h) * 100) : 0);
+        raf = 0;
+      });
+    };
+    onScroll();
+    window.addEventListener("scroll", onScroll, { passive: true });
+    return () => {
+      window.removeEventListener("scroll", onScroll);
+      if (raf) cancelAnimationFrame(raf);
+    };
+  }, []);
+
+  // Converge-on-scroll (IntersectionObserver)
+  useEffect(() => {
+    if (typeof window === "undefined") return;
+    const els = document.querySelectorAll<HTMLElement>("[data-converge]");
+    if (!els.length) return;
+    if (!("IntersectionObserver" in window)) {
+      els.forEach((el) => el.classList.add("in"));
+      return;
+    }
+    const io = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add("in");
+            io.unobserve(entry.target);
+          }
+        });
+      },
+      { threshold: 0.15, rootMargin: "0px 0px -40px 0px" }
+    );
+    els.forEach((el) => io.observe(el));
+    return () => io.disconnect();
+  }, []);
+
+  // CountUp on view (NUMBERS / CAREER)
+  useEffect(() => {
+    if (typeof window === "undefined") return;
+    if (!("IntersectionObserver" in window)) return;
+    const targets = document.querySelectorAll<HTMLElement>("[data-countup]");
+    if (!targets.length) return;
+    const io = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (!entry.isIntersecting) return;
+          const el = entry.target as HTMLElement;
+          const end = Number(el.dataset.countup || "0");
+          const duration = 1200;
+          const start = performance.now();
+          const render = (t: number) => {
+            const p = Math.min(1, (t - start) / duration);
+            const eased = 1 - Math.pow(1 - p, 3);
+            el.textContent = String(Math.round(end * eased));
+            if (p < 1) requestAnimationFrame(render);
+          };
+          requestAnimationFrame(render);
+          io.unobserve(el);
+        });
+      },
+      { threshold: 0.4 }
+    );
+    targets.forEach((t) => io.observe(t));
+    return () => io.disconnect();
+  }, []);
+
+  // Exit intent (desktop only, one-time per session)
+  useEffect(() => {
+    if (typeof window === "undefined") return;
+    if (window.matchMedia("(max-width: 900px)").matches) return;
+    if (sessionStorage.getItem("exit-shown")) return;
+    const onLeave = (e: MouseEvent) => {
+      if (e.clientY <= 0) {
+        sessionStorage.setItem("exit-shown", "1");
+        setExitModalOpen(true);
+        document.removeEventListener("mouseleave", onLeave);
+      }
+    };
+    // delay binding so modal doesn't pop on immediate navigation
+    const t = setTimeout(() => {
+      document.addEventListener("mouseleave", onLeave);
+    }, 15000);
+    return () => {
+      clearTimeout(t);
+      document.removeEventListener("mouseleave", onLeave);
+    };
+  }, []);
+
+  // Close drawer on ESC + lock body scroll while open
+  useEffect(() => {
+    const onKey = (e: KeyboardEvent) => {
+      if (e.key === "Escape") {
+        setDrawerOpen(false);
+        setExitModalOpen(false);
+      }
+    };
+    window.addEventListener("keydown", onKey);
+    return () => window.removeEventListener("keydown", onKey);
   }, []);
 
   const trackContact = () => {
@@ -265,8 +375,36 @@ export default function Home() {
     }
   };
 
+  const tocItems: { label: string; en: string; href: string }[] = [
+    { label: "代表メッセージ", en: "CEO", href: "#ceo" },
+    { label: "数字で見るエスコ", en: "NUMBERS", href: "#numbers" },
+    { label: "選ばれる理由", en: "MERIT", href: "#merit" },
+    { label: "先輩社員の声", en: "VOICE", href: "#voice" },
+    { label: "1日の流れ", en: "A DAY", href: "#aday" },
+    { label: "福利厚生", en: "BENEFITS", href: "#benefits" },
+    { label: "キャリアパス", en: "CAREER", href: "#career" },
+    { label: "募集要項", en: "RECRUITMENT", href: "#recruitment" },
+    { label: "選考フロー", en: "FLOW", href: "#flow" },
+    { label: "よくある質問", en: "FAQ", href: "#faq" },
+    { label: "応募フォーム", en: "APPLY", href: "#apply" },
+  ];
+
   return (
     <>
+      {/* Background animated blobs */}
+      <div className="bg-anim" aria-hidden="true">
+        <div className="blob blob-1" />
+        <div className="blob blob-2" />
+        <div className="blob blob-3" />
+      </div>
+
+      {/* Scroll progress bar */}
+      <div
+        className="scroll-progress"
+        style={{ width: `${progress}%` }}
+        aria-hidden="true"
+      />
+
       {/* ====== HEADER ====== */}
       <header className={`lp-header${scrolled ? " scrolled" : ""}`}>
         <div className="header">
@@ -276,18 +414,65 @@ export default function Home() {
               alt="ESCO PROMOTION 株式会社エスコプロモーション"
             />
           </a>
+          <div style={{ display: "flex", alignItems: "center", gap: 4 }}>
+            <button
+              type="button"
+              className={`header-menu-btn${drawerOpen ? " open" : ""}`}
+              aria-label="メニューを開く"
+              aria-expanded={drawerOpen}
+              aria-controls="sp-drawer"
+              onClick={() => setDrawerOpen((v) => !v)}
+            >
+              <span />
+            </button>
+            <a
+              className="header-cta"
+              href={LINE_URL}
+              target="_blank"
+              rel="noopener noreferrer"
+              onClick={trackContact}
+            >
+              <LineIcon size={14} />
+              LINEで相談
+            </a>
+          </div>
+        </div>
+      </header>
+
+      {/* SP drawer */}
+      <div
+        id="sp-drawer"
+        className={`sp-drawer${drawerOpen ? " open" : ""}`}
+        role="dialog"
+        aria-label="ナビゲーションメニュー"
+        aria-hidden={!drawerOpen}
+      >
+        <nav>
+          {tocItems.map((item) => (
+            <a
+              key={item.href}
+              href={item.href}
+              onClick={() => setDrawerOpen(false)}
+            >
+              {item.label}
+              <span className="en">{item.en}</span>
+            </a>
+          ))}
           <a
-            className="header-cta"
+            className="drawer-cta"
             href={LINE_URL}
             target="_blank"
             rel="noopener noreferrer"
-            onClick={trackContact}
+            onClick={() => {
+              trackContact();
+              setDrawerOpen(false);
+            }}
           >
-            <LineIcon size={14} />
-            LINEで相談
+            <LineIcon size={18} />
+            LINEで相談する
           </a>
-        </div>
-      </header>
+        </nav>
+      </div>
 
       <main>
         {/* ====== HERO ====== */}
@@ -333,6 +518,20 @@ export default function Home() {
           <p className="hero-sub">
             ESCO PROMOTION ／ 中途採用 ／ 営業職
           </p>
+          <div className="trust-badges" data-aos="fade-up" data-aos-delay="200">
+            <span className="trust-badge">
+              <span className="num">14<span>年</span></span>創業からの実績
+            </span>
+            <span className="trust-badge">
+              <span className="num">92<span>%</span></span>3年定着率
+            </span>
+            <span className="trust-badge">
+              <span className="num">120<span>名</span></span>在籍社員
+            </span>
+            <span className="trust-badge">
+              <span className="num">100<span>%</span></span>未経験スタート
+            </span>
+          </div>
         </section>
 
         {/* ====== GALLERY ====== */}
@@ -391,12 +590,12 @@ export default function Home() {
         </section>
 
         {/* ====== CEO MESSAGE ====== */}
-        <section className="ceo-sec">
+        <section className="ceo-sec" id="ceo">
           <div className="ceo-inner">
-            <div className="ceo-photo" data-aos="fade-up">
+            <div className="ceo-photo" data-converge="left">
               <img src="/images/esco_LP/ceo.svg" alt="代表取締役 山田 太郎" />
             </div>
-            <div className="ceo-body" data-aos="fade-up" data-aos-delay="100">
+            <div className="ceo-body" data-converge="right">
               <span className="sec-label">CEO MESSAGE</span>
               <h2>
                 社員一人ひとりの
@@ -422,15 +621,16 @@ export default function Home() {
         </section>
 
         {/* ====== NUMBERS ====== */}
-        <section className="sec bg-gray">
+        <section className="sec bg-gray" id="numbers">
           <div className="inner">
             <div style={{ textAlign: "center" }} data-aos="fade-up">
               <span className="sec-label">NUMBERS</span>
             </div>
-            <div className="numbers-grid" data-aos="fade-up">
-              <div className="num-item">
+            <div className="numbers-grid">
+              <div className="num-item" data-converge="left">
                 <span className="num">
-                  35<span>万円〜</span>
+                  <span data-countup="35">0</span>
+                  <span>万円〜</span>
                 </span>
                 <span className="num-label">入社1年目で目指せる月収</span>
                 <p className="num-desc">
@@ -439,9 +639,10 @@ export default function Home() {
                   頑張り次第で青天井。
                 </p>
               </div>
-              <div className="num-item">
+              <div className="num-item" data-converge="scale" data-d="1">
                 <span className="num">
-                  120<span>日</span>
+                  <span data-countup="120">0</span>
+                  <span>日</span>
                 </span>
                 <span className="num-label">年間休日</span>
                 <p className="num-desc">
@@ -450,9 +651,10 @@ export default function Home() {
                   年末年始・GW・お盆あり。
                 </p>
               </div>
-              <div className="num-item">
+              <div className="num-item" data-converge="right" data-d="2">
                 <span className="num">
-                  0<span>円</span>
+                  <span data-countup="0">0</span>
+                  <span>円</span>
                 </span>
                 <span className="num-label">必要な初期費用</span>
                 <p className="num-desc">
@@ -482,8 +684,8 @@ export default function Home() {
               </h2>
             </div>
 
-            <div className="compare-wrap" data-aos="fade-up">
-              <div className="compare-side other">
+            <div className="compare-wrap">
+              <div className="compare-side other" data-converge="left">
                 <div className="compare-top">
                   <span className="tag">他の仕事(例)</span>
                   <h3>飲食・販売・倉庫スタッフ</h3>
@@ -512,9 +714,9 @@ export default function Home() {
                 </div>
               </div>
 
-              <div className="compare-vs">VS</div>
+              <div className="compare-vs" data-converge="scale" data-d="1">VS</div>
 
-              <div className="compare-side espro">
+              <div className="compare-side espro" data-converge="right" data-d="2">
                 <div className="compare-top">
                   <span className="tag">当社</span>
                   <h3>エスコプロモーション・営業職</h3>
@@ -569,7 +771,7 @@ export default function Home() {
         </section>
 
         {/* ====== MERIT ====== */}
-        <section className="sec bg-gray" style={{ padding: 0 }}>
+        <section className="sec bg-gray" style={{ padding: 0 }} id="merit">
           <div className="merit-title-block">
             <span className="sec-label">MERIT</span>
             <h2>
@@ -580,11 +782,11 @@ export default function Home() {
           </div>
 
           <div className="merit-list">
-            {meritItems.map((m) => (
+            {meritItems.map((m, i) => (
               <article
                 key={m.num}
                 className="merit-item"
-                data-aos="fade-up"
+                data-converge={i % 2 === 0 ? "left" : "right"}
               >
                 <div className="merit-photo">
                   <img src={m.photo} alt={m.alt} />
@@ -602,7 +804,7 @@ export default function Home() {
         </section>
 
         {/* ====== VOICE ====== */}
-        <section className="sec">
+        <section className="sec" id="voice">
           <div className="inner">
             <div style={{ textAlign: "center" }} data-aos="fade-up">
               <span className="sec-label">VOICE</span>
@@ -611,12 +813,14 @@ export default function Home() {
               </h2>
             </div>
             <div className="voice-grid">
-              {voiceItems.map((v, i) => (
+              {voiceItems.map((v, i) => {
+                const dir = i === 0 ? "left" : i === 1 ? "scale" : "right";
+                return (
                 <article
                   key={v.name}
                   className="voice-card"
-                  data-aos="fade-up"
-                  data-aos-delay={i * 80}
+                  data-converge={dir}
+                  data-d={i + 1}
                 >
                   <div className="voice-photo">
                     <img src={v.photo} alt={v.name} />
@@ -637,21 +841,27 @@ export default function Home() {
                     </div>
                   </div>
                 </article>
-              ))}
+                );
+              })}
             </div>
           </div>
         </section>
 
         {/* ====== A DAY ====== */}
-        <section className="sec bg-gray">
+        <section className="sec bg-gray" id="aday">
           <div className="inner">
             <div style={{ textAlign: "center" }} data-aos="fade-up">
               <span className="sec-label">A DAY</span>
               <h2>営業スタッフの1日</h2>
             </div>
-            <div className="aday-wrap" data-aos="fade-up">
-              {aDayItems.map((item) => (
-                <div key={item.time} className="aday-item">
+            <div className="aday-wrap">
+              {aDayItems.map((item, i) => (
+                <div
+                  key={item.time}
+                  className="aday-item"
+                  data-converge={i % 2 === 0 ? "left-s" : "right-s"}
+                  data-d={Math.min(i + 1, 5)}
+                >
                   <div className="aday-time">{item.time}</div>
                   <div className="aday-dot" aria-hidden="true" />
                   <div className="aday-content">
@@ -665,15 +875,20 @@ export default function Home() {
         </section>
 
         {/* ====== BENEFITS ====== */}
-        <section className="sec">
+        <section className="sec" id="benefits">
           <div className="inner">
             <div style={{ textAlign: "center" }} data-aos="fade-up">
               <span className="sec-label">BENEFITS</span>
               <h2>福利厚生・待遇</h2>
             </div>
-            <div className="benefits-grid" data-aos="fade-up">
-              {benefits.map((b) => (
-                <div key={b.title} className="benefit-item">
+            <div className="benefits-grid">
+              {benefits.map((b, i) => (
+                <div
+                  key={b.title}
+                  className="benefit-item"
+                  data-converge="up"
+                  data-d={Math.min(i + 1, 6)}
+                >
                   <div className="benefit-icon" aria-hidden="true">
                     <svg
                       viewBox="0 0 24 24"
@@ -695,7 +910,7 @@ export default function Home() {
         </section>
 
         {/* ====== CAREER ====== */}
-        <section className="sec bg-gray">
+        <section className="sec bg-gray" id="career">
           <div className="inner">
             <div style={{ textAlign: "center" }} data-aos="fade-up">
               <span className="sec-label">CAREER PATH</span>
@@ -703,35 +918,46 @@ export default function Home() {
                 入社後のキャリアパス
               </h2>
             </div>
-            <div className="career-wrap" data-aos="fade-up">
-              {careerSteps.map((c) => (
-                <div
-                  key={c.year}
-                  className={`career-step${c.highlight ? " highlight" : ""}`}
-                >
-                  <div className="career-year">{c.year}</div>
-                  <div className="career-role">{c.role}</div>
-                  <div className="career-salary">
-                    {c.salary}
-                    <span>万円〜</span>
+            <div className="career-wrap">
+              {careerSteps.map((c, i) => {
+                const dir =
+                  i === 0 ? "left" : i === 1 ? "left-s" : i === 2 ? "right-s" : "right";
+                return (
+                  <div
+                    key={c.year}
+                    className={`career-step${c.highlight ? " highlight" : ""}`}
+                    data-converge={dir}
+                    data-d={i + 1}
+                  >
+                    <div className="career-year">{c.year}</div>
+                    <div className="career-role">{c.role}</div>
+                    <div className="career-salary">
+                      <span data-countup={c.salary}>0</span>
+                      <span>万円〜</span>
+                    </div>
+                    <p className="career-desc">{c.desc}</p>
                   </div>
-                  <p className="career-desc">{c.desc}</p>
-                </div>
-              ))}
+                );
+              })}
             </div>
           </div>
         </section>
 
         {/* ====== IDEAL CANDIDATE ====== */}
-        <section className="sec">
+        <section className="sec" id="ideal">
           <div className="inner">
             <div style={{ textAlign: "center" }} data-aos="fade-up">
               <span className="sec-label">IDEAL</span>
               <h2>こんな方を求めています</h2>
             </div>
-            <div className="ideal-list" data-aos="fade-up">
+            <div className="ideal-list">
               {idealPoints.map((p, i) => (
-                <div key={i} className="ideal-item">
+                <div
+                  key={i}
+                  className="ideal-item"
+                  data-converge={i % 2 === 0 ? "left-s" : "right-s"}
+                  data-d={Math.min(Math.floor(i / 2) + 1, 3)}
+                >
                   <div className="ideal-check" aria-hidden="true">
                     <svg
                       viewBox="0 0 24 24"
@@ -783,7 +1009,7 @@ export default function Home() {
         </section>
 
         {/* ====== RECRUITMENT ====== */}
-        <section className="sec">
+        <section className="sec" id="recruitment">
           <div className="inner">
             <div style={{ textAlign: "center" }} data-aos="fade-up">
               <span className="sec-label">RECRUITMENT</span>
@@ -843,27 +1069,39 @@ export default function Home() {
         </section>
 
         {/* ====== FLOW (selection steps) ====== */}
-        <section className="sec bg-gray">
+        <section className="sec bg-gray" id="flow">
           <div className="inner">
             <div style={{ textAlign: "center" }} data-aos="fade-up">
               <span className="sec-label">FLOW</span>
               <h2>応募から内定までの流れ</h2>
             </div>
-            <div className="flow-wrap" data-aos="fade-up">
-              {flowSteps.map((s) => (
-                <div key={s.num} className="flow-step">
+            <div className="flow-wrap">
+              {flowSteps.map((s, i) => {
+                const dir =
+                  i === 0 ? "left" :
+                  i === 1 ? "left-s" :
+                  i === 2 ? "scale" :
+                  i === 3 ? "right-s" : "right";
+                return (
+                <div
+                  key={s.num}
+                  className="flow-step"
+                  data-converge={dir}
+                  data-d={i + 1}
+                >
                   <span className="flow-num">STEP {s.num}</span>
                   <div className="flow-title">{s.title}</div>
                   <div className="flow-duration">所要: {s.duration}</div>
                   <p className="flow-desc">{s.desc}</p>
                 </div>
-              ))}
+                );
+              })}
             </div>
           </div>
         </section>
 
         {/* ====== FAQ ====== */}
-        <section className="sec bg-gray">
+        <section className="sec bg-gray" id="faq">
           <div className="inner">
             <div style={{ textAlign: "center" }} data-aos="fade-up">
               <span className="sec-label">FAQ</span>
@@ -1097,6 +1335,85 @@ export default function Home() {
             <span className="fb-sub">選考なし・返信1分・無料で相談できます</span>
           </span>
         </a>
+      </div>
+
+      {/* Back to top */}
+      <button
+        type="button"
+        className={`back-top${showBackTop ? " show" : ""}`}
+        aria-label="ページトップへ戻る"
+        onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}
+      >
+        <svg
+          viewBox="0 0 24 24"
+          fill="none"
+          stroke="currentColor"
+          strokeWidth="2"
+          strokeLinecap="round"
+          strokeLinejoin="round"
+          aria-hidden="true"
+        >
+          <path d="M12 19V5M5 12l7-7 7 7" />
+        </svg>
+      </button>
+
+      {/* Exit intent modal */}
+      <div
+        className={`exit-modal${exitModalOpen ? " show" : ""}`}
+        role="dialog"
+        aria-modal="true"
+        aria-labelledby="exit-modal-title"
+        aria-hidden={!exitModalOpen}
+        onClick={(e) => {
+          if (e.target === e.currentTarget) setExitModalOpen(false);
+        }}
+      >
+        <div className="exit-modal-body">
+          <button
+            type="button"
+            className="exit-modal-close"
+            aria-label="閉じる"
+            onClick={() => setExitModalOpen(false)}
+          >
+            <svg
+              width="18"
+              height="18"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              strokeWidth="2"
+              strokeLinecap="round"
+              strokeLinejoin="round"
+              aria-hidden="true"
+            >
+              <path d="M18 6L6 18M6 6l12 12" />
+            </svg>
+          </button>
+          <span className="exit-modal-kicker">LAST CHANCE</span>
+          <h3 id="exit-modal-title">
+            まだ迷っていますか?
+            <br />
+            <em>1分の相談</em>で、全てが解決します。
+          </h3>
+          <p>
+            選考前提ではありません。「詳しく聞きたいだけ」でも大歓迎です。
+            <br />
+            LINEで匿名のままご質問いただけます。
+          </p>
+          <a
+            className="btn-line-lg"
+            href={LINE_URL}
+            target="_blank"
+            rel="noopener noreferrer"
+            onClick={() => {
+              trackContact();
+              setExitModalOpen(false);
+            }}
+          >
+            <LineIcon size={22} />
+            LINEで無料相談する
+          </a>
+        </div>
       </div>
     </>
   );
