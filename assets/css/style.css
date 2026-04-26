@@ -446,7 +446,7 @@ select {
     rgba(184,216,208,0.6) 30%,
     rgba(200,184,216,0.65) 60%,
     rgba(184,208,232,0.7) 100%
-  ), url('../images/hero-01.jpg') center/cover no-repeat;
+  ), url('../images/omori-exterior-front.jpg') center/cover no-repeat;
   z-index: 0;
 }
 
@@ -642,15 +642,15 @@ select {
   aspect-ratio: 4 / 3;
   border-radius: 8px;
   overflow: hidden;
-  background: url('../images/philosophy-01.jpg') center/cover no-repeat;
+  background: url('../images/meeting-allmember-03.jpg') center/cover no-repeat;
 }
 
 .philosophy__image:nth-child(2) {
-  background-image: url('../images/philosophy-02.jpg');
+  background-image: url('../images/gh-caregivers-02.jpg');
 }
 
 .philosophy__image:nth-child(3) {
-  background-image: url('../images/philosophy-03.jpg');
+  background-image: url('../images/gh-staff-group-04.jpg');
 }
 
 .philosophy__image--large {
@@ -713,12 +713,12 @@ select {
   aspect-ratio: 16 / 9;
   border-radius: 8px;
   overflow: hidden;
-  background: url('../images/message-photo.jpg') center/cover no-repeat;
+  background: url('../images/free-landscape-01.jpg') center/cover no-repeat;
   margin-top: auto;
 }
 
 .mission-vision__col:nth-child(2) .mission-vision__image {
-  background-image: url('../images/gh-okayama1-01.jpg');
+  background-image: url('../images/okayama1-living.jpg');
 }
 
 .mission-vision__image img {
@@ -977,7 +977,7 @@ select {
   aspect-ratio: 4 / 3;
   border-radius: 12px;
   overflow: hidden;
-  background: url('../images/gh-omori-01.jpg') center/cover no-repeat;
+  background: url('../images/gh-view-04.jpg') center/cover no-repeat;
 }
 
 .service-detail__image img {
@@ -986,21 +986,26 @@ select {
   object-fit: cover;
 }
 
-/* Logo placeholder variant - displays company logo on tinted bg until business-specific logos are uploaded */
+/* Logo placeholder variant - displays business-specific logo on tinted bg */
 .service-detail__image--logo {
   display: flex;
   align-items: center;
   justify-content: center;
-  background: var(--cream) url('../images/logo-company.png') center/40% no-repeat;
+  background-color: var(--cream);
+  background-position: center;
+  background-size: 50%;
+  background-repeat: no-repeat;
   border: 1px solid #ECE2DA;
 }
 
 .service-detail__image--grouphome {
   background-color: var(--peach);
+  background-image: url('../images/logo-grouphome.png');
 }
 
 .service-detail__image--houkan {
   background-color: var(--sky);
+  background-image: url('../images/logo-houkan.png');
 }
 
 /* Reversed layout variant (image left, text right) */
@@ -1130,7 +1135,7 @@ select {
 .message-section__photo {
   flex: 0 0 360px;
   height: 480px;
-  background: url('../images/message-photo.jpg') center/cover no-repeat;
+  background: url('../images/free-landscape-01.jpg') center/cover no-repeat;
   border-radius: 8px;
   overflow: hidden;
 }
@@ -1402,7 +1407,7 @@ select {
   border-radius: 50%;
   overflow: hidden;
   flex-shrink: 0;
-  background: url('../images/recruit-photo.jpg') center/cover no-repeat;
+  background: url('../images/gh-staff-group-01.jpg') center/cover no-repeat;
 }
 
 .recruit-section__photo img {
@@ -2286,7 +2291,7 @@ select {
 .svc-photo__image {
   width: 100%;
   height: 400px;
-  background: linear-gradient(135deg, rgba(196,168,160,0.3), rgba(180,160,155,0.4)), url('../images/service-hero.jpg') center/cover no-repeat;
+  background: linear-gradient(135deg, rgba(196,168,160,0.3), rgba(180,160,155,0.4)), url('../images/gh-cooking-03.jpg') center/cover no-repeat;
   display: block;
 }
 
@@ -2882,7 +2887,7 @@ select {
 .svc-message__photo {
   width: 100%;
   height: 400px;
-  background: url('../images/svc-message-photo.jpg') center/cover no-repeat;
+  background: url('../images/gh-view-04.jpg') center/cover no-repeat;
 }
 
 /* ---------- 6. svc-policy ---------- */
@@ -3230,28 +3235,28 @@ select {
 .blog-card__image {
   width: 100%;
   aspect-ratio: 4 / 3;
-  background: url('../images/blog-img-01.jpg') center/cover no-repeat;
+  background: url('../images/meeting-allmember-03.jpg') center/cover no-repeat;
   margin-bottom: 16px;
 }
 
 .blog-card:nth-child(3) .blog-card__image {
-  background-image: url('../images/blog-img-03.jpg');
+  background-image: url('../images/meeting-03.jpg');
 }
 
 .blog-card:nth-child(4) .blog-card__image {
-  background-image: url('../images/gh-okayama2-01.jpg');
+  background-image: url('../images/meeting-04.jpg');
 }
 
 .blog-card:nth-child(5) .blog-card__image {
-  background-image: url('../images/blog-img-05.jpg');
+  background-image: url('../images/gh-meal-04.jpg');
 }
 
 .blog-card__image--2 {
-  background: url('../images/blog-img-02.jpg') center/cover no-repeat;
+  background: url('../images/meeting-allmember-02.jpg') center/cover no-repeat;
 }
 
 .blog-card__image--6 {
-  background: url('../images/blog-img-06.jpg') center/cover no-repeat;
+  background: url('../images/gh-cooking-02.jpg') center/cover no-repeat;
 }
 
 .blog-card__title {
@@ -3343,7 +3348,7 @@ select {
 .rec-hero__photo {
   width: 100%;
   height: 450px;
-  background: url('../images/recruit-photo.jpg') center/cover no-repeat;
+  background: url('../images/gh-staff-group-01.jpg') center/cover no-repeat;
   border-radius: 4px;
 }
 
@@ -3493,16 +3498,16 @@ select {
 .rec-point__photo {
   width: 100%;
   aspect-ratio: 4 / 3;
-  background: url('../images/recruit-point-01.jpg') center/cover no-repeat;
+  background: url('../images/gh-staff-trio.jpg') center/cover no-repeat;
   border-radius: 4px;
 }
 
 .rec-point__photo:nth-child(2) {
-  background-image: url('../images/recruit-point-02.jpg');
+  background-image: url('../images/gh-managers-02.jpg');
 }
 
 .rec-point__photo:nth-child(3) {
-  background-image: url('../images/recruit-point-03.jpg');
+  background-image: url('../images/houkan-staff-all-01.jpg');
 }
 
 .rec-point__circles {
@@ -3647,7 +3652,7 @@ select {
 .rec-info__job-photo {
   width: 100%;
   aspect-ratio: 3 / 4;
-  background: url('../images/recruit-staff-01.jpg') center/cover no-repeat;
+  background: url('../images/meeting-allmember-01.jpg') center/cover no-repeat;
   border-radius: 8px;
 }
 
@@ -3748,12 +3753,12 @@ select {
   width: 80px;
   height: 80px;
   border-radius: 50%;
-  background: url('../images/rec-comment.jpg') center/cover no-repeat;
+  background: url('../images/houkan-medicine-01.jpg') center/cover no-repeat;
   flex-shrink: 0;
 }
 
 .rec-info__comment--therapist .rec-info__comment-photo {
-  background-image: url('../images/rec-therapist.jpg');
+  background-image: url('../images/houkan-medicine-03.jpg');
 }
 
 .rec-info__comment-heading {
