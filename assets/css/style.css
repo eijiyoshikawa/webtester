@@ -916,6 +916,10 @@ select {
   align-items: center;
 }
 
+.service-detail__inner + .service-detail__inner {
+  margin-top: 80px;
+}
+
 .service-detail__content {
   display: flex;
   flex-direction: column;
