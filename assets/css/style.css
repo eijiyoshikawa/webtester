@@ -2424,6 +2424,235 @@ select {
   line-height: 2;
 }
 
+/* ---------- svc-grouphome / svc-houkan (新事業内容) ---------- */
+.svc-grouphome {
+  padding: 80px 0 60px;
+}
+
+.svc-houkan {
+  padding: 60px 0 80px;
+}
+
+.svc-section__heading {
+  font-family: var(--font-jp, 'Noto Sans JP', sans-serif);
+  font-size: 1.4rem;
+  font-weight: 600;
+  letter-spacing: 0.08em;
+  color: var(--text);
+  padding-bottom: 14px;
+  border-bottom: 1px solid var(--label);
+  margin-bottom: 16px;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: baseline;
+  gap: 8px;
+}
+
+.svc-section__heading-mark {
+  color: var(--label);
+  font-size: 1.1rem;
+  margin-right: 4px;
+}
+
+.svc-section__heading-sub {
+  font-size: 0.95rem;
+  font-weight: 400;
+  color: var(--text-light);
+  letter-spacing: 0.06em;
+}
+
+.svc-section__intro {
+  font-size: 1rem;
+  line-height: 1.9;
+  color: var(--text);
+  margin-bottom: 28px;
+}
+
+.svc-section__addr {
+  font-size: 0.95rem;
+  color: var(--text);
+  letter-spacing: 0.04em;
+  margin-bottom: 24px;
+}
+
+.svc-section__lead-box {
+  background-color: var(--cream);
+  border-left: 4px solid var(--label);
+  padding: 24px 28px;
+  border-radius: 0 8px 8px 0;
+  margin-bottom: 40px;
+}
+
+.svc-section__lead-box p {
+  font-size: 0.95rem;
+  line-height: 1.95;
+  color: var(--text);
+}
+
+.svc-section__lead-box p + p {
+  margin-top: 12px;
+}
+
+.svc-section__lead {
+  font-size: 1.1rem !important;
+  font-weight: 600 !important;
+  color: var(--label) !important;
+  letter-spacing: 0.05em;
+}
+
+/* GH home cards */
+.svc-homes {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 24px;
+  margin-bottom: 48px;
+}
+
+.svc-home-card {
+  background-color: var(--white);
+  border: 1px solid #ECE2DA;
+  border-radius: 10px;
+  overflow: hidden;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.svc-home-card:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 24px rgba(192, 120, 96, 0.10);
+}
+
+.svc-home-card__images {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 2px;
+  background-color: #ECE2DA;
+}
+
+.svc-home-card__image {
+  aspect-ratio: 4 / 3;
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.svc-home-card__body {
+  padding: 18px 22px 22px;
+}
+
+.svc-home-card__name {
+  font-size: 1.1rem;
+  font-weight: 600;
+  letter-spacing: 0.06em;
+  color: var(--text);
+  margin-bottom: 6px;
+}
+
+.svc-home-card__addr {
+  font-size: 0.9rem;
+  color: var(--text-light);
+  letter-spacing: 0.03em;
+}
+
+/* ご利用対象者 */
+.svc-target {
+  background-color: var(--pink-bg);
+  padding: 28px 32px;
+  border-radius: 8px;
+}
+
+.svc-target__heading {
+  font-size: 1.1rem;
+  font-weight: 600;
+  letter-spacing: 0.08em;
+  color: var(--label);
+  margin-bottom: 14px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.svc-target__heading::before {
+  content: '◎';
+  color: var(--label);
+}
+
+.svc-target__list {
+  list-style: none;
+  padding: 0;
+}
+
+.svc-target__list li {
+  position: relative;
+  padding: 6px 0 6px 22px;
+  font-size: 0.95rem;
+  line-height: 1.8;
+  color: var(--text);
+}
+
+.svc-target__list li::before {
+  content: '・';
+  position: absolute;
+  left: 4px;
+  color: var(--label);
+  font-weight: 700;
+}
+
+.svc-target__note {
+  display: inline;
+  font-size: 0.85rem;
+  color: var(--text-light);
+}
+
+/* 訪問看護 強み */
+.svc-strength {
+  margin-top: 8px;
+}
+
+.svc-strength__heading {
+  font-size: 1.05rem;
+  font-weight: 600;
+  letter-spacing: 0.05em;
+  color: var(--text);
+  margin-bottom: 12px;
+}
+
+.svc-strength__lead {
+  font-size: 0.95rem;
+  line-height: 1.95;
+  color: var(--text);
+  margin-bottom: 14px;
+}
+
+.svc-strength__list {
+  list-style: none;
+  padding: 0;
+}
+
+.svc-strength__list li {
+  position: relative;
+  padding: 6px 0 6px 22px;
+  font-size: 0.93rem;
+  line-height: 1.85;
+  color: var(--text);
+}
+
+.svc-strength__list li::before {
+  content: '・';
+  position: absolute;
+  left: 4px;
+  color: var(--label);
+  font-weight: 700;
+}
+
+@media (max-width: 768px) {
+  .svc-homes {
+    grid-template-columns: 1fr;
+  }
+  .svc-section__heading {
+    font-size: 1.2rem;
+  }
+}
+
 /* ---------- svc-fees (price list / service PDFs) ---------- */
 .svc-fees {
   padding: 100px 0 60px;
@@ -2563,6 +2792,59 @@ select {
   }
   .svc-fees__title {
     font-size: 1.8rem;
+  }
+}
+
+/* ---------- svc-gallery (写真ギャラリー) ---------- */
+.svc-gallery {
+  padding: 100px 0;
+  background-color: var(--cream);
+}
+
+.svc-gallery__header {
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+.svc-gallery__title {
+  font-family: var(--font-en);
+  font-size: 2.2rem;
+  font-weight: 300;
+  letter-spacing: 0.12em;
+  color: var(--label);
+  text-transform: lowercase;
+  line-height: 1.2;
+}
+
+.svc-gallery__subtitle {
+  font-size: 0.9rem;
+  letter-spacing: 0.2em;
+  margin-top: 6px;
+  color: var(--text-light);
+}
+
+.svc-gallery__grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 16px;
+}
+
+.svc-gallery__item {
+  aspect-ratio: 4 / 3;
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  border-radius: 8px;
+  transition: transform 0.4s ease;
+}
+
+.svc-gallery__item:hover {
+  transform: scale(1.02);
+}
+
+@media (max-width: 768px) {
+  .svc-gallery__grid {
+    grid-template-columns: repeat(2, 1fr);
   }
 }
 
@@ -4087,5 +4369,128 @@ select {
   }
   .footer__logo-img {
     height: 60px;
+  }
+}
+
+/* ==========================================================================
+   Privacy Policy Page
+   ========================================================================== */
+.privacy-page {
+  padding: 140px 0 100px;
+  background-color: var(--cream);
+  min-height: 80vh;
+}
+
+.privacy-page__header {
+  text-align: center;
+  margin-bottom: 60px;
+}
+
+.privacy-page__title {
+  font-family: var(--font-en);
+  font-size: 2.8rem;
+  font-weight: 300;
+  letter-spacing: 0.12em;
+  color: var(--label);
+  text-transform: lowercase;
+  line-height: 1.2;
+}
+
+.privacy-page__subtitle {
+  font-size: 0.95rem;
+  letter-spacing: 0.2em;
+  margin-top: 8px;
+  color: var(--text-light);
+}
+
+.privacy-page__body {
+  max-width: 820px;
+  margin: 0 auto;
+  background-color: var(--white);
+  padding: 56px 56px 64px;
+  border-radius: 12px;
+  box-shadow: 0 4px 24px rgba(0, 0, 0, 0.04);
+}
+
+.privacy-page__intro {
+  font-size: 1rem;
+  line-height: 1.95;
+  color: var(--text);
+  margin-bottom: 40px;
+  padding-bottom: 32px;
+  border-bottom: 1px solid #ECE2DA;
+}
+
+.privacy-page__section {
+  margin-bottom: 36px;
+}
+
+.privacy-page__heading {
+  font-size: 1.15rem;
+  font-weight: 600;
+  letter-spacing: 0.05em;
+  color: var(--label);
+  margin-bottom: 12px;
+  padding-bottom: 8px;
+  border-bottom: 2px solid var(--pink-bg);
+}
+
+.privacy-page__section p {
+  font-size: 0.95rem;
+  line-height: 1.95;
+  color: var(--text);
+}
+
+.privacy-page__list {
+  list-style: none;
+  padding: 0;
+  margin-top: 12px;
+}
+
+.privacy-page__list li {
+  position: relative;
+  padding: 4px 0 4px 22px;
+  font-size: 0.95rem;
+  line-height: 1.85;
+  color: var(--text);
+}
+
+.privacy-page__list li::before {
+  content: '・';
+  position: absolute;
+  left: 4px;
+  color: var(--label);
+  font-weight: 700;
+}
+
+.privacy-page__contact {
+  margin-top: 14px;
+  padding: 16px 20px;
+  background-color: var(--pink-bg);
+  border-radius: 6px;
+}
+
+.privacy-page__contact a {
+  color: var(--label);
+  text-decoration: underline;
+}
+
+.privacy-page__date {
+  margin-top: 32px;
+  text-align: right;
+  font-size: 0.85rem;
+  color: var(--text-light);
+  letter-spacing: 0.05em;
+}
+
+@media (max-width: 768px) {
+  .privacy-page {
+    padding: 100px 0 60px;
+  }
+  .privacy-page__body {
+    padding: 32px 24px 40px;
+  }
+  .privacy-page__title {
+    font-size: 2.2rem;
   }
 }
