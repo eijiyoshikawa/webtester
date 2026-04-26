@@ -225,33 +225,34 @@ select {
 .header__nav {
   display: flex;
   align-items: center;
-  gap: 40px;
+  gap: 44px;
 }
 
 .header__nav-item {
   display: flex;
   align-items: center;
-  gap: 8px;
+  gap: 10px;
   font-family: var(--font-en);
-  font-size: 0.85rem;
-  font-weight: 400;
-  letter-spacing: 0.15em;
+  font-size: 1.15rem;
+  font-weight: 500;
+  letter-spacing: 0.12em;
   text-transform: lowercase;
-  color: #666;
+  color: var(--text);
   transition: color 0.3s ease;
 }
 
 .header__nav-item::before {
   content: '';
   display: inline-block;
-  width: 5px;
-  height: 5px;
-  border: 1px solid var(--label);
+  width: 7px;
+  height: 7px;
+  background-color: var(--label);
   border-radius: 50%;
   flex-shrink: 0;
 }
 
-.header__nav-item:hover {
+.header__nav-item:hover,
+.header__nav-item.is-active {
   color: var(--label);
 }
 
@@ -260,14 +261,15 @@ select {
   position: relative;
   display: inline-flex;
   align-items: center;
-  padding: 8px 40px;
-  border: 1px solid var(--label);
+  padding: 10px 44px;
+  border: 1.5px solid var(--label);
   border-radius: 50px;
   font-family: var(--font-en);
-  font-size: 0.85rem;
-  letter-spacing: 0.15em;
+  font-size: 1.05rem;
+  font-weight: 500;
+  letter-spacing: 0.12em;
   text-transform: lowercase;
-  color: #666;
+  color: var(--label);
   overflow: hidden;
   transition: background-color 0.3s ease, color 0.3s ease;
 }
@@ -485,10 +487,19 @@ select {
   margin-bottom: 24px;
 }
 
+.hero__catch {
+  font-size: 1.1rem;
+  font-weight: 400;
+  letter-spacing: 0.18em;
+  line-height: 1.8;
+  margin-bottom: 18px;
+  color: rgba(255, 255, 255, 0.95);
+}
+
 .hero__subtitle {
-  font-size: 1rem;
-  font-weight: 300;
-  letter-spacing: 0.12em;
+  font-size: 1.15rem;
+  font-weight: 400;
+  letter-spacing: 0.14em;
   line-height: 2;
   margin-bottom: 60px;
 }
@@ -585,13 +596,22 @@ select {
 }
 
 .philosophy__text {
-  font-size: 0.95rem;
+  font-size: 1rem;
   line-height: 2;
-  color: rgba(255, 255, 255, 0.9);
+  color: rgba(255, 255, 255, 0.95);
 }
 
 .philosophy__text p + p {
   margin-top: 1.5em;
+}
+
+.philosophy__lead {
+  font-size: 1.35rem;
+  font-weight: 500;
+  line-height: 1.8;
+  letter-spacing: 0.04em;
+  margin-bottom: 1.2em;
+  color: var(--white);
 }
 
 .philosophy__cta {
@@ -902,13 +922,12 @@ select {
 }
 
 .service-detail__label {
-  font-family: var(--font-en);
-  font-size: 0.8rem;
-  font-weight: 300;
-  letter-spacing: 0.15em;
-  text-transform: lowercase;
+  font-family: 'Noto Sans JP', sans-serif;
+  font-size: 1.15rem;
+  font-weight: 600;
+  letter-spacing: 0.1em;
   color: var(--label);
-  margin-bottom: 12px;
+  margin-bottom: 8px;
 }
 
 .service-detail__title {
@@ -921,14 +940,15 @@ select {
 }
 
 .service-detail__subtitle {
-  font-size: 0.85rem;
-  color: var(--text-light);
-  letter-spacing: 0.1em;
-  margin-bottom: 24px;
+  font-size: 0.95rem;
+  color: var(--text);
+  letter-spacing: 0.08em;
+  margin-bottom: 20px;
+  font-weight: 500;
 }
 
 .service-detail__text {
-  font-size: 0.9rem;
+  font-size: 1rem;
   line-height: 2;
   color: var(--text);
   margin-bottom: 36px;
@@ -960,6 +980,23 @@ select {
   width: 100%;
   height: 100%;
   object-fit: cover;
+}
+
+/* Logo placeholder variant - displays company logo on tinted bg until business-specific logos are uploaded */
+.service-detail__image--logo {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: var(--cream) url('../images/logp-company.png') center/40% no-repeat;
+  border: 1px solid #ECE2DA;
+}
+
+.service-detail__image--grouphome {
+  background-color: var(--peach);
+}
+
+.service-detail__image--houkan {
+  background-color: var(--sky);
 }
 
 /* Reversed layout variant (image left, text right) */
@@ -1089,7 +1126,7 @@ select {
 .message-section__photo {
   flex: 0 0 360px;
   height: 480px;
-  background: url('../images/taikiyoshida.JPG') center/cover no-repeat;
+  background: url('../images/nishikamata001.jpeg') center/cover no-repeat;
   border-radius: 8px;
   overflow: hidden;
 }
@@ -1251,6 +1288,19 @@ select {
 .about-section__table td {
   color: var(--text);
   font-family: 'Noto Sans JP', sans-serif;
+}
+
+.about-section__office {
+  margin-bottom: 0.6em;
+}
+
+.about-section__office:last-child {
+  margin-bottom: 0;
+}
+
+.about-section__office strong {
+  color: var(--label);
+  font-weight: 500;
 }
 
 .about-section__btn {
@@ -2372,6 +2422,148 @@ select {
   font-size: 0.9rem;
   letter-spacing: 0.1em;
   line-height: 2;
+}
+
+/* ---------- svc-fees (price list / service PDFs) ---------- */
+.svc-fees {
+  padding: 100px 0 60px;
+  background-color: var(--cream);
+}
+
+.svc-fees__header {
+  text-align: center;
+  margin-bottom: 32px;
+}
+
+.svc-fees__title {
+  font-family: var(--font-en);
+  font-size: 2.2rem;
+  font-weight: 300;
+  letter-spacing: 0.12em;
+  color: var(--label);
+  text-transform: lowercase;
+  line-height: 1.2;
+}
+
+.svc-fees__subtitle {
+  font-size: 0.9rem;
+  letter-spacing: 0.2em;
+  margin-top: 6px;
+  color: var(--text-light);
+}
+
+.svc-fees__lead {
+  text-align: center;
+  font-size: 1rem;
+  letter-spacing: 0.06em;
+  line-height: 1.9;
+  margin-bottom: 40px;
+  color: var(--text);
+}
+
+.svc-fees__cards {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 24px;
+  margin-bottom: 24px;
+}
+
+.svc-fees__card {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  padding: 24px 28px;
+  background-color: var(--white);
+  border: 1px solid #ECE2DA;
+  border-radius: 10px;
+  color: var(--text);
+  transition: transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease;
+}
+
+.svc-fees__card:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(192, 120, 96, 0.12);
+  border-color: var(--label);
+  opacity: 1;
+}
+
+.svc-fees__card-icon {
+  flex-shrink: 0;
+  width: 52px;
+  height: 52px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  background-color: var(--pink-bg);
+  color: var(--label);
+}
+
+.svc-fees__card-icon svg {
+  width: 26px;
+  height: 26px;
+}
+
+.svc-fees__card-body {
+  flex: 1;
+  min-width: 0;
+}
+
+.svc-fees__card-label {
+  display: inline-block;
+  font-family: var(--font-en);
+  font-size: 0.7rem;
+  letter-spacing: 0.2em;
+  padding: 2px 10px;
+  background-color: var(--label);
+  color: var(--white);
+  border-radius: 999px;
+  margin-bottom: 8px;
+}
+
+.svc-fees__card-title {
+  font-size: 1.05rem;
+  font-weight: 500;
+  letter-spacing: 0.05em;
+  margin-bottom: 4px;
+}
+
+.svc-fees__card-desc {
+  font-size: 0.85rem;
+  color: var(--text-light);
+  line-height: 1.6;
+}
+
+.svc-fees__card-arrow {
+  flex-shrink: 0;
+  font-size: 1.2rem;
+  color: var(--label);
+  transition: transform 0.3s ease;
+}
+
+.svc-fees__card:hover .svc-fees__card-arrow {
+  transform: translateX(4px);
+}
+
+.svc-fees__note {
+  text-align: center;
+  font-size: 0.85rem;
+  color: var(--text-light);
+  letter-spacing: 0.05em;
+}
+
+.svc-fees__note a {
+  color: var(--label);
+  text-decoration: underline;
+}
+
+@media (max-width: 768px) {
+  .svc-fees__cards {
+    grid-template-columns: 1fr;
+  }
+  .svc-fees__title {
+    font-size: 1.8rem;
+  }
 }
 
 /* ---------- 5. svc-message ---------- */
