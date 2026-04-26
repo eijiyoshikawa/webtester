@@ -2475,11 +2475,24 @@ select {
 }
 
 .svc-section__lead-box {
+  position: relative;
   background-color: var(--cream);
-  border-left: 4px solid var(--label);
-  padding: 24px 28px;
-  border-radius: 0 8px 8px 0;
+  padding: 36px 40px 32px;
+  border-radius: 12px;
   margin-bottom: 40px;
+  box-shadow: 0 4px 16px rgba(192, 120, 96, 0.06);
+}
+
+.svc-section__lead-box::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 60px;
+  height: 3px;
+  background-color: var(--label);
+  border-radius: 2px;
 }
 
 .svc-section__lead-box p {
@@ -2493,10 +2506,12 @@ select {
 }
 
 .svc-section__lead {
-  font-size: 1.1rem !important;
+  font-size: 1.15rem !important;
   font-weight: 600 !important;
   color: var(--label) !important;
   letter-spacing: 0.05em;
+  text-align: center;
+  margin-bottom: 8px !important;
 }
 
 /* GH home cards */
