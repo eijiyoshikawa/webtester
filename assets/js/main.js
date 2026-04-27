@@ -123,6 +123,56 @@
     }, 5000);
   }
 
+  // ========== Lightbox (写真クリックで拡大表示) ==========
+  function initLightbox() {
+    var targets = document.querySelectorAll('.svc-home-card__image, .svc-gallery__item');
+    if (!targets.length) return;
+
+    var overlay = document.createElement('div');
+    overlay.className = 'lightbox';
+    overlay.setAttribute('aria-hidden', 'true');
+    overlay.innerHTML =
+      '<button class="lightbox__close" type="button" aria-label="閉じる">' +
+      '<svg viewBox="0 0 24 24" fill="none" width="24" height="24"><path d="M6 6l12 12M18 6L6 18" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>' +
+      '</button>' +
+      '<img class="lightbox__img" alt="">';
+    document.body.appendChild(overlay);
+
+    var img = overlay.querySelector('.lightbox__img');
+    var closeBtn = overlay.querySelector('.lightbox__close');
+
+    function open(url) {
+      img.src = url;
+      overlay.classList.add('is-open');
+      overlay.setAttribute('aria-hidden', 'false');
+      document.body.style.overflow = 'hidden';
+    }
+    function close() {
+      overlay.classList.remove('is-open');
+      overlay.setAttribute('aria-hidden', 'true');
+      document.body.style.overflow = '';
+      // delay clearing src so transition can finish
+      setTimeout(function () { img.src = ''; }, 300);
+    }
+
+    targets.forEach(function (el) {
+      el.addEventListener('click', function () {
+        var bg = el.style.backgroundImage || getComputedStyle(el).backgroundImage;
+        var match = bg.match(/url\((['"]?)([^'")]+)\1\)/);
+        if (match && match[2]) open(match[2]);
+      });
+    });
+
+    overlay.addEventListener('click', function (e) {
+      if (e.target === overlay || closeBtn.contains(e.target) || e.target === closeBtn) close();
+    });
+
+    document.addEventListener('keydown', function (e) {
+      if (e.key === 'Escape' && overlay.classList.contains('is-open')) close();
+    });
+  }
+  initLightbox();
+
   // ========== Initialize ==========
   handleScroll();
 })();
