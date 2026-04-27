@@ -4964,3 +4964,185 @@ select {
   transform: translateY(-4px);
   box-shadow: 0 12px 26px rgba(192, 120, 96, 0.28);
 }
+
+/* ==========================================================================
+   調整 (パディング統一・ホバー視認性・SPメニュー・背景アニメーション)
+   ========================================================================== */
+
+/* ---------- セクション padding 統一 100px ---------- */
+.philosophy { padding-top: 100px; padding-bottom: 100px; }
+.our-service { padding-top: 100px; padding-bottom: 100px; }
+.message-section__inner { padding-top: 100px; padding-bottom: 100px; }
+.about-section { padding-top: 100px; padding-bottom: 100px; }
+.news { padding-top: 100px; padding-bottom: 100px; }
+.service-detail { padding-top: 100px; padding-bottom: 100px; }
+
+/* ---------- ホバー視認性: テキストを暗くして読みやすく ---------- */
+
+/* news 項目: 緑背景 + 白文字 → ホバーで pink-bg + 暗いテキスト */
+.news__item:hover .news__date,
+.news__item:hover .news__title {
+  color: var(--text);
+}
+.news__item:hover .news__arrow {
+  color: var(--text);
+  border-color: rgba(58, 53, 48, 0.4);
+  background-color: rgba(255, 255, 255, 0.5);
+}
+
+/* footer ナビ: ホバーで暗いテキストに */
+.footer__nav-item:hover {
+  color: var(--text);
+}
+
+/* ヘッダーサブメニュー: ホバーで暗いテキスト */
+.header__nav-subitem:hover,
+.header__nav-subitem.is-active {
+  color: var(--text);
+}
+
+/* GH home card 名前: ホバー時にもアイコン色維持 */
+.svc-home-card:hover .svc-home-card__name {
+  color: var(--label);
+}
+
+/* ---------- SP メニューのドロップダウン修正 (余分なドット・ガタつき) ---------- */
+@media screen and (max-width: 768px) {
+  /* dropdown wrapper の bullet ::before を非表示 (代わりに trigger に dot を付ける) */
+  .header__nav-item.header__nav-dropdown::before {
+    display: none;
+  }
+  /* trigger に bullet dot を付与 */
+  .header__nav-trigger {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    font-family: var(--font-jp, 'Noto Sans JP', sans-serif);
+    font-size: 1.1rem;
+    font-weight: 500;
+    letter-spacing: 0.08em;
+    color: var(--text);
+  }
+  .header__nav-trigger::before {
+    content: '';
+    display: inline-block;
+    width: 7px;
+    height: 7px;
+    background-color: var(--label);
+    border-radius: 50%;
+    flex-shrink: 0;
+  }
+  /* dropdown wrapper のレイアウト調整 */
+  .header__nav-dropdown {
+    flex-direction: column;
+    gap: 0;
+    align-items: center;
+  }
+  /* submenu はインライン展開 (左ボーダーは PC のような飾り削除、SPは中央寄せ) */
+  .header__nav-submenu {
+    margin-top: 12px;
+    border-left: none;
+    text-align: center;
+  }
+  .header__nav-submenu::before {
+    display: none;
+  }
+  .header__nav-subitem {
+    padding: 8px 16px;
+    font-size: 0.95rem;
+    color: var(--gray-dark);
+  }
+}
+
+/* ==========================================================================
+   背景アニメーション (抽象的なブロブ - 福祉系の優しい色)
+   ========================================================================== */
+.bg-anim {
+  position: fixed;
+  inset: 0;
+  z-index: -1;
+  overflow: hidden;
+  pointer-events: none;
+}
+
+.bg-anim__blob {
+  position: absolute;
+  border-radius: 50%;
+  filter: blur(80px);
+  opacity: 0.45;
+  will-change: transform;
+}
+
+.bg-anim__blob--1 {
+  width: 480px;
+  height: 480px;
+  background: var(--peach);
+  top: -120px;
+  left: -120px;
+  animation: bgFloat1 22s infinite ease-in-out;
+}
+
+.bg-anim__blob--2 {
+  width: 560px;
+  height: 560px;
+  background: var(--mint);
+  top: 30%;
+  right: -180px;
+  animation: bgFloat2 26s infinite ease-in-out;
+}
+
+.bg-anim__blob--3 {
+  width: 420px;
+  height: 420px;
+  background: var(--pink-light);
+  bottom: -100px;
+  left: 25%;
+  animation: bgFloat3 28s infinite ease-in-out;
+}
+
+.bg-anim__blob--4 {
+  width: 360px;
+  height: 360px;
+  background: var(--sky);
+  top: 60%;
+  left: -100px;
+  animation: bgFloat4 24s infinite ease-in-out;
+}
+
+@keyframes bgFloat1 {
+  0%, 100% { transform: translate(0, 0) scale(1); }
+  33% { transform: translate(60px, 80px) scale(1.1); }
+  66% { transform: translate(120px, -40px) scale(0.95); }
+}
+@keyframes bgFloat2 {
+  0%, 100% { transform: translate(0, 0) scale(1); }
+  50% { transform: translate(-100px, -80px) scale(1.15); }
+}
+@keyframes bgFloat3 {
+  0%, 100% { transform: translate(0, 0) scale(1); }
+  40% { transform: translate(-80px, -60px) scale(1.08); }
+  80% { transform: translate(60px, 30px) scale(0.92); }
+}
+@keyframes bgFloat4 {
+  0%, 100% { transform: translate(0, 0) scale(1); }
+  50% { transform: translate(80px, -50px) scale(1.12); }
+}
+
+/* モバイルでは少し小さめ・少しオパシティ抑える */
+@media screen and (max-width: 768px) {
+  .bg-anim__blob {
+    filter: blur(60px);
+    opacity: 0.35;
+  }
+  .bg-anim__blob--1 { width: 320px; height: 320px; }
+  .bg-anim__blob--2 { width: 380px; height: 380px; }
+  .bg-anim__blob--3 { width: 280px; height: 280px; }
+  .bg-anim__blob--4 { width: 240px; height: 240px; }
+}
+
+/* アニメーション軽減モード */
+@media (prefers-reduced-motion: reduce) {
+  .bg-anim__blob {
+    animation: none;
+  }
+}
