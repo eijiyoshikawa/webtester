@@ -64,6 +64,12 @@
     anchor.addEventListener('click', function (e) {
       var targetId = this.getAttribute('href');
       if (targetId === '#') return;
+      // Back-to-top: scroll to the very top regardless of page
+      if (targetId === '#header' || targetId === '#top') {
+        e.preventDefault();
+        window.scrollTo({ top: 0, behavior: 'smooth' });
+        return;
+      }
       var target = document.querySelector(targetId);
       if (!target) return;
       e.preventDefault();

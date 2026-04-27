@@ -25,7 +25,7 @@
 
   --font-en: 'Cormorant Garamond', serif;
   --font-jp: 'Noto Sans JP', sans-serif;
-  --header-h: 80px;
+  --header-h: 92px;
   --container-max: 1200px;
   --container-wide: 1400px;
 }
@@ -4523,7 +4523,7 @@ select {
 
 /* ========== Logo Image Styles ========== */
 .header__logo-img {
-  height: 50px;
+  height: 64px;
   width: auto;
   display: block;
 }
@@ -4537,7 +4537,7 @@ select {
 
 @media (max-width: 768px) {
   .header__logo-img {
-    height: 40px;
+    height: 50px;
   }
   .footer__logo-img {
     height: 60px;
