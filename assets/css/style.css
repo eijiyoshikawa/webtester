@@ -4725,3 +4725,242 @@ select {
     height: 42px;
   }
 }
+
+/* ==========================================================================
+   福祉系デザイン調整 (配色・文言は維持、ソフトな印象に統一)
+   ========================================================================== */
+
+/* ---------- 角丸を全体的に大きく ---------- */
+.svc-home-card { border-radius: 18px; }
+.svc-fees__card { border-radius: 14px; }
+.svc-fees__card-icon { border-radius: 50%; width: 56px; height: 56px; }
+.about-section__card { border-radius: 20px; }
+.privacy-page__body { border-radius: 20px; }
+.svc-section__lead-box { border-radius: 18px; }
+.svc-target { border-radius: 18px; }
+.svc-gallery__item { border-radius: 14px; }
+.philosophy__image { border-radius: 14px; }
+.message-section__photo { border-radius: 16px; }
+.service-detail__image { border-radius: 18px; }
+
+/* ---------- 柔らかい影 (drop-shadowで自然な深み) ---------- */
+.svc-home-card {
+  box-shadow: 0 6px 20px rgba(192, 120, 96, 0.08), 0 2px 6px rgba(192, 120, 96, 0.04);
+}
+.svc-home-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 14px 36px rgba(192, 120, 96, 0.14), 0 4px 12px rgba(192, 120, 96, 0.06);
+}
+
+.svc-fees__card {
+  box-shadow: 0 4px 16px rgba(192, 120, 96, 0.06);
+}
+.svc-fees__card:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 12px 28px rgba(192, 120, 96, 0.16);
+}
+
+.svc-section__lead-box {
+  box-shadow: 0 4px 18px rgba(192, 120, 96, 0.06);
+}
+
+.about-section__card {
+  box-shadow: 0 6px 24px rgba(192, 120, 96, 0.07);
+}
+
+.privacy-page__body {
+  box-shadow: 0 6px 24px rgba(0, 0, 0, 0.05);
+}
+
+/* ---------- ボタンの丸みを増す + ホバーで浮く ---------- */
+.btn-cta,
+.cnt-form__submit,
+.svc-fees__card-arrow {
+  border-radius: 999px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease, background-color 0.3s ease;
+}
+
+.btn-cta:hover,
+.cnt-form__submit:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 20px rgba(192, 120, 96, 0.18);
+}
+
+.cta-link__circle {
+  transition: transform 0.3s ease, background-color 0.3s ease, color 0.3s ease;
+}
+.cta-link:hover .cta-link__circle {
+  transform: translateX(4px) scale(1.05);
+}
+
+/* ---------- リスト記号を「・」から優しい円形ドットに ---------- */
+.svc-target__list li,
+.svc-strength__list li {
+  padding-left: 28px;
+}
+.svc-target__list li::before,
+.svc-strength__list li::before {
+  content: '';
+  position: absolute;
+  left: 6px;
+  top: 14px;
+  width: 8px;
+  height: 8px;
+  background-color: var(--label);
+  border-radius: 50%;
+  font-weight: normal;
+}
+
+.privacy-page__list li {
+  padding-left: 28px;
+}
+.privacy-page__list li::before {
+  content: '';
+  position: absolute;
+  left: 6px;
+  top: 14px;
+  width: 8px;
+  height: 8px;
+  background-color: var(--label);
+  border-radius: 50%;
+  font-weight: normal;
+}
+
+/* ---------- ご利用対象者：チェックマーク風 ---------- */
+.svc-target__heading::before {
+  content: '';
+  display: inline-block;
+  width: 22px;
+  height: 22px;
+  background-color: var(--label);
+  -webkit-mask: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='currentColor' stroke-width='2.5' stroke-linecap='round' stroke-linejoin='round'><polyline points='20 6 9 17 4 12'/></svg>") center/contain no-repeat;
+  mask: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='currentColor' stroke-width='2.5' stroke-linecap='round' stroke-linejoin='round'><polyline points='20 6 9 17 4 12'/></svg>") center/contain no-repeat;
+  vertical-align: middle;
+  margin-right: 4px;
+}
+.svc-target__heading::after {
+  content: none;
+}
+
+/* ---------- ホームカードの名前にハウスアイコン ---------- */
+.svc-home-card__name {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+.svc-home-card__name::before {
+  content: '';
+  display: inline-block;
+  width: 18px;
+  height: 18px;
+  background-color: var(--label);
+  -webkit-mask: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='currentColor' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'><path d='M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z'/><polyline points='9 22 9 12 15 12 15 22'/></svg>") center/contain no-repeat;
+  mask: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='currentColor' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'><path d='M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z'/><polyline points='9 22 9 12 15 12 15 22'/></svg>") center/contain no-repeat;
+  flex-shrink: 0;
+}
+
+/* ---------- セクション見出しマーク ■ をハートに置き換え ---------- */
+.svc-section__heading-mark {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 22px;
+  height: 22px;
+  font-size: 0;
+  color: transparent;
+}
+.svc-section__heading-mark::before {
+  content: '';
+  display: block;
+  width: 22px;
+  height: 22px;
+  background-color: var(--label);
+  -webkit-mask: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='currentColor' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'><path d='M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z'/></svg>") center/contain no-repeat;
+  mask: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='currentColor' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'><path d='M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z'/></svg>") center/contain no-repeat;
+}
+
+/* ---------- ニュース項目のホバーで柔らかく ---------- */
+.news__item {
+  border-radius: 12px;
+  padding: 18px 20px;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+}
+.news__item:hover {
+  background-color: var(--pink-bg);
+  transform: translateX(2px);
+}
+
+/* ---------- ブログカードを柔らかく ---------- */
+.blog-card {
+  border-radius: 16px;
+  overflow: hidden;
+  box-shadow: 0 4px 18px rgba(192, 120, 96, 0.06);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+.blog-card:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 12px 30px rgba(192, 120, 96, 0.12);
+}
+
+/* ---------- セクション間の余白を広めに ---------- */
+.philosophy { padding-top: 110px; padding-bottom: 110px; }
+.our-service { padding-top: 100px; padding-bottom: 100px; }
+.message-section__inner { padding-top: 110px; padding-bottom: 110px; }
+.about-section { padding-top: 110px; padding-bottom: 110px; }
+
+/* ---------- リード文の行間を少し広げる ---------- */
+.svc-section__intro,
+.svc-section__lead-box p,
+.svc-strength__lead,
+.svc-target__list li,
+.svc-strength__list li {
+  line-height: 2;
+}
+
+/* ---------- フッターのコピーライト周りも柔らかく ---------- */
+.footer__nav-item {
+  padding: 4px 8px;
+  border-radius: 6px;
+  transition: background-color 0.2s ease, color 0.2s ease;
+}
+.footer__nav-item:hover {
+  background-color: var(--pink-bg);
+  color: var(--label);
+  opacity: 1;
+}
+
+/* ---------- お問い合わせフォーム周りを優しく ---------- */
+.cnt-form__input,
+.cnt-form__select,
+.cnt-form__textarea {
+  border-radius: 10px;
+  transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+.cnt-form__input:focus,
+.cnt-form__select:focus,
+.cnt-form__textarea:focus {
+  border-color: var(--label);
+  box-shadow: 0 0 0 3px rgba(192, 120, 96, 0.12);
+  outline: none;
+}
+
+/* ---------- About テーブルの柔らかさ ---------- */
+.about-section__office {
+  padding: 8px 12px;
+  border-radius: 8px;
+  transition: background-color 0.3s ease;
+}
+.about-section__office:hover {
+  background-color: var(--pink-bg);
+}
+
+/* ---------- back-to-top も柔らかく ---------- */
+.back-to-top {
+  border-radius: 50%;
+  box-shadow: 0 6px 18px rgba(192, 120, 96, 0.20);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+.back-to-top:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 12px 26px rgba(192, 120, 96, 0.28);
+}
