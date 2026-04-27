@@ -3,12 +3,12 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>サービス内容 | 合同会社あんじゅ</title>
-  <meta name="description" content="合同会社あんじゅのサービス内容。グループホーム事業（大田区）・訪問看護事業（大田区）の2つの事業で、地域の暮らしを支えます。">
+  <title>グループホームあんじゅ | 合同会社あんじゅ</title>
+  <meta name="description" content="グループホームあんじゅ。大田区内4事業所で知的障害・精神障害をお持ちの方の共同生活援助を運営しています。">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400&family=Noto+Sans+JP:wght@300;400;500;700&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="../assets/css/style.css">
+  <link rel="stylesheet" href="../../assets/css/style.css">
 </head>
 <body>
 
@@ -18,13 +18,19 @@
       <a href="/" class="header__logo">
         <img src="/assets/images/logo-company.png" alt="合同会社あんじゅ" class="header__logo-img">
       </a>
-      <nav class="header__nav" id="globalNav">
-        <a href="/" class="header__nav-item header__nav-link">ホーム</a>
-        <a href="/service/" class="header__nav-item header__nav-link is-active">サービス</a>
-        <a href="/news/" class="header__nav-item header__nav-link">お知らせ</a>
-        <a href="/blog/" class="header__nav-item header__nav-link">ブログ</a>
-        <a href="/contact/" class="header__nav-item header__nav-link">お問い合わせ</a>
-      </nav>
+         <nav class="header__nav" id="globalNav">
+    <a href="/" class="header__nav-item header__nav-link">ホーム</a>
+    <div class="header__nav-item header__nav-dropdown is-active" data-dropdown>
+     <span class="header__nav-trigger">サービス</span>
+     <div class="header__nav-submenu">
+      <a href="/service/grouphome/" class="header__nav-subitem is-active">グループホーム</a>
+      <a href="/service/houkan/" class="header__nav-subitem">訪問看護</a>
+     </div>
+    </div>
+    <a href="/news/" class="header__nav-item header__nav-link">お知らせ</a>
+    <a href="/blog/" class="header__nav-item header__nav-link">ブログ</a>
+    <a href="/contact/" class="header__nav-item header__nav-link">お問い合わせ</a>
+   </nav>
       <button class="header__hamburger" id="hamburger" aria-label="メニューを開く">
         <span></span><span></span><span></span>
       </button>
@@ -43,7 +49,7 @@
     <div class="svc-hero__bar svc-hero__bar--left"></div>
     <div class="svc-hero__bar svc-hero__bar--right"></div>
     <div class="svc-hero__inner">
-      <h1 class="svc-hero__title">our service</h1>
+      <h1 class="svc-hero__title">group home</h1>
       <div class="svc-hero__logo">
         <span class="svc-hero__logo-text">anju</span>
       </div>
@@ -52,7 +58,7 @@
 
   <!-- ========== MAIN PHOTO ========== -->
   <section class="svc-photo fade-in">
-    <div class="svc-photo__image"></div>
+    <div class="svc-photo__image" style="background:linear-gradient(135deg, rgba(196,168,160,0.3), rgba(180,160,155,0.4)), url('/assets/images/omori-exterior-front.jpg') center/cover no-repeat;"></div>
   </section>
 
   <!-- ========== 事業概要 ========== -->
@@ -61,12 +67,12 @@
       <div class="svc-nursing__header">
         <div class="svc-nursing__label">
           <span class="svc-nursing__dot"></span>
-          <span class="svc-nursing__label-text">グループホーム事業 ＆ 訪問看護事業</span>
+          <span class="svc-nursing__label-text">グループホーム事業</span>
         </div>
-        <p class="svc-nursing__lead">安心して穏やかに過ごせるホームと、身近な医療の相談相手を目指して</p>
+        <p class="svc-nursing__lead">安心して穏やかに過ごせるホームを目指して</p>
       </div>
       <div class="svc-nursing__body">
-        <p class="svc-nursing__desc">合同会社あんじゅでは、大田区内で知的障害や精神障害をお持ちの方のグループホーム（共同生活援助）と訪問看護ステーションを運営しています。<br>地域や支援者の方々、医療職の方とも手を取り合い、利用者さまが安心して暮らせる環境づくりに取り組んでいます。</p>
+        <p class="svc-nursing__desc">合同会社あんじゅでは、大田区内で知的障害や精神障害をお持ちの方のグループホーム（共同生活援助）を運営しています。<br>地域や支援者の方々、医療職の方とも手を取り合い、利用者さまが安心して暮らせる環境づくりに取り組んでいます。</p>
       </div>
     </div>
   </section>
@@ -143,97 +149,6 @@
     </div>
   </section>
 
-  <!-- ========== 事業内容 (訪問看護) ========== -->
-  <section class="svc-houkan fade-in" id="houkan">
-    <div class="container">
-      <div class="svc-details__grid">
-        <div class="svc-details__main">
-          <h3 class="svc-section__heading">
-            <span class="svc-section__heading-mark">■</span>訪問看護ステーションあんじゅ
-            <span class="svc-section__heading-sub">（大田区山王）</span>
-          </h3>
-          <p class="svc-section__addr">〒143-0023 東京都大田区山王3-35-7 八景坂マンション301号室</p>
-
-          <div class="svc-section__lead-box">
-            <p class="svc-section__lead">身近な医療の相談相手。そばで支える人にも寄り添う訪問看護を。</p>
-            <p>心と体の相談に乗り、医師と連携して安心した地域生活をサポートします。</p>
-          </div>
-
-          <div class="svc-strength">
-            <h4 class="svc-strength__heading">＜あんじゅ訪看の強み＞</h4>
-            <p class="svc-strength__lead">障害者グループホームを運営する訪問看護ステーションだからこその強みがあります。看護師全員が障害者グループホームで世話人業務経験者です。</p>
-            <ul class="svc-strength__list">
-              <li>おひとりおひとりの障害特性や個別支援計画を理解し、自立支援や社会参加支援のサポートをいたします。</li>
-              <li>利用者様の日中活動を制限しないよう、柔軟に訪問時間を調整いたします。</li>
-              <li>支援者様にもしっかり寄り添いながら、最善の看護支援を目指します。</li>
-            </ul>
-          </div>
-        </div>
-        <div class="svc-details__sidebar">
-          <div class="svc-details__sidebar-block">
-            <h4 class="svc-details__sidebar-heading">在籍スタッフ数</h4>
-            <p class="svc-details__sidebar-text">看護師：4名</p>
-            <p class="svc-details__sidebar-text">事務員：2名</p>
-          </div>
-          <div class="svc-details__sidebar-block">
-            <h4 class="svc-details__sidebar-heading">営業日及び営業時間</h4>
-            <p class="svc-details__sidebar-text">9:00-18:00</p>
-            <p class="svc-details__sidebar-text">緊急対応 24時間 365日</p>
-          </div>
-          <div class="svc-details__sidebar-block">
-            <h4 class="svc-details__sidebar-heading">訪問看護提供地域</h4>
-            <p class="svc-details__sidebar-text">大田区</p>
-            <p class="svc-details__sidebar-text">他、相談に応じて</p>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- ========== 料金表・サービス詳細 (訪問看護) ========== -->
-  <section class="svc-fees fade-in" id="fees">
-    <div class="container">
-      <div class="svc-fees__header">
-        <h2 class="svc-fees__title">price list</h2>
-        <p class="svc-fees__subtitle">料金表・サービス詳細</p>
-      </div>
-      <p class="svc-fees__lead">訪問看護ステーションあんじゅの料金表およびサービス詳細は、以下のPDFよりご覧いただけます。</p>
-      <div class="svc-fees__cards">
-        <a href="/assets/docs/anju-houkan-price.pdf" class="svc-fees__card" target="_blank" rel="noopener">
-          <div class="svc-fees__card-icon" aria-hidden="true">
-            <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-              <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8l-6-6z" stroke="currentColor" stroke-width="1.5" stroke-linejoin="round"/>
-              <path d="M14 2v6h6" stroke="currentColor" stroke-width="1.5" stroke-linejoin="round"/>
-              <path d="M9 13h6M9 17h6" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
-            </svg>
-          </div>
-          <div class="svc-fees__card-body">
-            <span class="svc-fees__card-label">PDF</span>
-            <h3 class="svc-fees__card-title">訪問看護 料金表</h3>
-            <p class="svc-fees__card-desc">基本料金・加算項目をまとめた料金一覧です。</p>
-          </div>
-          <span class="svc-fees__card-arrow" aria-hidden="true">→</span>
-        </a>
-        <a href="/assets/docs/anju-houkan-service.pdf" class="svc-fees__card" target="_blank" rel="noopener">
-          <div class="svc-fees__card-icon" aria-hidden="true">
-            <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-              <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8l-6-6z" stroke="currentColor" stroke-width="1.5" stroke-linejoin="round"/>
-              <path d="M14 2v6h6" stroke="currentColor" stroke-width="1.5" stroke-linejoin="round"/>
-              <path d="M9 13h6M9 17h6" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
-            </svg>
-          </div>
-          <div class="svc-fees__card-body">
-            <span class="svc-fees__card-label">PDF</span>
-            <h3 class="svc-fees__card-title">サービス詳細</h3>
-            <p class="svc-fees__card-desc">提供サービスの内容・対象・利用方法をご案内します。</p>
-          </div>
-          <span class="svc-fees__card-arrow" aria-hidden="true">→</span>
-        </a>
-      </div>
-      <p class="svc-fees__note">※料金・サービス内容に関するご質問は、<a href="/contact/">お問い合わせフォーム</a>よりお気軽にご連絡ください。</p>
-    </div>
-  </section>
-
   <!-- ========== PHOTO GALLERY ========== -->
   <section class="svc-gallery fade-in">
     <div class="container">
@@ -245,9 +160,9 @@
         <div class="svc-gallery__item" style="background-image:url('/assets/images/gh-cooking-02.jpg')"></div>
         <div class="svc-gallery__item" style="background-image:url('/assets/images/gh-meal-04.jpg')"></div>
         <div class="svc-gallery__item" style="background-image:url('/assets/images/gh-staff-group-03.jpg')"></div>
-        <div class="svc-gallery__item" style="background-image:url('/assets/images/houkan-medicine-01.jpg')"></div>
         <div class="svc-gallery__item" style="background-image:url('/assets/images/gh-allowance-support.jpg')"></div>
         <div class="svc-gallery__item" style="background-image:url('/assets/images/gh-caregivers-02.jpg')"></div>
+        <div class="svc-gallery__item" style="background-image:url('/assets/images/gh-meal-01.jpg')"></div>
       </div>
     </div>
   </section>
@@ -296,9 +211,10 @@
       <span class="footer__name-jp">合同会社 あんじゅ</span>
       <span class="footer__name-en">Anju LLC.</span>
     </div>
-    <nav class="footer__nav">
+        <nav class="footer__nav">
       <a href="/" class="footer__nav-item">ホーム</a>
-      <a href="/service/" class="footer__nav-item">サービス</a>
+      <a href="/service/grouphome/" class="footer__nav-item">グループホーム</a>
+      <a href="/service/houkan/" class="footer__nav-item">訪問看護</a>
       <a href="/news/" class="footer__nav-item">お知らせ</a>
       <a href="/blog/" class="footer__nav-item">ブログ</a>
       <a href="/contact/" class="footer__nav-item">お問い合わせ</a>
@@ -312,6 +228,6 @@
     <svg viewBox="0 0 24 24" fill="none"><path d="M12 19V5M5 12l7-7 7 7" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
   </a>
 
-  <script src="../assets/js/main.js"></script>
+  <script src="../../assets/js/main.js"></script>
 </body>
 </html>

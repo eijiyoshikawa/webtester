@@ -34,7 +34,7 @@
       globalNav.classList.toggle('is-active');
       document.body.style.overflow = globalNav.classList.contains('is-active') ? 'hidden' : '';
     });
-    globalNav.querySelectorAll('.header__nav-link').forEach(function (link) {
+    globalNav.querySelectorAll('.header__nav-link, .header__nav-subitem').forEach(function (link) {
       link.addEventListener('click', function () {
         hamburger.classList.remove('is-active');
         globalNav.classList.remove('is-active');
@@ -42,6 +42,22 @@
       });
     });
   }
+
+  // ========== Dropdown Menu (サービス) ==========
+  document.querySelectorAll('[data-dropdown]').forEach(function (dropdown) {
+    var trigger = dropdown.querySelector('.header__nav-trigger');
+    if (!trigger) return;
+    trigger.addEventListener('click', function (e) {
+      e.stopPropagation();
+      dropdown.classList.toggle('is-open');
+    });
+  });
+  // Close dropdown on outside click
+  document.addEventListener('click', function (e) {
+    document.querySelectorAll('[data-dropdown].is-open').forEach(function (d) {
+      if (!d.contains(e.target)) d.classList.remove('is-open');
+    });
+  });
 
   // ========== Smooth Scroll ==========
   document.querySelectorAll('a[href^="#"]').forEach(function (anchor) {

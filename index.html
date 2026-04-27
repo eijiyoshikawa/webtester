@@ -18,13 +18,19 @@
       <a href="/" class="header__logo">
         <img src="/assets/images/logo-company.png" alt="合同会社あんじゅ" class="header__logo-img">
       </a>
-      <nav class="header__nav" id="globalNav">
-        <a href="/" class="header__nav-item header__nav-link is-active">ホーム</a>
-        <a href="/service/" class="header__nav-item header__nav-link">サービス</a>
-        <a href="/news/" class="header__nav-item header__nav-link">お知らせ</a>
-        <a href="/blog/" class="header__nav-item header__nav-link">ブログ</a>
-        <a href="/contact/" class="header__nav-item header__nav-link">お問い合わせ</a>
-      </nav>
+         <nav class="header__nav" id="globalNav">
+    <a href="/" class="header__nav-item header__nav-link is-active">ホーム</a>
+    <div class="header__nav-item header__nav-dropdown" data-dropdown>
+     <span class="header__nav-trigger">サービス</span>
+     <div class="header__nav-submenu">
+      <a href="/service/grouphome/" class="header__nav-subitem">グループホーム</a>
+      <a href="/service/houkan/" class="header__nav-subitem">訪問看護</a>
+     </div>
+    </div>
+    <a href="/news/" class="header__nav-item header__nav-link">お知らせ</a>
+    <a href="/blog/" class="header__nav-item header__nav-link">ブログ</a>
+    <a href="/contact/" class="header__nav-item header__nav-link">お問い合わせ</a>
+   </nav>
       <button class="header__hamburger" id="hamburger" aria-label="メニューを開く">
         <span></span><span></span><span></span>
       </button>
@@ -135,7 +141,7 @@
           <p class="service-detail__subtitle">グループホームあんじゅ</p>
           <p class="service-detail__text">安心して穏やかに過ごせる、もう一つの居場所を目指して。<br>大田区内で知的障害や精神障害をお持ちの方のグループホーム（共同生活援助）を運営しています。</p>
           <div class="service-detail__cta">
-            <a href="/service/" class="cta-link">
+            <a href="/service/grouphome/" class="cta-link">
               <span class="cta-link__circle">→</span>
               <span class="cta-link__text">詳しくはこちら</span>
             </a>
@@ -149,7 +155,7 @@
           <p class="service-detail__subtitle">訪問看護ステーションあんじゅ</p>
           <p class="service-detail__text">身近な医療の相談相手。そばで支える人にも寄り添う訪問看護を。<br>心と体の相談に乗り、医師と連携して安心した地域生活をサポートします。</p>
           <div class="service-detail__cta">
-            <a href="/service/" class="cta-link">
+            <a href="/service/houkan/" class="cta-link">
               <span class="cta-link__circle">→</span>
               <span class="cta-link__text">詳しくはこちら</span>
             </a>
@@ -263,9 +269,10 @@
       <span class="footer__name-jp">合同会社 あんじゅ</span>
       <span class="footer__name-en">Anju LLC.</span>
     </div>
-    <nav class="footer__nav">
+        <nav class="footer__nav">
       <a href="/" class="footer__nav-item">ホーム</a>
-      <a href="/service/" class="footer__nav-item">サービス</a>
+      <a href="/service/grouphome/" class="footer__nav-item">グループホーム</a>
+      <a href="/service/houkan/" class="footer__nav-item">訪問看護</a>
       <a href="/news/" class="footer__nav-item">お知らせ</a>
       <a href="/blog/" class="footer__nav-item">ブログ</a>
       <a href="/contact/" class="footer__nav-item">お問い合わせ</a>

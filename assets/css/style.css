@@ -256,6 +256,92 @@ select {
   color: var(--label);
 }
 
+/* Dropdown menu (サービス → グループホーム / 訪問看護) */
+.header__nav-dropdown {
+  position: relative;
+  cursor: pointer;
+}
+
+.header__nav-trigger {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  user-select: none;
+}
+
+.header__nav-trigger::after {
+  content: '';
+  display: inline-block;
+  width: 6px;
+  height: 6px;
+  border-right: 1.5px solid currentColor;
+  border-bottom: 1.5px solid currentColor;
+  transform: rotate(45deg) translateY(-2px);
+  margin-left: 6px;
+  transition: transform 0.3s ease;
+}
+
+.header__nav-dropdown.is-open .header__nav-trigger::after,
+.header__nav-dropdown:hover .header__nav-trigger::after {
+  transform: rotate(225deg) translateY(2px);
+}
+
+.header__nav-submenu {
+  position: absolute;
+  top: 100%;
+  left: 50%;
+  transform: translateX(-50%) translateY(8px);
+  background-color: var(--white);
+  border-radius: 10px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.10);
+  padding: 12px 0;
+  min-width: 200px;
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.25s ease, visibility 0.25s ease, transform 0.25s ease;
+  z-index: 1100;
+}
+
+.header__nav-submenu::before {
+  content: '';
+  position: absolute;
+  top: -8px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 14px;
+  height: 14px;
+  background-color: var(--white);
+  transform: translateX(-50%) rotate(45deg);
+  margin-top: 4px;
+  box-shadow: -2px -2px 4px rgba(0, 0, 0, 0.04);
+}
+
+.header__nav-dropdown:hover .header__nav-submenu,
+.header__nav-dropdown.is-open .header__nav-submenu {
+  opacity: 1;
+  visibility: visible;
+  transform: translateX(-50%) translateY(4px);
+}
+
+.header__nav-subitem {
+  display: block;
+  padding: 10px 24px;
+  font-family: var(--font-jp, 'Noto Sans JP', sans-serif);
+  font-size: 0.95rem;
+  font-weight: 500;
+  letter-spacing: 0.06em;
+  color: var(--text);
+  white-space: nowrap;
+  transition: background-color 0.2s ease, color 0.2s ease;
+}
+
+.header__nav-subitem:hover,
+.header__nav-subitem.is-active {
+  background-color: var(--pink-bg);
+  color: var(--label);
+  opacity: 1;
+}
+
 /* Contact button */
 .header__contact {
   position: relative;
@@ -1771,6 +1857,44 @@ select {
 
   .header__nav-item {
     font-size: 1.1rem;
+  }
+
+  /* Dropdown - mobile inline expansion */
+  .header__nav-dropdown {
+    flex-direction: column;
+    gap: 16px;
+  }
+
+  .header__nav-trigger {
+    cursor: pointer;
+  }
+
+  .header__nav-submenu {
+    position: static;
+    transform: none;
+    box-shadow: none;
+    background-color: transparent;
+    padding: 0;
+    margin: 0;
+    min-width: 0;
+    opacity: 1;
+    visibility: visible;
+    display: none;
+    border-left: 2px solid var(--label);
+  }
+
+  .header__nav-submenu::before {
+    display: none;
+  }
+
+  .header__nav-dropdown.is-open .header__nav-submenu {
+    display: block;
+    transform: none;
+  }
+
+  .header__nav-subitem {
+    padding: 8px 24px;
+    font-size: 0.95rem;
   }
 
   .header__contact {

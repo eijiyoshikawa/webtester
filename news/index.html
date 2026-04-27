@@ -18,13 +18,19 @@
       <a href="/" class="header__logo">
         <img src="/assets/images/logo-company.png" alt="合同会社あんじゅ" class="header__logo-img">
       </a>
-      <nav class="header__nav" id="globalNav">
-        <a href="/" class="header__nav-item header__nav-link">ホーム</a>
-        <a href="/service/" class="header__nav-item header__nav-link">サービス</a>
-        <a href="/news/" class="header__nav-item header__nav-link is-active">お知らせ</a>
-        <a href="/blog/" class="header__nav-item header__nav-link">ブログ</a>
-        <a href="/contact/" class="header__nav-item header__nav-link">お問い合わせ</a>
-      </nav>
+         <nav class="header__nav" id="globalNav">
+    <a href="/" class="header__nav-item header__nav-link">ホーム</a>
+    <div class="header__nav-item header__nav-dropdown" data-dropdown>
+     <span class="header__nav-trigger">サービス</span>
+     <div class="header__nav-submenu">
+      <a href="/service/grouphome/" class="header__nav-subitem">グループホーム</a>
+      <a href="/service/houkan/" class="header__nav-subitem">訪問看護</a>
+     </div>
+    </div>
+    <a href="/news/" class="header__nav-item header__nav-link is-active">お知らせ</a>
+    <a href="/blog/" class="header__nav-item header__nav-link">ブログ</a>
+    <a href="/contact/" class="header__nav-item header__nav-link">お問い合わせ</a>
+   </nav>
       <button class="header__hamburger" id="hamburger" aria-label="メニューを開く">
         <span></span><span></span><span></span>
       </button>
@@ -92,9 +98,10 @@
       <span class="footer__name-jp">合同会社 あんじゅ</span>
       <span class="footer__name-en">Anju LLC.</span>
     </div>
-    <nav class="footer__nav">
+        <nav class="footer__nav">
       <a href="/" class="footer__nav-item">ホーム</a>
-      <a href="/service/" class="footer__nav-item">サービス</a>
+      <a href="/service/grouphome/" class="footer__nav-item">グループホーム</a>
+      <a href="/service/houkan/" class="footer__nav-item">訪問看護</a>
       <a href="/news/" class="footer__nav-item">お知らせ</a>
       <a href="/blog/" class="footer__nav-item">ブログ</a>
       <a href="/contact/" class="footer__nav-item">お問い合わせ</a>
