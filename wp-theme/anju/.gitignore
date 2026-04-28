@@ -1,0 +1,14 @@
+# Composer 生成物（ローカルでインストールしてサーバーへ転送）
+/vendor/
+composer.lock
+
+# OS / Editor
+.DS_Store
+Thumbs.db
+*.swp
+*.swo
+.idea/
+.vscode/
+
+# WordPress 一時ファイル
+debug.log
