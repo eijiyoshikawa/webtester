@@ -1,0 +1,17 @@
+{
+  "hooks": {
+    "PostToolUse": [
+      {
+        "matcher": "Edit|Write|NotebookEdit|MultiEdit",
+        "hooks": [
+          {
+            "type": "command",
+            "command": "/home/user/webtester/.claude/hooks/auto-commit.sh",
+            "timeout": 60,
+            "statusMessage": "auto-commit → corp/anju"
+          }
+        ]
+      }
+    ]
+  }
+}
