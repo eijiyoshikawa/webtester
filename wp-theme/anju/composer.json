@@ -1,0 +1,14 @@
+{
+	"name": "anju/wordpress-theme",
+	"description": "合同会社あんじゅ コーポレートサイト用 WordPress テーマ",
+	"type": "wordpress-theme",
+	"license": "proprietary",
+	"require": {
+		"php": ">=8.0",
+		"htmlburger/carbon-fields": "^3.6"
+	},
+	"config": {
+		"optimize-autoloader": true,
+		"sort-packages": true
+	}
+}
