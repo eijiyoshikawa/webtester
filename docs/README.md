@@ -9,11 +9,22 @@
 | # | ファイル | 用途 | 対象読者 | フォーマット |
 |---|---------|------|---------|-------------|
 | 1 | [wordpress-rfp-template.md](./wordpress-rfp-template.md) | **RFP（要件定義書）** — 制作会社への発注用 | 発注者・営業 | Markdown |
-| 2 | [wordpress-acf-spec.md](./wordpress-acf-spec.md) | **ACF設計書** — カスタムフィールド定義 | WP開発者 | Markdown |
-| 3 | [acf-fields.json](./acf-fields.json) | **ACFインポートJSON** — 機械可読データ | WP開発者 | JSON |
+| 2 | [wordpress-acf-spec.md](./wordpress-acf-spec.md) | **カスタムフィールド設計書** — Carbon Fields / ACF 共通 | WP開発者 | Markdown |
+| 3 | [acf-fields.json](./acf-fields.json) | ACF Pro 用インポートJSON（バックアップ参考） | WP開発者 | JSON |
 | 4 | [image-migration-plan.md](./image-migration-plan.md) | **画像・PDF移行計画** — WP-CLI手順含む | WP開発者・インフラ | Markdown |
 | 5 | [launch-checklist.md](./launch-checklist.md) | **ローンチ前チェックリスト** — DNS切替・SEO検証 | PM・全関係者 | Markdown |
 | 6 | [site-operations-manual.md](./site-operations-manual.md) | **運用マニュアル** — 日常的な更新方法 | 納品先従業員 | Markdown（WP固定ページ化予定） |
+
+## WordPress テーマ実装
+
+`wp-theme/anju/` に **完全動作する WordPress テーマ** を同梱。
+
+| バージョン | プラグイン | コスト |
+|----------|-----------|--------|
+| **`wp-theme/anju/`（メイン）** | **Carbon Fields**（OSS） | **完全無料** |
+| `wp-theme/anju-acf-backup/`（参考） | ACF Pro | 年額 $49〜 |
+
+詳細は [`wp-theme/anju/README.md`](../wp-theme/anju/README.md) 参照。
 
 ---
 
