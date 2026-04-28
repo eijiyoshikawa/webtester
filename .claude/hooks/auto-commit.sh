@@ -36,4 +36,11 @@ git commit -m "auto: ${REL} 更新 (${TS})" >>"$LOG" 2>&1 || exit 0
 PUSH_OUT=$(git push origin "HEAD:${TARGET_BRANCH}" 2>&1) || PUSH_RC=$?
 echo "[$TS] push HEAD->$TARGET_BRANCH rc=${PUSH_RC:-0}: $PUSH_OUT" >>"$LOG"
 
+# Also push current branch to its own remote so stop-hook git check passes.
+CURRENT_BRANCH=$(git rev-parse --abbrev-ref HEAD 2>/dev/null)
+if [ -n "$CURRENT_BRANCH" ] && [ "$CURRENT_BRANCH" != "HEAD" ] && [ "$CURRENT_BRANCH" != "$TARGET_BRANCH" ]; then
+  BR_OUT=$(git push origin "$CURRENT_BRANCH" 2>&1) || BR_RC=$?
+  echo "[$TS] push $CURRENT_BRANCH rc=${BR_RC:-0}: $BR_OUT" >>"$LOG"
+fi
+
 exit 0
