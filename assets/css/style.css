@@ -718,7 +718,7 @@ select {
   aspect-ratio: 4 / 3;
   border-radius: 8px;
   overflow: hidden;
-  background: url('../images/meeting-allmember-03.jpg') center/cover no-repeat;
+  background: url('../images/secondsection.jpg') center/cover no-repeat;
 }
 
 .philosophy__image:nth-child(2) {
