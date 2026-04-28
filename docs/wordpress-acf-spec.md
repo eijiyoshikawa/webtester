@@ -1,6 +1,10 @@
-# WordPress 移行準備：ACF カスタムフィールド設計書
+# WordPress 移行準備：カスタムフィールド設計書
 
-> 静的 HTML から WordPress 移行時に、管理画面から **すべての画像・PDF・テキスト** を非エンジニアでも差し替えられるようにするための ACF（Advanced Custom Fields）設計仕様。
+> 静的 HTML から WordPress 移行時に、管理画面から **すべての画像・PDF・テキスト** を非エンジニアでも差し替えられるようにするためのカスタムフィールド設計仕様。
+>
+> **📌 現在の実装状況：** `wp-theme/anju/` は **Carbon Fields（完全無料）** ベースで実装されています。フィールド定義は `wp-theme/anju/inc/carbon-fields-setup.php` 参照。
+>
+> ACF Pro 版（年額 $49〜）も `wp-theme/anju-acf-backup/` に保管しています。下記設計はどちらのプラグインでも適用可能です。
 
 ## 前提
 
