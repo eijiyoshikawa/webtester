@@ -990,6 +990,10 @@ select {
   grid-template-columns: 1fr 1fr;
   gap: 60px;
   align-items: center;
+  background-color: var(--white);
+  border: 1px solid #ECE2DA;
+  border-radius: 16px;
+  padding: 48px;
 }
 
 .service-detail__inner + .service-detail__inner {
