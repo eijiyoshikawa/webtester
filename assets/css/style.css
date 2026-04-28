@@ -2045,6 +2045,7 @@ select {
   .service-detail__inner {
     grid-template-columns: 1fr;
     gap: 30px;
+    padding: 28px;
   }
 
   .service-detail__title {
