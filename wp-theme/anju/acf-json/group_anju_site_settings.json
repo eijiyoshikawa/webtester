@@ -1,0 +1,132 @@
+{
+  "key": "group_anju_site_settings",
+  "title": "サイト共通設定",
+  "fields": [
+    {
+      "key": "field_anju_site_tab_brand",
+      "label": "ブランド情報",
+      "name": "",
+      "type": "tab",
+      "placement": "top",
+      "endpoint": 0
+    },
+    {
+      "key": "field_anju_site_logo",
+      "label": "会社ロゴ",
+      "name": "site_logo",
+      "type": "image",
+      "instructions": "ヘッダー・フッターで使用されるロゴ。透過PNG推奨。",
+      "return_format": "array",
+      "preview_size": "medium",
+      "library": "all"
+    },
+    {
+      "key": "field_anju_site_company_jp",
+      "label": "会社名（日本語）",
+      "name": "site_company_jp",
+      "type": "text",
+      "default_value": "合同会社 あんじゅ"
+    },
+    {
+      "key": "field_anju_site_company_en",
+      "label": "会社名（英語）",
+      "name": "site_company_en",
+      "type": "text",
+      "default_value": "Anju LLC."
+    },
+    {
+      "key": "field_anju_site_copyright",
+      "label": "コピーライト表記",
+      "name": "site_copyright",
+      "type": "text",
+      "default_value": "© 合同会社あんじゅ All Rights Reserved."
+    },
+    {
+      "key": "field_anju_site_tab_contact",
+      "label": "連絡先",
+      "name": "",
+      "type": "tab",
+      "placement": "top",
+      "endpoint": 0
+    },
+    {
+      "key": "field_anju_site_address",
+      "label": "住所",
+      "name": "site_address",
+      "type": "textarea",
+      "rows": 2,
+      "new_lines": "br",
+      "default_value": "〒143-0023 東京都大田区山王3-35-7\n八景坂マンション301"
+    },
+    {
+      "key": "field_anju_site_tel",
+      "label": "電話番号",
+      "name": "site_tel",
+      "type": "text",
+      "placeholder": "03-XXXX-XXXX"
+    },
+    {
+      "key": "field_anju_site_email",
+      "label": "代表メールアドレス",
+      "name": "site_email",
+      "type": "email"
+    },
+    {
+      "key": "field_anju_site_contact_url",
+      "label": "お問い合わせフォームURL",
+      "name": "site_contact_url",
+      "type": "url",
+      "default_value": "/contact/"
+    },
+    {
+      "key": "field_anju_site_tab_sns",
+      "label": "SNS",
+      "name": "",
+      "type": "tab",
+      "placement": "top",
+      "endpoint": 0
+    },
+    {
+      "key": "field_anju_site_sns_instagram",
+      "label": "Instagram URL",
+      "name": "site_sns_instagram",
+      "type": "url",
+      "default_value": "https://www.instagram.com/grouphome_anju/"
+    },
+    {
+      "key": "field_anju_site_sns_facebook",
+      "label": "Facebook URL",
+      "name": "site_sns_facebook",
+      "type": "url"
+    },
+    {
+      "key": "field_anju_site_sns_x",
+      "label": "X (Twitter) URL",
+      "name": "site_sns_x",
+      "type": "url"
+    },
+    {
+      "key": "field_anju_site_sns_youtube",
+      "label": "YouTube URL",
+      "name": "site_sns_youtube",
+      "type": "url"
+    }
+  ],
+  "location": [
+    [
+      {
+        "param": "options_page",
+        "operator": "==",
+        "value": "site-settings"
+      }
+    ]
+  ],
+  "menu_order": 10,
+  "position": "normal",
+  "style": "default",
+  "label_placement": "top",
+  "instruction_placement": "label",
+  "hide_on_screen": "",
+  "active": true,
+  "description": "サイト全体（ヘッダー・フッター・SNS等）で使用する共通情報。Options Page を functions.php で acf_add_options_page(['menu_slug' => 'site-settings']) として登録してください。"
+}
