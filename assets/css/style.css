@@ -4984,6 +4984,10 @@ select {
 .news { padding-top: 100px; padding-bottom: 100px; }
 .service-detail { padding-top: 100px; padding-bottom: 100px; }
 
+/* our-service → service-detail は同色背景で連続するため間を詰める */
+.our-service { padding-bottom: 40px; }
+.service-detail { padding-top: 40px; }
+
 /* ---------- ホバー視認性: テキストを暗くして読みやすく ---------- */
 
 /* news 項目: 緑背景 + 白文字 → ホバーで pink-bg + 暗いテキスト */
