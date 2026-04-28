@@ -1,0 +1,206 @@
+{
+  "key": "group_anju_home",
+  "title": "トップページ設定",
+  "fields": [
+    {
+      "key": "field_anju_home_tab_hero",
+      "label": "ヒーロースライダー",
+      "name": "",
+      "type": "tab",
+      "instructions": "",
+      "required": 0,
+      "placement": "top",
+      "endpoint": 0
+    },
+    {
+      "key": "field_anju_home_hero_slides",
+      "label": "ヒーロースライダー画像",
+      "name": "home_hero_slides",
+      "type": "gallery",
+      "instructions": "推奨5〜8枚、1920×1080px 以上。ドラッグで並び替え可。",
+      "required": 1,
+      "return_format": "array",
+      "preview_size": "medium",
+      "insert": "append",
+      "library": "all",
+      "min": 1,
+      "max": 0,
+      "min_width": 0,
+      "min_height": 0,
+      "min_size": 0,
+      "max_width": 0,
+      "max_height": 0,
+      "max_size": 0,
+      "mime_types": ""
+    },
+    {
+      "key": "field_anju_home_hero_title",
+      "label": "メインキャッチコピー",
+      "name": "home_hero_title",
+      "type": "text",
+      "instructions": "",
+      "required": 0,
+      "default_value": "ひとつでも多くの笑顔に出会うために",
+      "placeholder": "",
+      "prepend": "",
+      "append": "",
+      "maxlength": 0
+    },
+    {
+      "key": "field_anju_home_hero_subtitle",
+      "label": "サブキャッチコピー",
+      "name": "home_hero_subtitle",
+      "type": "textarea",
+      "instructions": "改行はそのまま反映されます。",
+      "required": 0,
+      "default_value": "確かな支援で今日を支え、\n明日の笑顔をつなぐ",
+      "placeholder": "",
+      "maxlength": 0,
+      "rows": 2,
+      "new_lines": "br"
+    },
+    {
+      "key": "field_anju_home_tab_philosophy",
+      "label": "philosophy（理念）",
+      "name": "",
+      "type": "tab",
+      "placement": "top",
+      "endpoint": 0
+    },
+    {
+      "key": "field_anju_home_philosophy_image_large",
+      "label": "philosophy 大画像（上）",
+      "name": "home_philosophy_image_large",
+      "type": "image",
+      "instructions": "理念セクションの大きな画像。横長推奨。",
+      "required": 0,
+      "return_format": "array",
+      "preview_size": "medium",
+      "library": "all"
+    },
+    {
+      "key": "field_anju_home_philosophy_image_left",
+      "label": "philosophy 小画像（下左）",
+      "name": "home_philosophy_image_left",
+      "type": "image",
+      "return_format": "array",
+      "preview_size": "medium",
+      "library": "all"
+    },
+    {
+      "key": "field_anju_home_philosophy_image_right",
+      "label": "philosophy 小画像（下右）",
+      "name": "home_philosophy_image_right",
+      "type": "image",
+      "return_format": "array",
+      "preview_size": "medium",
+      "library": "all"
+    },
+    {
+      "key": "field_anju_home_philosophy_lead",
+      "label": "リード文",
+      "name": "home_philosophy_lead",
+      "type": "textarea",
+      "default_value": "確かな支援の先にある、\n関わる「すべての人」の笑顔のために。",
+      "rows": 2,
+      "new_lines": "br"
+    },
+    {
+      "key": "field_anju_home_philosophy_body",
+      "label": "本文",
+      "name": "home_philosophy_body",
+      "type": "wysiwyg",
+      "tabs": "all",
+      "toolbar": "basic",
+      "media_upload": 0,
+      "delay": 0
+    },
+    {
+      "key": "field_anju_home_tab_message",
+      "label": "代表からのメッセージ",
+      "name": "",
+      "type": "tab",
+      "placement": "top",
+      "endpoint": 0
+    },
+    {
+      "key": "field_anju_home_message_photo",
+      "label": "代表写真",
+      "name": "home_message_photo",
+      "type": "image",
+      "return_format": "array",
+      "preview_size": "medium",
+      "library": "all"
+    },
+    {
+      "key": "field_anju_home_message_body",
+      "label": "あいさつ本文",
+      "name": "home_message_body",
+      "type": "wysiwyg",
+      "tabs": "all",
+      "toolbar": "basic",
+      "media_upload": 0
+    },
+    {
+      "key": "field_anju_home_message_signer",
+      "label": "代表者名",
+      "name": "home_message_signer",
+      "type": "text",
+      "default_value": "代表 〇〇 〇〇"
+    },
+    {
+      "key": "field_anju_home_tab_logos",
+      "label": "サービスロゴ",
+      "name": "",
+      "type": "tab",
+      "placement": "top",
+      "endpoint": 0
+    },
+    {
+      "key": "field_anju_home_logo_grouphome",
+      "label": "グループホームロゴ",
+      "name": "home_logo_grouphome",
+      "type": "image",
+      "instructions": "推奨：透過PNG。",
+      "return_format": "array",
+      "preview_size": "medium",
+      "library": "all",
+      "mime_types": "png,svg"
+    },
+    {
+      "key": "field_anju_home_logo_houkan",
+      "label": "訪問看護ロゴ",
+      "name": "home_logo_houkan",
+      "type": "image",
+      "instructions": "推奨：透過PNG。",
+      "return_format": "array",
+      "preview_size": "medium",
+      "library": "all",
+      "mime_types": "png,svg"
+    }
+  ],
+  "location": [
+    [
+      {
+        "param": "page_template",
+        "operator": "==",
+        "value": "page-home.php"
+      }
+    ],
+    [
+      {
+        "param": "page_type",
+        "operator": "==",
+        "value": "front_page"
+      }
+    ]
+  ],
+  "menu_order": 0,
+  "position": "normal",
+  "style": "default",
+  "label_placement": "top",
+  "instruction_placement": "label",
+  "hide_on_screen": "",
+  "active": true,
+  "description": "トップページの全セクション。固定ページのテンプレートを page-home.php に設定するか、フロントページ表示で使用。"
+}

@@ -1,0 +1,20 @@
+/*
+Theme Name: Anju
+Theme URI: https://github.com/eijiyoshikawa/webtester
+Author: 合同会社あんじゅ
+Author URI: https://anju.example.com/
+Description: 合同会社あんじゅ コーポレートサイト用 WordPress テーマ。ACF Pro と連携し、トップページ・訪問看護・グループホームの全コンテンツを管理画面から編集可能。
+Version: 1.0.0
+Requires at least: 6.0
+Requires PHP: 8.0
+License: All Rights Reserved
+License URI: https://anju.example.com/
+Text Domain: anju
+Tags: business, healthcare, custom-theme
+*/
+
+/*
+このファイルはテーマ識別用のメタ情報のみを定義します。
+実際のスタイル定義は assets/css/style.css に記述されており、
+inc/enqueue.php から wp_enqueue_style() で読み込まれます。
+*/
