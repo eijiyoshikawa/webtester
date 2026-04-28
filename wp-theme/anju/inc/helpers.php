@@ -2,7 +2,8 @@
 /**
  * Helper Functions
  *
- * テンプレート内で使用するヘルパー関数群。
+ * テンプレート内で使用するヘルパー関数群。Carbon Fields のデータ形式を
+ * 抽象化して、テンプレート側でシンプルに値を取り出せるようにする。
  *
  * @package Anju
  */
@@ -12,68 +13,112 @@ if ( ! defined( 'ABSPATH' ) ) {
 }
 
 /**
- * ACF Image フィールドから安全に URL を取得
+ * 添付ファイルID から URL を取得（画像・PDF共通）
  *
- * @param mixed  $image_field ACF Imageフィールドの返り値（array | int | string）
- * @param string $size 画像サイズ
- * @return string 画像URL（取得不可の場合は空文字）
+ * @param int|string $attachment_id 添付ファイルID（Carbon Fields の image / file フィールドの返り値）
+ * @param string     $size 画像サイズ（'full' | 'large' | 'medium_large' | 'medium' | 'thumbnail'）
+ * @return string 取得不可なら空文字
  */
-function anju_image_url( $image_field, $size = 'large' ) {
-	if ( empty( $image_field ) ) {
+function anju_image_url( $attachment_id, $size = 'large' ) {
+	if ( empty( $attachment_id ) ) {
 		return '';
 	}
-	if ( is_array( $image_field ) ) {
-		if ( isset( $image_field['sizes'][ $size ] ) ) {
-			return $image_field['sizes'][ $size ];
+
+	// 配列形式（古いコードとの後方互換）
+	if ( is_array( $attachment_id ) ) {
+		if ( ! empty( $attachment_id['sizes'][ $size ] ) ) {
+			return $attachment_id['sizes'][ $size ];
 		}
-		return $image_field['url'] ?? '';
+		return $attachment_id['url'] ?? '';
 	}
-	if ( is_numeric( $image_field ) ) {
-		$src = wp_get_attachment_image_src( $image_field, $size );
-		return $src[0] ?? '';
+
+	// 数値ID（Carbon Fields の image / file フィールドの標準）
+	if ( is_numeric( $attachment_id ) ) {
+		$src = wp_get_attachment_image_src( (int) $attachment_id, $size );
+		if ( $src && ! empty( $src[0] ) ) {
+			return $src[0];
+		}
+		// 画像以外（PDF等）の場合
+		$url = wp_get_attachment_url( (int) $attachment_id );
+		return $url ?: '';
 	}
-	if ( is_string( $image_field ) ) {
-		return $image_field;
+
+	// URL 文字列がそのまま入っている場合
+	if ( is_string( $attachment_id ) ) {
+		return $attachment_id;
 	}
+
 	return '';
 }
 
 /**
- * ACF Image フィールドから alt テキストを取得
+ * 添付ファイルID から alt テキストを取得
  */
-function anju_image_alt( $image_field, $fallback = '' ) {
-	if ( is_array( $image_field ) && ! empty( $image_field['alt'] ) ) {
-		return $image_field['alt'];
-	}
-	if ( is_numeric( $image_field ) ) {
-		$alt = get_post_meta( $image_field, '_wp_attachment_image_alt', true );
+function anju_image_alt( $attachment_id, $fallback = '' ) {
+	if ( is_numeric( $attachment_id ) ) {
+		$alt = get_post_meta( (int) $attachment_id, '_wp_attachment_image_alt', true );
 		if ( $alt ) {
 			return $alt;
 		}
+	}
+	if ( is_array( $attachment_id ) && ! empty( $attachment_id['alt'] ) ) {
+		return $attachment_id['alt'];
 	}
 	return $fallback;
 }
 
 /**
- * Options Page の ACF フィールドを取得（簡略化）
+ * Theme Options の値を取得（Carbon Fields）
+ *
+ * @param string $key       フィールドキー
+ * @param mixed  $default   未設定時のフォールバック値
+ * @return mixed
  */
-function anju_option( $field_name, $default = '' ) {
-	$value = get_field( $field_name, 'option' );
-	return $value !== null && $value !== false && $value !== '' ? $value : $default;
+function anju_option( $key, $default = '' ) {
+	if ( ! function_exists( 'carbon_get_theme_option' ) ) {
+		return $default;
+	}
+	$value = carbon_get_theme_option( $key );
+	if ( $value === null || $value === false || $value === '' || $value === array() ) {
+		return $default;
+	}
+	return $value;
 }
 
 /**
- * 現在のメニュー項目で、指定パスに該当するか判定（ナビ用 active 判定）
+ * 現在の投稿のメタ値を取得（Carbon Fields）
+ *
+ * @param string   $key      フィールドキー
+ * @param int|null $post_id  投稿ID（省略時は現在の投稿）
+ * @param mixed    $default  未設定時のフォールバック値
+ * @param string   $type     'simple' | 'complex' | 'media_gallery'
+ * @return mixed
+ */
+function anju_meta( $key, $post_id = null, $default = '', $type = 'simple' ) {
+	if ( ! function_exists( 'carbon_get_post_meta' ) ) {
+		return $default;
+	}
+	if ( null === $post_id ) {
+		$post_id = get_the_ID();
+	}
+
+	if ( 'complex' === $type ) {
+		$value = carbon_get_post_meta( $post_id, $key, 'complex' );
+	} else {
+		$value = carbon_get_post_meta( $post_id, $key );
+	}
+
+	if ( $value === null || $value === false || $value === '' || $value === array() ) {
+		return $default;
+	}
+	return $value;
+}
+
+/**
+ * 現在ページが指定パスかどうかを判定
  */
 function anju_is_current_url( $path ) {
 	$current = home_url( $_SERVER['REQUEST_URI'] ?? '' );
 	$check   = home_url( $path );
 	return rtrim( $current, '/' ) === rtrim( $check, '/' );
-}
-
-/**
- * preg_replace で XSS 安全な inline style 用 URL 生成
- */
-function anju_safe_bg_url( $url ) {
-	return esc_url( $url );
 }
