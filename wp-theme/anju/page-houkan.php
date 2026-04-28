@@ -6,17 +6,19 @@
  */
 get_header();
 
-$hero_image    = get_field( 'houkan_hero_image' );
+$pid = get_the_ID();
+
+$hero_image     = anju_meta( 'houkan_hero_image', $pid );
 $hero_image_url = anju_image_url( $hero_image, 'large' );
 
-$price_pdf     = get_field( 'houkan_price_pdf' );
-$price_title   = get_field( 'houkan_price_title' );
-$price_desc    = get_field( 'houkan_price_desc' );
-$service_pdf   = get_field( 'houkan_service_pdf' );
-$service_title = get_field( 'houkan_service_title' );
-$service_desc  = get_field( 'houkan_service_desc' );
+$price_pdf      = anju_meta( 'houkan_price_pdf', $pid );
+$price_title    = anju_meta( 'houkan_price_title', $pid );
+$price_desc     = anju_meta( 'houkan_price_desc', $pid );
+$service_pdf    = anju_meta( 'houkan_service_pdf', $pid );
+$service_title  = anju_meta( 'houkan_service_title', $pid );
+$service_desc   = anju_meta( 'houkan_service_desc', $pid );
 
-$gallery       = get_field( 'houkan_gallery' );
+$gallery        = anju_meta( 'houkan_gallery', $pid, array() );
 ?>
 
 <!-- ========== SERVICE HERO BANNER ========== -->
@@ -126,10 +128,7 @@ $gallery       = get_field( 'houkan_gallery' );
 				),
 			);
 			foreach ( $cards as $card ) :
-				$pdf_url = '';
-				if ( is_array( $card['pdf'] ) && ! empty( $card['pdf']['url'] ) ) {
-					$pdf_url = $card['pdf']['url'];
-				}
+				$pdf_url = anju_image_url( $card['pdf'] ); // anju_image_url は wp_get_attachment_url() に fallback するので PDF にも対応
 				if ( ! $pdf_url ) continue;
 				?>
 				<a href="<?php echo esc_url( $pdf_url ); ?>" class="svc-fees__card" target="_blank" rel="noopener">
@@ -163,7 +162,7 @@ $gallery       = get_field( 'houkan_gallery' );
 		<div class="svc-gallery__grid">
 			<div class="svc-gallery__track">
 				<?php
-				if ( $gallery && is_array( $gallery ) ) {
+				if ( ! empty( $gallery ) && is_array( $gallery ) ) {
 					// ループ用に2回繰り返して無限スライダーを表現
 					for ( $loop = 0; $loop < 2; $loop++ ) {
 						foreach ( $gallery as $img ) {
@@ -173,7 +172,6 @@ $gallery       = get_field( 'houkan_gallery' );
 						}
 					}
 				} else {
-					// フォールバック：テーマ内画像
 					$fallbacks = array(
 						'houkan-medicine-01.jpg', 'houkan-medicine-03.jpg', 'houkan-bloodpressure.jpg',
 						'houkan-staff-all-01.jpg', 'meeting-allmember-03.jpg', 'meeting-04.jpg',
