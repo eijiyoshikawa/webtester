@@ -6,9 +6,12 @@
  */
 get_header();
 
-$hero_image     = get_field( 'grouphome_hero_image' );
+$pid = get_the_ID();
+
+$hero_image     = anju_meta( 'grouphome_hero_image', $pid );
 $hero_image_url = anju_image_url( $hero_image, 'large' );
-$gallery        = get_field( 'grouphome_gallery' );
+$gallery        = anju_meta( 'grouphome_gallery', $pid, array() );
+$homes          = anju_meta( 'grouphome_homes', $pid, array(), 'complex' );
 ?>
 
 <!-- ========== SERVICE HERO BANNER ========== -->
@@ -65,12 +68,12 @@ $gallery        = get_field( 'grouphome_gallery' );
 		</div>
 
 		<div class="svc-homes">
-			<?php if ( have_rows( 'grouphome_homes' ) ) :
-				while ( have_rows( 'grouphome_homes' ) ) : the_row();
-					$name        = get_sub_field( 'name' );
-					$address     = get_sub_field( 'address' );
-					$image_left  = get_sub_field( 'image_left' );
-					$image_right = get_sub_field( 'image_right' );
+			<?php if ( ! empty( $homes ) && is_array( $homes ) ) : ?>
+				<?php foreach ( $homes as $home ) :
+					$name        = $home['name']        ?? '';
+					$address     = $home['address']     ?? '';
+					$image_left  = $home['image_left']  ?? 0;
+					$image_right = $home['image_right'] ?? 0;
 					$left_url    = anju_image_url( $image_left, 'medium_large' );
 					$right_url   = anju_image_url( $image_right, 'medium_large' );
 					?>
@@ -84,8 +87,8 @@ $gallery        = get_field( 'grouphome_gallery' );
 							<p class="svc-home-card__addr"><?php echo esc_html( $address ); ?></p>
 						</div>
 					</article>
-				<?php endwhile;
-			else : ?>
+				<?php endforeach; ?>
+			<?php else : ?>
 				<!-- フォールバック：管理画面で「ホーム一覧」を未設定の場合 -->
 				<?php
 				$default_homes = array(
@@ -121,7 +124,7 @@ $gallery        = get_field( 'grouphome_gallery' );
 		<div class="svc-gallery__grid">
 			<div class="svc-gallery__track">
 				<?php
-				if ( $gallery && is_array( $gallery ) ) {
+				if ( ! empty( $gallery ) && is_array( $gallery ) ) {
 					for ( $loop = 0; $loop < 2; $loop++ ) {
 						foreach ( $gallery as $img ) {
 							$url = anju_image_url( $img, 'medium_large' );
