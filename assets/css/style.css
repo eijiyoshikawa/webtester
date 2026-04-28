@@ -2122,22 +2122,8 @@ select {
     padding: 60px 0;
   }
 
-  .contact-section__inner {
-    flex-direction: column;
-    gap: 40px;
-  }
-
   .contact-section__heading {
     font-size: 2.2rem;
-  }
-
-  .contact-section__map {
-    width: 100%;
-  }
-
-  .contact-section__map iframe {
-    height: 280px;
-    border-radius: 8px;
   }
 
   /* ---- Recruit Full Section ---- */
