@@ -7,36 +7,32 @@
  */
 get_header();
 
-// ACF フィールド取得
-$hero_slides    = get_field( 'home_hero_slides' );
-$hero_title     = get_field( 'home_hero_title' );
-$hero_subtitle  = get_field( 'home_hero_subtitle' );
-$philo_large    = get_field( 'home_philosophy_image_large' );
-$philo_left     = get_field( 'home_philosophy_image_left' );
-$philo_right    = get_field( 'home_philosophy_image_right' );
-$philo_lead     = get_field( 'home_philosophy_lead' );
-$philo_body     = get_field( 'home_philosophy_body' );
-$message_photo  = get_field( 'home_message_photo' );
-$message_body   = get_field( 'home_message_body' );
-$message_signer = get_field( 'home_message_signer' );
-$logo_grouphome = get_field( 'home_logo_grouphome' );
-$logo_houkan    = get_field( 'home_logo_houkan' );
+$pid = get_the_ID();
 
-// philosophy 画像（CSSではなくinline styleで動的化）
-$philo_large_url = anju_image_url( $philo_large, 'large' );
-$philo_left_url  = anju_image_url( $philo_left, 'medium' );
-$philo_right_url = anju_image_url( $philo_right, 'medium' );
+// Carbon Fields からフィールド取得（未導入時は空文字を返す anju_meta ヘルパー経由）
+$hero_slides    = anju_meta( 'home_hero_slides', $pid, array() );
+$hero_title     = anju_meta( 'home_hero_title', $pid );
+$hero_subtitle  = anju_meta( 'home_hero_subtitle', $pid );
+$philo_large    = anju_meta( 'home_philosophy_image_large', $pid );
+$philo_left     = anju_meta( 'home_philosophy_image_left', $pid );
+$philo_right    = anju_meta( 'home_philosophy_image_right', $pid );
+$philo_lead     = anju_meta( 'home_philosophy_lead', $pid );
+$philo_body     = anju_meta( 'home_philosophy_body', $pid );
+$message_photo  = anju_meta( 'home_message_photo', $pid );
+$message_body   = anju_meta( 'home_message_body', $pid );
+$message_signer = anju_meta( 'home_message_signer', $pid );
+$logo_grouphome = anju_meta( 'home_logo_grouphome', $pid );
+$logo_houkan    = anju_meta( 'home_logo_houkan', $pid );
 
-// サービスロゴ
+// 画像URLに変換
+$philo_large_url    = anju_image_url( $philo_large, 'large' );
+$philo_left_url     = anju_image_url( $philo_left, 'medium' );
+$philo_right_url    = anju_image_url( $philo_right, 'medium' );
 $logo_grouphome_url = anju_image_url( $logo_grouphome, 'medium' );
 $logo_houkan_url    = anju_image_url( $logo_houkan, 'medium' );
+$message_photo_url  = anju_image_url( $message_photo, 'large' );
 
-// message photo
-$message_photo_url = anju_image_url( $message_photo, 'large' );
-
-// 会社概要（Options で運用）
-$company    = anju_option( 'site_company_jp', '合同会社あんじゅ' );
-$address    = anju_option( 'site_address', '' );
+$company = anju_option( 'site_company_jp', '合同会社あんじゅ' );
 ?>
 
 <!-- ========== HERO ========== -->
@@ -78,7 +74,7 @@ $address    = anju_option( 'site_address', '' );
 				<p class="philosophy__lead">確かな支援の先にある、<br>関わる「すべての人」の笑顔のために。</p>
 				<?php endif; ?>
 				<?php if ( $philo_body ) : ?>
-					<?php echo wp_kses_post( $philo_body ); ?>
+					<?php echo wp_kses_post( wpautop( $philo_body ) ); ?>
 				<?php else : ?>
 				<p>利用者様とご家族の穏やかな日常を支えることはもちろん、働くスタッフも笑顔でいられる環境をつくること。それが私たちの理念です。</p>
 				<p>今日だけでなく、明日も明後日もその笑顔を守っていくために、枠にとらわれることなく、地域や様々な分野の方と手をつなぎ、本当に必要とされる確かな支援体制を創り上げていきたいと考えています。</p>
@@ -196,7 +192,7 @@ $address    = anju_option( 'site_address', '' );
 				</div>
 				<div class="message-section__quote">
 					<?php if ( $message_body ) : ?>
-						<?php echo wp_kses_post( $message_body ); ?>
+						<?php echo wp_kses_post( wpautop( $message_body ) ); ?>
 					<?php else : ?>
 					<p>合同会社あんじゅは大田区内で2023年からは障害をお持ちの方向けのグループホームを、2025年からはより良い医療福祉の形を目指し訪問看護ステーションを運営しています。<br><br>理念である「関わるすべての人の笑顔の実現」に向けて、柔軟な思考を持ち、業界の垣根を越えての協働を推進しています。<br><br>医療福祉や地域社会の明日がしなやかで生き生きとしたものになることを信じて、仲間と共に挑戦を続けてまいります。</p>
 					<?php endif; ?>
