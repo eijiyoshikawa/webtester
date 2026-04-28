@@ -10,7 +10,7 @@
  */
 get_header();
 
-$cf7_shortcode = get_field( 'contact_cf7_shortcode' );
+$cf7_shortcode = anju_meta( 'contact_cf7_shortcode' );
 if ( ! $cf7_shortcode ) {
 	$cf7_shortcode = get_post_meta( get_the_ID(), 'cf7_shortcode', true );
 }
