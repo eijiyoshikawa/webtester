@@ -1066,25 +1066,22 @@ select {
   object-fit: cover;
 }
 
-/* Logo placeholder variant - displays business-specific logo on tinted bg */
+/* Logo placeholder variant - displays business-specific logo on white panel */
 .service-detail__image--logo {
   display: flex;
   align-items: center;
   justify-content: center;
-  background-color: var(--cream);
+  background-color: var(--white);
   background-position: center;
   background-size: 50%;
   background-repeat: no-repeat;
-  border: 1px solid #ECE2DA;
 }
 
 .service-detail__image--grouphome {
-  background-color: var(--peach);
   background-image: url('../images/logo-grouphome.png');
 }
 
 .service-detail__image--houkan {
-  background-color: var(--sky);
   background-image: url('../images/logo-houkan.png');
 }
 
