@@ -476,8 +476,8 @@ select {
 /* SNS sidebar */
 .sidebar-sns {
   position: fixed;
-  right: 20px;
-  bottom: 100px;
+  right: 30px;
+  bottom: 110px;
   display: flex;
   flex-direction: column;
   gap: 15px;
