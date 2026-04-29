@@ -9,6 +9,7 @@
   var hamburger = document.getElementById('hamburger');
   var globalNav = document.getElementById('globalNav');
   var backToTop = document.getElementById('backToTop');
+  var floatingInstagram = document.getElementById('floatingInstagram');
 
   // ========== Header Scroll Effect ==========
   function handleScroll() {
@@ -17,12 +18,12 @@
     } else {
       header.classList.remove('is-scrolled');
     }
+    var showFloating = window.scrollY > 500;
     if (backToTop) {
-      if (window.scrollY > 500) {
-        backToTop.classList.add('is-visible');
-      } else {
-        backToTop.classList.remove('is-visible');
-      }
+      backToTop.classList.toggle('is-visible', showFloating);
+    }
+    if (floatingInstagram) {
+      floatingInstagram.classList.toggle('is-visible', showFloating);
     }
   }
   window.addEventListener('scroll', handleScroll, { passive: true });
