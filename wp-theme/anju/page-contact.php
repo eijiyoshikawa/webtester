@@ -53,6 +53,13 @@ if ( ! $cf7_shortcode ) {
 						管理画面 → お問い合わせ固定ページ → 本文に <code>[contact-form-7 id="..."]</code>
 					</p>
 				<?php endif; ?>
+
+				<?php $instagram = anju_option( 'site_sns_instagram' ); if ( $instagram ) : ?>
+				<a href="<?php echo esc_url( $instagram ); ?>" target="_blank" rel="noopener noreferrer" class="cnt-form__sp-instagram" aria-label="Instagramをフォロー">
+					<svg width="22" height="22" viewBox="0 0 24 24" fill="none" aria-hidden="true"><rect x="2" y="2" width="20" height="20" rx="5" stroke="currentColor" stroke-width="1.5"/><circle cx="12" cy="12" r="5" stroke="currentColor" stroke-width="1.5"/><circle cx="17.5" cy="6.5" r="1.5" fill="currentColor"/></svg>
+					<span>Instagramをフォロー</span>
+				</a>
+				<?php endif; ?>
 			</div>
 
 			<!-- Sidebar Info -->
