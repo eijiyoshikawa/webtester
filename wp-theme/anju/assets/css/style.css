@@ -910,6 +910,63 @@ select {
   text-align: right;
 }
 
+/* --------------------------------------------------------------------------
+   News / Blog アーカイブページ用：明るい背景でも視認できる色に上書き
+   -------------------------------------------------------------------------- */
+.news--archive {
+  background-color: transparent;
+  color: var(--text);
+}
+
+.news--archive .news__label {
+  color: var(--text);
+}
+
+.news--archive .news__label-jp {
+  color: var(--gray);
+}
+
+.news--archive .news__label-divider {
+  color: var(--gray);
+}
+
+.news--archive .news__list {
+  border-top-color: rgba(60, 50, 40, 0.15);
+}
+
+.news--archive .news__item {
+  border-bottom-color: rgba(60, 50, 40, 0.15);
+}
+
+.news--archive .news__date {
+  color: var(--gray);
+}
+
+.news--archive .news__title {
+  color: var(--text);
+}
+
+.news--archive .news__title a {
+  color: inherit;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.news--archive .news__title a:hover {
+  color: var(--label);
+}
+
+.news--archive .news__arrow {
+  border-color: rgba(60, 50, 40, 0.3);
+  color: var(--text);
+}
+
+.news--archive .news__item:hover .news__arrow {
+  background-color: rgba(60, 50, 40, 0.08);
+  border-color: var(--label);
+  color: var(--label);
+}
+
 /* ==========================================================================
    9. Our Service Section
    ========================================================================== */
