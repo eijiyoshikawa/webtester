@@ -8,6 +8,7 @@
 
 | # | ファイル | 用途 | 対象読者 | フォーマット |
 |---|---------|------|---------|-------------|
+| 0 | [project-summary.md](./project-summary.md) ★ | **プロジェクト整理ドキュメント** — 現状・進捗・次のアクション | 全員 | Markdown |
 | 1 | [wordpress-rfp-template.md](./wordpress-rfp-template.md) | **RFP（要件定義書）** — 制作会社への発注用 | 発注者・営業 | Markdown |
 | 2 | [wordpress-acf-spec.md](./wordpress-acf-spec.md) | **カスタムフィールド設計書** — Carbon Fields / ACF 共通 | WP開発者 | Markdown |
 | 3 | [acf-fields.json](./acf-fields.json) | ACF Pro 用インポートJSON（バックアップ参考） | WP開発者 | JSON |
