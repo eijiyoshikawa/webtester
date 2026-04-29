@@ -30,6 +30,13 @@
 		<p class="footer__copyright"><?php echo esc_html( anju_option( 'site_copyright', '© Anju LLC. All Rights Reserved.' ) ); ?></p>
 	</footer>
 
+	<!-- Floating SNS (Instagram) - スクロール追従 -->
+	<?php $instagram = anju_option( 'site_sns_instagram' ); if ( $instagram ) : ?>
+	<a href="<?php echo esc_url( $instagram ); ?>" target="_blank" rel="noopener noreferrer" class="floating-sns" id="floatingInstagram" aria-label="Instagram">
+		<svg viewBox="0 0 24 24" fill="none"><rect x="2" y="2" width="20" height="20" rx="5" stroke="currentColor" stroke-width="1.5"/><circle cx="12" cy="12" r="5" stroke="currentColor" stroke-width="1.5"/><circle cx="17.5" cy="6.5" r="1.5" fill="currentColor"/></svg>
+	</a>
+	<?php endif; ?>
+
 	<!-- Back to Top -->
 	<a href="#home" class="back-to-top" id="backToTop" aria-label="ページトップへ戻る">
 		<svg viewBox="0 0 24 24" fill="none"><path d="M12 19V5M5 12l7-7 7 7" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
