@@ -1,7 +1,3 @@
-# Composer 生成物（ローカルでインストールしてサーバーへ転送）
-/vendor/
-composer.lock
-
 # OS / Editor
 .DS_Store
 Thumbs.db
@@ -12,3 +8,6 @@ Thumbs.db
 
 # WordPress 一時ファイル
 debug.log
+
+# Composer ロックファイルは保持（再現性のため）
+# vendor/ も同梱（インストール時の Composer 実行不要にするため）
