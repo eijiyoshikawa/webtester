@@ -4395,6 +4395,116 @@ select {
   margin-left: -4px;
 }
 
+/* --------------------------------------------------------------------------
+   Contact Form 7（CF7）統合スタイル
+   .cnt-form__* を CF7 のフォーム定義（[text] [email] etc.）と組み合わせて利用
+   -------------------------------------------------------------------------- */
+
+/* CF7 ラッパーのデフォルト余白をリセット */
+.wpcf7,
+.wpcf7-form {
+  margin: 0;
+  padding: 0;
+}
+
+.wpcf7-form .wpcf7-form-control-wrap {
+  display: block;
+  width: 100%;
+}
+
+/* バリデーションエラー */
+.wpcf7-not-valid-tip {
+  color: #dc3545;
+  font-size: 0.8rem;
+  margin-top: 6px;
+  display: block;
+}
+
+.wpcf7-form-control.wpcf7-not-valid {
+  border-bottom-color: #dc3545 !important;
+}
+
+/* CF7 のレスポンスメッセージ（送信成功・失敗） */
+.wpcf7-response-output {
+  margin: 24px 0 0 !important;
+  padding: 16px 20px !important;
+  border-radius: 8px !important;
+  border: none !important;
+  font-size: 0.9rem;
+  line-height: 1.6;
+}
+
+.wpcf7 form.sent .wpcf7-response-output {
+  background: #e8f5e9;
+  color: #2e7d32;
+  border-left: 4px solid #66bb6a !important;
+}
+
+.wpcf7 form.invalid .wpcf7-response-output,
+.wpcf7 form.unaccepted .wpcf7-response-output,
+.wpcf7 form.spam .wpcf7-response-output,
+.wpcf7 form.failed .wpcf7-response-output {
+  background: #fde8e8;
+  color: #c62828;
+  border-left: 4px solid #ef5350 !important;
+}
+
+/* 送信中スピナー */
+.wpcf7-spinner {
+  margin-left: 12px;
+  vertical-align: middle;
+}
+
+/* acceptance（同意チェックボックス）の見た目調整 */
+.cnt-form__privacy .wpcf7-list-item {
+  margin: 0;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.cnt-form__privacy .wpcf7-list-item-label {
+  font-size: 0.85rem;
+  color: var(--text-light);
+}
+
+.cnt-form__privacy input[type="checkbox"] {
+  width: 18px;
+  height: 18px;
+  accent-color: var(--pink);
+  cursor: pointer;
+  flex-shrink: 0;
+}
+
+/* CF7 が生成する submit ボタン（input[type="submit"]）も同デザインに */
+input.cnt-form__submit,
+input.wpcf7-submit {
+  display: inline-flex;
+  align-items: center;
+  background: var(--pink);
+  color: var(--white);
+  border: none;
+  border-radius: 50px;
+  padding: 14px 40px;
+  font-family: var(--font-jp);
+  font-size: 0.9rem;
+  letter-spacing: 0.1em;
+  cursor: pointer;
+  transition: background 0.3s ease, transform 0.3s ease;
+}
+
+input.cnt-form__submit:hover,
+input.wpcf7-submit:hover {
+  background: #b89a92;
+  transform: translateY(-2px);
+}
+
+/* 必須マーク自動表示（CF7 の wpcf7-validates-as-required を持つ field のラベル） */
+.cnt-form__group label .cnt-form__required {
+  color: var(--label);
+  margin-left: 2px;
+}
+
 /* Sidebar */
 .cnt-page__sidebar {
   padding-top: 20px;
