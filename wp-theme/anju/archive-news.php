@@ -18,7 +18,7 @@ get_header();
 	</div>
 </section>
 
-<section class="news" style="background:transparent;padding-top:80px;padding-bottom:80px;">
+<section class="news news--archive" style="padding-top:80px;padding-bottom:80px;">
 	<div class="container">
 		<div class="news__header fade-in">
 			<span class="news__label">news</span>
