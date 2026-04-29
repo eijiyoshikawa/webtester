@@ -4741,6 +4741,35 @@ input.wpcf7-submit:hover {
     width: 100%;
     justify-content: center;
   }
+
+  .cnt-form__sp-instagram {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    width: 100%;
+    margin-top: 28px;
+    padding: 14px 20px;
+    background-color: var(--label);
+    color: var(--white);
+    border-radius: 999px;
+    font-size: 0.95rem;
+    letter-spacing: 0.06em;
+    text-decoration: none;
+    transition: opacity 0.3s ease, transform 0.3s ease;
+    box-shadow: 0 2px 12px rgba(196, 168, 160, 0.4);
+  }
+
+  .cnt-form__sp-instagram:hover {
+    opacity: 0.9;
+    transform: translateY(-2px);
+  }
+
+  .cnt-form__sp-instagram svg {
+    width: 22px;
+    height: 22px;
+    flex-shrink: 0;
+  }
 }
 
 @media (max-width: 1024px) {
