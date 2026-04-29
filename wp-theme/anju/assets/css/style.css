@@ -4706,6 +4706,11 @@ input.wpcf7-submit:hover {
   opacity: 1;
 }
 
+/* SP-only Instagram CTA below form */
+.cnt-form__sp-instagram {
+  display: none;
+}
+
 .cnt-page__sidebar-sns-link svg {
   width: 20px;
   height: 20px;
