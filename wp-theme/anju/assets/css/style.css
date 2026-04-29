@@ -2285,6 +2285,19 @@ select {
     height: 42px;
   }
 
+  /* ---- Floating SNS ---- */
+  .floating-sns {
+    bottom: 72px; /* back-to-top (42px + 20px) + 10px gap */
+    right: 20px;
+    width: 42px;
+    height: 42px;
+  }
+
+  .floating-sns svg {
+    width: 20px;
+    height: 20px;
+  }
+
   /* ---- CTA Button ---- */
   .btn-cta {
     padding: 12px 24px;
