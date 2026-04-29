@@ -45,7 +45,19 @@ $company = anju_option( 'site_company_jp', '合同会社あんじゅ' );
 				<div class="hero__slide<?php echo 0 === $i ? ' hero__slide--active' : ''; ?>" style="background-image:url('<?php echo esc_url( $url ); ?>')"></div>
 			<?php endforeach; ?>
 		<?php else : ?>
-			<div class="hero__slide hero__slide--active" style="background-image:url('<?php echo esc_url( ANJU_THEME_URI . '/assets/images/grouphome-hero.jpg' ); ?>')"></div>
+			<?php
+			// フォールバック：Carbon Fields 未入力時は同梱画像でスライドショー
+			$default_slides = array(
+				'grouphome-hero.jpg',
+				'gh-room-private-01.jpg',
+				'nishikamata-exterior-front.jpg',
+				'gh-washroom-01.jpg',
+				'houkan-bloodpressure-02.jpg',
+				'gh-allowance-support.jpg',
+			);
+			foreach ( $default_slides as $i => $name ) : ?>
+				<div class="hero__slide<?php echo 0 === $i ? ' hero__slide--active' : ''; ?>" style="background-image:url('<?php echo esc_url( ANJU_THEME_URI . '/assets/images/' . $name ); ?>')"></div>
+			<?php endforeach; ?>
 		<?php endif; ?>
 	</div>
 	<div class="hero__overlay"></div>
