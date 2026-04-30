@@ -28,7 +28,7 @@ $homes          = anju_meta( 'grouphome_homes', $pid, array(), 'complex' );
 
 <!-- ========== MAIN PHOTO ========== -->
 <section class="svc-photo fade-in">
-	<?php $bg = $hero_image_url ?: ANJU_THEME_URI . '/assets/images/omori-exterior-front.jpg'; ?>
+	<?php $bg = $hero_image_url ?: ANJU_THEME_URI . '/assets/images/grouphometop.jpg'; ?>
 	<div class="svc-photo__image" style="background:linear-gradient(135deg, rgba(196,168,160,0.3), rgba(180,160,155,0.4)), url('<?php echo esc_url( $bg ); ?>') center/cover no-repeat;"></div>
 </section>
 
