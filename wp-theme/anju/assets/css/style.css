@@ -4728,8 +4728,7 @@ input.wpcf7-submit:hover {
   }
 
   .cnt-page__grid {
-    grid-template-columns: 1fr;
-    gap: 40px;
+    display: block;
   }
 
   .cnt-page__form-card {
