@@ -4772,7 +4772,7 @@ input.wpcf7-submit:hover {
   }
 
   .cnt-page__sidebar {
-    display: none;
+    display: none !important;
   }
 }
 
