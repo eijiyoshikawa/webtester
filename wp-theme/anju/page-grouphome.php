@@ -82,6 +82,18 @@ $policy_text      = anju_meta( 'grouphome_policy_text', $pid, '私たちは、�
 		</div>
 
 		<div class="svc-homes">
+			<?php
+			// === 一時デバッグ: 確認後に削除してください ===
+			if ( current_user_can( 'manage_options' ) ) {
+				echo '<!-- ANJU DEBUG START -->';
+				echo '<!-- pid=' . esc_html( (string) $pid ) . ' -->';
+				echo '<!-- template=' . esc_html( (string) get_post_meta( $pid, '_wp_page_template', true ) ) . ' -->';
+				echo '<!-- raw carbon_get_post_meta=' . esc_html( wp_json_encode( function_exists( 'carbon_get_post_meta' ) ? carbon_get_post_meta( $pid, 'grouphome_homes' ) : 'no-carbon' ) ) . ' -->';
+				echo '<!-- homes_var=' . esc_html( wp_json_encode( $homes ) ) . ' -->';
+				echo '<!-- branch=' . ( ( ! empty( $homes ) && is_array( $homes ) ) ? 'DYNAMIC' : 'FALLBACK' ) . ' -->';
+				echo '<!-- ANJU DEBUG END -->';
+			}
+			?>
 			<?php if ( ! empty( $homes ) && is_array( $homes ) ) : ?>
 				<?php foreach ( $homes as $home ) :
 					$name        = $home['name']        ?? '';
