@@ -102,11 +102,7 @@ function anju_meta( $key, $post_id = null, $default = '', $type = 'simple' ) {
 		$post_id = get_the_ID();
 	}
 
-	if ( 'complex' === $type ) {
-		$value = carbon_get_post_meta( $post_id, $key, 'complex' );
-	} else {
-		$value = carbon_get_post_meta( $post_id, $key );
-	}
+	$value = carbon_get_post_meta( $post_id, $key );
 
 	if ( $value === null || $value === false || $value === '' || $value === array() ) {
 		return $default;
