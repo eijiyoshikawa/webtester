@@ -4733,10 +4733,10 @@ input.wpcf7-submit:hover {
   }
 
   .cnt-page__form-card {
-    padding: 0;
-    background: transparent;
-    box-shadow: none;
-    border-radius: 0;
+    padding: 0 !important;
+    background: transparent !important;
+    box-shadow: none !important;
+    border-radius: 0 !important;
   }
 
   .cnt-form__footer {
