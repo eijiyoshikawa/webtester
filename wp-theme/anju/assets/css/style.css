@@ -2849,6 +2849,45 @@ select {
   letter-spacing: 0.03em;
 }
 
+.svc-home-card__meta {
+  list-style: none;
+  margin: 12px 0 0;
+  padding: 12px 0 0;
+  border-top: 1px solid #ECE2DA;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px 18px;
+}
+
+.svc-home-card__meta-item {
+  display: inline-flex;
+  align-items: baseline;
+  gap: 6px;
+  font-size: 0.85rem;
+  line-height: 1.4;
+}
+
+.svc-home-card__meta-label {
+  font-size: 0.7rem;
+  letter-spacing: 0.06em;
+  color: var(--text-light);
+  background-color: var(--pink-bg, #f6ece6);
+  padding: 2px 8px;
+  border-radius: 999px;
+}
+
+.svc-home-card__meta-value {
+  color: var(--text);
+  font-weight: 500;
+  letter-spacing: 0.02em;
+}
+
+@media (max-width: 480px) {
+  .svc-home-card__meta { gap: 6px 12px; }
+  .svc-home-card__meta-item { font-size: 0.8rem; }
+  .svc-home-card__meta-label { font-size: 0.66rem; padding: 2px 7px; }
+}
+
 /* ご利用対象者 */
 .svc-target {
   background-color: var(--pink-bg);
