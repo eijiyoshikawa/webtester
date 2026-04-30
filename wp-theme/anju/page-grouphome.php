@@ -8,10 +8,21 @@ get_header();
 
 $pid = get_the_ID();
 
-$hero_image     = anju_meta( 'grouphome_hero_image', $pid );
-$hero_image_url = anju_image_url( $hero_image, 'large' );
-$gallery        = anju_meta( 'grouphome_gallery', $pid, array() );
-$homes          = anju_meta( 'grouphome_homes', $pid, array(), 'complex' );
+$hero_image       = anju_meta( 'grouphome_hero_image', $pid );
+$hero_image_url   = anju_image_url( $hero_image, 'large' );
+$gallery          = anju_meta( 'grouphome_gallery', $pid, array() );
+$homes            = anju_meta( 'grouphome_homes', $pid, array(), 'complex' );
+
+$section_lead     = anju_meta( 'grouphome_section_lead', $pid, '安心して穏やかに過ごせるホームを目指して' );
+$section_desc     = anju_meta( 'grouphome_section_desc', $pid, '合同会社あんじゅでは、大田区内で知的障害や精神障害をお持ちの方のグループホーム（共同生活援助）を運営しています。地域や支援者の方々、医療職の方とも手を取り合い、利用者さまが安心して暮らせる環境づくりに取り組んでいます。' );
+
+$sub_heading      = anju_meta( 'grouphome_subsection_heading', $pid, 'グループホームあんじゅ' );
+$sub_heading_sub  = anju_meta( 'grouphome_subsection_heading_sub', $pid, '（大田区・4事業所）' );
+$sub_intro        = anju_meta( 'grouphome_subsection_intro', $pid, '大田区内で知的障害や精神障害をお持ちの方のグループホーム（共同生活援助）を運営しています。' );
+$lead_title       = anju_meta( 'grouphome_lead_title', $pid, '安心して穏やかに過ごせる、もう一つの居場所を目指して。' );
+$lead_body        = anju_meta( 'grouphome_lead_body', $pid, '<p>利用者さまが安心して笑顔で暮らし、同時にスタッフも笑顔でいられることが、よりよい支援を生み、それが継続できるものと考えています。</p><p>共同生活を通じて、ひとりじゃない、一緒だったら何かできるかも…を探せる環境を用意していきたいと思います。</p>' );
+
+$policy_text      = anju_meta( 'grouphome_policy_text', $pid, '私たちは、利用者さまが笑顔で暮らし、スタッフが健康的に働けることが、より良い福祉サービスを生み出すと信じています。グループホームという共同生活を通じて、ひとりじゃない、一緒だったら何かできるかも…を探せる環境を用意していきたいと考えています。' );
 ?>
 
 <!-- ========== SERVICE HERO BANNER ========== -->
@@ -40,13 +51,13 @@ $homes          = anju_meta( 'grouphome_homes', $pid, array(), 'complex' );
 				<span class="svc-nursing__dot"></span>
 				<span class="svc-nursing__label-text">グループホーム事業</span>
 			</div>
-			<p class="svc-nursing__lead">安心して穏やかに過ごせるホームを目指して</p>
+			<p class="svc-nursing__lead"><?php echo esc_html( $section_lead ); ?></p>
 		</div>
 		<div class="svc-nursing__body">
 			<?php if ( get_the_content() ) : ?>
 				<?php the_content(); ?>
 			<?php else : ?>
-			<p class="svc-nursing__desc">合同会社あんじゅでは、大田区内で知的障害や精神障害をお持ちの方のグループホーム（共同生活援助）を運営しています。<br>地域や支援者の方々、医療職の方とも手を取り合い、利用者さまが安心して暮らせる環境づくりに取り組んでいます。</p>
+				<p class="svc-nursing__desc"><?php echo nl2br( esc_html( $section_desc ) ); ?></p>
 			<?php endif; ?>
 		</div>
 	</div>
@@ -56,15 +67,18 @@ $homes          = anju_meta( 'grouphome_homes', $pid, array(), 'complex' );
 <section class="svc-grouphome fade-in" id="grouphome">
 	<div class="container">
 		<h3 class="svc-section__heading">
-			<span class="svc-section__heading-mark">■</span>グループホームあんじゅ
-			<span class="svc-section__heading-sub">（大田区・4事業所）</span>
+			<span class="svc-section__heading-mark">■</span><?php echo esc_html( $sub_heading ); ?>
+			<?php if ( $sub_heading_sub ) : ?><span class="svc-section__heading-sub"><?php echo esc_html( $sub_heading_sub ); ?></span><?php endif; ?>
 		</h3>
-		<p class="svc-section__intro">大田区内で知的障害や精神障害をお持ちの方のグループホーム（共同生活援助）を運営しています。</p>
+		<?php if ( $sub_intro ) : ?>
+		<p class="svc-section__intro"><?php echo nl2br( esc_html( $sub_intro ) ); ?></p>
+		<?php endif; ?>
 
 		<div class="svc-section__lead-box">
-			<p class="svc-section__lead">安心して穏やかに過ごせる、もう一つの居場所を目指して。</p>
-			<p>利用者さまが安心して笑顔で暮らし、同時にスタッフも笑顔でいられることが、よりよい支援を生み、それが継続できるものと考えています。</p>
-			<p>共同生活を通じて、ひとりじゃない、一緒だったら何かできるかも…を探せる環境を用意していきたいと思います。</p>
+			<?php if ( $lead_title ) : ?>
+			<p class="svc-section__lead"><?php echo esc_html( $lead_title ); ?></p>
+			<?php endif; ?>
+			<?php echo wp_kses_post( $lead_body ); ?>
 		</div>
 
 		<div class="svc-homes">
@@ -156,7 +170,7 @@ $homes          = anju_meta( 'grouphome_homes', $pid, array(), 'complex' );
 			<h2 class="svc-policy__title">our policy</h2>
 			<div class="svc-policy__title-line"></div>
 		</div>
-		<p class="svc-policy__text">私たちは、利用者さまが笑顔で暮らし、スタッフが健康的に働けることが、より良い福祉サービスを生み出すと信じています。グループホームという共同生活を通じて、ひとりじゃない、一緒だったら何かできるかも…を探せる環境を用意していきたいと考えています。</p>
+		<p class="svc-policy__text"><?php echo nl2br( esc_html( $policy_text ) ); ?></p>
 	</div>
 </section>
 
