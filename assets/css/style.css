@@ -4475,6 +4475,10 @@ select {
     height: 22px;
     flex-shrink: 0;
   }
+
+  .cnt-page__sidebar {
+    display: none;
+  }
 }
 
 @media (max-width: 1024px) {
