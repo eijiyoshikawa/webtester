@@ -4722,13 +4722,21 @@ input.wpcf7-submit:hover {
     padding: 100px 0 60px;
   }
 
+  .cnt-page > .container,
+  .cnt-page .container {
+    padding: 0 16px;
+  }
+
   .cnt-page__grid {
     grid-template-columns: 1fr;
     gap: 40px;
   }
 
   .cnt-page__form-card {
-    padding: 30px 20px;
+    padding: 0;
+    background: transparent;
+    box-shadow: none;
+    border-radius: 0;
   }
 
   .cnt-form__footer {
