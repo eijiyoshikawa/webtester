@@ -86,6 +86,9 @@ $policy_text      = anju_meta( 'grouphome_policy_text', $pid, '私たちは、�
 				<?php foreach ( $homes as $home ) :
 					$name        = $home['name']        ?? '';
 					$address     = $home['address']     ?? '';
+					$type        = $home['type']        ?? '';
+					$capacity    = $home['capacity']    ?? '';
+					$gender      = $home['gender']      ?? '';
 					$image_left  = $home['image_left']  ?? 0;
 					$image_right = $home['image_right'] ?? 0;
 					$left_url    = anju_image_url( $image_left, 'medium_large' );
@@ -99,6 +102,19 @@ $policy_text      = anju_meta( 'grouphome_policy_text', $pid, '私たちは、�
 						<div class="svc-home-card__body">
 							<h4 class="svc-home-card__name"><?php echo esc_html( $name ); ?></h4>
 							<p class="svc-home-card__addr"><?php echo esc_html( $address ); ?></p>
+							<?php if ( $type || $capacity || $gender ) : ?>
+							<ul class="svc-home-card__meta">
+								<?php if ( $type ) : ?>
+								<li class="svc-home-card__meta-item"><span class="svc-home-card__meta-label">タイプ</span><span class="svc-home-card__meta-value"><?php echo esc_html( $type ); ?></span></li>
+								<?php endif; ?>
+								<?php if ( $capacity ) : ?>
+								<li class="svc-home-card__meta-item"><span class="svc-home-card__meta-label">定員数</span><span class="svc-home-card__meta-value"><?php echo esc_html( $capacity ); ?></span></li>
+								<?php endif; ?>
+								<?php if ( $gender ) : ?>
+								<li class="svc-home-card__meta-item"><span class="svc-home-card__meta-label">性別</span><span class="svc-home-card__meta-value"><?php echo esc_html( $gender ); ?></span></li>
+								<?php endif; ?>
+							</ul>
+							<?php endif; ?>
 						</div>
 					</article>
 				<?php endforeach; ?>
