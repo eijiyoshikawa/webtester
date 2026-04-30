@@ -254,6 +254,12 @@ function anju_register_carbon_fields() {
 					Field::make( 'text', 'address', '住所' )
 						->set_required( true )
 						->set_attribute( 'placeholder', '例：東京都大田区大森南3-29-10' ),
+					Field::make( 'text', 'type', 'タイプ' )
+						->set_attribute( 'placeholder', '例：シェアハウスタイプ' ),
+					Field::make( 'text', 'capacity', '定員数' )
+						->set_attribute( 'placeholder', '例：定員9名' ),
+					Field::make( 'text', 'gender', '性別' )
+						->set_attribute( 'placeholder', '例：男性 / 女性 / 男性・女性' ),
 					Field::make( 'image', 'image_left', '左側写真' )
 						->set_value_type( 'id' )
 						->set_required( true ),
