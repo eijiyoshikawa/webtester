@@ -136,8 +136,52 @@ function anju_register_carbon_fields() {
 		->add_tab( 'メイン写真', array(
 			Field::make( 'image', 'houkan_hero_image', 'メイン写真' )
 				->set_value_type( 'id' )
-				->set_required( true )
-				->set_help_text( 'ページ最上部の大きな画像。' ),
+				->set_help_text( 'ページ最上部の大きな画像。未設定時はテーマ同梱画像。' ),
+		) )
+		->add_tab( '事業概要', array(
+			Field::make( 'text', 'houkan_section_lead', 'リード文（小見出し）' )
+				->set_default_value( '身近な医療の相談相手を目指して' )
+				->set_help_text( '事業概要セクションの最上部に表示される小見出し。' ),
+			Field::make( 'textarea', 'houkan_section_desc', '事業概要 説明文' )
+				->set_rows( 4 )
+				->set_default_value( '合同会社あんじゅでは、大田区山王を拠点に訪問看護ステーションを運営しています。医師や薬剤師など関係者の方々、また利用者さまを日々サポートされているご家族や支援者の方々とも密に連携を取り、利用者さまが安心して暮らせる環境づくりに取り組んでいます。' )
+				->set_help_text( '改行はそのまま反映されます。本文エディタが入力されている場合はそちらが優先されます。' ),
+		) )
+		->add_tab( '事業内容（訪問看護）', array(
+			Field::make( 'text', 'houkan_subsection_heading', '見出し' )
+				->set_default_value( '訪問看護ステーションあんじゅ' ),
+			Field::make( 'text', 'houkan_subsection_heading_sub', '見出し補足' )
+				->set_default_value( '（大田区山王）' ),
+			Field::make( 'text', 'houkan_lead_title', 'リードタイトル' )
+				->set_default_value( '身近な医療の相談相手。そばで支える人にも寄り添う訪問看護を。' ),
+			Field::make( 'rich_text', 'houkan_lead_body', 'リード本文' )
+				->set_default_value( '<p>心と体の相談に乗り、医師と連携して安心した地域生活をサポートします。</p>' ),
+		) )
+		->add_tab( '＜訪看の強み＞', array(
+			Field::make( 'text', 'houkan_strength_heading', '強み 見出し' )
+				->set_default_value( '＜あんじゅ訪看の強み＞' ),
+			Field::make( 'textarea', 'houkan_strength_lead', '強み リード文' )
+				->set_rows( 3 )
+				->set_default_value( '障害者グループホームを運営する訪問看護ステーションだからこその強みがあります。看護師全員が障害者グループホームでの世話人業務経験者です。' ),
+			Field::make( 'complex', 'houkan_strength_items', '強み一覧' )
+				->set_layout( 'tabbed-vertical' )
+				->add_fields( array(
+					Field::make( 'textarea', 'text', '本文' )->set_rows( 2 )->set_required( true ),
+				) )
+				->set_header_template( '<%- text %>' )
+				->set_help_text( '「行を追加」で項目を追加できます。' ),
+		) )
+		->add_tab( 'サイドバー（事業内容）', array(
+			Field::make( 'complex', 'houkan_sidebar_blocks', 'サイドバー ブロック' )
+				->set_layout( 'tabbed-vertical' )
+				->add_fields( array(
+					Field::make( 'text', 'heading', '見出し' )->set_required( true ),
+					Field::make( 'textarea', 'body', '本文' )
+						->set_rows( 3 )
+						->set_help_text( '改行で複数行表示できます。' ),
+				) )
+				->set_header_template( '<%- heading %>' )
+				->set_help_text( '例：在籍スタッフ数 / 営業日及び営業時間 / 訪問看護提供地域 など' ),
 		) )
 		->add_tab( '料金表・サービスPDF', array(
 			Field::make( 'file', 'houkan_price_pdf', '料金表PDF' )
@@ -161,6 +205,11 @@ function anju_register_carbon_fields() {
 			Field::make( 'media_gallery', 'houkan_gallery', 'ギャラリー画像' )
 				->set_help_text( '推奨6〜12枚。スライダーで自動表示されます。' )
 				->set_type( array( 'image' ) ),
+		) )
+		->add_tab( 'our policy', array(
+			Field::make( 'textarea', 'houkan_policy_text', 'our policy 本文' )
+				->set_rows( 5 )
+				->set_default_value( '私たちは、利用者さまが笑顔で暮らし、スタッフが健康的に働けることが、より良い医療福祉サービスを生み出すと信じています。心と体の健康を支え、地域での暮らしに寄り添う訪問看護を提供していきたいと考えています。' ),
 		) );
 
 	// =========================================================================
@@ -171,7 +220,28 @@ function anju_register_carbon_fields() {
 		->add_tab( 'メイン写真', array(
 			Field::make( 'image', 'grouphome_hero_image', 'メイン写真' )
 				->set_value_type( 'id' )
-				->set_required( true ),
+				->set_help_text( 'ページ最上部の大きな画像。未設定時はテーマ同梱画像。' ),
+		) )
+		->add_tab( '事業概要', array(
+			Field::make( 'text', 'grouphome_section_lead', 'リード文（小見出し）' )
+				->set_default_value( '安心して穏やかに過ごせるホームを目指して' ),
+			Field::make( 'textarea', 'grouphome_section_desc', '事業概要 説明文' )
+				->set_rows( 4 )
+				->set_default_value( '合同会社あんじゅでは、大田区内で知的障害や精神障害をお持ちの方のグループホーム（共同生活援助）を運営しています。地域や支援者の方々、医療職の方とも手を取り合い、利用者さまが安心して暮らせる環境づくりに取り組んでいます。' )
+				->set_help_text( '改行はそのまま反映されます。本文エディタが入力されている場合はそちらが優先されます。' ),
+		) )
+		->add_tab( '事業内容（グループホーム）', array(
+			Field::make( 'text', 'grouphome_subsection_heading', '見出し' )
+				->set_default_value( 'グループホームあんじゅ' ),
+			Field::make( 'text', 'grouphome_subsection_heading_sub', '見出し補足' )
+				->set_default_value( '（大田区・4事業所）' ),
+			Field::make( 'textarea', 'grouphome_subsection_intro', '導入文' )
+				->set_rows( 2 )
+				->set_default_value( '大田区内で知的障害や精神障害をお持ちの方のグループホーム（共同生活援助）を運営しています。' ),
+			Field::make( 'text', 'grouphome_lead_title', 'リードタイトル' )
+				->set_default_value( '安心して穏やかに過ごせる、もう一つの居場所を目指して。' ),
+			Field::make( 'rich_text', 'grouphome_lead_body', 'リード本文' )
+				->set_default_value( '<p>利用者さまが安心して笑顔で暮らし、同時にスタッフも笑顔でいられることが、よりよい支援を生み、それが継続できるものと考えています。</p><p>共同生活を通じて、ひとりじゃない、一緒だったら何かできるかも…を探せる環境を用意していきたいと思います。</p>' ),
 		) )
 		->add_tab( 'ホーム一覧', array(
 			Field::make( 'complex', 'grouphome_homes', 'ホーム一覧' )
@@ -197,6 +267,11 @@ function anju_register_carbon_fields() {
 			Field::make( 'media_gallery', 'grouphome_gallery', 'ギャラリー画像' )
 				->set_help_text( '推奨6〜12枚。スライダーで自動表示されます。' )
 				->set_type( array( 'image' ) ),
+		) )
+		->add_tab( 'our policy', array(
+			Field::make( 'textarea', 'grouphome_policy_text', 'our policy 本文' )
+				->set_rows( 5 )
+				->set_default_value( '私たちは、利用者さまが笑顔で暮らし、スタッフが健康的に働けることが、より良い福祉サービスを生み出すと信じています。グループホームという共同生活を通じて、ひとりじゃない、一緒だったら何かできるかも…を探せる環境を用意していきたいと考えています。' ),
 		) );
 
 	// =========================================================================
