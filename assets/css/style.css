@@ -4477,7 +4477,7 @@ select {
   }
 
   .cnt-page__sidebar {
-    display: none;
+    display: none !important;
   }
 }
 
