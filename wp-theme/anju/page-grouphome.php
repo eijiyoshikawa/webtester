@@ -122,10 +122,10 @@ $policy_text      = anju_meta( 'grouphome_policy_text', $pid, '私たちは、�
 				<!-- フォールバック：管理画面で「ホーム一覧」を未設定の場合 -->
 				<?php
 				$default_homes = array(
-					array( 'name' => 'あんじゅ大森南',  'addr' => '東京都大田区大森南3-29-10',          'left' => 'grouphome-hero.jpg',         'right' => 'omori-living-2f.jpg' ),
-					array( 'name' => 'あんじゅ大岡山①', 'addr' => '東京都大田区南千束3-3-14 1階',       'left' => 'okayama12-exterior-01.jpg', 'right' => 'okayama1-living.jpg' ),
-					array( 'name' => 'あんじゅ大岡山②', 'addr' => '東京都大田区南千束3-3-14 2階・3階', 'left' => 'gh-washroom-01.jpg',        'right' => 'okayama2-room-01.jpg' ),
-					array( 'name' => 'あんじゅ西蒲田',  'addr' => '東京都大田区西蒲田6-16-5',           'left' => 'nishikamata-exterior-front.jpg', 'right' => 'nishikamata-kitchen-02.jpg' ),
+					array( 'name' => 'あんじゅ大森南',  'addr' => '東京都大田区大森南3-29-10',          'type' => 'シェアハウスタイプ', 'capacity' => '定員9名',  'gender' => '男性',       'left' => 'grouphome-hero.jpg',             'right' => 'omori-living-2f.jpg' ),
+					array( 'name' => 'あんじゅ大岡山①', 'addr' => '東京都大田区南千束3-3-14 1階',       'type' => 'シェアハウスタイプ', 'capacity' => '定員5名',  'gender' => '男性',       'left' => 'okayama12-exterior-01.jpg',     'right' => 'okayama1-living.jpg' ),
+					array( 'name' => 'あんじゅ大岡山②', 'addr' => '東京都大田区南千束3-3-14 2階・3階', 'type' => 'シェアハウスタイプ', 'capacity' => '定員6名',  'gender' => '男性',       'left' => 'gh-washroom-01.jpg',            'right' => 'okayama2-room-01.jpg' ),
+					array( 'name' => 'あんじゅ西蒲田',  'addr' => '東京都大田区西蒲田6-16-5',           'type' => 'アパートタイプ',     'capacity' => '定員10名', 'gender' => '男性・女性', 'left' => 'nishikamata-exterior-front.jpg', 'right' => 'nishikamata-kitchen-02.jpg' ),
 				);
 				foreach ( $default_homes as $home ) : ?>
 					<article class="svc-home-card">
@@ -136,6 +136,11 @@ $policy_text      = anju_meta( 'grouphome_policy_text', $pid, '私たちは、�
 						<div class="svc-home-card__body">
 							<h4 class="svc-home-card__name"><?php echo esc_html( $home['name'] ); ?></h4>
 							<p class="svc-home-card__addr"><?php echo esc_html( $home['addr'] ); ?></p>
+							<ul class="svc-home-card__meta">
+								<li class="svc-home-card__meta-item"><span class="svc-home-card__meta-label">タイプ</span><span class="svc-home-card__meta-value"><?php echo esc_html( $home['type'] ); ?></span></li>
+								<li class="svc-home-card__meta-item"><span class="svc-home-card__meta-label">定員数</span><span class="svc-home-card__meta-value"><?php echo esc_html( $home['capacity'] ); ?></span></li>
+								<li class="svc-home-card__meta-item"><span class="svc-home-card__meta-label">性別</span><span class="svc-home-card__meta-value"><?php echo esc_html( $home['gender'] ); ?></span></li>
+							</ul>
 						</div>
 					</article>
 				<?php endforeach; ?>
