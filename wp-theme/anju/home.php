@@ -20,31 +20,39 @@ get_header();
 	</div>
 </section>
 
-<section class="news news--archive" style="padding-top:80px;padding-bottom:80px;">
+<section class="blog-page">
 	<div class="container">
-		<div class="news__header fade-in">
-			<span class="news__label">blog</span>
-			<span class="news__label-divider">|</span>
-			<span class="news__label-jp">ブログ</span>
+		<div class="blog-page__header fade-in">
+			<h1 class="blog-page__title">blog</h1>
+			<p class="blog-page__subtitle">ブログ</p>
 		</div>
-		<ul class="news__list fade-in">
+
+		<div class="blog-page__grid fade-in">
 			<?php if ( have_posts() ) :
-				while ( have_posts() ) : the_post(); ?>
-					<li class="news__item">
-						<time class="news__date"><?php echo esc_html( get_the_date( 'Y.m.d' ) ); ?></time>
-						<p class="news__title"><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></p>
-						<span class="news__arrow">
-							<svg viewBox="0 0 24 24" fill="none"><circle cx="12" cy="12" r="11" stroke="currentColor" stroke-width="1"/><path d="M10 8l4 4-4 4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
-						</span>
-					</li>
+				while ( have_posts() ) : the_post();
+					$thumb_url = get_the_post_thumbnail_url( null, 'medium' );
+					if ( ! $thumb_url ) {
+						$thumb_url = ANJU_THEME_URI . '/assets/images/grouphome-hero.jpg';
+					}
+					?>
+					<a href="<?php the_permalink(); ?>" class="blog-card">
+						<div class="blog-card__image" style="background-image:url('<?php echo esc_url( $thumb_url ); ?>');"></div>
+						<h2 class="blog-card__title"><?php the_title(); ?></h2>
+						<time class="blog-card__date" datetime="<?php echo esc_attr( get_the_date( 'Y-m-d' ) ); ?>"><?php echo esc_html( get_the_date( 'Y.m.d' ) ); ?></time>
+					</a>
 				<?php endwhile;
 			else : ?>
-				<li class="news__item">
-					<p class="news__title">記事はまだありません</p>
-				</li>
+				<p style="grid-column:1 / -1;text-align:center;color:#999;padding:60px 0;">記事はまだありません</p>
 			<?php endif; ?>
-		</ul>
-		<?php the_posts_pagination( array( 'mid_size' => 2, 'prev_text' => '前へ', 'next_text' => '次へ' ) ); ?>
+		</div>
+
+		<?php
+		the_posts_pagination( array(
+			'mid_size'  => 2,
+			'prev_text' => '前へ',
+			'next_text' => '次へ',
+		) );
+		?>
 	</div>
 </section>
 
