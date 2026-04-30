@@ -18,30 +18,25 @@ get_header();
 	</div>
 </section>
 
-<section class="news news--archive" style="padding-top:80px;padding-bottom:80px;">
+<section class="news-page">
 	<div class="container">
-		<div class="news__header fade-in">
-			<span class="news__label">news</span>
-			<span class="news__label-divider">|</span>
-			<span class="news__label-jp">お知らせ</span>
+		<div class="news-page__header fade-in">
+			<h1 class="news-page__title">news</h1>
+			<p class="news-page__subtitle">お知らせ</p>
 		</div>
-		<ul class="news__list fade-in">
+
+		<div class="news-page__list fade-in">
 			<?php if ( have_posts() ) :
 				while ( have_posts() ) : the_post(); ?>
-					<li class="news__item">
-						<time class="news__date"><?php echo esc_html( get_the_date( 'Y.m.d' ) ); ?></time>
-						<p class="news__title"><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></p>
-						<span class="news__arrow">
-							<svg viewBox="0 0 24 24" fill="none"><circle cx="12" cy="12" r="11" stroke="currentColor" stroke-width="1"/><path d="M10 8l4 4-4 4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
-						</span>
-					</li>
+					<article class="news-page__item">
+						<time class="news-page__date" datetime="<?php echo esc_attr( get_the_date( 'Y-m-d' ) ); ?>"><?php echo esc_html( get_the_date( 'Y.m.d' ) ); ?></time>
+						<p class="news-page__item-title"><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></p>
+					</article>
 				<?php endwhile;
 			else : ?>
-				<li class="news__item">
-					<p class="news__title">お知らせはまだありません</p>
-				</li>
+				<p style="text-align:center;color:#999;padding:60px 0;">お知らせはまだありません</p>
 			<?php endif; ?>
-		</ul>
+		</div>
 
 		<?php
 		the_posts_pagination( array(
