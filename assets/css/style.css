@@ -1625,6 +1625,46 @@ select {
    18. Back to Top
    -------------------------------------------- */
 
+/* Floating SNS (Instagram) — back-to-top の上に追従表示 */
+.floating-sns {
+  position: fixed;
+  right: 30px;
+  bottom: 88px;
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  background-color: var(--white);
+  color: var(--label);
+  border: 1.5px solid var(--label);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.3s ease, visibility 0.3s ease, transform 0.3s ease, background-color 0.3s ease, color 0.3s ease, box-shadow 0.3s ease;
+  z-index: 999;
+  box-shadow: 0 2px 12px rgba(196, 168, 160, 0.3);
+  text-decoration: none;
+}
+
+.floating-sns.is-visible {
+  opacity: 1;
+  visibility: visible;
+}
+
+.floating-sns:hover {
+  background-color: var(--label);
+  color: var(--white);
+  transform: translateY(-3px);
+  box-shadow: 0 4px 18px rgba(196, 168, 160, 0.5);
+}
+
+.floating-sns svg {
+  width: 22px;
+  height: 22px;
+}
+
 .back-to-top {
   position: fixed;
   bottom: 30px;
