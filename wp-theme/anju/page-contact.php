@@ -89,4 +89,6 @@ if ( ! $cf7_shortcode ) {
 	</div>
 </section>
 
+<?php get_template_part( 'template-parts/contact-cta' ); ?>
+
 <?php get_footer(); ?>
