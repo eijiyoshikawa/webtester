@@ -39,11 +39,12 @@
 			</a>
 			<nav class="header__nav" id="globalNav">
 				<a href="<?php echo esc_url( home_url( '/' ) ); ?>" class="header__nav-item header__nav-link<?php echo is_front_page() ? ' is-active' : ''; ?>">ホーム</a>
-				<div class="header__nav-item header__nav-dropdown" data-dropdown>
+				<?php $is_service_page = is_page( array( 'grouphome', 'houkan', 'service' ) ); ?>
+				<div class="header__nav-item header__nav-dropdown<?php echo $is_service_page ? ' is-active' : ''; ?>" data-dropdown>
 					<span class="header__nav-trigger">サービス</span>
 					<div class="header__nav-submenu">
-						<a href="<?php echo esc_url( home_url( '/service/grouphome/' ) ); ?>" class="header__nav-subitem">グループホーム</a>
-						<a href="<?php echo esc_url( home_url( '/service/houkan/' ) ); ?>" class="header__nav-subitem">訪問看護</a>
+						<a href="<?php echo esc_url( home_url( '/service/grouphome/' ) ); ?>" class="header__nav-subitem<?php echo is_page( 'grouphome' ) ? ' is-active' : ''; ?>">グループホーム</a>
+						<a href="<?php echo esc_url( home_url( '/service/houkan/' ) ); ?>" class="header__nav-subitem<?php echo is_page( 'houkan' ) ? ' is-active' : ''; ?>">訪問看護</a>
 					</div>
 				</div>
 				<a href="<?php echo esc_url( home_url( '/news/' ) ); ?>" class="header__nav-item header__nav-link<?php echo ( is_post_type_archive( 'news' ) || is_singular( 'news' ) ) ? ' is-active' : ''; ?>">お知らせ</a>
