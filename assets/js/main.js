@@ -60,13 +60,23 @@
     });
   });
 
+  // ========== Back to Top ==========
+  // href の値に依存せず、ボタンID で確実にトップへスクロール
+  if (backToTop) {
+    backToTop.addEventListener('click', function (e) {
+      e.preventDefault();
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+    });
+  }
+
   // ========== Smooth Scroll ==========
   document.querySelectorAll('a[href^="#"]').forEach(function (anchor) {
+    if (anchor.id === 'backToTop') return; // 上で個別処理済み
     anchor.addEventListener('click', function (e) {
       var targetId = this.getAttribute('href');
       if (targetId === '#') return;
       // Back-to-top: scroll to the very top regardless of page
-      if (targetId === '#header' || targetId === '#top') {
+      if (targetId === '#header' || targetId === '#top' || targetId === '#home') {
         e.preventDefault();
         window.scrollTo({ top: 0, behavior: 'smooth' });
         return;
