@@ -50,12 +50,18 @@ get_header();
 
 		<div class="privacy-page__body fade-in">
 			<?php if ( post_password_required() ) : ?>
+				<p class="manual-page__lock-intro">このページはパスワードで保護されています。閲覧するには下記にパスワードを入力してください。</p>
 				<?php echo get_the_password_form(); ?>
 			<?php else : ?>
 				<?php
 				if ( have_posts() ) :
 					while ( have_posts() ) : the_post();
-						the_content();
+						$content = get_the_content();
+						if ( trim( wp_strip_all_tags( $content ) ) !== '' ) {
+							the_content();
+						} else {
+							echo '<p>マニュアルの内容を編集画面から登録してください。</p>';
+						}
 					endwhile;
 				else :
 					echo '<p>マニュアルの内容を編集画面から登録してください。</p>';
