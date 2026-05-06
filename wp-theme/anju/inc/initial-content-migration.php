@@ -263,15 +263,19 @@ function anju_migrate_manual( &$log ) {
 	if ( ! $post_id ) {
 		return;
 	}
-	$md_path = ANJU_THEME_DIR . '/../../docs/site-operations-manual.md';
-	if ( ! file_exists( $md_path ) ) {
-		// docs ディレクトリがテーマと同階層にない場合のフォールバック
-		$alt = realpath( ANJU_THEME_DIR . '/../../../docs/site-operations-manual.md' );
-		if ( $alt && file_exists( $alt ) ) {
-			$md_path = $alt;
+	// テーマ内にバンドルした原稿を優先利用。リポジトリ開発環境のみ docs/ にフォールバック。
+	$candidates = array(
+		ANJU_THEME_DIR . '/inc/manual-source.md',
+		ANJU_THEME_DIR . '/../../docs/site-operations-manual.md',
+	);
+	$md_path = '';
+	foreach ( $candidates as $candidate ) {
+		if ( file_exists( $candidate ) ) {
+			$md_path = $candidate;
+			break;
 		}
 	}
-	if ( ! file_exists( $md_path ) ) {
+	if ( ! $md_path ) {
 		anju_migration_log( $log, 'manual', 'post_content', 'skipped', '(md file not found)' );
 		return;
 	}
