@@ -11,6 +11,22 @@
  *
  * @package Anju
  */
+
+// パスワード保護ページなのでキャッシュさせない（デバイスにより表示が不安定になるのを防止）
+if ( ! defined( 'DONOTCACHEPAGE' ) ) {
+	define( 'DONOTCACHEPAGE', true );
+}
+if ( ! defined( 'DONOTCACHEDB' ) ) {
+	define( 'DONOTCACHEDB', true );
+}
+if ( ! defined( 'DONOTMINIFY' ) ) {
+	define( 'DONOTMINIFY', true );
+}
+if ( ! defined( 'DONOTCDN' ) ) {
+	define( 'DONOTCDN', true );
+}
+nocache_headers();
+
 get_header();
 ?>
 
