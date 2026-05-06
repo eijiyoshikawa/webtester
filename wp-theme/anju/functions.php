@@ -41,3 +41,4 @@ require_once ANJU_THEME_DIR . '/inc/enqueue.php';
 require_once ANJU_THEME_DIR . '/inc/post-types.php';
 require_once ANJU_THEME_DIR . '/inc/carbon-fields-setup.php';
 require_once ANJU_THEME_DIR . '/inc/helpers.php';
+require_once ANJU_THEME_DIR . '/inc/initial-content-migration.php';
