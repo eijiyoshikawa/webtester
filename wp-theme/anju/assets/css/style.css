@@ -5021,6 +5021,87 @@ input.wpcf7-submit:hover {
   }
 }
 
+/* マニュアルページ パスワード保護フォーム */
+.manual-page__lock-intro {
+  font-size: 0.95rem;
+  line-height: 1.85;
+  color: var(--text);
+  margin-bottom: 24px;
+}
+
+.privacy-page__body .post-password-form {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  max-width: 480px;
+  margin: 0 auto;
+  color: var(--text);
+}
+
+.privacy-page__body .post-password-form p {
+  margin: 0;
+  font-size: 0.95rem;
+  line-height: 1.7;
+  color: var(--text);
+}
+
+.privacy-page__body .post-password-form label {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  font-size: 0.85rem;
+  letter-spacing: 0.05em;
+  color: var(--text);
+}
+
+.privacy-page__body .post-password-form input[type="password"] {
+  width: 100%;
+  padding: 14px 16px;
+  background: #f5f2ef;
+  border: 1px solid #ddd;
+  border-radius: 10px;
+  font-family: var(--font-jp);
+  font-size: 0.95rem;
+  color: var(--text);
+  outline: none;
+  transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.privacy-page__body .post-password-form input[type="password"]:focus {
+  border-color: var(--label);
+  box-shadow: 0 0 0 3px rgba(192, 120, 96, 0.12);
+}
+
+.privacy-page__body .post-password-form input[type="submit"] {
+  align-self: flex-start;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  background: var(--label);
+  color: var(--white);
+  border: none;
+  border-radius: 999px;
+  padding: 12px 36px;
+  font-family: var(--font-jp);
+  font-size: 0.9rem;
+  letter-spacing: 0.1em;
+  cursor: pointer;
+  transition: background 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease;
+  box-shadow: 0 6px 18px rgba(192, 120, 96, 0.20);
+}
+
+.privacy-page__body .post-password-form input[type="submit"]:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 12px 26px rgba(192, 120, 96, 0.28);
+}
+
+@media (max-width: 768px) {
+  .privacy-page__body .post-password-form input[type="submit"] {
+    width: 100%;
+    align-self: stretch;
+  }
+}
+
 /* ==========================================================================
    Lightbox (写真クリックで拡大表示)
    ========================================================================== */
