@@ -220,3 +220,10 @@ figure {
 body.is-menu-open {
   overflow: hidden;
 }
+
+/* ===== HTML hidden 属性の保証 =====
+   個別セレクタの display:flex 等がブラウザのデフォルト
+   [hidden]{display:none} を上書きしてしまう事故を防止。 */
+[hidden] {
+  display: none !important;
+}

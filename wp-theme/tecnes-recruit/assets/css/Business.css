@@ -289,6 +289,11 @@
   overflow-y: auto;
 }
 
+/* HTML の hidden 属性で確実に非表示にする（display: flex の上書き対策） */
+.modalOverlay[hidden] {
+  display: none !important;
+}
+
 .modalBox {
   position: relative;
   background-color: rgb(255, 255, 255);

@@ -8,6 +8,16 @@
   transition: 0.3s cubic-bezier(0.215, 0.61, 0.355, 1);
 }
 
+/* WordPress admin bar 表示中はヘッダーをその下にずらす */
+body.admin-bar .lHeader {
+  top: 32px;
+}
+@media screen and (max-width: 782px) {
+  body.admin-bar .lHeader {
+    top: 46px;
+  }
+}
+
 .lHeader.fixed {
   backdrop-filter: blur(10px);
   -webkit-backdrop-filter: blur(10px);
