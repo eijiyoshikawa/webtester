@@ -45,10 +45,10 @@
                 <h2 class="ttl01"><span>ENTRY</span></h2>
                 <ul class="list02">
                     <li>
-                        <a href="https://job.mynavi.jp/27/pc/search/corp7" target="_blank" rel="noopener noreferrer">マイナビからエントリー</a>
+                        <a href="<?php echo tecnes_mynavi_url(); ?>" target="_blank" rel="noopener noreferrer">マイナビからエントリー</a>
                     </li>
                     <li>
-                        <a href="https://job.career-tasu.jp/corp/00200776" target="_blank" rel="noopener noreferrer">キャリタスからエントリー</a>
+                        <a href="<?php echo tecnes_careertasu_url(); ?>" target="_blank" rel="noopener noreferrer">キャリタスからエントリー</a>
                     </li>
                 </ul>
             </div>

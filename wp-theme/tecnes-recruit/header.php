@@ -14,7 +14,7 @@
         <p class="logo">
             <a href="<?php echo esc_url( home_url( '/' ) ); ?>" class="logoLink">
                 <span class="logoImage">
-                    <img src="<?php echo tecnes_img( 'logo.png' ); ?>" alt="千代田工販株式会社" width="200" height="50">
+                    <img src="<?php echo tecnes_img( 'logo.png' ); ?>" alt="<?php bloginfo( 'name' ); ?>" width="200" height="50">
                 </span>
                 <span class="logoTxt">RECRUIT SITE</span>
             </a>
@@ -36,12 +36,12 @@
                 <div class="entryBox">
                     <ul class="entryBoxList">
                         <li>
-                            <a href="https://job.mynavi.jp/27/pc/search/corp7" target="_blank" rel="noopener noreferrer">
+                            <a href="<?php echo tecnes_mynavi_url(); ?>" target="_blank" rel="noopener noreferrer">
                                 <img src="<?php echo tecnes_img( 'header_btn_mynavi.png' ); ?>" alt="マイナビ" width="200" height="60">
                             </a>
                         </li>
                         <li>
-                            <a href="https://job.career-tasu.jp/corp/00200776" target="_blank" rel="noopener noreferrer">
+                            <a href="<?php echo tecnes_careertasu_url(); ?>" target="_blank" rel="noopener noreferrer">
                                 <img src="<?php echo tecnes_img( 'header_btn_career-tasu.png' ); ?>" alt="キャリタス" width="200" height="60">
                             </a>
                         </li>

@@ -1,6 +1,6 @@
 <?php
 $members = array(
-    array( 'thumb' => 'people_thumbs01@2x.jpg', 'catch' => '先輩に支えられ始まった千代田工販での挑戦 次は私が後輩を支える番だ',                                     'dept' => '電機システム部',           'role' => '営業職', 'name' => 'M.M', 'year' => '2017年入社' ),
+    array( 'thumb' => 'people_thumbs01@2x.jpg', 'catch' => '先輩に支えられ始まった株式会社TECNESでの挑戦 次は私が後輩を支える番だ',                                     'dept' => '電機システム部',           'role' => '営業職', 'name' => 'M.M', 'year' => '2017年入社' ),
     array( 'thumb' => 'people_thumbs02@2x.jpg', 'catch' => '関わるすべての人のベクトルを合わせて 大型プロジェクトに挑む',                                           'dept' => 'プラント産業システム部',   'role' => '営業職', 'name' => 'Y.T', 'year' => '2014年入社' ),
     array( 'thumb' => 'people_thumbs03@2x.jpg', 'catch' => '顧客利益だけでなく その先にある「社会に良いこと」を追求',                                               'dept' => '環境・機械システム営業部', 'role' => '営業職', 'name' => 'N.S', 'year' => '2017年入社' ),
     array( 'thumb' => 'people_thumbs04@2x.jpg', 'catch' => '主体性を持って企業と向き合い提案し、感謝される それが私の成長サイクル',                                 'dept' => '新潟支店',                 'role' => '営業職', 'name' => 'O.T', 'year' => '2017年入社' ),
@@ -16,7 +16,7 @@ $members = array(
             <span class="ttl01Ja">働く社員を知る</span>
         </h2>
         <p class="leadTxt">
-            千代田工販で新しい自分に出会い、変わらない自分の信念を持って活躍している先輩たち。どんな想いで働いているのか、エピソードを交えてご紹介します。
+            株式会社TECNESで新しい自分に出会い、変わらない自分の信念を持って活躍している先輩たち。どんな想いで働いているのか、エピソードを交えてご紹介します。
         </p>
     </div>
 

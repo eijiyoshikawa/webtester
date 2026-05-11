@@ -21,8 +21,8 @@
             <div class="ctaBtns">
                 <a href="<?php echo esc_url( home_url( '/recruitment/' ) ); ?>" class="btnEntry">エントリーする</a>
                 <div class="externalBtns">
-                    <a href="https://job.mynavi.jp/27/pc/search/corp7" target="_blank" rel="noopener noreferrer" class="btnExternal">マイナビからエントリー</a>
-                    <a href="https://job.career-tasu.jp/corp/00200776" target="_blank" rel="noopener noreferrer" class="btnExternal">キャリタスからエントリー</a>
+                    <a href="<?php echo tecnes_mynavi_url(); ?>" target="_blank" rel="noopener noreferrer" class="btnExternal">マイナビからエントリー</a>
+                    <a href="<?php echo tecnes_careertasu_url(); ?>" target="_blank" rel="noopener noreferrer" class="btnExternal">キャリタスからエントリー</a>
                 </div>
             </div>
         </div>

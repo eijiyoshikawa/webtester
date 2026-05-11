@@ -7,7 +7,7 @@
                 私たちは社会と産業の<br class="u-sm-min">未来のために挑戦し続けます
             </h2>
             <p class="txt js-animate fadeIn01">
-                千代田工販はただ商品を売るだけではありません。<br class="u-sm-min">
+                株式会社TECNESはただ商品を売るだけではありません。<br class="u-sm-min">
                 付加価値を加え、お客さまの課題解決に寄り添いながら<br class="u-sm-min">
                 社会インフラ整備と産業界の成長に貢献する商社です。
             </p>

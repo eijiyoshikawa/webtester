@@ -14,10 +14,10 @@ $num_cards = array(
     <div class="l-inner aboutInner">
         <h2 class="ttl01 js-animate fadeIn01">
             <span class="ttl01En">ABOUT US</span>
-            <span class="ttl01Ja">千代田工販について</span>
+            <span class="ttl01Ja">株式会社TECNESについて</span>
         </h2>
 
-        <p class="subTtl">数字でわかる 千代田工販の今</p>
+        <p class="subTtl">数字でわかる 株式会社TECNESの今</p>
         <p class="note">※2025年3月時点</p>
 
         <div class="numGrid">

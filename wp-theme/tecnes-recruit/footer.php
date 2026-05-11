@@ -15,82 +15,83 @@
                     </ul>
                 </li>
                 <li>
-                    <a href="<?php echo esc_url( home_url( '/people/' ) ); ?>" class="menuTtl">働く社員を知る</a>
+                    <a href="<?php echo esc_url( home_url( '/#people' ) ); ?>" class="menuTtl">働く社員を知る</a>
                 </li>
                 <li>
-                    <a href="<?php echo esc_url( home_url( '/culture/' ) ); ?>" class="menuTtl">働く環境を知る</a>
+                    <a href="<?php echo esc_url( home_url( '/#environment' ) ); ?>" class="menuTtl">働く環境を知る</a>
                     <ul class="subMenu">
-                        <li><a href="<?php echo esc_url( home_url( '/culture/' ) ); ?>">ENVIRONMENT 働く環境を知る</a></li>
+                        <li><a href="<?php echo esc_url( home_url( '/#environment' ) ); ?>">ENVIRONMENT 働く環境を知る</a></li>
                     </ul>
                 </li>
                 <li>
-                    <a href="<?php echo esc_url( home_url( '/recruitment/' ) ); ?>" class="menuTtl">採用情報</a>
-                    <ul class="subMenu">
-                        <li><a href="<?php echo esc_url( home_url( '/recruitment/#requirements' ) ); ?>">募集要項</a></li>
-                        <li><a href="<?php echo esc_url( home_url( '/recruitment/#flow' ) ); ?>">応募方法・選考フロー</a></li>
-                        <li><a href="<?php echo esc_url( home_url( '/recruitment/#message' ) ); ?>">採用担当者メッセージ</a></li>
-                        <li><a href="<?php echo esc_url( home_url( '/recruitment/#personality' ) ); ?>">求める人物像</a></li>
-                        <li><a href="<?php echo esc_url( home_url( '/recruitment/#faq' ) ); ?>">よくあるご質問</a></li>
-                    </ul>
+                    <a href="<?php echo esc_url( home_url( '/#footnav' ) ); ?>" class="menuTtl">採用情報</a>
                 </li>
             </ul>
             <ul class="menu02">
+                <?php $privacy = tecnes_opt( 'privacy_url' ); ?>
                 <li>
-                    <a href="https://www.chiyodakohan.co.jp/privacy.html" target="_blank" rel="noopener noreferrer">
+                    <a href="<?php echo $privacy ? esc_url( $privacy ) : esc_url( home_url( '/privacy/' ) ); ?>"<?php echo $privacy ? ' target="_blank" rel="noopener noreferrer"' : ''; ?>>
                         <span>プライバシーポリシー</span>
                     </a>
                 </li>
+                <?php if ( $corp = tecnes_opt( 'corp_site_url' ) ) : ?>
                 <li>
-                    <a href="https://www.chiyodakohan.co.jp/" target="_blank" rel="noopener noreferrer">
+                    <a href="<?php echo esc_url( $corp ); ?>" target="_blank" rel="noopener noreferrer">
                         <span>コーポレートサイト</span>
                     </a>
                 </li>
+                <?php endif; ?>
             </ul>
         </div>
 
         <div class="leftBox">
             <p class="footerLogo">
                 <a href="<?php echo esc_url( home_url( '/' ) ); ?>">
-                    <img src="<?php echo tecnes_img( 'logo.png' ); ?>" alt="千代田工販株式会社">
+                    <img src="<?php echo tecnes_img( 'logo.png' ); ?>" alt="<?php bloginfo( 'name' ); ?>">
                 </a>
             </p>
             <ul class="list01">
+                <?php if ( $founded = tecnes_opt( 'founded_date' ) ) : ?>
                 <li>
                     <span class="itemTtl">創立</span>
-                    <span>1947年（昭和22年）2月</span>
+                    <span><?php echo esc_html( $founded ); ?></span>
                 </li>
+                <?php endif; ?>
+                <?php if ( $capital = tecnes_opt( 'capital' ) ) : ?>
                 <li>
                     <span class="itemTtl">資本金</span>
-                    <span>200,000,000円</span>
+                    <span><?php echo esc_html( $capital ); ?></span>
                 </li>
+                <?php endif; ?>
             </ul>
+            <?php $postal = tecnes_opt( 'postal_code' ); $addr = tecnes_opt( 'address' ); ?>
+            <?php if ( $postal || $addr ) : ?>
             <p class="address">
-                〒104-0031 東京都中央区京橋2-8-7 読売京橋ビル
+                <?php echo esc_html( trim( $postal . ' ' . $addr ) ); ?>
                 <br class="u-sm-max">
             </p>
-            <a href="https://maps.app.goo.gl/kyobashi" target="_blank" rel="noopener noreferrer" class="mapLink">
+            <?php endif; ?>
+            <?php if ( $map = tecnes_opt( 'map_url' ) ) : ?>
+            <a href="<?php echo esc_url( $map ); ?>" target="_blank" rel="noopener noreferrer" class="mapLink">
                 <span>Googleマップ</span>
             </a>
-            <p class="tel">03-3564-5511</p>
+            <?php endif; ?>
+            <?php if ( $tel = tecnes_opt( 'tel' ) ) : ?>
+            <p class="tel"><?php echo esc_html( $tel ); ?></p>
+            <?php endif; ?>
             <ul class="list02">
+                <?php foreach ( array( 'station_1', 'station_2', 'station_3' ) as $key ) :
+                    $st = tecnes_opt( $key );
+                    if ( ! $st ) continue;
+                ?>
                 <li>
                     <span class="stationIco">地</span>
-                    <span>浅草線「宝町駅」より</span>
-                    <span class="time">徒歩4分</span>
+                    <span><?php echo esc_html( $st ); ?></span>
                 </li>
-                <li>
-                    <span class="stationIco">地</span>
-                    <span>銀座線「京橋駅」より</span>
-                    <span class="time">徒歩4分</span>
-                </li>
-                <li>
-                    <span class="stationIco">地</span>
-                    <span>東西線「日本橋駅」より</span>
-                    <span class="time">徒歩5分</span>
-                </li>
+                <?php endforeach; ?>
             </ul>
             <p class="copyright">
-                &copy; Chiyoda Kohan Co., LTD. All rights reserved.
+                &copy; <?php echo esc_html( tecnes_opt( 'company_en', get_bloginfo( 'name' ) ) ); ?> All rights reserved.
             </p>
         </div>
     </div>
