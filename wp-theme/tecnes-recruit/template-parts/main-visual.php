@@ -15,14 +15,6 @@ $slides = array(
                     <?php foreach ( $slides as $slide ) : ?>
                         <li class="splide__slide">
                             <span class="slideBg"></span>
-                            <span class="txtWrap">
-                                <span class="txtWrapInner">
-                                    <img src="<?php echo tecnes_img( 'mv_txt.png' ); ?>" alt="" width="800" height="80">
-                                </span>
-                                <span class="txtWrapInner">
-                                    <img src="<?php echo tecnes_img( 'mv_txt.png' ); ?>" alt="" width="800" height="80">
-                                </span>
-                            </span>
                             <span class="slideImg">
                                 <img src="<?php echo tecnes_image( $slide['slot'], $slide['fallback'] ); ?>" alt="" style="object-fit:cover;width:100%;height:100%;">
                             </span>
@@ -30,14 +22,6 @@ $slides = array(
                     <?php endforeach; ?>
                 </ul>
             </div>
-
-            <p class="mvScreen">
-                <img src="<?php echo tecnes_img( 'mv_screen.png' ); ?>" alt="" style="object-fit:cover;width:100%;height:100%;">
-            </p>
-
-            <h1 class="mvCopy">
-                <img src="<?php echo tecnes_img( 'mv_copy.png' ); ?>" alt="キミの想いが未来をともす" width="600" height="120">
-            </h1>
 
             <div class="progressWrap">
                 <div class="progressInner">

@@ -51,9 +51,4 @@ $members = array(
         </div>
     </div>
 
-    <div class="l-inner decorSection">
-        <p class="decorCopy">
-            <img src="<?php echo tecnes_img( 'people_copy.svg' ); ?>" alt="あなたの成長を全力でサポート" width="400" height="100">
-        </p>
-    </div>
 </section>

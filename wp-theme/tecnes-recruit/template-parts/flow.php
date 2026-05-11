@@ -22,8 +22,5 @@ $flow_img = tecnes_img( 'tecnes_work_flow_preview.png' );
             </div>
         </div>
 
-        <p class="flowCopy">
-            <img src="<?php echo tecnes_img( 'flow_txt.png' ); ?>" alt="" width="600" height="120">
-        </p>
     </div>
 </section>
