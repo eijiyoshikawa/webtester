@@ -1,7 +1,4 @@
 <?php
-/**
- * Read (intro copy) section
- */
 ?>
 <section id="read" class="read">
     <div class="l-inner readInner">

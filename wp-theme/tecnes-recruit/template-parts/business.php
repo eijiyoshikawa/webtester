@@ -1,7 +1,4 @@
 <?php
-/**
- * Business section with modal data
- */
 $trading_modals = array(
     array(
         'id'       => 'trading-01',

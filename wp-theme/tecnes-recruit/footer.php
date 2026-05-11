@@ -1,7 +1,4 @@
 <?php
-/**
- * Site footer
- */
 ?>
 <footer class="lFooter">
     <div class="lFooterInner">

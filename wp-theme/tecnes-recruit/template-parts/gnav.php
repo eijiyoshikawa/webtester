@@ -1,7 +1,4 @@
 <?php
-/**
- * Global navigation drawer (SP)
- */
 ?>
 <div class="lGnav" id="js-gnav">
     <div class="overlay" data-gnav-close></div>

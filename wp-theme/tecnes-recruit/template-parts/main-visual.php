@@ -1,7 +1,4 @@
 <?php
-/**
- * Main Visual hero slider
- */
 $slides = array(
     array( 'img1' => 'mv_slide01-01.png' ),
     array( 'img1' => 'mv_slide02-01.png' ),

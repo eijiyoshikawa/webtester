@@ -1,7 +1,4 @@
 <?php
-/**
- * Flow section
- */
 $flow_img = tecnes_img( 'tecnes_work_flow_preview.png' );
 ?>
 <section id="flow" class="flow">

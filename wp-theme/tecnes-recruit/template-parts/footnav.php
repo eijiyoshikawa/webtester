@@ -1,7 +1,4 @@
 <?php
-/**
- * FootNav (CTA) section above the global footer
- */
 ?>
 <div class="footNav">
     <div class="l-inner footNavInner">

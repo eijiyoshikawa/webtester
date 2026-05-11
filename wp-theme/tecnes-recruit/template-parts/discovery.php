@@ -1,7 +1,4 @@
 <?php
-/**
- * Discovery section
- */
 ?>
 <section id="discovery" class="discovery">
     <div class="discoveryBg">

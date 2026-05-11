@@ -1,7 +1,4 @@
 <?php
-/**
- * People section – Swiper carousel
- */
 $members = array(
     array( 'thumb' => 'people_thumbs01@2x.jpg', 'catch' => '先輩に支えられ始まった千代田工販での挑戦 次は私が後輩を支える番だ',                                     'dept' => '電機システム部',           'role' => '営業職', 'name' => 'M.M', 'year' => '2017年入社' ),
     array( 'thumb' => 'people_thumbs02@2x.jpg', 'catch' => '関わるすべての人のベクトルを合わせて 大型プロジェクトに挑む',                                           'dept' => 'プラント産業システム部',   'role' => '営業職', 'name' => 'Y.T', 'year' => '2014年入社' ),

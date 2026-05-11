@@ -1,7 +1,4 @@
 <?php
-/**
- * Environment section
- */
 $cards = array(
     array( 'img' => 'environment_img01@2x.jpg', 'label' => '福利厚生' ),
     array( 'img' => 'environment_img02@2x.jpg', 'label' => '教育制度' ),
