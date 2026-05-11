@@ -151,26 +151,12 @@ figure {
   100% { transform: translateX(-100%); }
 }
 
-/* ===== スクロール連動フェードイン ===== */
-.js-animate.fadeIn01 {
-  opacity: 0;
-  transform: translateY(2rem);
-  transition: opacity 1.2s cubic-bezier(0.215, 0.61, 0.355, 1),
-              transform 1.25s cubic-bezier(0.215, 0.61, 0.355, 1);
-}
-
-.js-animate.fadeIn01.is-animate {
-  opacity: 1;
-  transform: none;
-}
-
+/* ===== js-animate（スクロール連動アニメ）はホバー以外のモーション抑制のため即時表示 ===== */
+.js-animate,
+.js-animate.fadeIn01,
 .js-animate.fade {
-  opacity: 0;
-  transition: opacity 1s ease;
-}
-
-.js-animate.fade.is-animate {
-  opacity: 1;
+  opacity: 1 !important;
+  transform: none !important;
 }
 
 /* ===== 共通見出し .c-ttl-01 ===== */

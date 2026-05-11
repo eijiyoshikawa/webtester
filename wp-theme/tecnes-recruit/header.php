@@ -22,31 +22,16 @@
 
         <ul class="menu">
             <li><a href="<?php echo esc_url( home_url( '/#business' ) ); ?>"><span class="menuJpn">仕事を知る</span></a></li>
-            <li><a href="<?php echo esc_url( home_url( '/people/' ) ); ?>"><span class="menuJpn">働く社員を知る</span></a></li>
-            <li><a href="<?php echo esc_url( home_url( '/culture/' ) ); ?>"><span class="menuJpn">働く環境を知る</span></a></li>
-            <li><a href="<?php echo esc_url( home_url( '/recruitment/' ) ); ?>"><span class="menuJpn">採用情報</span></a></li>
+            <li><a href="<?php echo esc_url( home_url( '/#people' ) ); ?>"><span class="menuJpn">働く社員を知る</span></a></li>
+            <li><a href="<?php echo esc_url( home_url( '/#environment' ) ); ?>"><span class="menuJpn">働く環境を知る</span></a></li>
+            <li><a href="<?php echo esc_url( home_url( '/#footnav' ) ); ?>"><span class="menuJpn">採用情報</span></a></li>
         </ul>
 
         <ul class="btn">
-            <li class="btnRecruit">
-                <a href="<?php echo esc_url( home_url( '/recruitment/#requirements' ) ); ?>">募集要項</a>
-            </li>
             <li class="btnEntry">
-                <span>ENTRY</span>
-                <div class="entryBox">
-                    <ul class="entryBoxList">
-                        <li>
-                            <a href="<?php echo tecnes_mynavi_url(); ?>" target="_blank" rel="noopener noreferrer">
-                                <img src="<?php echo tecnes_image( 'btn_mynavi', 'header_btn_mynavi.png' ); ?>" alt="マイナビ" width="200" height="60">
-                            </a>
-                        </li>
-                        <li>
-                            <a href="<?php echo tecnes_careertasu_url(); ?>" target="_blank" rel="noopener noreferrer">
-                                <img src="<?php echo tecnes_image( 'btn_careertasu', 'header_btn_career-tasu.png' ); ?>" alt="キャリタス" width="200" height="60">
-                            </a>
-                        </li>
-                    </ul>
-                </div>
+                <a href="<?php echo tecnes_line_url(); ?>" target="_blank" rel="noopener noreferrer" class="btnEntryLink">
+                    <span class="btnEntryLabel">LINEで応募</span>
+                </a>
             </li>
         </ul>
 

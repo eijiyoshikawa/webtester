@@ -1,0 +1,101 @@
+/* ===== SP 専用 LINE 固定 CTA バナー ===== */
+
+/* PC では完全に非表示 */
+.spLineCta { display: none; }
+
+@media screen and (max-width: 767px) {
+  .spLineCta {
+    position: fixed;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 9500;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    padding: 14px 18px calc(14px + env(safe-area-inset-bottom)) 18px;
+    background: linear-gradient(135deg, #06C755 0%, #04A847 100%);
+    color: #fff;
+    text-decoration: none;
+    box-shadow: 0 -4px 16px rgba(0, 0, 0, 0.18);
+    overflow: hidden;
+  }
+
+  /* キラッと光るシマー演出 */
+  .spLineCta::after {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(120deg, transparent 30%, rgba(255, 255, 255, 0.18) 50%, transparent 70%);
+    background-size: 220% 100%;
+    background-position: 200% 0;
+    animation: tecnesLineShimmer 3.2s linear infinite;
+    pointer-events: none;
+  }
+
+  .spLineCtaIco {
+    flex: 0 0 auto;
+    width: 36px;
+    height: 36px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    background: rgba(255, 255, 255, 0.18);
+    color: #fff;
+  }
+  .spLineCtaIco svg { width: 22px; height: 22px; }
+
+  .spLineCtaTxt {
+    flex: 1 1 auto;
+    display: flex;
+    flex-direction: column;
+    line-height: 1.2;
+    min-width: 0;
+  }
+  .spLineCtaTxtMain {
+    font-size: 16px;
+    font-weight: 700;
+    letter-spacing: 0.02em;
+  }
+  .spLineCtaTxtSub {
+    font-size: 11px;
+    opacity: 0.85;
+    margin-top: 4px;
+    letter-spacing: 0.04em;
+  }
+
+  .spLineCtaArrow {
+    flex: 0 0 auto;
+    font-size: 28px;
+    line-height: 1;
+    font-weight: 300;
+    animation: tecnesLineArrow 1.4s ease-in-out infinite;
+  }
+
+  /* CTA が表示されているとき、フッターのコンテンツが隠れないよう余白を確保 */
+  body { padding-bottom: 80px; }
+}
+
+/* タップで軽くフィードバック */
+.spLineCta:active { transform: translateY(1px); transition: transform 0.08s; }
+
+/* 矢印スライド */
+@keyframes tecnesLineArrow {
+  0%, 100% { transform: translateX(0); opacity: 0.85; }
+  50%      { transform: translateX(6px); opacity: 1; }
+}
+
+/* シマー */
+@keyframes tecnesLineShimmer {
+  0%   { background-position: 200% 0; }
+  100% { background-position: -200% 0; }
+}
+
+/* OS のモーション軽減設定を尊重 */
+@media (prefers-reduced-motion: reduce) {
+  .spLineCtaArrow,
+  .spLineCta::after {
+    animation: none !important;
+  }
+}

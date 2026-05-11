@@ -85,7 +85,7 @@
   border-top: 0.5vw solid rgba(28, 44, 67, 0.5);
   border-right: 0.5vw solid rgba(28, 44, 67, 0.5);
   transform: rotate(45deg);
-  animation: scrollArrowBounce 1.2s ease-in-out infinite;
+  animation: none;
 }
 
 @keyframes scrollArrowBounce {

@@ -121,12 +121,12 @@
 
 .txtLoopInner {
   display: inline-block;
-  animation: txtloop 50s linear infinite;
+  animation: none;
 }
 
 .txtLoopInner2 {
   display: inline-block;
-  animation: txtloop 50s linear infinite;
+  animation: none;
   animation-delay: -25s;
 }
 

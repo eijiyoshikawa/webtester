@@ -70,20 +70,14 @@
 
 /* テキストループラッパー */
 .txtWrap {
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  width: 100%;
-  overflow: hidden;
-  display: flex;
-  white-space: nowrap;
-  z-index: 5;
+  /* マーキー演出は停止（ホバー以外のモーション抑制） */
+  display: none;
 }
 
 .txtWrapInner {
   display: inline-block;
   flex-shrink: 0;
-  animation: txtloop02 20s linear infinite;
+  animation: none;
 }
 
 .txtWrapInner img {

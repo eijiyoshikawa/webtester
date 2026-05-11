@@ -59,12 +59,12 @@
 
 .image01 {
   top: 0;
-  animation: imgloop01 30s linear infinite;
+  animation: none;
 }
 
 .image02 {
   top: 100%;
-  animation: imgloop01 30s linear infinite;
+  animation: none;
   animation-delay: -15s;
 }
 

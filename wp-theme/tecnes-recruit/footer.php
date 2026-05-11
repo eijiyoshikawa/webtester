@@ -95,12 +95,9 @@
             </p>
         </div>
     </div>
-
-    <p class="footerCopy">
-        <img src="<?php echo tecnes_img( 'footer_copy.png' ); ?>" alt="キミの想いが未来をともす" width="1280" height="300" style="width:100%;height:auto;">
-    </p>
 </footer>
 
+<?php get_template_part( 'template-parts/line-cta' ); ?>
 <?php wp_footer(); ?>
 </body>
 </html>

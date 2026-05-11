@@ -7,7 +7,7 @@ if ( ! defined( 'ABSPATH' ) ) {
     exit;
 }
 
-define( 'TECNES_THEME_VERSION', '1.5.0' );
+define( 'TECNES_THEME_VERSION', '1.6.0' );
 
 /**
  * ファイル更新時刻ベースで自動キャッシュバスティング。
@@ -52,6 +52,7 @@ function tecnes_enqueue_assets() {
         'environment' => 'Environment.css',
         'footnav'     => 'FootNav.css',
         'footer'      => 'Footer.css',
+        'linecta'     => 'LineCta.css',
     );
     foreach ( $sections as $handle => $file ) {
         wp_enqueue_style( 'tecnes-' . $handle, $theme_uri . '/assets/css/' . $file, array( 'tecnes-globals' ), tecnes_asset_ver( 'assets/css/' . $file ) );
@@ -62,13 +63,15 @@ function tecnes_enqueue_assets() {
     wp_enqueue_script( 'splide', 'https://cdn.jsdelivr.net/npm/@splidejs/splide@4.1.4/dist/js/splide.min.js', array(), '4.1.4', true );
     wp_enqueue_script( 'swiper', 'https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js',              array(), '11.0.0', true );
 
+    // scroll-animator.js は意図的に enqueue しない:
+    // スクロール連動の fadeIn 等はホバー以外のモーションを抑えるためオフ。
+    // globals.css 側でも .js-animate を即時表示化している。
     foreach ( array(
         'tecnes-header'          => array( 'header.js', array() ),
         'tecnes-mainvisual'      => array( 'mainvisual.js', array( 'splide' ) ),
         'tecnes-business-modal'  => array( 'business-modal.js', array() ),
         'tecnes-people-swiper'   => array( 'people-swiper.js', array( 'swiper' ) ),
         'tecnes-about-counter'   => array( 'about-counter.js', array() ),
-        'tecnes-scroll-animator' => array( 'scroll-animator.js', array() ),
     ) as $handle => $cfg ) {
         list( $file, $deps ) = $cfg;
         wp_enqueue_script( $handle, $theme_uri . '/assets/js/' . $file, $deps, tecnes_asset_ver( 'assets/js/' . $file ), true );
@@ -118,15 +121,18 @@ function tecnes_customize_register( $wp_customize ) {
 
     $fields = array(
         'company_en'    => array( 'TECNES Inc.', '英語社名（著作権表記等で使用）' ),
-        'founded_date'  => array( '', '創立（例: 2010年）' ),
-        'capital'       => array( '', '資本金（例: 10,000,000円）' ),
-        'postal_code'   => array( '', '郵便番号（例: 〒000-0000）' ),
-        'address'       => array( '', '住所' ),
-        'map_url'       => array( '', 'Googleマップ URL' ),
-        'tel'           => array( '', '電話番号（例: 00-0000-0000）' ),
+        'ceo'           => array( '田中 義和', '代表取締役' ),
+        'founded_date'  => array( '平成18年12月4日', '創立' ),
+        'capital'       => array( '1,000万円', '資本金' ),
+        'postal_code'   => array( '〒577-0063', '郵便番号' ),
+        'address'       => array( '大阪府東大阪市川俣1-6-10', '住所' ),
+        'map_url'       => array( 'https://maps.google.com/?q=%E3%80%92577-0063%20%E5%A4%A7%E9%98%AA%E5%BA%9C%E6%9D%B1%E5%A4%A7%E9%98%AA%E5%B8%82%E5%B7%9D%E4%BF%A31-6-10', 'Googleマップ URL' ),
+        'tel'           => array( '', '電話番号（例: 06-0000-0000）' ),
         'station_1'     => array( '', '最寄り駅 1（例: ○○線「○○駅」より 徒歩○分）' ),
         'station_2'     => array( '', '最寄り駅 2' ),
         'station_3'     => array( '', '最寄り駅 3' ),
+        'license'       => array( '国土交通大臣　許可（般-6）第27222号', '建設業許可番号' ),
+        'employees'     => array( '22', '従業員数（数字のみ）' ),
     );
     foreach ( $fields as $key => $cfg ) {
         list( $default, $label ) = $cfg;
@@ -148,8 +154,7 @@ function tecnes_customize_register( $wp_customize ) {
     ) );
 
     $links = array(
-        'mynavi_url'      => 'マイナビ エントリー URL',
-        'careertasu_url'  => 'キャリタス エントリー URL',
+        'line_url'        => 'LINE エントリー URL（公式LINE友達追加リンク等）',
         'corp_site_url'   => 'コーポレートサイト URL',
         'privacy_url'     => 'プライバシーポリシー URL（空ならテーマ内 /privacy/ ）',
     );
@@ -248,22 +253,16 @@ add_action( 'customize_register', function ( $wp_customize ) {
         'env_6' => '先輩たちの声',
     ) );
 
-    // ===== ロゴ・採用ボタン =====
-    tecnes_register_image_section( $wp_customize, 'tecnes_imgs_brand', 'ロゴ・採用ボタン画像', 45, array(
-        'logo'             => 'サイトロゴ',
-        'btn_mynavi'       => 'マイナビボタン画像',
-        'btn_careertasu'   => 'キャリタスボタン画像',
+    // ===== ロゴ =====
+    tecnes_register_image_section( $wp_customize, 'tecnes_imgs_brand', 'ロゴ', 45, array(
+        'logo' => 'サイトロゴ',
     ) );
 } );
 
 /**
- * エントリー（マイナビ）リンク。未設定なら #entry にフォールバック。
+ * LINE エントリーリンク。未設定なら #footnav にフォールバック。
  */
-function tecnes_mynavi_url() {
-    $u = tecnes_opt( 'mynavi_url' );
-    return $u ? esc_url( $u ) : '#entry';
-}
-function tecnes_careertasu_url() {
-    $u = tecnes_opt( 'careertasu_url' );
-    return $u ? esc_url( $u ) : '#entry';
+function tecnes_line_url() {
+    $u = tecnes_opt( 'line_url' );
+    return $u ? esc_url( $u ) : '#footnav';
 }

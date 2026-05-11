@@ -8,7 +8,7 @@
                 <h2 class="ttl01 u-md-min"><span>CONTENTS</span></h2>
                 <ul class="list01">
                     <li class="btnTop">
-                        <a href="<?php echo esc_url( home_url( '/' ) ); ?>" class="menuTtl">TOP</a>
+                        <a href="<?php echo esc_url( home_url( '/' ) ); ?>" class="menuTtl" data-gnav-close>TOP</a>
                     </li>
                     <li class="w01">
                         <a href="<?php echo esc_url( home_url( '/#business' ) ); ?>" class="menuTtl" data-gnav-close>仕事を知る</a>
@@ -18,37 +18,21 @@
                         </ul>
                     </li>
                     <li class="w02">
-                        <a href="<?php echo esc_url( home_url( '/people/' ) ); ?>" class="menuTtl">働く社員を知る</a>
+                        <a href="<?php echo esc_url( home_url( '/#people' ) ); ?>" class="menuTtl" data-gnav-close>働く社員を知る</a>
                     </li>
                     <li class="w01">
-                        <a href="<?php echo esc_url( home_url( '/culture/' ) ); ?>" class="menuTtl">働く環境を知る</a>
-                        <ul class="subMenu">
-                            <li><a href="<?php echo esc_url( home_url( '/culture/' ) ); ?>">ENVIRONMENT 働く環境を知る</a></li>
-                        </ul>
+                        <a href="<?php echo esc_url( home_url( '/#environment' ) ); ?>" class="menuTtl" data-gnav-close>働く環境を知る</a>
                     </li>
                     <li class="w02">
-                        <a href="<?php echo esc_url( home_url( '/recruitment/' ) ); ?>" class="menuTtl">採用情報</a>
-                        <ul class="subMenu">
-                            <li><a href="<?php echo esc_url( home_url( '/recruitment/#requirements' ) ); ?>">募集要項</a></li>
-                            <li><a href="<?php echo esc_url( home_url( '/recruitment/#flow' ) ); ?>">応募方法・選考フロー</a></li>
-                        </ul>
+                        <a href="<?php echo esc_url( home_url( '/#footnav' ) ); ?>" class="menuTtl" data-gnav-close>採用情報</a>
                     </li>
                 </ul>
-                <p class="btn01">
-                    <a href="<?php echo esc_url( home_url( '/recruitment/#requirements' ) ); ?>" data-gnav-close>
-                        <span class="txt">募集要項</span>
-                        <span class="ico c-ico c-ico-arrow01"></span>
-                    </a>
-                </p>
             </div>
             <div class="leftBox">
                 <h2 class="ttl01"><span>ENTRY</span></h2>
                 <ul class="list02">
                     <li>
-                        <a href="<?php echo tecnes_mynavi_url(); ?>" target="_blank" rel="noopener noreferrer">マイナビからエントリー</a>
-                    </li>
-                    <li>
-                        <a href="<?php echo tecnes_careertasu_url(); ?>" target="_blank" rel="noopener noreferrer">キャリタスからエントリー</a>
+                        <a href="<?php echo tecnes_line_url(); ?>" target="_blank" rel="noopener noreferrer" data-gnav-close>LINEで応募する</a>
                     </li>
                 </ul>
             </div>

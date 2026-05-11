@@ -2,13 +2,6 @@
 .lFooter {
   position: relative;
   background-color: rgb(28, 44, 67);
-  padding: 0 0 114.667vw;
-}
-
-@media print, screen and (min-width: 768px) {
-  .lFooter {
-    padding: 0;
-  }
 }
 
 .lFooterInner {
@@ -195,18 +188,6 @@
   letter-spacing: 0.05em;
 }
 
-/* ===== フッターコピー（巨大装飾）===== */
-.footerCopy {
-  width: 100%;
-  overflow: hidden;
-  line-height: 0;
-}
-
-.footerCopy img {
-  width: 100%;
-  height: auto;
-}
-
 /* ===== タブレット（〜1024px）===== */
 @media screen and (max-width: 1024px) {
   .lFooterInner {
@@ -229,13 +210,9 @@
 
 /* ===== モバイル（〜767px）===== */
 @media screen and (max-width: 767px) {
-  .lFooter {
-    padding: 0 0 114.667vw;
-  }
-
   .lFooterInner {
     display: block;
-    padding: 10.6667vw 5.33333vw 0;
+    padding: 10.6667vw 5.33333vw;
   }
 
   .rightBox {

@@ -173,7 +173,7 @@
   height: 2px;
   background-color: rgb(28, 44, 67);
   transform: translateY(-50%);
-  animation: arrowSlide 1.2s ease-in-out infinite;
+  animation: none;
 }
 
 .arrowIco::after {
@@ -186,7 +186,7 @@
   border-right: 2px solid rgb(28, 44, 67);
   border-bottom: 2px solid rgb(28, 44, 67);
   transform: translateY(-50%) rotate(-45deg);
-  animation: arrowSlide 1.2s ease-in-out infinite;
+  animation: none;
 }
 
 @keyframes arrowSlide {
