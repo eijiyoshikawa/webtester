@@ -1,67 +1,63 @@
 # TECNES Recruit — WordPress テーマ
 
-千代田工販株式会社 新卒採用LP（[tecnes_lp_001](https://github.com/hmatsuoka-glitch/tecnes_lp_001) / Next.js 14版）の **オリジナル WordPress テーマ移植版**です。
+株式会社TECNES 新卒採用LP用 WordPress テーマ。
 
-オリジナル Next.js プロジェクト内の `wordpress-theme/tecnes-recruit/` をベースに、軽微なクリーンアップを加えた上で `wp-theme/tecnes-recruit/` に配置しています。
+## 🖼 画像の差し替え（重要）
 
-## 構成
+**FTP / ZIP 再アップロード不要。** WordPress 管理画面のメディアライブラリにアップロード → カスタマイザーで割り当てるだけで反映されます。
 
-```
-wp-theme/tecnes-recruit/
-├── style.css                 … テーマヘッダー (必須)
-├── functions.php             … 設定 / アセット enqueue / ヘルパー関数 (tecnes_img)
-├── header.php                … 共通ヘッダー（PC ナビ + ハンバーガー + ENTRY ドロップダウン）
-├── footer.php                … 共通フッター（サイトマップ + 会社情報 + アクセス）
-├── front-page.php            … TOP（全セクションを get_template_part で連結）
-├── index.php                 … フォールバック（front-page と同内容）
-├── template-parts/
-│   ├── main-visual.php       … MV (Splide スライダー)
-│   ├── read.php              … リード文 + 縦長画像
-│   ├── business.php          … 事業紹介カード + モーダル（JSON 経由でJSに渡す）
-│   ├── flow.php              … 仕事の流れ図 (PC: 静止画 / SP: 横スクロール)
-│   ├── about.php             … 数字カード（IntersectionObserver でカウントアップ）
-│   ├── discovery.php         … 背景画像セクション
-│   ├── people.php            … 社員紹介 Swiper カルーセル
-│   ├── environment.php       … 環境紹介グリッド
-│   ├── footnav.php           … フッター上部 CTA
-│   └── gnav.php              … モバイル用ドロワー
-└── assets/
-    ├── css/   (13 files: globals + 12 section CSS)
-    ├── js/    (6 files: header / mainvisual / business-modal / people-swiper / about-counter / scroll-animator)
-    ├── vendor/ (Splide & Swiper CSS)
-    └── images/ (94 ファイル)
-```
+### 手順
 
-## レスポンシブ / 画像チェック結果
+1. **WordPress 管理画面 → メディア → 新規追加** で必要な写真を全てアップロード
+2. **外観 → カスタマイズ** を開く
+3. 以下のセクションが追加されているので、それぞれで画像を選択
 
-事前に静的解析を実施済み：
+| カスタマイザーセクション | 配置 | 枚数 |
+|---|---|---|
+| **MV スライダー画像** | トップヒーロー画像（自動切替） | 4 |
+| **セクションメイン画像** | READ / 商社カード / モノづくりカード / ABOUT / DISCOVERY 背景 / PEOPLE メイン | 6 |
+| **PEOPLE 社員サムネイル** | 「働く社員を知る」カルーセル | 7 |
+| **BUSINESS モーダル画像** | 各事業の詳細モーダル | 8 |
+| **ENVIRONMENT カード画像** | 「働く環境を知る」グリッド | 6 |
+| **ロゴ・採用ボタン画像** | サイトロゴ / マイナビ / キャリタス | 3 |
 
-- ✅ `header.php:9` に viewport meta あり（`width=device-width, initial-scale=1.0, minimum-scale=1.0`）
-- ✅ メディアクエリ計31個：`globals.css` に9個（`max-width:374px` / `max-width:767px` SP / `max-width:1024px` タブレット / `min-width:768/1025/1281px` PC）、各セクションCSSに2-3個ずつ
-- ✅ 全 PHP ファイルで参照される **49枚すべての画像** が `assets/images/` に存在（欠落ゼロ）
-- ✅ PHP 構文エラーなし
+未設定のスロットはテーマ同梱のフォールバック画像（プレースホルダー）が自動で表示されます。
 
-## セットアップ手順
+### なぜこの方式か
 
-1. **テーマ配置**
-   `wp-theme/tecnes-recruit/` を WordPress の `wp-content/themes/tecnes-recruit/` に丸ごとコピー。
+- ✅ サーバー／CDN がテーマフォルダ内画像を強くキャッシュしていても、メディアライブラリの画像URLは毎回ユニーク（`/wp-content/uploads/yyyy/mm/file.jpg`）なのでキャッシュを完全回避
+- ✅ 画像差し替えのために FTP / ZIP 再アップロードが不要
+- ✅ 「画像が変わらない」トラブルが構造的に起きない
 
-2. **テーマ有効化**
-   管理画面 → 外観 → テーマ → 「TECNES Recruit」を有効化。
+## 📝 テキスト・連絡先の編集
 
-3. **表示設定**
-   管理画面 → 設定 → 表示設定 → 「ホームページの表示」を **最新の投稿** または、**固定ページ（任意の空ページを front-page として割り当て）** に設定すれば `front-page.php` が描画されます。
+**外観 → カスタマイズ** に以下のセクションがあります：
 
-4. **パーマリンク**
-   管理画面 → 設定 → パーマリンク → 「投稿名」(`/%postname%/`) を保存。
+- **会社情報** — 創立 / 資本金 / 郵便番号 / 住所 / Googleマップ URL / 電話番号 / 最寄り駅 / 英語社名
+- **採用エントリーリンク** — マイナビ URL / キャリタス URL / コーポレートサイト URL / プライバシーポリシー URL
 
-## 仕様メモ
+## 📋 構造編集（数字や社員情報）
 
-- **Splide / Swiper** は CDN (jsDelivr) と同梱の `assets/vendor/` の両方で読み込まれます。CSP の都合でCDNを切りたい場合は `functions.php` の `wp_enqueue_script('splide', ...)` / `wp_enqueue_script('swiper', ...)` を同梱版に差し替えてください。
-- **画像** は `tecnes_img( 'filename.ext' )` ヘルパーで参照（`functions.php:97`）。`get_template_directory_uri() . '/assets/images/'` を組み立てます。
-- **ナビゲーション** の `/people/`, `/culture/`, `/recruitment/` 等のリンクは下層ページを想定。1枚LPで運用する場合は TOP 内のアンカー (`#business`, `#flow`, `#people` 等) にリダイレクトされる構成になっています。
-- **フォント**: Noto Sans JP + Poppins を Google Fonts から読み込み（`functions.php:38`）。
+下記の固有データは PHP ファイルを直接編集してください：
 
-## オリジナルからの変更点
+| 内容 | 編集ファイル |
+|---|---|
+| ABOUT 8項目の数字 | `template-parts/about.php:3-13` |
+| BUSINESS モーダル 8件のテキスト | `template-parts/business.php:5-81` |
+| PEOPLE 社員 7名のキャッチコピー・部署 | `template-parts/people.php:3-9` |
 
-- `assets/css/globals.css` 先頭の未コンパイル `@tailwind base/components/utilities` 3行を削除（Next.js 開発環境専用のディレクティブで、ブラウザでは無視される。実際のマークアップでは Tailwind ユーティリティを使っていないため影響なし）。
+## 🛠 セットアップ
+
+1. `wp-theme/tecnes-recruit/` を WordPress の `wp-content/themes/` にコピー
+2. 外観 → テーマ → 「TECNES Recruit」を有効化
+3. 上記「画像の差し替え」「テキスト・連絡先の編集」を実施
+
+## ✅ 技術仕様
+
+- レスポンシブ BP: 374 / 767 / 768 / 1024 / 1025 / 1281px
+- 依存: Splide (MV スライダー) / Swiper (PEOPLE カルーセル) — どちらも CDN + 同梱 vendor の両方を読み込み
+- フォント: Noto Sans JP + Poppins (Google Fonts)
+- 全画像参照は `tecnes_image($slot, $fallback)` ヘルパー経由
+  - $slot = Customizer 設定キー（メディアライブラリ画像）
+  - $fallback = テーマ同梱フォールバック画像名
+- ファイル更新時刻ベースのキャッシュバスティング（`filemtime`）

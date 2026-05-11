@@ -2,7 +2,7 @@
 ?>
 <section id="discovery" class="discovery">
     <div class="discoveryBg">
-        <img src="<?php echo tecnes_img( 'discovery_bg@2x.jpg' ); ?>" alt="" style="object-fit:cover;width:100%;height:100%;">
+        <img src="<?php echo tecnes_image( 'discovery_bg', 'discovery_bg@2x.jpg' ); ?>" alt="" style="object-fit:cover;width:100%;height:100%;">
     </div>
     <div class="l-inner discoveryInner">
         <h2 class="ttl01 js-animate fadeIn01">

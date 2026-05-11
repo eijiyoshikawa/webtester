@@ -47,7 +47,7 @@
         <div class="leftBox">
             <p class="footerLogo">
                 <a href="<?php echo esc_url( home_url( '/' ) ); ?>">
-                    <img src="<?php echo tecnes_img( 'logo.png' ); ?>" alt="<?php bloginfo( 'name' ); ?>">
+                    <img src="<?php echo tecnes_image( 'logo', 'logo.png' ); ?>" alt="<?php bloginfo( 'name' ); ?>">
                 </a>
             </p>
             <ul class="list01">

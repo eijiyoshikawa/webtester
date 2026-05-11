@@ -25,14 +25,14 @@
             <p class="imageWrap">
                 <span class="image01">
                     <picture>
-                        <source srcset="<?php echo tecnes_img( 'read_img01@2x.jpg' ); ?>">
-                        <img src="<?php echo tecnes_img( 'read_img01@2x.jpg' ); ?>" alt="">
+                        <source srcset="<?php echo tecnes_image( 'read_main', 'read_img01@2x.jpg' ); ?>">
+                        <img src="<?php echo tecnes_image( 'read_main', 'read_img01@2x.jpg' ); ?>" alt="">
                     </picture>
                 </span>
                 <span class="image02">
                     <picture>
-                        <source srcset="<?php echo tecnes_img( 'read_img01@2x.jpg' ); ?>">
-                        <img src="<?php echo tecnes_img( 'read_img01@2x.jpg' ); ?>" alt="">
+                        <source srcset="<?php echo tecnes_image( 'read_main', 'read_img01@2x.jpg' ); ?>">
+                        <img src="<?php echo tecnes_image( 'read_main', 'read_img01@2x.jpg' ); ?>" alt="">
                     </picture>
                 </span>
             </p>

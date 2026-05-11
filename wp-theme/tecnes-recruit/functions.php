@@ -7,7 +7,7 @@ if ( ! defined( 'ABSPATH' ) ) {
     exit;
 }
 
-define( 'TECNES_THEME_VERSION', '1.4.0' );
+define( 'TECNES_THEME_VERSION', '1.5.0' );
 
 /**
  * ファイル更新時刻ベースで自動キャッシュバスティング。
@@ -81,6 +81,24 @@ function tecnes_img( $name ) {
 }
 
 /**
+ * コンテンツ画像スロット。
+ * Customizer で「コンテンツ画像」セクションから個別にメディアライブラリ画像を割り当て可能。
+ * 未設定なら $fallback_filename のテーマ同梱画像を返す。
+ *
+ * これにより:
+ * - サーバー／CDN がテーマフォルダ内画像を強くキャッシュしていても、
+ *   メディアライブラリ画像 (uploads/) は別の URL なのでキャッシュを回避可能
+ * - WP 管理画面から画像差し替えが可能（FTP / ZIP 再アップ不要）
+ */
+function tecnes_image( $slot_key, $fallback_filename = null ) {
+    $url = get_theme_mod( 'tecnes_image_' . $slot_key );
+    if ( $url ) {
+        return esc_url( $url );
+    }
+    return $fallback_filename ? tecnes_img( $fallback_filename ) : '';
+}
+
+/**
  * Customizer 設定値の取得（デフォルト付き）。
  * 管理画面: 外観 → カスタマイズ → 会社情報 / 採用エントリーリンク から編集可能。
  */
@@ -148,6 +166,95 @@ function tecnes_customize_register( $wp_customize ) {
     }
 }
 add_action( 'customize_register', 'tecnes_customize_register' );
+
+/**
+ * コンテンツ画像セクション登録ヘルパー
+ */
+function tecnes_register_image_section( $wp_customize, $section_id, $title, $priority, $slots ) {
+    $wp_customize->add_section( $section_id, array(
+        'title'    => $title,
+        'priority' => $priority,
+    ) );
+    foreach ( $slots as $slot_key => $label ) {
+        $setting_id = 'tecnes_image_' . $slot_key;
+        $wp_customize->add_setting( $setting_id, array(
+            'default'           => '',
+            'sanitize_callback' => 'esc_url_raw',
+        ) );
+        $wp_customize->add_control( new WP_Customize_Image_Control(
+            $wp_customize,
+            $setting_id,
+            array(
+                'label'       => $label,
+                'section'     => $section_id,
+                'description' => __( '空欄ならテーマ同梱のフォールバック画像が表示されます。', 'tecnes-recruit' ),
+            )
+        ) );
+    }
+}
+
+/**
+ * コンテンツ画像 Customizer 登録（カスタマイザー登録の続き）
+ */
+add_action( 'customize_register', function ( $wp_customize ) {
+    // ===== Main Visual スライダー =====
+    tecnes_register_image_section( $wp_customize, 'tecnes_imgs_mv', 'MV スライダー画像', 40, array(
+        'mv_slide_1' => 'MV スライド 1',
+        'mv_slide_2' => 'MV スライド 2',
+        'mv_slide_3' => 'MV スライド 3',
+        'mv_slide_4' => 'MV スライド 4',
+    ) );
+
+    // ===== Section main images =====
+    tecnes_register_image_section( $wp_customize, 'tecnes_imgs_sections', 'セクションメイン画像', 41, array(
+        'read_main'        => 'READ セクション 右側画像',
+        'trading_card'     => '商社のしごとカード 画像',
+        'manufacturing_card' => 'モノづくりのしごとカード 画像',
+        'about_main'       => 'ABOUT セクション 下部画像',
+        'discovery_bg'     => 'DISCOVERY セクション 背景画像',
+        'people_main'      => 'PEOPLE セクション メイン画像',
+    ) );
+
+    // ===== People カード =====
+    tecnes_register_image_section( $wp_customize, 'tecnes_imgs_people', 'PEOPLE 社員サムネイル', 42, array(
+        'people_1' => '社員 1',
+        'people_2' => '社員 2',
+        'people_3' => '社員 3',
+        'people_4' => '社員 4',
+        'people_5' => '社員 5',
+        'people_6' => '社員 6',
+        'people_7' => '社員 7',
+    ) );
+
+    // ===== Business モーダル =====
+    tecnes_register_image_section( $wp_customize, 'tecnes_imgs_business', 'BUSINESS モーダル画像', 43, array(
+        'biz_trading_1' => '商社 #01 エネルギー・電力',
+        'biz_trading_2' => '商社 #02 プラント産業・電機',
+        'biz_trading_3' => '商社 #03 交通・施設',
+        'biz_trading_4' => '商社 #04 環境機械',
+        'biz_trading_5' => '商社 #05 情報・通信',
+        'biz_trading_6' => '商社 #06 国際事業',
+        'biz_mfg_1'     => 'モノづくり #01 自動車部品',
+        'biz_mfg_2'     => 'モノづくり #02 UV システム',
+    ) );
+
+    // ===== Environment カード =====
+    tecnes_register_image_section( $wp_customize, 'tecnes_imgs_env', 'ENVIRONMENT カード画像', 44, array(
+        'env_1' => '福利厚生',
+        'env_2' => '教育制度',
+        'env_3' => 'オフィス紹介',
+        'env_4' => '社員座談会 パパ・ママトーク',
+        'env_5' => '社員座談会 社風トーク',
+        'env_6' => '先輩たちの声',
+    ) );
+
+    // ===== ロゴ・採用ボタン =====
+    tecnes_register_image_section( $wp_customize, 'tecnes_imgs_brand', 'ロゴ・採用ボタン画像', 45, array(
+        'logo'             => 'サイトロゴ',
+        'btn_mynavi'       => 'マイナビボタン画像',
+        'btn_careertasu'   => 'キャリタスボタン画像',
+    ) );
+} );
 
 /**
  * エントリー（マイナビ）リンク。未設定なら #entry にフォールバック。

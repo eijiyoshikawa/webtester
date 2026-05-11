@@ -1,9 +1,9 @@
 <?php
 $slides = array(
-    array( 'img1' => 'mv_slide01-01.png' ),
-    array( 'img1' => 'mv_slide02-01.png' ),
-    array( 'img1' => 'mv_slide03-01.png' ),
-    array( 'img1' => 'mv_slide04-01.png' ),
+    array( 'slot' => 'mv_slide_1', 'fallback' => 'mv_slide01-01.png' ),
+    array( 'slot' => 'mv_slide_2', 'fallback' => 'mv_slide02-01.png' ),
+    array( 'slot' => 'mv_slide_3', 'fallback' => 'mv_slide03-01.png' ),
+    array( 'slot' => 'mv_slide_4', 'fallback' => 'mv_slide04-01.png' ),
 );
 ?>
 <div class="mv">
@@ -24,7 +24,7 @@ $slides = array(
                                 </span>
                             </span>
                             <span class="slideImg">
-                                <img src="<?php echo tecnes_img( $slide['img1'] ); ?>" alt="" style="object-fit:cover;width:100%;height:100%;">
+                                <img src="<?php echo tecnes_image( $slide['slot'], $slide['fallback'] ); ?>" alt="" style="object-fit:cover;width:100%;height:100%;">
                             </span>
                         </li>
                     <?php endforeach; ?>

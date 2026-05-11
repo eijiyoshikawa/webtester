@@ -14,7 +14,7 @@
         <p class="logo">
             <a href="<?php echo esc_url( home_url( '/' ) ); ?>" class="logoLink">
                 <span class="logoImage">
-                    <img src="<?php echo tecnes_img( 'logo.png' ); ?>" alt="<?php bloginfo( 'name' ); ?>" width="200" height="50">
+                    <img src="<?php echo tecnes_image( 'logo', 'logo.png' ); ?>" alt="<?php bloginfo( 'name' ); ?>" width="200" height="50">
                 </span>
                 <span class="logoTxt">RECRUIT SITE</span>
             </a>
@@ -37,12 +37,12 @@
                     <ul class="entryBoxList">
                         <li>
                             <a href="<?php echo tecnes_mynavi_url(); ?>" target="_blank" rel="noopener noreferrer">
-                                <img src="<?php echo tecnes_img( 'header_btn_mynavi.png' ); ?>" alt="マイナビ" width="200" height="60">
+                                <img src="<?php echo tecnes_image( 'btn_mynavi', 'header_btn_mynavi.png' ); ?>" alt="マイナビ" width="200" height="60">
                             </a>
                         </li>
                         <li>
                             <a href="<?php echo tecnes_careertasu_url(); ?>" target="_blank" rel="noopener noreferrer">
-                                <img src="<?php echo tecnes_img( 'header_btn_career-tasu.png' ); ?>" alt="キャリタス" width="200" height="60">
+                                <img src="<?php echo tecnes_image( 'btn_careertasu', 'header_btn_career-tasu.png' ); ?>" alt="キャリタス" width="200" height="60">
                             </a>
                         </li>
                     </ul>

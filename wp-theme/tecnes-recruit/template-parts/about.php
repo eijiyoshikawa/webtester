@@ -39,7 +39,7 @@ $num_cards = array(
         </div>
 
         <div class="mainImg">
-            <img src="<?php echo tecnes_img( 'about_img01@2x.jpg' ); ?>" alt="ABOUT US">
+            <img src="<?php echo tecnes_image( 'about_main', 'about_img01@2x.jpg' ); ?>" alt="ABOUT US">
         </div>
     </div>
 </section>

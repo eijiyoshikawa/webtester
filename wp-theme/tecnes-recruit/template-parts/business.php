@@ -7,7 +7,7 @@ $trading_modals = array(
         'subTitle' => '電気をつくる、電気をはこぶ',
         'body'     => '火力・水力発電や電力流通設備を通じて、安定した電力供給に貢献。カーボンニュートラルを目指し、再生可能エネルギーや次世代エネルギー分野にも注力しています。',
         'keywords' => array( '＃発電設備', '＃受変電設備', '＃太陽光発電システム' ),
-        'img'      => 'modal_img01-01@2x.jpg',
+        'slot'     => 'biz_trading_1', 'fallback' => 'modal_img01-01@2x.jpg',
     ),
     array(
         'id'       => 'trading-02',
@@ -16,7 +16,7 @@ $trading_modals = array(
         'subTitle' => '工場の"つくる・しらべる・はこぶ"',
         'body'     => '製造業全般に電力システムから製造機械、物流設備、労働環境の改善まで、工場を動かすために必要な機器やサービスを幅広く提供しています。',
         'keywords' => array( '＃産業用モータ', '＃産業機械', '＃計測・制御システム' ),
-        'img'      => 'modal_img01-02@2x.jpg',
+        'slot'     => 'biz_trading_2', 'fallback' => 'modal_img01-02@2x.jpg',
     ),
     array(
         'id'       => 'trading-03',
@@ -25,7 +25,7 @@ $trading_modals = array(
         'subTitle' => '都市と人びとをつなげる',
         'body'     => '電車の駆動システムや照明、空調、電源を供給するための受変電設備などを提供し、駅の自動改札機や端末システムも納入しています。鉄道会社との仕事を通じて安全な交通システムの構築に貢献しています。',
         'keywords' => array( '＃車両用駆動システム', '＃駅務システム', '＃鉄道電力システム' ),
-        'img'      => 'modal_img01-03@2x.jpg',
+        'slot'     => 'biz_trading_3', 'fallback' => 'modal_img01-03@2x.jpg',
     ),
     array(
         'id'       => 'trading-04',
@@ -34,7 +34,7 @@ $trading_modals = array(
         'subTitle' => '"地球に優しい"を実現する',
         'body'     => 'カーボンニュートラルやSDGsを重視し、排水や排ガスの浄化装置、省エネシステムを提供。余剰エネルギーの有効活用など、環境配慮型の事業を展開しています。',
         'keywords' => array( '＃水処理システム', '＃大気処理システム', '＃省エネシステム' ),
-        'img'      => 'modal_img01-04@2x.jpg',
+        'slot'     => 'biz_trading_4', 'fallback' => 'modal_img01-04@2x.jpg',
     ),
     array(
         'id'       => 'trading-05',
@@ -43,7 +43,7 @@ $trading_modals = array(
         'subTitle' => '工場をネットワークでつなぐ',
         'body'     => 'DXを活用し、パソコンやセンサーなどの情報機器を組み合わせたシステムで、工場設備の安定稼働や予防保全、生産性向上を支援しています。',
         'keywords' => array( '＃生産管理システム', '＃監視カメラシステム', '＃IoTソリューション' ),
-        'img'      => 'modal_img01-05@2x.jpg',
+        'slot'     => 'biz_trading_5', 'fallback' => 'modal_img01-05@2x.jpg',
     ),
     array(
         'id'       => 'trading-06',
@@ -52,7 +52,7 @@ $trading_modals = array(
         'subTitle' => 'お客さまと世界をむすぶ',
         'body'     => '中国や東南アジアを中心に産業機器の輸出や特色ある海外製品を輸入販売。自社製品の紫外線殺菌装置も海外に納入するなど、グローバルに事業を展開中です。',
         'keywords' => array( '＃製品の輸出入販売', '＃海外向け案件の営業サポート' ),
-        'img'      => 'modal_img01-06@2x.jpg',
+        'slot'     => 'biz_trading_6', 'fallback' => 'modal_img01-06@2x.jpg',
     ),
 );
 
@@ -64,7 +64,7 @@ $mfg_modals = array(
         'subTitle' => 'トラックやバスの安全と環境をまもる',
         'body'     => 'トラックやバスなどの商用車向けにエアブレーキ配管の加工や排出ガスの無害化を図る浄化システム用の配管を販売。自社で製造拠点を構え、少量多品種生産によりきめ細かいニーズに対応、大手商用車メーカーと直接取引しています。',
         'keywords' => array( '＃エアブレーキ配管', '＃燃料配管', '＃排出ガス浄化システム用配管' ),
-        'img'      => 'modal_img02-01@2x.jpg',
+        'slot'     => 'biz_mfg_1', 'fallback' => 'modal_img02-01@2x.jpg',
     ),
     array(
         'id'       => 'mfg-02',
@@ -73,7 +73,7 @@ $mfg_modals = array(
         'subTitle' => 'キレイな水で安心・安全をとどける',
         'body'     => '飲料水や洗浄水向けの紫外線殺菌装置を設計・販売しています。当社研究開発センターにて試験や研究を重ね、安心・安全な水を提供。約半世紀の実績とノウハウを持つ紫外線技術のリーディングカンパニーです。',
         'keywords' => array( '＃半導体工場向け', '＃食品・飲料工場向け', '＃上下水道施設向け' ),
-        'img'      => 'modal_img02-02@2x.jpg',
+        'slot'     => 'biz_mfg_2', 'fallback' => 'modal_img02-02@2x.jpg',
     ),
 );
 
@@ -95,7 +95,7 @@ $all_modals = array_merge( $trading_modals, $mfg_modals );
         <div class="cards">
             <div class="card">
                 <div class="cardImg">
-                    <img src="<?php echo tecnes_img( 'trading_img@2x.jpg' ); ?>" alt="TRADING">
+                    <img src="<?php echo tecnes_image( 'trading_card', 'trading_img@2x.jpg' ); ?>" alt="TRADING">
                 </div>
                 <div class="cardBody">
                     <p class="cardEn">TRADING</p>
@@ -120,7 +120,7 @@ $all_modals = array_merge( $trading_modals, $mfg_modals );
 
             <div class="card">
                 <div class="cardImg">
-                    <img src="<?php echo tecnes_img( 'manufacturing_img@2x.jpg' ); ?>" alt="MANUFACTURING">
+                    <img src="<?php echo tecnes_image( 'manufacturing_card', 'manufacturing_img@2x.jpg' ); ?>" alt="MANUFACTURING">
                 </div>
                 <div class="cardBody">
                     <p class="cardEn">MANUFACTURING</p>
@@ -169,7 +169,8 @@ $all_modals = array_merge( $trading_modals, $mfg_modals );
     <script id="js-business-modal-data" type="application/json"><?php
         $payload = array();
         foreach ( $all_modals as $m ) {
-            $m['img']  = tecnes_img( $m['img'] );
+            $m['img'] = tecnes_image( $m['slot'], $m['fallback'] );
+            unset( $m['slot'], $m['fallback'] );
             $payload[] = $m;
         }
         echo wp_json_encode( $payload, JSON_UNESCAPED_UNICODE | JSON_UNESCAPED_SLASHES );

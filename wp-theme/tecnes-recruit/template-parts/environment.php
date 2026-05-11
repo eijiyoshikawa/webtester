@@ -1,11 +1,11 @@
 <?php
 $cards = array(
-    array( 'img' => 'environment_img01@2x.jpg', 'label' => '福利厚生' ),
-    array( 'img' => 'environment_img02@2x.jpg', 'label' => '教育制度' ),
-    array( 'img' => 'environment_img03@2x.jpg', 'label' => 'オフィス紹介' ),
-    array( 'img' => 'environment_img04@2x.jpg', 'label' => '社員座談会 パパ・ママトーク' ),
-    array( 'img' => 'environment_img05@2x.jpg', 'label' => '社員座談会 社風トーク' ),
-    array( 'img' => 'environment_img06@2x.jpg', 'label' => '先輩たちの声' ),
+    array( 'slot' => 'env_1', 'fallback' => 'environment_img01@2x.jpg', 'label' => '福利厚生' ),
+    array( 'slot' => 'env_2', 'fallback' => 'environment_img02@2x.jpg', 'label' => '教育制度' ),
+    array( 'slot' => 'env_3', 'fallback' => 'environment_img03@2x.jpg', 'label' => 'オフィス紹介' ),
+    array( 'slot' => 'env_4', 'fallback' => 'environment_img04@2x.jpg', 'label' => '社員座談会 パパ・ママトーク' ),
+    array( 'slot' => 'env_5', 'fallback' => 'environment_img05@2x.jpg', 'label' => '社員座談会 社風トーク' ),
+    array( 'slot' => 'env_6', 'fallback' => 'environment_img06@2x.jpg', 'label' => '先輩たちの声' ),
 );
 ?>
 <section id="environment" class="environment">
@@ -21,7 +21,7 @@ $cards = array(
             <?php foreach ( $cards as $card ) : ?>
                 <div class="card">
                     <div class="cardImg">
-                        <img src="<?php echo tecnes_img( $card['img'] ); ?>" alt="<?php echo esc_attr( $card['label'] ); ?>">
+                        <img src="<?php echo tecnes_image( $card['slot'], $card['fallback'] ); ?>" alt="<?php echo esc_attr( $card['label'] ); ?>">
                     </div>
                     <p class="cardLabel"><?php echo esc_html( $card['label'] ); ?></p>
                 </div>
