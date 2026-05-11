@@ -7,7 +7,7 @@ if ( ! defined( 'ABSPATH' ) ) {
     exit;
 }
 
-define( 'TECNES_THEME_VERSION', '1.3.0' );
+define( 'TECNES_THEME_VERSION', '1.4.0' );
 
 /**
  * ファイル更新時刻ベースで自動キャッシュバスティング。
