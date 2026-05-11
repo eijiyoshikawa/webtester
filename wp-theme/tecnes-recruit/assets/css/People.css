@@ -61,25 +61,25 @@
   padding-bottom: 6rem;
 }
 
-.swiperWrap :global(.swiper) {
+.swiperWrap .swiper {
   padding-bottom: 5rem;
 }
 
-.swiperWrap :global(.swiper-pagination) {
+.swiperWrap .swiper-pagination {
   bottom: 0;
 }
 
-.swiperWrap :global(.swiper-pagination-bullet) {
+.swiperWrap .swiper-pagination-bullet {
   background-color: rgb(28, 44, 67);
   opacity: 0.3;
 }
 
-.swiperWrap :global(.swiper-pagination-bullet-active) {
+.swiperWrap .swiper-pagination-bullet-active {
   opacity: 1;
 }
 
-.swiperWrap :global(.swiper-button-prev),
-.swiperWrap :global(.swiper-button-next) {
+.swiperWrap .swiper-button-prev,
+.swiperWrap .swiper-button-next {
   color: rgb(28, 44, 67);
 }
 
