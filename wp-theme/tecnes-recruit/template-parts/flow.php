@@ -3,9 +3,9 @@ $flow_img = tecnes_img( 'tecnes_work_flow_preview.png' );
 ?>
 <section id="flow" class="flow">
     <div class="l-inner flowInner">
-        <h2 class="flowTtl01 js-animate fadeIn01">仕事の流れ</h2>
+        <h2 class="flowTtl01 js-animate fadeIn01"><?php echo esc_html( tecnes_text( 'flow_ttl', '仕事の流れ' ) ); ?></h2>
         <p class="flowTxt01">
-            私たちはお客さまの課題解決を通して、社会インフラの発展を支えることで豊かな暮らしを実現します。
+            <?php echo esc_html( tecnes_text( 'flow_lead', '私たちはお客さまの課題解決を通して、社会インフラの発展を支えることで豊かな暮らしを実現します。' ) ); ?>
         </p>
 
         <figure class="flowImg">

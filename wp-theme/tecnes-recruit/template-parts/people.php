@@ -1,22 +1,35 @@
 <?php
-$members = array(
-    array( 'slot' => 'people_1', 'fallback' => 'people_thumbs01@2x.jpg', 'catch' => '先輩に支えられ始まった株式会社TECNESでの挑戦 次は私が後輩を支える番だ',     'dept' => '電機システム部',           'role' => '営業職', 'name' => 'M.M', 'year' => '2017年入社' ),
-    array( 'slot' => 'people_2', 'fallback' => 'people_thumbs02@2x.jpg', 'catch' => '関わるすべての人のベクトルを合わせて 大型プロジェクトに挑む',                 'dept' => 'プラント産業システム部',   'role' => '営業職', 'name' => 'Y.T', 'year' => '2014年入社' ),
-    array( 'slot' => 'people_3', 'fallback' => 'people_thumbs03@2x.jpg', 'catch' => '顧客利益だけでなく その先にある「社会に良いこと」を追求',                     'dept' => '環境・機械システム営業部', 'role' => '営業職', 'name' => 'N.S', 'year' => '2017年入社' ),
-    array( 'slot' => 'people_4', 'fallback' => 'people_thumbs04@2x.jpg', 'catch' => '主体性を持って企業と向き合い提案し、感謝される それが私の成長サイクル',       'dept' => '新潟支店',                 'role' => '営業職', 'name' => 'O.T', 'year' => '2017年入社' ),
-    array( 'slot' => 'people_5', 'fallback' => 'people_thumbs05@2x.jpg', 'catch' => '商社ならではの価値を追求し 幅広い業界へ提案 次は本社でさらなる挑戦へ',         'dept' => '九州支店',                 'role' => '営業職', 'name' => 'J.A', 'year' => '2019年入社' ),
-    array( 'slot' => 'people_6', 'fallback' => 'people_thumbs06@2x.jpg', 'catch' => '何事も全力で楽しむ 自社製品の海外展開という「未知なる挑戦」も楽しみたい',     'dept' => '自動車部品部',             'role' => '営業職', 'name' => 'W.R', 'year' => '2005年入社' ),
-    array( 'slot' => 'people_7', 'fallback' => 'people_thumbs07@2x.jpg', 'catch' => 'UVシステムの営業が切り拓く 「社会インフラ」と「持続可能な未来」への貢献',      'dept' => 'UVシステム営業部',         'role' => '営業職', 'name' => 'E.M', 'year' => '2012年入社' ),
+$members_default = "先輩に支えられ始まった株式会社TECNESでの挑戦 次は私が後輩を支える番だ|電機システム部|営業職|M.M|2017年入社\n関わるすべての人のベクトルを合わせて 大型プロジェクトに挑む|プラント産業システム部|営業職|Y.T|2014年入社\n顧客利益だけでなく その先にある「社会に良いこと」を追求|環境・機械システム営業部|営業職|N.S|2017年入社\n主体性を持って企業と向き合い提案し、感謝される それが私の成長サイクル|新潟支店|営業職|O.T|2017年入社\n商社ならではの価値を追求し 幅広い業界へ提案 次は本社でさらなる挑戦へ|九州支店|営業職|J.A|2019年入社\n何事も全力で楽しむ 自社製品の海外展開という「未知なる挑戦」も楽しみたい|自動車部品部|営業職|W.R|2005年入社\nUVシステムの営業が切り拓く 「社会インフラ」と「持続可能な未来」への貢献|UVシステム営業部|営業職|E.M|2012年入社";
+
+$rows = tecnes_parse_rows( tecnes_text( 'people_members', $members_default ), 5 );
+$thumb_fallbacks = array(
+    'people_thumbs01@2x.jpg', 'people_thumbs02@2x.jpg', 'people_thumbs03@2x.jpg',
+    'people_thumbs04@2x.jpg', 'people_thumbs05@2x.jpg', 'people_thumbs06@2x.jpg',
+    'people_thumbs07@2x.jpg',
 );
+
+$members = array();
+foreach ( $rows as $i => $r ) {
+    list( $catch, $dept, $role, $name, $year ) = $r;
+    $members[] = array(
+        'slot'     => 'people_' . ( $i + 1 ),
+        'fallback' => isset( $thumb_fallbacks[ $i ] ) ? $thumb_fallbacks[ $i ] : end( $thumb_fallbacks ),
+        'catch'    => $catch,
+        'dept'     => $dept,
+        'role'     => $role,
+        'name'     => $name,
+        'year'     => $year,
+    );
+}
 ?>
 <section id="people" class="people">
     <div class="l-inner peopleTop">
         <h2 class="ttl01 js-animate fadeIn01">
-            <span class="ttl01En">PEOPLE</span>
-            <span class="ttl01Ja">働く社員を知る</span>
+            <span class="ttl01En"><?php echo esc_html( tecnes_text( 'people_ttl_en', 'PEOPLE' ) ); ?></span>
+            <span class="ttl01Ja"><?php echo esc_html( tecnes_text( 'people_ttl_ja', '働く社員を知る' ) ); ?></span>
         </h2>
         <p class="leadTxt">
-            株式会社TECNESで新しい自分に出会い、変わらない自分の信念を持って活躍している先輩たち。どんな想いで働いているのか、エピソードを交えてご紹介します。
+            <?php echo esc_html( tecnes_text( 'people_lead', '株式会社TECNESで新しい自分に出会い、変わらない自分の信念を持って活躍している先輩たち。どんな想いで働いているのか、エピソードを交えてご紹介します。' ) ); ?>
         </p>
     </div>
 
