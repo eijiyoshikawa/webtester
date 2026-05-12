@@ -7,7 +7,7 @@ if ( ! defined( 'ABSPATH' ) ) {
     exit;
 }
 
-define( 'TECNES_THEME_VERSION', '2.2.0' );
+define( 'TECNES_THEME_VERSION', '2.2.1' );
 
 /**
  * ファイル更新時刻ベースで自動キャッシュバスティング。
@@ -111,10 +111,16 @@ function tecnes_opt( $key, $default = '' ) {
 
 /**
  * Customizer のテキスト（複数行可）を取得。未設定なら $default を返す。
+ *
+ * get_theme_mod() は値が未保存のとき false を返すため、
+ * 比較は !== にして false / null / 空文字すべてを「未設定扱い」にする。
  */
 function tecnes_text( $key, $default = '' ) {
     $v = get_theme_mod( 'tecnes_text_' . $key );
-    return ( $v === '' || $v === null ) ? $default : $v;
+    if ( $v === false || $v === null || $v === '' ) {
+        return $default;
+    }
+    return $v;
 }
 
 /**
