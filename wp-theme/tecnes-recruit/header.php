@@ -24,7 +24,6 @@
             <li><a href="<?php echo esc_url( home_url( '/#business' ) ); ?>"><span class="menuJpn">仕事を知る</span></a></li>
             <li><a href="<?php echo esc_url( home_url( '/#people' ) ); ?>"><span class="menuJpn">働く社員を知る</span></a></li>
             <li><a href="<?php echo esc_url( home_url( '/#environment' ) ); ?>"><span class="menuJpn">働く環境を知る</span></a></li>
-            <li><a href="<?php echo esc_url( home_url( '/#footnav' ) ); ?>"><span class="menuJpn">採用情報</span></a></li>
         </ul>
 
         <ul class="btn">

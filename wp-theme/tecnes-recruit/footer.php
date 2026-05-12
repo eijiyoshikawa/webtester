@@ -23,9 +23,6 @@
                         <li><a href="<?php echo esc_url( home_url( '/#environment' ) ); ?>">ENVIRONMENT 働く環境を知る</a></li>
                     </ul>
                 </li>
-                <li>
-                    <a href="<?php echo esc_url( home_url( '/#footnav' ) ); ?>" class="menuTtl">採用情報</a>
-                </li>
             </ul>
             <ul class="menu02">
                 <?php $privacy = tecnes_opt( 'privacy_url' ); ?>

@@ -7,7 +7,7 @@ if ( ! defined( 'ABSPATH' ) ) {
     exit;
 }
 
-define( 'TECNES_THEME_VERSION', '1.9.0' );
+define( 'TECNES_THEME_VERSION', '2.0.0' );
 
 /**
  * ファイル更新時刻ベースで自動キャッシュバスティング。
@@ -50,7 +50,6 @@ function tecnes_enqueue_assets() {
         'discovery'   => 'Discovery.css',
         'people'      => 'People.css',
         'environment' => 'Environment.css',
-        'footnav'     => 'FootNav.css',
         'footer'      => 'Footer.css',
         'linecta'     => 'LineCta.css',
     );
@@ -258,10 +257,7 @@ add_action( 'customize_register', function ( $wp_customize ) {
     ) );
 } );
 
-/**
- * LINE エントリーリンク。未設定なら #footnav にフォールバック。
- */
 function tecnes_line_url() {
     $u = tecnes_opt( 'line_url' );
-    return $u ? esc_url( $u ) : '#footnav';
+    return $u ? esc_url( $u ) : '#';
 }

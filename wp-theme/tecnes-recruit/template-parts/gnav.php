@@ -23,9 +23,6 @@
                     <li class="w01">
                         <a href="<?php echo esc_url( home_url( '/#environment' ) ); ?>" class="menuTtl" data-gnav-close>働く環境を知る</a>
                     </li>
-                    <li class="w02">
-                        <a href="<?php echo esc_url( home_url( '/#footnav' ) ); ?>" class="menuTtl" data-gnav-close>採用情報</a>
-                    </li>
                 </ul>
             </div>
             <div class="leftBox">
