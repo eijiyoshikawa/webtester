@@ -7,7 +7,7 @@ if ( ! defined( 'ABSPATH' ) ) {
     exit;
 }
 
-define( 'TECNES_THEME_VERSION', '1.7.0' );
+define( 'TECNES_THEME_VERSION', '1.8.0' );
 
 /**
  * ファイル更新時刻ベースで自動キャッシュバスティング。
@@ -80,7 +80,7 @@ function tecnes_enqueue_assets() {
 add_action( 'wp_enqueue_scripts', 'tecnes_enqueue_assets' );
 
 function tecnes_img( $name ) {
-    return esc_url( get_template_directory_uri() . '/assets/images/' . ltrim( $name, '/' ) );
+    return esc_url( get_template_directory_uri() . '/assets/img-v2/' . ltrim( $name, '/' ) );
 }
 
 /**
