@@ -42,43 +42,98 @@
   margin-bottom: 6rem;
 }
 
-/* ===== 6 枚グリッド ===== */
-.grid {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 4rem 4rem;
+/* ===== アコーディオン ===== */
+.envAccordion {
+  border-top: 1px solid rgb(220, 224, 230);
 }
 
-.card {
-  position: relative;
-  overflow: hidden;
+.envAcItem {
+  border-bottom: 1px solid rgb(220, 224, 230);
+}
+
+.envAcSummary {
+  list-style: none;
   cursor: pointer;
+  padding: 2.4rem 0;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 2rem;
+  user-select: none;
 }
 
-.cardImg {
-  position: relative;
-  width: 100%;
-  aspect-ratio: 4/3;
-  overflow: hidden;
-}
+.envAcSummary::-webkit-details-marker { display: none; }
 
-.cardImg img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  transition: transform 0.5s cubic-bezier(0.215, 0.61, 0.355, 1);
-}
-
-.card:hover .cardImg img {
-  transform: scale(1.05);
-}
-
-.cardLabel {
-  padding: 2rem 0 0;
-  font-size: 1.8rem;
-  font-weight: 500;
+.envAcTitle {
+  font-size: 2rem;
+  font-weight: 700;
   color: rgb(28, 44, 67);
   line-height: 1.4;
+}
+
+.envAcIcon {
+  position: relative;
+  width: 24px;
+  height: 24px;
+  flex-shrink: 0;
+}
+
+.envAcIcon::before,
+.envAcIcon::after {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  background-color: rgb(43, 185, 176);
+  transition: transform 0.25s ease;
+}
+
+.envAcIcon::before {
+  width: 18px;
+  height: 2px;
+  transform: translate(-50%, -50%);
+}
+
+.envAcIcon::after {
+  width: 2px;
+  height: 18px;
+  transform: translate(-50%, -50%);
+}
+
+.envAcItem[open] .envAcIcon::after {
+  transform: translate(-50%, -50%) scaleY(0);
+}
+
+.envAcBody {
+  padding: 0 0 3.2rem;
+}
+
+.envAcList {
+  display: flex;
+  flex-direction: column;
+  gap: 1.6rem;
+}
+
+.envAcRow {
+  display: grid;
+  grid-template-columns: 16rem 1fr;
+  gap: 2rem;
+  align-items: baseline;
+  padding: 1.2rem 0;
+  border-bottom: 1px dashed rgb(228, 231, 236);
+}
+
+.envAcRow dt {
+  font-size: 1.4rem;
+  font-weight: 700;
+  color: rgb(28, 44, 67);
+  letter-spacing: 0.04em;
+}
+
+.envAcRow dd {
+  font-size: 1.4rem;
+  line-height: 1.7;
+  color: rgb(70, 86, 110);
 }
 
 /* ===== タブレット（〜1024px）===== */
@@ -86,17 +141,12 @@
   .environment {
     padding: 10rem 0 10rem;
   }
-
-  .grid {
-    grid-template-columns: repeat(2, 1fr);
-    gap: 3rem;
-  }
 }
 
 /* ===== モバイル（〜767px）===== */
 @media screen and (max-width: 767px) {
   .environment {
-    padding: 13.3333vw 0 32vw;
+    padding: 13.3333vw 0 24vw;
   }
 
   .ttl01En {
@@ -116,13 +166,25 @@
     margin-bottom: 8vw;
   }
 
-  .grid {
-    grid-template-columns: repeat(2, 1fr);
-    gap: 5.33333vw;
+  .envAcSummary {
+    padding: 4.8vw 0;
   }
 
-  .cardLabel {
-    font-size: 4.26667vw;
-    padding-top: 3.2vw;
+  .envAcTitle {
+    font-size: 4.8vw;
+  }
+
+  .envAcRow {
+    grid-template-columns: 1fr;
+    gap: 0.4rem;
+    padding: 2.4vw 0;
+  }
+
+  .envAcRow dt {
+    font-size: 3.46667vw;
+  }
+
+  .envAcRow dd {
+    font-size: 3.46667vw;
   }
 }

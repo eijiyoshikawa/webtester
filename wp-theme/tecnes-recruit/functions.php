@@ -7,7 +7,7 @@ if ( ! defined( 'ABSPATH' ) ) {
     exit;
 }
 
-define( 'TECNES_THEME_VERSION', '2.0.0' );
+define( 'TECNES_THEME_VERSION', '2.1.0' );
 
 /**
  * ファイル更新時刻ベースで自動キャッシュバスティング。
@@ -47,9 +47,9 @@ function tecnes_enqueue_assets() {
         'business'    => 'Business.css',
         'flow'        => 'Flow.css',
         'about'       => 'About.css',
-        'discovery'   => 'Discovery.css',
         'people'      => 'People.css',
         'environment' => 'Environment.css',
+        'recruit'     => 'Recruit.css',
         'footer'      => 'Footer.css',
         'linecta'     => 'LineCta.css',
     );
@@ -71,6 +71,7 @@ function tecnes_enqueue_assets() {
         'tecnes-business-modal'  => array( 'business-modal.js', array() ),
         'tecnes-people-swiper'   => array( 'people-swiper.js', array( 'swiper' ) ),
         'tecnes-about-counter'   => array( 'about-counter.js', array() ),
+        'tecnes-recruit-tabs'    => array( 'recruit-tabs.js', array() ),
     ) as $handle => $cfg ) {
         list( $file, $deps ) = $cfg;
         wp_enqueue_script( $handle, $theme_uri . '/assets/js/' . $file, $deps, tecnes_asset_ver( 'assets/js/' . $file ), true );

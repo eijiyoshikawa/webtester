@@ -1,13 +1,13 @@
 <?php
 $num_cards = array(
-    array( 'label' => '創業年数',     'target' => 19,   'unit' => '年',     'sub' => '2006年（平成18年）12月 創立' ),
+    array( 'label' => '創業年数',     'target' => 30,   'unit' => '年',     'sub' => '' ),
+    array( 'label' => '建設業種',     'target' => 6,    'unit' => '業種',   'sub' => '電気通信・電気・土木・舗装・とび土木・管工事' ),
+    array( 'label' => '拠点数',       'target' => 3,    'unit' => '拠点',   'sub' => '' ),
+    array( 'label' => '従業員数',     'target' => 22,   'unit' => '人',     'sub' => '' ),
     array( 'label' => '資本金',       'target' => 1000, 'unit' => '万円',   'sub' => '' ),
-    array( 'label' => '建設業種',     'target' => 6,    'unit' => '種',     'sub' => '電気通信・電気・土木・舗装・とび土木・管工事' ),
-    array( 'label' => '従業員数',     'target' => 22,   'unit' => '名',     'sub' => '' ),
-    array( 'label' => '本社所在地',   'target' => 1,    'unit' => '拠点',   'sub' => '大阪府東大阪市' ),
-    array( 'label' => '年間休日',     'target' => 105,  'unit' => '日',     'sub' => '※目安。詳細は採用情報をご確認ください' ),
+    array( 'label' => '年間休日',     'target' => 120,  'unit' => '日',     'sub' => '' ),
     array( 'label' => '就業時間/日',  'target' => 8,    'unit' => '時間',   'sub' => '' ),
-    array( 'label' => '許可番号',     'target' => 27222,'unit' => '号',     'sub' => '国土交通大臣許可（般-6）' ),
+    array( 'label' => '平均勤続年数', 'target' => 10,   'unit' => '年',     'sub' => '' ),
 );
 ?>
 <section id="about" class="about">
