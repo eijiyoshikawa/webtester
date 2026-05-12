@@ -7,7 +7,7 @@ if ( ! defined( 'ABSPATH' ) ) {
     exit;
 }
 
-define( 'TECNES_THEME_VERSION', '1.8.0' );
+define( 'TECNES_THEME_VERSION', '1.9.0' );
 
 /**
  * ファイル更新時刻ベースで自動キャッシュバスティング。
@@ -216,7 +216,6 @@ add_action( 'customize_register', function ( $wp_customize ) {
         'trading_card'     => '商社のしごとカード 画像',
         'manufacturing_card' => 'モノづくりのしごとカード 画像',
         'about_main'       => 'ABOUT セクション 下部画像',
-        'discovery_bg'     => 'DISCOVERY セクション 背景画像',
         'people_main'      => 'PEOPLE セクション メイン画像',
     ) );
 
