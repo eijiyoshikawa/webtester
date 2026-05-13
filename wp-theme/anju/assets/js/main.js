@@ -13,12 +13,11 @@
 
   // ========== Header Scroll Effect ==========
   function handleScroll() {
-    if (window.scrollY > 50) {
-      header.classList.add('is-scrolled');
-    } else {
-      header.classList.remove('is-scrolled');
+    var y = window.scrollY;
+    if (header) {
+      header.classList.toggle('is-scrolled', y > 50);
     }
-    var showFloating = window.scrollY > 500;
+    var showFloating = y > 500;
     if (backToTop) {
       backToTop.classList.toggle('is-visible', showFloating);
     }
@@ -27,6 +26,7 @@
     }
   }
   window.addEventListener('scroll', handleScroll, { passive: true });
+  handleScroll();
 
   // ========== Hamburger Menu ==========
   if (hamburger && globalNav) {
