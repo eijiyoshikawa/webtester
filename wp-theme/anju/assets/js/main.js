@@ -65,7 +65,13 @@
   if (backToTop) {
     backToTop.addEventListener('click', function (e) {
       e.preventDefault();
-      window.scrollTo({ top: 0, behavior: 'smooth' });
+      e.stopPropagation();
+      try {
+        window.scrollTo({ top: 0, behavior: 'smooth' });
+      } catch (err) {
+        // 古いブラウザ向けフォールバック
+        window.scrollTo(0, 0);
+      }
     });
   }
 
