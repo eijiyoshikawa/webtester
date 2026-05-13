@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>運用マニュアル ダウンロード | 合同会社あんじゅ</title>
+  <meta name="description" content="合同会社あんじゅ Webサイトの運用マニュアルPDFをダウンロードできるページです。">
+  <meta name="robots" content="noindex">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400&family=Noto+Sans+JP:wght@300;400;500;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../assets/css/style.css">
+  <style>
+    .manual-dl { padding: 80px 20px 100px; }
+    .manual-dl__container { max-width: 760px; margin: 0 auto; }
+    .manual-dl__header { text-align: center; margin-bottom: 56px; }
+    .manual-dl__title { font-family: var(--font-en); font-size: 42px; color: var(--text); letter-spacing: 0.04em; font-weight: 400; margin: 0 0 8px; }
+    .manual-dl__subtitle { font-size: 14px; color: var(--gray); letter-spacing: 0.2em; margin: 0; }
+    .manual-dl__card { background: var(--white); border-radius: 18px; padding: 48px 44px; box-shadow: 0 4px 28px rgba(180, 150, 135, 0.1); border: 1px solid #f3ebe6; }
+    @media (max-width: 600px) { .manual-dl__card { padding: 36px 24px; } }
+    .manual-dl__icon { width: 72px; height: 72px; margin: 0 auto 24px; display: flex; align-items: center; justify-content: center; background: linear-gradient(135deg, var(--peach), var(--lavender)); border-radius: 50%; color: var(--label); }
+    .manual-dl__icon svg { width: 32px; height: 32px; }
+    .manual-dl__lead { text-align: center; font-size: 15px; color: var(--gray-dark); line-height: 1.9; margin: 0 0 32px; }
+    .manual-dl__meta { background: var(--cream); border-radius: 12px; padding: 22px 26px; margin-bottom: 32px; }
+    .manual-dl__meta-row { display: flex; padding: 8px 0; font-size: 14px; border-bottom: 1px dashed #ede0d8; gap: 16px; }
+    .manual-dl__meta-row:last-child { border-bottom: none; }
+    .manual-dl__meta-label { flex-shrink: 0; width: 110px; color: var(--gray); letter-spacing: 0.05em; }
+    .manual-dl__meta-value { color: var(--text); }
+    .manual-dl__actions { text-align: center; margin-top: 8px; }
+    .manual-dl__btn { display: inline-flex; align-items: center; gap: 12px; padding: 18px 36px; background: var(--label); color: var(--white); border-radius: 999px; text-decoration: none; font-size: 15px; font-weight: 500; letter-spacing: 0.06em; box-shadow: 0 4px 16px rgba(192, 120, 96, 0.3); transition: transform 0.2s, box-shadow 0.2s, background 0.2s; }
+    .manual-dl__btn:hover { transform: translateY(-2px); box-shadow: 0 6px 22px rgba(192, 120, 96, 0.4); background: #a86850; }
+    .manual-dl__btn svg { width: 18px; height: 18px; }
+    .manual-dl__note { margin-top: 28px; padding: 16px 20px; background: #fdf8f3; border-left: 3px solid #d4b89c; border-radius: 0 6px 6px 0; font-size: 13px; color: #6a5848; line-height: 1.8; }
+    .manual-dl__back { text-align: center; margin-top: 40px; }
+    .manual-dl__back a { color: var(--gray); text-decoration: none; font-size: 13px; letter-spacing: 0.06em; transition: color 0.15s; }
+    .manual-dl__back a:hover { color: var(--label); }
+  </style>
+</head>
+<body>
+
+  <!-- ========== BACKGROUND ANIMATION ========== -->
+  <div class="bg-anim" aria-hidden="true">
+    <span class="bg-anim__blob bg-anim__blob--1"></span>
+    <span class="bg-anim__blob bg-anim__blob--2"></span>
+    <span class="bg-anim__blob bg-anim__blob--3"></span>
+    <span class="bg-anim__blob bg-anim__blob--4"></span>
+  </div>
+
+  <!-- ========== HEADER ========== -->
+  <header class="header" id="header">
+    <div class="header__inner">
+      <a href="/" class="header__logo">
+        <img src="/assets/images/logo-company.png" alt="合同会社あんじゅ" class="header__logo-img">
+      </a>
+      <nav class="header__nav" id="globalNav">
+        <a href="/" class="header__nav-item header__nav-link">ホーム</a>
+        <div class="header__nav-item header__nav-dropdown" data-dropdown>
+          <span class="header__nav-trigger">サービス</span>
+          <div class="header__nav-submenu">
+            <a href="/service/grouphome/" class="header__nav-subitem">グループホーム</a>
+            <a href="/service/houkan/" class="header__nav-subitem">訪問看護</a>
+          </div>
+        </div>
+        <a href="/news/" class="header__nav-item header__nav-link">お知らせ</a>
+        <a href="/blog/" class="header__nav-item header__nav-link">ブログ</a>
+        <a href="/contact/" class="header__nav-item header__nav-link">お問い合わせ</a>
+      </nav>
+      <button class="header__hamburger" id="hamburger" aria-label="メニューを開く">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </header>
+
+  <!-- ========== HERO BANNER ========== -->
+  <section class="svc-hero fade-in">
+    <div class="svc-hero__bar svc-hero__bar--left"></div>
+    <div class="svc-hero__bar svc-hero__bar--right"></div>
+    <div class="svc-hero__inner">
+      <h1 class="svc-hero__title">manual</h1>
+      <div class="svc-hero__logo">
+        <span class="svc-hero__logo-text">anju</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========== MANUAL DOWNLOAD ========== -->
+  <section class="manual-dl">
+    <div class="manual-dl__container">
+
+      <div class="manual-dl__header fade-in">
+        <h2 class="manual-dl__title">Operations Manual</h2>
+        <p class="manual-dl__subtitle">運用マニュアル ダウンロード</p>
+      </div>
+
+      <div class="manual-dl__card fade-in">
+
+        <div class="manual-dl__icon" aria-hidden="true">
+          <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8l-6-6z" stroke="currentColor" stroke-width="1.5" stroke-linejoin="round"/>
+            <path d="M14 2v6h6" stroke="currentColor" stroke-width="1.5" stroke-linejoin="round"/>
+            <path d="M9 13h6M9 17h6" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
+          </svg>
+        </div>
+
+        <p class="manual-dl__lead">
+          合同会社あんじゅ Webサイトの<br>運用マニュアル（PDF版）をダウンロードできます。
+        </p>
+
+        <div class="manual-dl__meta">
+          <div class="manual-dl__meta-row">
+            <span class="manual-dl__meta-label">ファイル</span>
+            <span class="manual-dl__meta-value">operations-manual.pdf</span>
+          </div>
+          <div class="manual-dl__meta-row">
+            <span class="manual-dl__meta-label">対象読者</span>
+            <span class="manual-dl__meta-value">サイトを編集する従業員の方</span>
+          </div>
+          <div class="manual-dl__meta-row">
+            <span class="manual-dl__meta-label">収録内容</span>
+            <span class="manual-dl__meta-value">お知らせ更新／ブログ投稿／画像差し替え／PDF差し替え／拠点情報の編集 ほか</span>
+          </div>
+          <div class="manual-dl__meta-row">
+            <span class="manual-dl__meta-label">サイズ</span>
+            <span class="manual-dl__meta-value">約 135 KB</span>
+          </div>
+        </div>
+
+        <div class="manual-dl__actions">
+          <a href="/assets/pdf/operations-manual.pdf" download="anju-operations-manual.pdf" class="manual-dl__btn">
+            <svg viewBox="0 0 24 24" fill="none" aria-hidden="true">
+              <path d="M12 3v12m0 0l-5-5m5 5l5-5M5 21h14" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+            <span>PDFをダウンロード</span>
+          </a>
+        </div>
+
+        <p class="manual-dl__note">
+          ダウンロードが始まらない場合は、<a href="/assets/pdf/operations-manual.pdf" target="_blank" rel="noopener">こちら</a> をクリックして直接表示してください。<br>
+          内容についてのご不明点は、システム管理者または制作会社までお問い合わせください。
+        </p>
+      </div>
+
+      <p class="manual-dl__back">
+        <a href="/">← トップページへ戻る</a>
+      </p>
+
+    </div>
+  </section>
+
+  <!-- ========== FOOTER ========== -->
+  <footer class="footer">
+    <div class="footer__brand">
+      <img src="/assets/images/logo-company.png" alt="合同会社あんじゅ" class="footer__logo-img">
+      <span class="footer__name-jp">合同会社 あんじゅ</span>
+      <span class="footer__name-en">Anju LLC.</span>
+    </div>
+    <nav class="footer__nav">
+      <a href="/" class="footer__nav-item">ホーム</a>
+      <a href="/service/grouphome/" class="footer__nav-item">グループホーム</a>
+      <a href="/service/houkan/" class="footer__nav-item">訪問看護</a>
+      <a href="/news/" class="footer__nav-item">お知らせ</a>
+      <a href="/blog/" class="footer__nav-item">ブログ</a>
+      <a href="/contact/" class="footer__nav-item">お問い合わせ</a>
+      <a href="/privacy-policy/" class="footer__nav-item">プライバシーポリシー</a>
+    </nav>
+    <p class="footer__copyright">&copy; Anju LLC. All Rights Reserved.</p>
+  </footer>
+
+  <a href="https://www.instagram.com/grouphome_anju/" target="_blank" rel="noopener noreferrer" class="floating-sns" id="floatingInstagram" aria-label="Instagram"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" aria-hidden="true"><rect x="2" y="2" width="20" height="20" rx="5" stroke="currentColor" stroke-width="1.5"/><circle cx="12" cy="12" r="5" stroke="currentColor" stroke-width="1.5"/><circle cx="17.5" cy="6.5" r="1.5" fill="currentColor"/></svg></a>
+
+  <a href="#header" class="back-to-top" id="backToTop" aria-label="ページトップへ戻る">
+    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M12 19V5M5 12l7-7 7 7" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+  </a>
+
+  <script src="../assets/js/main.js"></script>
+</body>
+</html>
