@@ -10,7 +10,7 @@
 }
 
 /* ===== 見出し ===== */
-.ttl01 {
+.business .ttl01 {
   text-align: center;
   margin-bottom: 6rem;
   display: flex;
@@ -19,7 +19,7 @@
   gap: 8px 0;
 }
 
-.ttl01En {
+.business .ttl01En {
   font-size: 5.6rem;
   font-weight: 700;
   font-family: var(--font-poppins), Poppins, sans-serif;
@@ -28,7 +28,7 @@
   line-height: 1;
 }
 
-.ttl01Ja {
+.business .ttl01Ja {
   font-size: 1.4rem;
   font-weight: 500;
   letter-spacing: 0.08em;
@@ -37,7 +37,7 @@
 }
 
 /* ===== リード文 ===== */
-.leadTxt {
+.business .leadTxt {
   text-align: center;
   font-size: 1.5rem;
   line-height: 1.8;
@@ -220,19 +220,19 @@
     padding-bottom: 13.3333vw;
   }
 
-  .ttl01En {
+  .business .ttl01En {
     font-size: 9.6vw;
   }
 
-  .ttl01Ja {
+  .business .ttl01Ja {
     font-size: 3.2vw;
   }
 
-  .ttl01 {
+  .business .ttl01 {
     margin-bottom: 8vw;
   }
 
-  .leadTxt {
+  .business .leadTxt {
     font-size: 3.73333vw;
     text-align: left;
     margin-bottom: 8vw;

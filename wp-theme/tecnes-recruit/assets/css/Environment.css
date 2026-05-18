@@ -10,7 +10,7 @@
 }
 
 /* ===== 見出し ===== */
-.ttl01 {
+.environment .ttl01 {
   display: flex;
   flex-direction: column;
   align-items: flex-start;
@@ -18,7 +18,7 @@
   margin-bottom: 4rem;
 }
 
-.ttl01En {
+.environment .ttl01En {
   font-size: 5.6rem;
   font-weight: 700;
   font-family: var(--font-poppins), Poppins, sans-serif;
@@ -27,7 +27,7 @@
   line-height: 1;
 }
 
-.ttl01Ja {
+.environment .ttl01Ja {
   font-size: 1.4rem;
   font-weight: 500;
   letter-spacing: 0.08em;
@@ -35,7 +35,7 @@
   line-height: 1;
 }
 
-.leadTxt {
+.environment .leadTxt {
   font-size: 1.5rem;
   line-height: 1.8;
   color: rgb(28, 44, 67);
@@ -149,19 +149,19 @@
     padding: 13.3333vw 0 24vw;
   }
 
-  .ttl01En {
+  .environment .ttl01En {
     font-size: 9.6vw;
   }
 
-  .ttl01Ja {
+  .environment .ttl01Ja {
     font-size: 3.2vw;
   }
 
-  .ttl01 {
+  .environment .ttl01 {
     margin-bottom: 6.4vw;
   }
 
-  .leadTxt {
+  .environment .leadTxt {
     font-size: 3.73333vw;
     margin-bottom: 8vw;
   }
