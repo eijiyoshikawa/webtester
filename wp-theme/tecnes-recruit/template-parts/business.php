@@ -43,7 +43,7 @@ $all_modals        = array_merge( $electrical_modals, $civil_modals );
         <div class="cards">
             <div class="card">
                 <div class="cardImg">
-                    <img src="<?php echo tecnes_image( 'trading_card', 'trading_img@2x.jpg' ); ?>" alt="<?php echo esc_attr( tecnes_text( 'business_card1_en', 'ELECTRICAL' ) ); ?>">
+                    <img src="<?php echo tecnes_image( 'trading_card', 'mv_slide03-01.png' ); ?>" alt="<?php echo esc_attr( tecnes_text( 'business_card1_en', 'ELECTRICAL' ) ); ?>">
                 </div>
                 <div class="cardBody">
                     <p class="cardEn"><?php echo esc_html( tecnes_text( 'business_card1_en', 'ELECTRICAL' ) ); ?></p>
@@ -70,7 +70,7 @@ $all_modals        = array_merge( $electrical_modals, $civil_modals );
 
             <div class="card">
                 <div class="cardImg">
-                    <img src="<?php echo tecnes_image( 'manufacturing_card', 'manufacturing_img@2x.jpg' ); ?>" alt="<?php echo esc_attr( tecnes_text( 'business_card2_en', 'CIVIL' ) ); ?>">
+                    <img src="<?php echo tecnes_image( 'manufacturing_card', 'mv_slide04-01.png' ); ?>" alt="<?php echo esc_attr( tecnes_text( 'business_card2_en', 'CIVIL' ) ); ?>">
                 </div>
                 <div class="cardBody">
                     <p class="cardEn"><?php echo esc_html( tecnes_text( 'business_card2_en', 'CIVIL' ) ); ?></p>

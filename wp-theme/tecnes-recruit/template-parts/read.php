@@ -23,14 +23,14 @@ $body_paragraphs = preg_split( "/(\r\n|\n){2,}/", tecnes_text( 'read_body', $bod
             <p class="imageWrap">
                 <span class="image01">
                     <picture>
-                        <source srcset="<?php echo tecnes_image( 'read_main', 'read_img01@2x.jpg' ); ?>">
-                        <img src="<?php echo tecnes_image( 'read_main', 'read_img01@2x.jpg' ); ?>" alt="">
+                        <source srcset="<?php echo tecnes_image( 'read_main', 'mv_slide01-01.png' ); ?>">
+                        <img src="<?php echo tecnes_image( 'read_main', 'mv_slide01-01.png' ); ?>" alt="">
                     </picture>
                 </span>
                 <span class="image02">
                     <picture>
-                        <source srcset="<?php echo tecnes_image( 'read_main', 'read_img01@2x.jpg' ); ?>">
-                        <img src="<?php echo tecnes_image( 'read_main', 'read_img01@2x.jpg' ); ?>" alt="">
+                        <source srcset="<?php echo tecnes_image( 'read_main', 'mv_slide01-01.png' ); ?>">
+                        <img src="<?php echo tecnes_image( 'read_main', 'mv_slide01-01.png' ); ?>" alt="">
                     </picture>
                 </span>
             </p>

@@ -29,7 +29,7 @@ $num_cards = tecnes_parse_rows( tecnes_text( 'about_cards', $cards_default ), 4 
         </div>
 
         <div class="mainImg">
-            <img src="<?php echo tecnes_image( 'about_main', 'about_img01@2x.jpg' ); ?>" alt="ABOUT US">
+            <img src="<?php echo tecnes_image( 'about_main', 'mv_slide02-01.png' ); ?>" alt="ABOUT US">
         </div>
     </div>
 </section>

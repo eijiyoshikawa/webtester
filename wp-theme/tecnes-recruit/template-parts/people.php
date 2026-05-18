@@ -34,7 +34,7 @@ foreach ( $rows as $i => $r ) {
     </div>
 
     <div class="mainImg">
-        <img src="<?php echo tecnes_image( 'people_main', 'people_img01@2x.jpg' ); ?>" alt="" width="1280" height="400" style="width:100%;height:auto;">
+        <img src="<?php echo tecnes_image( 'people_main', 'modal_img01-01@2x.jpg' ); ?>" alt="" width="1280" height="400" style="width:100%;height:auto;">
     </div>
 
     <div class="swiperWrap">
