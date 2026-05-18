@@ -13,7 +13,7 @@
 }
 
 /* ===== 左ボックス ===== */
-.leftBox {
+.read .leftBox {
   flex: 1;
   min-width: 0;
   display: flex;
@@ -21,7 +21,7 @@
   gap: 3.2rem 0;
 }
 
-.ttl {
+.read .ttl {
   font-size: 2.8rem;
   font-weight: 500;
   line-height: 1.5;
@@ -29,7 +29,7 @@
   color: rgb(255, 255, 255);
 }
 
-.txt {
+.read .txt {
   font-size: 1.6rem;
   font-weight: 400;
   line-height: 2;
@@ -37,7 +37,7 @@
 }
 
 /* ===== 右ボックス（縦ループ画像）===== */
-.rightBox {
+.read .rightBox {
   width: 320px;
   flex-shrink: 0;
   height: 600px;
@@ -45,31 +45,31 @@
   position: relative;
 }
 
-.imageWrap {
+.read .imageWrap {
   position: relative;
   height: 100%;
 }
 
-.image01,
-.image02 {
+.read .image01,
+.read .image02 {
   position: absolute;
   left: 0;
   width: 100%;
 }
 
-.image01 {
+.read .image01 {
   top: 0;
   animation: none;
 }
 
-.image02 {
+.read .image02 {
   top: 100%;
   animation: none;
   animation-delay: -15s;
 }
 
-.image01 img,
-.image02 img {
+.read .image01 img,
+.read .image02 img {
   width: 100%;
   height: auto;
   object-fit: cover;
@@ -81,7 +81,7 @@
     padding: 16rem 0 10rem;
   }
 
-  .rightBox {
+  .read .rightBox {
     width: 240px;
     height: 480px;
   }
@@ -99,21 +99,21 @@
     display: block;
   }
 
-  .leftBox {
+  .read .leftBox {
     gap: 6.4vw 0;
   }
 
-  .ttl {
+  .read .ttl {
     font-size: 5.86667vw;
     letter-spacing: 0.05em;
   }
 
-  .txt {
+  .read .txt {
     font-size: 3.73333vw;
     line-height: 1.8;
   }
 
-  .rightBox {
+  .read .rightBox {
     width: 100%;
     height: 64vw;
     margin-top: 10.6667vw;

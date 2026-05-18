@@ -68,16 +68,6 @@
   gap: 1.6rem 0;
 }
 
-.numCardIco {
-  width: 56px;
-  height: 56px;
-}
-
-.numCardIco img {
-  width: 100%;
-  height: auto;
-}
-
 .numCardLabel {
   font-size: 1.4rem;
   font-weight: 500;
@@ -110,24 +100,6 @@
   font-size: 1.3rem;
   color: rgba(255, 255, 255, 0.8);
   line-height: 1.5;
-}
-
-/* ===== 横流れテキスト ===== */
-.txtLoopWrap {
-  overflow: hidden;
-  margin-bottom: 0;
-  white-space: nowrap;
-}
-
-.txtLoopInner {
-  display: inline-block;
-  animation: none;
-}
-
-.txtLoopInner2 {
-  display: inline-block;
-  animation: none;
-  animation-delay: -25s;
 }
 
 /* ===== メイン画像 ===== */
@@ -203,11 +175,6 @@
   .numCard {
     padding: 5.33333vw 4vw;
     gap: 3.2vw 0;
-  }
-
-  .numCardIco {
-    width: 10.6667vw;
-    height: 10.6667vw;
   }
 
   .numCardLabel {

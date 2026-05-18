@@ -68,24 +68,6 @@
   background-color: rgb(28, 44, 67);
 }
 
-/* テキストループラッパー */
-.txtWrap {
-  /* マーキー演出は停止（ホバー以外のモーション抑制） */
-  display: none;
-}
-
-.txtWrapInner {
-  display: inline-block;
-  flex-shrink: 0;
-  animation: none;
-}
-
-.txtWrapInner img {
-  height: 60px;
-  width: auto;
-  display: inline-block;
-}
-
 /* スライド画像 */
 .slideImg {
   position: absolute;
@@ -97,39 +79,6 @@
 }
 
 .slideImg img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-}
-
-/* キャッチコピー */
-.mvCopy {
-  position: absolute;
-  bottom: 10rem;
-  left: 50%;
-  transform: translateX(-50%);
-  z-index: 10;
-  white-space: nowrap;
-}
-
-.mvCopy img {
-  width: auto;
-  height: auto;
-  max-width: 600px;
-}
-
-/* スクリーンオーバーレイ */
-.mvScreen {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  z-index: 8;
-  pointer-events: none;
-}
-
-.mvScreen img {
   width: 100%;
   height: 100%;
   object-fit: cover;
@@ -222,10 +171,6 @@
   .progressWrap {
     bottom: 8vw;
     right: 4vw;
-  }
-
-  .mvCopy img {
-    max-width: 80vw;
   }
 }
 

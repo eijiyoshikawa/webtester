@@ -93,17 +93,6 @@
   50% { transform: rotate(45deg) translateX(1.5vw); }
 }
 
-.flowCopy {
-  text-align: center;
-}
-
-.flowCopy img {
-  max-width: 600px;
-  width: 100%;
-  height: auto;
-  margin: 0 auto;
-}
-
 /* ===== タブレット（〜1024px）===== */
 @media screen and (max-width: 1024px) {
   .flow {
