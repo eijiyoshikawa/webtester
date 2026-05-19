@@ -7,7 +7,7 @@ if ( ! defined( 'ABSPATH' ) ) {
     exit;
 }
 
-define( 'TECNES_THEME_VERSION', '2.6.0' );
+define( 'TECNES_THEME_VERSION', '2.7.0' );
 
 /**
  * ファイル更新時刻ベースで自動キャッシュバスティング。
@@ -221,13 +221,14 @@ function tecnes_customize_register( $wp_customize ) {
     ) );
 
     $links = array(
-        'line_url'        => 'LINE エントリー URL（公式LINE友達追加リンク等）',
-        'corp_site_url'   => 'コーポレートサイト URL',
-        'privacy_url'     => 'プライバシーポリシー URL（空ならテーマ内 /privacy/ ）',
+        'line_url'        => array( 'LINE エントリー URL（公式LINE友達追加リンク・追従バナーで使用）', 'https://lin.ee/ZfLUBUW' ),
+        'corp_site_url'   => array( 'コーポレートサイト URL', '' ),
+        'privacy_url'     => array( 'プライバシーポリシー URL（空ならテーマ内 /privacy/ ）', '' ),
     );
-    foreach ( $links as $key => $label ) {
+    foreach ( $links as $key => $cfg ) {
+        list( $label, $default ) = $cfg;
         $wp_customize->add_setting( 'tecnes_' . $key, array(
-            'default'           => '',
+            'default'           => $default,
             'sanitize_callback' => 'esc_url_raw',
         ) );
         $wp_customize->add_control( 'tecnes_' . $key, array(
@@ -280,8 +281,9 @@ add_action( 'customize_register', function ( $wp_customize ) {
     // ===== Section main images =====
     tecnes_register_image_section( $wp_customize, 'tecnes_imgs_sections', 'セクションメイン画像', 41, array(
         'read_main'        => 'READ セクション 右側画像',
-        'trading_card'     => '商社のしごとカード 画像',
-        'manufacturing_card' => 'モノづくりのしごとカード 画像',
+        'trading_card'     => 'BUSINESS 電気・通信のしごとカード 画像',
+        'manufacturing_card' => 'BUSINESS 土木・建築のしごとカード 画像',
+        'flow_diagram'     => '仕事の流れ 図解画像',
         'about_main'       => 'ABOUT セクション 下部画像',
         'people_main'      => 'PEOPLE セクション メイン画像',
     ) );
@@ -489,7 +491,11 @@ add_action( 'customize_register', function ( $wp_customize ) {
     ) );
 } );
 
+/**
+ * LINE 友だち追加 URL。Customizer の「採用エントリーリンク → LINE URL」で上書き可能。
+ * 未設定なら現行リンクをフォールバックとして返す。
+ */
 function tecnes_line_url() {
     $u = tecnes_opt( 'line_url' );
-    return $u ? esc_url( $u ) : '#';
+    return $u ? esc_url( $u ) : 'https://lin.ee/ZfLUBUW';
 }

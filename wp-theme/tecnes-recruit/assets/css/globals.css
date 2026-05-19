@@ -89,6 +89,109 @@ figure {
   }
 }
 
+/* ===== セクション見出し共通装飾 .ttl01 =====
+   各セクションの .ttl01 / .ttl01En / .ttl01Ja は色とフォントサイズだけ
+   個別 CSS で持ち、ここで全セクション共通の「アクセントバー＋小ダッシュ」
+   装飾を適用してデザイン統一感を出す。 */
+.about .ttl01,
+.business .ttl01,
+.people .ttl01,
+.environment .ttl01,
+.recruit .ttl01,
+.flow .flowTtl01 {
+  gap: 18px 0 !important;
+}
+
+.about .ttl01En,
+.business .ttl01En,
+.people .ttl01En,
+.environment .ttl01En,
+.recruit .ttl01En {
+  position: relative;
+  display: inline-block;
+  padding-bottom: 14px;
+  letter-spacing: 0.06em !important;
+}
+
+.about .ttl01En::after,
+.business .ttl01En::after,
+.people .ttl01En::after,
+.environment .ttl01En::after,
+.recruit .ttl01En::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 64px;
+  height: 4px;
+  background: linear-gradient(90deg, #2bb9b0 0%, rgba(43, 185, 176, 0.25) 100%);
+  border-radius: 2px;
+}
+
+/* ABOUT はティール背景なのでバーを白基調にして可読性確保 */
+.about .ttl01En::after {
+  background: linear-gradient(90deg, #ffffff 0%, rgba(255, 255, 255, 0.3) 100%);
+}
+
+.about .ttl01Ja,
+.business .ttl01Ja,
+.people .ttl01Ja,
+.environment .ttl01Ja,
+.recruit .ttl01Ja {
+  position: relative;
+  padding-left: 18px;
+  font-weight: 600 !important;
+  letter-spacing: 0.14em !important;
+}
+
+.about .ttl01Ja::before,
+.business .ttl01Ja::before,
+.people .ttl01Ja::before,
+.environment .ttl01Ja::before,
+.recruit .ttl01Ja::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 50%;
+  width: 10px;
+  height: 2px;
+  background: #2bb9b0;
+  transform: translateY(-50%);
+}
+
+.about .ttl01Ja::before { background: #ffffff; }
+
+/* Flow は h2 単体（En/Ja スパン構造なし）なのでバー単独 */
+.flow .flowTtl01 {
+  position: relative;
+  padding-bottom: 14px;
+  display: inline-block;
+}
+
+.flow .flowTtl01::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 64px;
+  height: 4px;
+  background: linear-gradient(90deg, #2bb9b0 0%, rgba(43, 185, 176, 0.25) 100%);
+  border-radius: 2px;
+}
+
+/* ===== SP: 見出しサイズ調整 ===== */
+@media screen and (max-width: 767px) {
+  .about .ttl01En::after,
+  .business .ttl01En::after,
+  .people .ttl01En::after,
+  .environment .ttl01En::after,
+  .recruit .ttl01En::after,
+  .flow .flowTtl01::after {
+    width: 48px;
+    height: 3px;
+  }
+}
+
 /* ===== SP: ヒーロー（MV）は完全に画面の端から端まで ===== */
 @media screen and (max-width: 767px) {
   .mv,

@@ -1,5 +1,5 @@
 <?php
-$flow_img = tecnes_img( 'tecnes_work_flow_preview.png' );
+$flow_img = tecnes_image( 'flow_diagram', 'tecnes_work_flow_preview.png' );
 ?>
 <section id="flow" class="flow">
     <div class="l-inner flowInner">
