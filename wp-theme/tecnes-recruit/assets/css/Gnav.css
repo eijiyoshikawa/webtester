@@ -1,10 +1,24 @@
-/* ===== l-gnav ===== */
+/* ===== l-gnav =====
+ * SP で「メニューが半分しか出ない」バグ対策ポイント:
+ * 1) height: 100% は親要素 (=body) 依存で iOS Safari のアドレスバー表示状態で
+ *    高さが変動 → 100vh + 100dvh を併記して常にビューポート全面に固定。
+ * 2) inset: 0 で top/right/bottom/left を一括ゼロにし、ブラウザ既定の
+ *    auto 値が残って中途半端なサイズになるのを防止。
+ * 3) .lGnavInner は SP で必ず 100vw を厳格適用 (デスクトップの 540px 残りを上書き)。
+ * 4) GPU 合成を予告する will-change で transform アニメ中のサブピクセル欠けを抑制。
+ */
 .lGnav {
   position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
+  inset: 0;
+  width: 100vw;
+  /* フォールバックの段階指定:
+     1) 100vh: 全ブラウザ対応
+     2) calc(var(--tecnes-vh) * 100): header.js が実測した値 (dvh 未対応用)
+     3) 100dvh: 最新ブラウザの動的ビューポート高
+     後ろほど優先度が高く、対応ブラウザでは 3) が使われる。 */
+  height: 100vh;
+  height: calc(var(--tecnes-vh, 1vh) * 100);
+  height: 100dvh;
   z-index: 999;
   opacity: 0;
   visibility: hidden;
@@ -19,8 +33,7 @@
 
 .overlay {
   position: absolute;
-  top: 0;
-  left: 0;
+  inset: 0;
   width: 100%;
   height: 100%;
   background-color: rgba(28, 44, 67, 0.5);
@@ -31,14 +44,16 @@
   position: absolute;
   top: 0;
   right: 0;
-  width: 540px;
-  max-width: 100%;
+  width: min(540px, 100vw);
+  max-width: 100vw;
   height: 100%;
   background-color: rgb(255, 255, 255);
   overflow-y: auto;
+  -webkit-overflow-scrolling: touch;
   transform: translateX(100%);
   transition: transform 0.4s cubic-bezier(0.215, 0.61, 0.355, 1);
   padding: 100px 50px 60px;
+  will-change: transform;
 }
 
 .lGnav.isOpen .lGnavInner {
@@ -179,16 +194,29 @@
   }
 
   .lGnavInner {
-    width: 100%;
+    width: 100vw !important;
+    max-width: 100vw !important;
     padding: 100px 40px 60px;
   }
 }
 
 /* ===== モバイル（〜767px）===== */
 @media screen and (max-width: 767px) {
+  /* iOS Safari のアドレスバー表示変動に確実追従させるため
+     ラッパー側にも 100dvh を再宣言（CSS の cascade 上、最後の宣言が勝つ）。 */
+  .lGnav {
+    height: 100vh;
+    height: calc(var(--tecnes-vh, 1vh) * 100);
+    height: 100dvh;
+  }
+
   .lGnavInner {
     padding: 25.3333vw 10.6667vw 16vw;
-    width: 100%;
+    width: 100vw !important;
+    max-width: 100vw !important;
+    height: 100vh;
+    height: calc(var(--tecnes-vh, 1vh) * 100);
+    height: 100dvh;
   }
 
   .box {
