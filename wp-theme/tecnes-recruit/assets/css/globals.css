@@ -1,9 +1,20 @@
 /* (WordPress 版では @tailwind ディレクティブは不要のため削除。
     実際の Tailwind ユーティリティはマークアップで使用されていません。) */
 
+/* ===== CSS 変数（フォント）=====
+   元は Next.js 版で next/font が --font-noto-sans-jp / --font-poppins を
+   注入していたが、WordPress 版では存在しないため var() が空文字を返し
+   font-family 全体が無効になって明朝系フォールバックに落ちる事故が起きていた。
+   WP 用に :root で明示的に定義することでゴシック（Noto Sans JP / Poppins）を確実に適用する。 */
+:root {
+  --font-noto-sans-jp: "Noto Sans JP";
+  --font-poppins: "Poppins";
+}
+
 /* ===== ルート font-size（1rem = 10px）===== */
 html { font-size: 62.5%; }
 html { font-size: 10px; }
+html, body { overflow-x: hidden; }
 
 @media screen and (max-width: 374px) {
   html { font-size: 2.66667vw; }
@@ -20,7 +31,7 @@ html { font-size: 10px; }
 body {
   width: 100%;
   color: rgb(28, 44, 67);
-  font-family: var(--font-noto-sans-jp), "Noto Sans JP", sans-serif;
+  font-family: "Noto Sans JP", "Hiragino Kaku Gothic ProN", "ヒラギノ角ゴ ProN W3", "Yu Gothic", "游ゴシック", Meiryo, sans-serif;
   font-size: 1.6rem;
   font-weight: 400;
   line-height: 1.5;
@@ -85,8 +96,10 @@ figure {
 
 @media screen and (max-width: 767px) {
   .l-inner {
-    padding: 0;
+    padding: 0 5vw;
   }
+  /* MV/Hero は親が .l-inner を使っていないが、念のため
+     特例として全幅 (l-inner padding 無効化) を後段で強制適用する。 */
 }
 
 /* ===== セクション見出し共通装飾 .ttl01 =====

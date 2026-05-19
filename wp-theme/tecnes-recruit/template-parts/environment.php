@@ -24,7 +24,7 @@ $accordion_items = array(
         </p>
         <div class="envAccordion">
             <?php foreach ( $accordion_items as $i => $item ) : ?>
-                <details class="envAcItem"<?php echo $i === 0 ? ' open' : ''; ?>>
+                <details class="envAcItem">
                     <summary class="envAcSummary">
                         <span class="envAcTitle"><?php echo esc_html( $item['title'] ); ?></span>
                         <span class="envAcIcon" aria-hidden="true"></span>
