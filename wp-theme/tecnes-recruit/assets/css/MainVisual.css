@@ -156,7 +156,8 @@
   }
 
   .mvInner {
-    margin-left: 10.6667vw;
+    margin-left: 0;
+    width: 100%;
   }
 
   .mvScroll {
