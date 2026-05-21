@@ -49,7 +49,14 @@ foreach ( $rows as $i => $r ) {
                             <div class="cardBody">
                                 <p class="cardCatch"><?php echo esc_html( $m['catch'] ); ?></p>
                                 <div class="cardMeta">
-                                    <span class="cardDept"><?php echo esc_html( $m['dept'] . '・' . $m['role'] ); ?></span>
+                                    <?php
+                                        // 部署が空のときは「・」を出さずに役職のみ表示。
+                                        // 役職側も空なら span を出さない。
+                                        $meta_parts = array_filter( array( trim( $m['dept'] ), trim( $m['role'] ) ), 'strlen' );
+                                        if ( $meta_parts ) :
+                                    ?>
+                                    <span class="cardDept"><?php echo esc_html( implode( '・', $meta_parts ) ); ?></span>
+                                    <?php endif; ?>
                                     <span class="cardName"><?php echo esc_html( $m['name'] ); ?></span>
                                     <span class="cardYear"><?php echo esc_html( $m['year'] ); ?></span>
                                 </div>
