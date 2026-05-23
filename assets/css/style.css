@@ -1643,3 +1643,220 @@ img { display: block; max-width: 100%; }
   .nav__lang { display: none; }
   .nav__actions { gap: 0; }
 }
+
+/* --- Blog --- */
+.blog-page {
+  padding: 60px 40px 120px;
+  position: relative;
+  z-index: 1;
+}
+.blog-page__inner {
+  max-width: 1100px;
+  margin: 0 auto;
+}
+.blog-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: 32px;
+  margin-top: 32px;
+}
+.blog-card {
+  display: flex;
+  flex-direction: column;
+  background: #0c0c0c;
+  border: 1px solid #1a1a1a;
+  transition: transform 0.4s, border-color 0.4s;
+  text-decoration: none;
+  color: inherit;
+}
+.blog-card:hover {
+  transform: translateY(-4px);
+  border-color: #333;
+}
+.blog-card__img {
+  aspect-ratio: 16/9;
+  overflow: hidden;
+}
+.blog-card__img img {
+  width: 100%; height: 100%;
+  object-fit: cover;
+  transition: transform 0.5s;
+}
+.blog-card:hover .blog-card__img img {
+  transform: scale(1.05);
+}
+.blog-card__body {
+  padding: 20px 22px 24px;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+.blog-card__meta {
+  display: flex;
+  gap: 12px;
+  align-items: center;
+  font-family: "Space Grotesk", sans-serif;
+  font-size: 11px;
+  letter-spacing: 0.15em;
+  color: #666;
+}
+.blog-card__category {
+  color: #FF0055;
+}
+.blog-card__title {
+  font-family: "Sora", "Hiragino Sans", sans-serif;
+  font-size: 16px;
+  font-weight: 700;
+  line-height: 1.55;
+  color: #fff;
+  margin: 0;
+}
+.blog-card__excerpt {
+  font-size: 13px;
+  line-height: 1.7;
+  color: #999;
+  margin: 0;
+}
+.blog-filter {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  margin: 8px 0 32px;
+  list-style: none;
+}
+.blog-filter a {
+  font-family: "Space Grotesk", sans-serif;
+  font-size: 12px;
+  letter-spacing: 0.15em;
+  color: #888;
+  padding: 6px 14px;
+  border: 1px solid #2a2a2a;
+  text-decoration: none;
+  transition: color 0.3s, border-color 0.3s;
+}
+.blog-filter a:hover {
+  color: #fff;
+  border-color: #fff;
+}
+
+/* Article body extensions for blog posts */
+.post-figure {
+  margin: 28px 0;
+}
+.post-figure img,
+.post-figure svg {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+.post-figure figcaption {
+  margin-top: 8px;
+  font-size: 12px;
+  color: #777;
+  text-align: center;
+  letter-spacing: 0.05em;
+}
+.post-body h2 {
+  font-family: "Sora", "Hiragino Sans", sans-serif;
+  font-size: 22px;
+  font-weight: 700;
+  color: #fff;
+  margin: 2.2em 0 0.9em;
+  padding-left: 12px;
+  border-left: 3px solid #FF0055;
+}
+.post-body h3 {
+  font-family: "Sora", "Hiragino Sans", sans-serif;
+  font-size: 17px;
+  font-weight: 700;
+  color: #ddd;
+  margin: 1.8em 0 0.7em;
+}
+.post-body ul, .post-body ol {
+  padding-left: 1.5em;
+  margin: 0 0 1.5em;
+}
+.post-body li {
+  margin: 0.4em 0;
+}
+.post-body a {
+  color: #FF8AB0;
+  text-decoration: underline;
+  text-underline-offset: 3px;
+}
+.post-body a:hover { color: #FF0055; }
+.post-meta {
+  display: flex;
+  gap: 16px;
+  align-items: center;
+  font-family: "Space Grotesk", sans-serif;
+  font-size: 12px;
+  letter-spacing: 0.15em;
+  color: #888;
+  margin-bottom: 16px;
+}
+.post-meta__category {
+  color: #FF0055;
+}
+.post-author {
+  display: flex;
+  gap: 16px;
+  align-items: flex-start;
+  margin-top: 56px;
+  padding: 20px;
+  border: 1px solid #1a1a1a;
+  background: #0a0a0a;
+}
+.post-author__avatar {
+  width: 48px; height: 48px;
+  flex-shrink: 0;
+  border-radius: 50%;
+  background: linear-gradient(135deg, #FF0055, #8B5CF6);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: "Space Grotesk", sans-serif;
+  font-weight: 800;
+  font-size: 16px;
+  color: #fff;
+}
+.post-author__name {
+  font-weight: 700;
+  margin-bottom: 4px;
+}
+.post-author__name a { color: #fff; text-decoration: none; }
+.post-author__name a:hover { color: #FF8AB0; }
+.post-author__bio {
+  font-size: 13px;
+  color: #999;
+  line-height: 1.7;
+}
+.post-related {
+  margin-top: 48px;
+  padding-top: 32px;
+  border-top: 1px solid #1a1a1a;
+}
+.post-related__title {
+  font-family: "Space Grotesk", sans-serif;
+  font-size: 13px;
+  letter-spacing: 0.2em;
+  color: #888;
+  margin-bottom: 16px;
+}
+.post-related ul {
+  list-style: none;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+.post-related a {
+  color: #ccc;
+  text-decoration: none;
+}
+.post-related a:hover { color: #FF8AB0; }
+@media (max-width: 640px) {
+  .blog-page { padding: 40px 20px 80px; }
+  .blog-grid { gap: 20px; }
+}
