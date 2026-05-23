@@ -8,6 +8,11 @@
 <meta name="keywords" content="ダンススタジオ,レンタルスタジオ,枚方,大阪,時間貸し,ダンス練習,撮影スタジオ,防音,鏡張り,学割">
 <link rel="canonical" href="https://www.suiseistudio.com/">
 
+<!-- hreflang -->
+<link rel="alternate" hreflang="ja" href="https://www.suiseistudio.com/">
+<link rel="alternate" hreflang="en" href="https://www.suiseistudio.com/en/">
+<link rel="alternate" hreflang="x-default" href="https://www.suiseistudio.com/">
+
 <!-- Open Graph -->
 <meta property="og:type" content="website">
 <meta property="og:site_name" content="SUISEI STUDIO">
@@ -51,9 +56,115 @@
     "opens": "06:00",
     "closes": "23:00"
   }],
+  "priceRange": "¥500-¥1000",
+  "currenciesAccepted": "JPY",
+  "paymentAccepted": "Cash",
+  "hasOfferCatalog": {
+    "@type": "OfferCatalog",
+    "name": "スタジオ利用料金",
+    "itemListElement": [
+      {
+        "@type": "Offer",
+        "name": "一般 1時間レンタル",
+        "price": "1000",
+        "priceCurrency": "JPY",
+        "availability": "https://schema.org/InStock",
+        "itemOffered": {
+          "@type": "Service",
+          "name": "ダンスレンタルスタジオ（一般）",
+          "description": "1時間単位のスタジオレンタル"
+        }
+      },
+      {
+        "@type": "Offer",
+        "name": "学割 1時間レンタル",
+        "price": "500",
+        "priceCurrency": "JPY",
+        "availability": "https://schema.org/InStock",
+        "eligibleCustomerType": "https://schema.org/Student",
+        "validFrom": "06:00",
+        "validThrough": "16:00",
+        "itemOffered": {
+          "@type": "Service",
+          "name": "ダンスレンタルスタジオ（学生）",
+          "description": "学割対象（6:00〜16:00）1時間単位のスタジオレンタル"
+        }
+      }
+    ]
+  },
   "hasMap": "https://www.google.com/maps/search/%E5%A4%A7%E9%98%AA%E5%BA%9C%E6%9E%9A%E6%96%B9%E5%B8%82%E4%B8%AD%E5%AE%AE%E6%9D%B1%E4%B9%8B%E7%94%BA6-15+Cometa%E3%83%93%E3%83%AB",
   "sameAs": [
     "https://www.instagram.com/suiseidancestudio/"
+  ]
+}
+</script>
+
+<!-- FAQPage Structured Data -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "予約方法を教えてください",
+      "acceptedAnswer": { "@type": "Answer", "text": "SUISEI公式LINEからご予約ください。" }
+    },
+    {
+      "@type": "Question",
+      "name": "どのくらい先まで予約できますか？",
+      "acceptedAnswer": { "@type": "Answer", "text": "２ヶ月前から予約可能です。" }
+    },
+    {
+      "@type": "Question",
+      "name": "料金の支払い方法は？",
+      "acceptedAnswer": { "@type": "Answer", "text": "当日現金払いとなっております。クレジットカード・電子マネーはご利用いただけません。スタジオ内にポストを設置しておりますので、そちらの封筒にお金を入れて投函してください。" }
+    },
+    {
+      "@type": "Question",
+      "name": "学割について教えてください",
+      "acceptedAnswer": { "@type": "Answer", "text": "当スタジオでは学生の皆さまにリーズナブルにレンタルして頂ける学割を設けております。予約時、お客様情報を入力する際に学校名等を記載していただくことで学割適用となります。学割適用の時間帯は6:00-16:00となります。" }
+    },
+    {
+      "@type": "Question",
+      "name": "キャンセル料金はいくらですか？",
+      "acceptedAnswer": { "@type": "Answer", "text": "予約日の1週間前まで：無料／3日前〜6日前まで：レンタル料金50%／当日・前日・前々日：レンタル料金100%。キャンセル料金はキャンセルから1週間以内に当スタジオ指定口座へお振込みください。" }
+    },
+    {
+      "@type": "Question",
+      "name": "利用可能な音響機器は？",
+      "acceptedAnswer": { "@type": "Answer", "text": "iPhone・iPod・スマートフォン・パソコン等のご利用が可能です。AUXコードをスタジオ内にご用意しており、Bluetooth対応機器からはワイヤレスで再生も可能です。" }
+    },
+    {
+      "@type": "Question",
+      "name": "撮影は可能ですか？",
+      "acceptedAnswer": { "@type": "Answer", "text": "ダンスの練習の他に写真や動画の撮影も通常料金でしていただけます。事前のお問い合わせも不要、SNS掲載も規制はございません。" }
+    },
+    {
+      "@type": "Question",
+      "name": "バンドの練習や楽器演奏はできますか？",
+      "acceptedAnswer": { "@type": "Answer", "text": "スタジオ内では防音や電力の関係から楽器演奏やバンドの練習（歌唱も含む）を一切禁止しております。" }
+    },
+    {
+      "@type": "Question",
+      "name": "スタジオ内での履物について",
+      "acceptedAnswer": { "@type": "Answer", "text": "使用できる履物は、室内用シューズに限らせていただきます（裸足、靴下も可／外履きは不可）。ヒールブーツ、タップシューズ、釘のついた靴など床を傷めるものは禁止です。" }
+    },
+    {
+      "@type": "Question",
+      "name": "荷物を預けることはできますか？",
+      "acceptedAnswer": { "@type": "Answer", "text": "当スタジオではお荷物をお預かりするサービスはございません。お荷物の管理はお客様にてお願いいたします。" }
+    },
+    {
+      "@type": "Question",
+      "name": "喫煙はできますか？",
+      "acceptedAnswer": { "@type": "Answer", "text": "当スタジオは喫煙スペースを設けておりません。当スタジオ周辺・近隣施設のご迷惑となりますので決して喫煙されないようお願いいたします。" }
+    },
+    {
+      "@type": "Question",
+      "name": "領収書は発行できますか？",
+      "acceptedAnswer": { "@type": "Answer", "text": "領収書はご利用日の翌日以降、メールにてPDFデータでお送りいたします。予約時にお伝えください。" }
+    }
   ]
 }
 </script>
@@ -129,14 +240,14 @@
 
 <!-- Navigation -->
 <nav class="nav" id="nav">
-  <a href="./" class="nav__logo">SUISEI</a>
+  <a href="./" class="nav__logo" lang="en">SUISEI</a>
   <ul class="nav__menu" id="nav-menu">
-    <li><a href="#studio" class="nav__link">STUDIO</a></li>
-    <li><a href="./info/" class="nav__link">NEWS</a></li>
-    <li><a href="./riyou/" class="nav__link">GUIDE</a></li>
-    <li><a href="#faq" class="nav__link">FAQ</a></li>
+    <li><a href="#studio" class="nav__link" lang="en">STUDIO</a></li>
+    <li><a href="./info/" class="nav__link" lang="en">NEWS</a></li>
+    <li><a href="./riyou/" class="nav__link" lang="en">GUIDE</a></li>
+    <li><a href="#faq" class="nav__link" lang="en">FAQ</a></li>
   </ul>
-  <a href="https://system.suiseistudio.com/" target="_blank" rel="noopener" class="nav__reserve">RESERVE</a>
+  <a href="https://system.suiseistudio.com/" target="_blank" rel="noopener" class="nav__reserve" lang="en">RESERVE</a>
   <button class="hamburger" id="hamburger" aria-label="メニュー">
     <span class="hamburger__line"></span>
     <span class="hamburger__line"></span>
@@ -146,11 +257,11 @@
 <!-- Mobile Menu Overlay -->
 <div class="mobile-menu" id="mobile-menu">
   <ul class="mobile-menu__list">
-    <li><a href="#studio" class="mobile-menu__link">STUDIO</a></li>
-    <li><a href="./info/" class="mobile-menu__link">NEWS</a></li>
-    <li><a href="./riyou/" class="mobile-menu__link">GUIDE</a></li>
-    <li><a href="#faq" class="mobile-menu__link">FAQ</a></li>
-    <li><a href="https://system.suiseistudio.com/" target="_blank" rel="noopener" class="mobile-menu__link mobile-menu__link--reserve">RESERVE</a></li>
+    <li><a href="#studio" class="mobile-menu__link" lang="en">STUDIO</a></li>
+    <li><a href="./info/" class="mobile-menu__link" lang="en">NEWS</a></li>
+    <li><a href="./riyou/" class="mobile-menu__link" lang="en">GUIDE</a></li>
+    <li><a href="#faq" class="mobile-menu__link" lang="en">FAQ</a></li>
+    <li><a href="https://system.suiseistudio.com/" target="_blank" rel="noopener" class="mobile-menu__link mobile-menu__link--reserve" lang="en">RESERVE</a></li>
   </ul>
 </div>
 
@@ -158,15 +269,15 @@
 <section class="hero" id="hero">
   <div class="hero__grain" aria-hidden="true"></div>
   <div class="hero__content">
-    <h1 class="hero__title">
+    <h1 class="hero__title" lang="en">
       <span class="hero__line hero__line--1" data-animate>SUISEI</span>
       <span class="hero__line hero__line--2" data-animate>STUDIO</span>
     </h1>
-    <p class="hero__sub" data-animate>DANCE RENTAL STUDIO</p>
+    <p class="hero__sub" data-animate lang="en">DANCE RENTAL STUDIO</p>
   </div>
   <div class="hero__side" aria-hidden="true">大阪・枚方</div>
   <div class="hero__scroll" aria-hidden="true">
-    <span class="hero__scroll-text">SCROLL</span>
+    <span class="hero__scroll-text" lang="en">SCROLL</span>
     <span class="hero__scroll-line"></span>
   </div>
 </section>
@@ -174,43 +285,43 @@
 <!-- Studio -->
 <section class="studio" id="studio">
   <div class="studio__header" data-animate>
-    <span class="studio__label">ABOUT</span>
-    <h2 class="studio__title">STUDIO</h2>
+    <span class="studio__label" lang="en">ABOUT</span>
+    <h2 class="studio__title" lang="en">STUDIO</h2>
   </div>
   <div class="studio__hero-img">
-    <img src="https://images.unsplash.com/photo-1508700929628-666bc8bd84ea?w=1200&h=500&fit=crop" alt="ダンススタジオ" loading="lazy">
+    <img src="https://images.unsplash.com/photo-1508700929628-666bc8bd84ea?w=1200&h=500&fit=crop" alt="SUISEI STUDIOのダンスフロア全景 - 大阪・枚方のダンスレンタルスタジオ" loading="lazy">
   </div>
   <div class="studio__grid">
     <div class="studio__card" data-animate>
       <div class="studio__card-img">
-        <img src="https://images.unsplash.com/photo-1601925260368-ae2f83cf8b7f?w=600&h=450&fit=crop" alt="スタジオ内装" loading="lazy">
+        <img src="https://images.unsplash.com/photo-1601925260368-ae2f83cf8b7f?w=600&h=450&fit=crop" alt="鏡張りのダンススタジオ内装（約19帖）" loading="lazy">
       </div>
       <span class="studio__card-num">01</span>
-      <h3 class="studio__card-title">STUDIO</h3>
+      <h3 class="studio__card-title" lang="en">STUDIO</h3>
       <p class="studio__card-text">2026年3月にリニューアルいたしました。ダンスはもちろんヨガやエアロビ、ズンバなど多目的にご利用いただけます。（広さ約19帖）</p>
     </div>
     <div class="studio__card" data-animate>
       <div class="studio__card-img">
-        <img src="https://images.unsplash.com/photo-1545454675-3531b543be5d?w=600&h=450&fit=crop" alt="スピーカー" loading="lazy">
+        <img src="https://images.unsplash.com/photo-1545454675-3531b543be5d?w=600&h=450&fit=crop" alt="JBL製の高品質スピーカー（Bluetooth対応）" loading="lazy">
       </div>
       <span class="studio__card-num">02</span>
-      <h3 class="studio__card-title">SPEAKER</h3>
+      <h3 class="studio__card-title" lang="en">SPEAKER</h3>
       <p class="studio__card-text">音質にこだわり、音響機器にJBLをご用意しております。有線と無線(Bluetooth)接続が可能です。(CD等は使用不可)</p>
     </div>
     <div class="studio__card" data-animate>
       <div class="studio__card-img">
-        <img src="https://images.unsplash.com/photo-1574717024653-61fd2cf4d44d?w=600&h=450&fit=crop" alt="モニター" loading="lazy">
+        <img src="https://images.unsplash.com/photo-1574717024653-61fd2cf4d44d?w=600&h=450&fit=crop" alt="動作確認用の大画面モニターディスプレイ" loading="lazy">
       </div>
       <span class="studio__card-num">03</span>
-      <h3 class="studio__card-title">MONITOR</h3>
+      <h3 class="studio__card-title" lang="en">MONITOR</h3>
       <p class="studio__card-text">ダンスの練習に動作を確認できる大画面ディスプレイを設置。1つひとつの動作を確認できるので初心者やコピーダンスの利用にもぴったり。</p>
     </div>
     <div class="studio__card" data-animate>
       <div class="studio__card-img">
-        <img src="https://images.unsplash.com/photo-1540224871915-bc8ffb782bdf?w=600&h=450&fit=crop" alt="照明" loading="lazy">
+        <img src="https://images.unsplash.com/photo-1540224871915-bc8ffb782bdf?w=600&h=450&fit=crop" alt="撮影用のカラー調整可能な照明機材" loading="lazy">
       </div>
       <span class="studio__card-num">04</span>
-      <h3 class="studio__card-title">LIGHTING</h3>
+      <h3 class="studio__card-title" lang="en">LIGHTING</h3>
       <p class="studio__card-text">SNSや思い出の動画を撮影する際にぜひ使っていただきたい照明器具を2種類装備しています。カラーなども選べますので、ご自由にお使いください。</p>
     </div>
   </div>
@@ -219,8 +330,8 @@
 <!-- Price -->
 <section class="price" id="price">
   <div class="price__header" data-animate>
-    <span class="price__label">RENTAL</span>
-    <h2 class="price__title">PRICE</h2>
+    <span class="price__label" lang="en">RENTAL</span>
+    <h2 class="price__title" lang="en">PRICE</h2>
   </div>
   <div class="price__table-wrap" data-animate>
     <p class="price__note">スタジオ基本利用料金（1時間）</p>
@@ -251,8 +362,8 @@
 <!-- FAQ -->
 <section class="faq" id="faq">
   <div class="faq__header" data-animate>
-    <span class="faq__label">SUPPORT</span>
-    <h2 class="faq__title">FAQ</h2>
+    <span class="faq__label" lang="en">SUPPORT</span>
+    <h2 class="faq__title" lang="en">FAQ</h2>
   </div>
 
   <div class="faq__category" data-animate>
@@ -366,7 +477,7 @@
 
 <!-- Location -->
 <section class="location" id="location">
-  <div class="location__label" aria-hidden="true">LOCATION</div>
+  <div class="location__label" aria-hidden="true" lang="en">LOCATION</div>
   <div class="location__info" data-animate>
     <p class="location__zip">〒573-1197</p>
     <p class="location__address">
@@ -375,7 +486,7 @@
       Cometaビル
     </p>
     <a href="https://www.google.com/maps/search/%E5%A4%A7%E9%98%AA%E5%BA%9C%E6%9E%9A%E6%96%B9%E5%B8%82%E4%B8%AD%E5%AE%AE%E6%9D%B1%E4%B9%8B%E7%94%BA6-15+Cometa%E3%83%93%E3%83%AB" target="_blank" rel="noopener" class="location__map-link">
-      VIEW ON MAP <span class="location__arrow">&rarr;</span>
+      <span lang="en">VIEW ON MAP</span> <span class="location__arrow">&rarr;</span>
     </a>
   </div>
 </section>
@@ -383,17 +494,17 @@
 <!-- CTA / Reserve -->
 <section class="cta" id="reserve">
   <a href="https://system.suiseistudio.com/" target="_blank" rel="noopener" class="cta__button" data-animate>
-    <span class="cta__text">RESERVE NOW</span>
+    <span class="cta__text" lang="en">RESERVE NOW</span>
     <span class="cta__arrow">&rarr;</span>
   </a>
   <footer class="footer">
     <div class="footer__links">
-      <a href="https://www.instagram.com/suiseidancestudio/" target="_blank" rel="noopener" class="footer__instagram">
+      <a href="https://www.instagram.com/suiseidancestudio/" target="_blank" rel="noopener" class="footer__instagram" lang="en">
         <svg class="footer__ig-icon" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" width="18" height="18"><rect x="2" y="2" width="20" height="20" rx="5" stroke="currentColor" stroke-width="1.5"/><circle cx="12" cy="12" r="5" stroke="currentColor" stroke-width="1.5"/><circle cx="17.5" cy="6.5" r="1.5" fill="currentColor"/></svg>
         FOLLOW US ON INSTAGRAM
       </a>
     </div>
-    <p class="footer__copy">&copy; SUISEI STUDIO</p>
+    <p class="footer__copy" lang="en">&copy; SUISEI STUDIO</p>
   </footer>
 </section>
 
