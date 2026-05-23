@@ -20,14 +20,26 @@ AUTHOR = {
 }
 
 # 共通のUnsplash画像（ダンス/スタジオ系のフリー素材）
+# 各記事に固有のIDを割り当てて重複を避ける。
 IMAGES = {
-    "studio_wide":  "https://images.unsplash.com/photo-1508700929628-666bc8bd84ea?w=1200&h=630&fit=crop",
-    "studio_int":   "https://images.unsplash.com/photo-1601925260368-ae2f83cf8b7f?w=1200&h=630&fit=crop",
-    "speaker":      "https://images.unsplash.com/photo-1545454675-3531b543be5d?w=1200&h=630&fit=crop",
-    "monitor":      "https://images.unsplash.com/photo-1574717024653-61fd2cf4d44d?w=1200&h=630&fit=crop",
-    "lighting":     "https://images.unsplash.com/photo-1540224871915-bc8ffb782bdf?w=1200&h=630&fit=crop",
-    "lit":          "https://images.unsplash.com/photo-1514525253161-7a46d19cd819?w=1200&h=630&fit=crop",
-    "photo_day":    "https://images.unsplash.com/photo-1571266028243-e68f7b2a1b8a?w=1200&h=630&fit=crop",
+    "studio_wide":  "https://images.unsplash.com/photo-1508700929628-666bc8bd84ea?w=1200&h=630&fit=crop&q=80&auto=format",
+    "studio_int":   "https://images.unsplash.com/photo-1601925260368-ae2f83cf8b7f?w=1200&h=630&fit=crop&q=80&auto=format",
+    "speaker":      "https://images.unsplash.com/photo-1545454675-3531b543be5d?w=1200&h=630&fit=crop&q=80&auto=format",
+    "monitor":      "https://images.unsplash.com/photo-1574717024653-61fd2cf4d44d?w=1200&h=630&fit=crop&q=80&auto=format",
+    "lighting":     "https://images.unsplash.com/photo-1540224871915-bc8ffb782bdf?w=1200&h=630&fit=crop&q=80&auto=format",
+    "lit":          "https://images.unsplash.com/photo-1514525253161-7a46d19cd819?w=1200&h=630&fit=crop&q=80&auto=format",
+    "yoga_mat":     "https://images.unsplash.com/photo-1518611012118-696072aa579a?w=1200&h=630&fit=crop&q=80&auto=format",
+    "gym":          "https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?w=1200&h=630&fit=crop&q=80&auto=format",
+    "dj":           "https://images.unsplash.com/photo-1556910103-1c02745aae4d?w=1200&h=630&fit=crop&q=80&auto=format",
+    "concert":      "https://images.unsplash.com/photo-1547347298-4074fc3086f0?w=1200&h=630&fit=crop&q=80&auto=format",
+    "sneakers":     "https://images.unsplash.com/photo-1547234935-80c7145ec969?w=1200&h=630&fit=crop&q=80&auto=format",
+    "headphones":   "https://images.unsplash.com/photo-1493676304819-0d7a8d026dcf?w=1200&h=630&fit=crop&q=80&auto=format",
+    "dancer_a":     "https://images.unsplash.com/photo-1517022812141-23620dba5c23?w=1200&h=630&fit=crop&q=80&auto=format",
+    "dancer_b":     "https://images.unsplash.com/photo-1564507592333-c60657eea523?w=1200&h=630&fit=crop&q=80&auto=format",
+    "silhouette":   "https://images.unsplash.com/photo-1429962714451-bb934ecdc4ec?w=1200&h=630&fit=crop&q=80&auto=format",
+    "people":       "https://images.unsplash.com/photo-1485579149621-3123dd979885?w=1200&h=630&fit=crop&q=80&auto=format",
+    "halloween":    "https://images.unsplash.com/photo-1509248961158-e54f6934749c?w=1200&h=630&fit=crop&q=80&auto=format",
+    "barre":        "https://images.unsplash.com/photo-1495555687398-3f50d6e79e1e?w=1200&h=630&fit=crop&q=80&auto=format",
 }
 
 CATEGORIES = {
@@ -111,7 +123,7 @@ ARTICLES = [
         "publish_date": "2026-05-23",
         "title": "枚方で学割が使えるダンスレンタルスタジオ｜時間帯と適用条件のすべて",
         "description": "枚方エリアのダンスレンタルスタジオで使える学割の特徴と、適用時間帯・必要な情報・注意点を解説。学生がコスパよく練習するためのコツを紹介します。",
-        "image": IMAGES["studio_wide"],
+        "image": IMAGES["sneakers"],
         "image_alt": "学生がダンス練習をしているスタジオの様子",
         "body": """<p>「学生でお金がないけど、ちゃんとしたスタジオで練習したい」という相談をよく受けます。実は枚方エリアのダンスレンタルスタジオには学割を設けているところが複数あり、上手に使えば月額制の半額以下で本格的な練習環境が手に入ります。本記事では学割の仕組みと使い方のコツを整理します。</p>
 
@@ -153,7 +165,7 @@ ARTICLES = [
         "publish_date": "2026-05-23",
         "title": "初心者のためのダンス練習メニュー｜最初の30日間ロードマップ",
         "description": "ダンスを始めたばかりの初心者が、最初の30日間で何をどう練習すれば上達するのかを、週単位のメニュー付きで解説します。スタジオ・自宅どちらでも実践可能。",
-        "image": IMAGES["monitor"],
+        "image": IMAGES["dancer_a"],
         "image_alt": "鏡の前でダンス練習をする初心者",
         "body": """<p>ダンスを始めたばかりの頃は「何から練習すればいいのか分からない」と感じる方がほとんどです。本記事では、初心者が最初の30日間でやるべき練習メニューを週単位で整理しました。スタジオでも自宅でも実践できる内容で、30日後には1曲を最後まで踊れる状態を目指します。</p>
 
@@ -205,7 +217,7 @@ ARTICLES = [
         "publish_date": "2026-05-23",
         "title": "TikTok・Instagram用ダンス動画をきれいに撮るコツ｜照明・構図・音響",
         "description": "スマホでもプロっぽいダンス動画を撮るための、照明・構図・音響・編集の4つのコツを解説。スタジオで撮影する際の設定例も紹介します。",
-        "image": IMAGES["lighting"],
+        "image": IMAGES["dj"],
         "image_alt": "TikTok用のダンス動画をスタジオで撮影している様子",
         "body": """<p>「自分で踊って投稿しているけど、なんとなくクオリティが上がらない」――TikTok/Instagram にダンス動画を投稿している方からよく聞く悩みです。本記事ではスマホ撮影でもプロっぽく見せる4つのコツを、ダンススタジオでの撮影例とともに解説します。</p>
 
@@ -253,7 +265,7 @@ ARTICLES = [
         "publish_date": "2026-05-23",
         "title": "ヒールダンスの練習で気をつけたい5つのこと｜怪我せず上達するために",
         "description": "ヒールを履いて踊るスタイルが増える中、怪我を防ぎつつ上達するために気をつけたいポイントを5つに整理。スタジオ利用時のマナーも合わせて紹介します。",
-        "image": IMAGES["lighting"],
+        "image": IMAGES["barre"],
         "image_alt": "ヒールダンスの練習風景",
         "body": """<p>K-POPやガールズヒップホップの影響で「ヒールを履いて踊りたい」というニーズが年々増えています。一方でヒールは普通のスニーカーと違って、足首・膝・床へのダメージが大きく、怪我のリスクが高い練習でもあります。本記事では、ヒールダンスを始める・続けるうえで気をつけたい5つのポイントを整理しました。</p>
 
@@ -295,7 +307,7 @@ ARTICLES = [
         "publish_date": "2026-05-23",
         "title": "文化祭ダンスの練習はいつから始める？本番から逆算する3か月スケジュール",
         "description": "文化祭ダンス出演に向けて、どのタイミングから何を練習すべきかを本番から逆算した3か月スケジュールで解説。クラス・部活でのダンス練習に活用できます。",
-        "image": IMAGES["photo_day"],
+        "image": IMAGES["concert"],
         "image_alt": "文化祭ダンスの練習をするグループ",
         "body": """<p>「文化祭でクラスや部活でダンスを披露することになったけど、いつから準備すれば本番に間に合うのか分からない」――毎年この時期になるとよく聞く相談です。本記事では本番から逆算した3か月のスケジュール例を紹介します。</p>
 
@@ -347,7 +359,7 @@ ARTICLES = [
         "publish_date": "2026-05-23",
         "title": "春からダンスを始めたい人向け｜スタジオデビュー完全ガイド",
         "description": "春からダンスを始めたい人に向けて、スタジオデビューまでに準備すべきこと・最初の1か月のスタジオ活用法・継続のコツを解説します。",
-        "image": IMAGES["studio_int"],
+        "image": IMAGES["yoga_mat"],
         "image_alt": "春からダンスを始める初心者のスタジオ風景",
         "body": """<p>春は新しいことを始めるのにぴったりの季節。「ダンスを始めたい」と思っていた方には絶好のスタートタイミングです。本記事ではダンス未経験者向けに、スタジオデビューまでに準備しておきたいことと、最初の1か月の使い方を解説します。</p>
 
@@ -406,7 +418,7 @@ ARTICLES = [
         "publish_date": "2026-05-23",
         "title": "カラオケでダンス練習 vs ダンススタジオ｜目的別の使い分けガイド",
         "description": "カラオケのパーティールームとダンス専用スタジオを、料金・設備・防音・規約の4軸で比較。それぞれが向いている用途を解説します。",
-        "image": IMAGES["lit"],
+        "image": IMAGES["headphones"],
         "image_alt": "ダンス練習場所の比較イメージ",
         "body": """<p>「ダンスの練習なら、安いカラオケで十分じゃない？」と考える方は少なくありません。確かにコスパだけ見れば近い部分もありますが、実は目的によって向き不向きが大きく変わります。本記事では4つの軸で両者を比較しました。</p>
 
@@ -451,7 +463,7 @@ ARTICLES = [
         "publish_date": "2026-05-23",
         "title": "大阪府のダンスレンタルスタジオ料金相場と賢い選び方",
         "description": "大阪府内のダンスレンタルスタジオの料金相場を、エリア・時間帯・設備別に整理。コスパよく練習するための選び方ガイドです。",
-        "image": IMAGES["studio_wide"],
+        "image": IMAGES["gym"],
         "image_alt": "大阪府内のダンスレンタルスタジオ料金比較イメージ",
         "body": """<p>大阪府内でダンスレンタルスタジオを探していると、料金が500円〜3,000円と幅広く、何が違うのかわかりにくいと感じる方が多いです。本記事では大阪府の料金相場を整理し、コスパよく練習するための選び方を紹介します。</p>
 
@@ -520,7 +532,7 @@ SCHEDULED = [
         "category": "C",
         "title": "夏休みダンス強化｜サマー集中練習プランの組み方",
         "description": "夏休みの長期休暇をダンス上達に活かすための、週次集中練習プランを解説。スタジオ・自宅・公園の使い分けで効率的に伸ばすコツを紹介。",
-        "image": IMAGES["studio_wide"],
+        "image": IMAGES["dancer_b"],
         "image_alt": "夏休みのダンス集中練習",
         "body": """<p>1か月以上のまとまった時間が取れる夏休みは、ダンス上達にとって絶好のチャンスです。本記事では、夏休み40日間を最大限に活かす集中練習プランを紹介します。</p>
 
@@ -549,7 +561,7 @@ SCHEDULED = [
         "category": "A",
         "title": "枚方市駅周辺のダンス練習スポット完全ガイド",
         "description": "枚方市駅から徒歩圏内でダンス練習ができる場所を、レンタルスタジオ・公共施設・屋外スペースまで網羅的にまとめました。",
-        "image": IMAGES["studio_int"],
+        "image": IMAGES["people"],
         "image_alt": "枚方市駅周辺のダンス練習スポット",
         "body": """<p>京阪本線・京阪交野線が交わる枚方市駅は、北河内エリアのダンス練習ハブと言える立地です。本記事では枚方市駅から徒歩圏内のダンス練習スポットを種類別にまとめました。</p>
 <h2>レンタルスタジオ</h2>
@@ -579,7 +591,7 @@ SCHEDULED = [
         "category": "B",
         "title": "ダンス上達のための鏡稽古完全ガイド｜鏡の使い方で伸びが変わる",
         "description": "鏡を使ったダンス練習を効果的に行うためのテクニックを、初心者から経験者まで実践できる形で解説します。",
-        "image": IMAGES["studio_int"],
+        "image": IMAGES["silhouette"],
         "image_alt": "鏡を使ったダンス練習",
         "body": """<p>ダンスの上達において、鏡は最大のフィードバックツールです。しかし鏡を「ただ見る」だけでは効果は限定的。本記事では鏡稽古の正しいやり方を解説します。</p>
 <h2>鏡を「見る」と「映る」の違い</h2>
@@ -611,7 +623,7 @@ SCHEDULED = [
         "category": "D",
         "title": "個人練習用 vs グループ練習用｜ダンススタジオの選び方の違い",
         "description": "個人練習に向いているスタジオと、グループ練習に向いているスタジオの違いを5つの観点から比較。目的に合った選び方を解説します。",
-        "image": IMAGES["studio_wide"],
+        "image": IMAGES["monitor"],
         "image_alt": "個人練習とグループ練習のスタジオ比較",
         "body": """<p>ダンススタジオを選ぶとき、「個人で使うのか」「グループで使うのか」で最適な選択が変わります。本記事ではそれぞれに向いたスタジオの特徴を解説します。</p>
 <h2>1. 広さ</h2>
@@ -640,7 +652,7 @@ SCHEDULED = [
         "category": "A",
         "title": "北河内エリアのダンススタジオまとめ｜枚方・寝屋川・交野",
         "description": "枚方・寝屋川・交野を含む北河内エリアでダンス練習ができるレンタルスタジオの特徴と選び方を、エリア別にまとめました。",
-        "image": IMAGES["studio_wide"],
+        "image": IMAGES["lit"],
         "image_alt": "北河内エリアのダンススタジオ",
         "body": """<p>大阪府北河内エリア（枚方・寝屋川・交野・四條畷など）には、コスパの良いダンスレンタルスタジオが複数あります。本記事ではエリア別に特徴を整理しました。</p>
 <h2>枚方市</h2>
@@ -670,7 +682,7 @@ SCHEDULED = [
         "category": "C",
         "title": "ハロウィン撮影をダンススタジオでやるアイデア集",
         "description": "ハロウィンの仮装写真・動画をダンススタジオで撮るためのアイデアと、照明・構図のコツを解説します。",
-        "image": IMAGES["lighting"],
+        "image": IMAGES["halloween"],
         "image_alt": "ハロウィン撮影のスタジオ",
         "body": """<p>ハロウィンが近づくと「仮装してかっこいい動画を撮りたい」というニーズが増えます。本記事ではダンススタジオを使ったハロウィン撮影のアイデアと、簡単に映える設定を紹介します。</p>
 <h2>なぜスタジオ撮影が映えるのか</h2>
