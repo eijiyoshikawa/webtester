@@ -12,7 +12,7 @@ import os
 import re
 import json
 from pathlib import Path
-from articles_data import ARTICLES, SCHEDULED, CATEGORIES
+from articles_data import ARTICLES, SCHEDULED, CATEGORIES, AUTHOR
 
 ROOT = Path(__file__).resolve().parent.parent
 BASE_URL = "https://www.suiseistudio.com"
@@ -96,7 +96,7 @@ def article_html(article, depth, is_scheduled, all_articles):
 <meta property="og:image" content="{image}">
 <meta property="og:locale" content="ja_JP">
 <meta property="article:published_time" content="{publish_date}">
-<meta property="article:author" content="SUISEI STUDIO 編集部">
+<meta property="article:author" content="{AUTHOR['name']}">
 <meta property="article:section" content="{category_name}">
 
 <meta name="twitter:card" content="summary_large_image">
@@ -121,9 +121,17 @@ def article_html(article, depth, is_scheduled, all_articles):
   "inLanguage": "ja",
   "image": "{image}",
   "author": {{
-    "@type": "Organization",
-    "name": "SUISEI STUDIO 編集部",
-    "url": "{BASE_URL}/author/suisei-team/"
+    "@type": "Person",
+    "name": "{AUTHOR['name']}",
+    "alternateName": "{AUTHOR['name_ja']}",
+    "jobTitle": "{AUTHOR['role']}",
+    "url": "{BASE_URL}/{AUTHOR['url_path']}",
+    "image": "{BASE_URL}/{AUTHOR['photo']}",
+    "worksFor": {{
+      "@type": "Organization",
+      "name": "SUISEI STUDIO",
+      "url": "{BASE_URL}/"
+    }}
   }},
   "publisher": {{
     "@type": "Organization",
@@ -206,10 +214,10 @@ def article_html(article, depth, is_scheduled, all_articles):
     </div>
 
     <div class="post-author">
-      <div class="post-author__avatar">SS</div>
+      <div class="post-author__avatar">{AUTHOR['initials']}<img src="{up}{AUTHOR['photo']}" alt="{AUTHOR['name']}" loading="lazy" decoding="async" onerror="this.remove()"></div>
       <div>
-        <div class="post-author__name"><a href="{up}author/suisei-team/">SUISEI STUDIO 編集部</a></div>
-        <div class="post-author__bio">大阪・枚方のダンスレンタルスタジオを運営するチーム。スタジオ運営の現場で得た知見をもとに、ダンス練習・スタジオ選び・ローカル情報を発信しています。</div>
+        <div class="post-author__name"><a href="{up}{AUTHOR['url_path']}">{AUTHOR['name']}</a><span style="color:#888; font-weight:400; font-size:12px; margin-left:8px;">{AUTHOR['role']}</span></div>
+        <div class="post-author__bio">{AUTHOR['bio']}</div>
       </div>
     </div>
 {related_html}

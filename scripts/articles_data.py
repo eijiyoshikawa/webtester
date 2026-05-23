@@ -7,6 +7,18 @@ SCHEDULED: 予約公開する記事（2記事/月 × 12か月分）
 各記事の body は 2,000〜3,000字を目安に記述。
 """
 
+# 著者情報（E-E-A-T シグナル）
+AUTHOR = {
+    "slug": "eiji-yoshikawa",        # URL: /author/{slug}/
+    "name": "Eiji Yoshikawa",
+    "name_ja": "吉川 英司",
+    "initials": "EY",                 # 画像が無い時のフォールバック表示
+    "role": "SUISEI STUDIO 編集長 / 元ダンススクール運営者",
+    "bio": "大阪を拠点に小学生〜社会人向けにK-POPクラスを展開していた元ダンススクール運営者。スクール運営の現場知見をもとに、ダンス練習・スタジオ選び・地域情報を発信しています。",
+    "photo": "assets/img/author-eiji-yoshikawa.jpg",  # ルート相対（先頭スラッシュなし）
+    "url_path": "author/eiji-yoshikawa/",
+}
+
 # 共通のUnsplash画像（ダンス/スタジオ系のフリー素材）
 IMAGES = {
     "studio_wide":  "https://images.unsplash.com/photo-1508700929628-666bc8bd84ea?w=1200&h=630&fit=crop",
