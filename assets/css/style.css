@@ -1387,6 +1387,19 @@ img { display: block; max-width: 100%; }
   .nav__menu { display: none; }
   .hamburger { display: flex; }
   .nav__reserve { margin-right: 48px; }
+
+  /* SP: ヘッダー追従を確実にする（iOS のpos:fixed バグ対策＋常時背景バー） */
+  .nav {
+    -webkit-transform: translateZ(0);
+    transform: translateZ(0);
+    will-change: transform;
+    background: rgba(0,0,0,0.55);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+  }
+  .nav.is-scrolled {
+    background: rgba(0,0,0,0.8);
+  }
 }
 @media (min-width: 1025px) {
   .hamburger { display: none; }
