@@ -2,13 +2,49 @@
 <html lang="ja">
 <head>
 <meta charset="UTF-8">
-<title>お知らせ | SUISEI STUDIO</title>
+<title>お知らせ | SUISEI STUDIO（大阪・枚方のダンスレンタルスタジオ）</title>
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<meta name="description" content="SUISEI STUDIO からのお知らせ">
+<meta name="description" content="SUISEI STUDIOからの最新のお知らせ・設備アップデート・メンテナンス情報などをご案内します。大阪・枚方のダンスレンタルスタジオ。">
+<link rel="canonical" href="https://www.suiseistudio.com/info/">
+
+<!-- hreflang -->
+<link rel="alternate" hreflang="ja" href="https://www.suiseistudio.com/info/">
+<link rel="alternate" hreflang="en" href="https://www.suiseistudio.com/en/info/">
+<link rel="alternate" hreflang="es" href="https://www.suiseistudio.com/es/info/">
+<link rel="alternate" hreflang="x-default" href="https://www.suiseistudio.com/info/">
+
+<!-- Open Graph -->
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="SUISEI STUDIO">
+<meta property="og:title" content="お知らせ | SUISEI STUDIO">
+<meta property="og:description" content="SUISEI STUDIOからの最新のお知らせ・設備アップデート・メンテナンス情報。">
+<meta property="og:url" content="https://www.suiseistudio.com/info/">
+<meta property="og:image" content="https://www.suiseistudio.com/assets/img/top_bg.jpg">
+<meta property="og:locale" content="ja_JP">
+
+<!-- Twitter Card -->
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="お知らせ | SUISEI STUDIO">
+<meta name="twitter:description" content="SUISEI STUDIOからの最新のお知らせ・設備アップデート・メンテナンス情報。">
+<meta name="twitter:image" content="https://www.suiseistudio.com/assets/img/top_bg.jpg">
+
+<link rel="preconnect" href="https://images.unsplash.com">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;700;800&family=Sora:wght@300;400;700&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="../assets/css/style.css">
+
+<!-- BreadcrumbList -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    { "@type": "ListItem", "position": 1, "name": "ホーム", "item": "https://www.suiseistudio.com/" },
+    { "@type": "ListItem", "position": 2, "name": "お知らせ", "item": "https://www.suiseistudio.com/info/" }
+  ]
+}
+</script>
 </head>
 <body>
 
@@ -23,14 +59,21 @@
 
 <!-- Navigation -->
 <nav class="nav" id="nav">
-  <a href="../" class="nav__logo">SUISEI</a>
+  <a href="../" class="nav__logo" lang="en">SUISEI</a>
   <ul class="nav__menu" id="nav-menu">
-    <li><a href="../#studio" class="nav__link">STUDIO</a></li>
-    <li><a href="./" class="nav__link nav__link--active">NEWS</a></li>
-    <li><a href="../riyou/" class="nav__link">GUIDE</a></li>
-    <li><a href="../#faq" class="nav__link">FAQ</a></li>
+    <li><a href="../#studio" class="nav__link" lang="en">STUDIO</a></li>
+    <li><a href="./" class="nav__link nav__link--active" lang="en">NEWS</a></li>
+    <li><a href="../riyou/" class="nav__link" lang="en">GUIDE</a></li>
+    <li><a href="../#faq" class="nav__link" lang="en">FAQ</a></li>
   </ul>
-  <a href="https://system.suiseistudio.com/" target="_blank" rel="noopener" class="nav__reserve">RESERVE</a>
+  <div class="nav__actions">
+    <ul class="nav__lang" aria-label="Language">
+      <li><a href="https://www.suiseistudio.com/info/" class="nav__lang-link nav__lang-link--active" lang="ja" aria-current="page">JP</a></li>
+      <li><a href="https://www.suiseistudio.com/en/info/" class="nav__lang-link" lang="en">EN</a></li>
+      <li><a href="https://www.suiseistudio.com/es/info/" class="nav__lang-link" lang="es">ES</a></li>
+    </ul>
+    <a href="https://system.suiseistudio.com/" target="_blank" rel="noopener" class="nav__reserve" lang="en">RESERVE</a>
+  </div>
   <button class="hamburger" id="hamburger" aria-label="メニュー">
     <span class="hamburger__line"></span>
     <span class="hamburger__line"></span>
@@ -39,11 +82,16 @@
 </nav>
 <div class="mobile-menu" id="mobile-menu">
   <ul class="mobile-menu__list">
-    <li><a href="../#studio" class="mobile-menu__link">STUDIO</a></li>
-    <li><a href="./" class="mobile-menu__link">NEWS</a></li>
-    <li><a href="../riyou/" class="mobile-menu__link">GUIDE</a></li>
-    <li><a href="../#faq" class="mobile-menu__link">FAQ</a></li>
-    <li><a href="https://system.suiseistudio.com/" target="_blank" rel="noopener" class="mobile-menu__link mobile-menu__link--reserve">RESERVE</a></li>
+    <li><a href="../#studio" class="mobile-menu__link" lang="en">STUDIO</a></li>
+    <li><a href="./" class="mobile-menu__link" lang="en">NEWS</a></li>
+    <li><a href="../riyou/" class="mobile-menu__link" lang="en">GUIDE</a></li>
+    <li><a href="../#faq" class="mobile-menu__link" lang="en">FAQ</a></li>
+    <li><a href="https://system.suiseistudio.com/" target="_blank" rel="noopener" class="mobile-menu__link mobile-menu__link--reserve" lang="en">RESERVE</a></li>
+  </ul>
+  <ul class="mobile-menu__lang">
+    <li><a href="https://www.suiseistudio.com/info/" class="mobile-menu__lang-link mobile-menu__lang-link--active" lang="ja" aria-current="page">日本語</a></li>
+    <li><a href="https://www.suiseistudio.com/en/info/" class="mobile-menu__lang-link" lang="en">English</a></li>
+    <li><a href="https://www.suiseistudio.com/es/info/" class="mobile-menu__lang-link" lang="es">Español</a></li>
   </ul>
 </div>
 
@@ -51,7 +99,7 @@
 <section class="sub-hero">
   <div class="sub-hero__grain" aria-hidden="true"></div>
   <div class="sub-hero__content">
-    <span class="sub-hero__label">INFORMATION</span>
+    <span class="sub-hero__label" lang="en">INFORMATION</span>
     <h1 class="sub-hero__title">お知らせ</h1>
   </div>
 </section>
@@ -60,32 +108,32 @@
 <section class="news-page">
   <div class="news-page__inner">
     <article class="news-card" data-animate>
-      <div class="news-card__img">
-        <img src="https://images.unsplash.com/photo-1540224871915-bc8ffb782bdf?w=560&h=420&fit=crop" alt="シーリングライト" loading="lazy">
-      </div>
+      <a href="./20251209-ceiling-light/" class="news-card__img">
+        <img src="https://images.unsplash.com/photo-1540224871915-bc8ffb782bdf?w=560&h=420&fit=crop" alt="調光可能なシーリングライト（SUISEI STUDIO 設備更新）" loading="lazy" decoding="async">
+      </a>
       <div class="news-card__body">
-        <time class="news-card__date">2025.12.09</time>
-        <h2 class="news-card__title">調光可能なシーリングライトを設置しました。</h2>
+        <time class="news-card__date" datetime="2025-12-09">2025.12.09</time>
+        <h2 class="news-card__title"><a href="./20251209-ceiling-light/" class="news-card__title-link">調光可能なシーリングライトを設置しました。</a></h2>
         <p class="news-card__text">スタジオ内のシーリングライトを調光可能なタイプに変更しました。撮影やダンス練習のシーンに合わせて明るさを自由に調整いただけます。</p>
       </div>
     </article>
     <article class="news-card" data-animate>
-      <div class="news-card__img">
-        <img src="https://images.unsplash.com/photo-1514525253161-7a46d19cd819?w=560&h=420&fit=crop" alt="ライト追加" loading="lazy">
-      </div>
+      <a href="./20231010-studio-light/" class="news-card__img">
+        <img src="https://images.unsplash.com/photo-1514525253161-7a46d19cd819?w=560&h=420&fit=crop" alt="新たに追加された撮影用照明ライト" loading="lazy" decoding="async">
+      </a>
       <div class="news-card__body">
-        <time class="news-card__date">2023.10.10</time>
-        <h2 class="news-card__title">【スタジオ内にライトを追加しました】</h2>
+        <time class="news-card__date" datetime="2023-10-10">2023.10.10</time>
+        <h2 class="news-card__title"><a href="./20231010-studio-light/" class="news-card__title-link">【スタジオ内にライトを追加しました】</a></h2>
         <p class="news-card__text">動画撮影やSNS用コンテンツ制作にお使いいただける照明ライトを新たに追加設置いたしました。カラー変更にも対応しております。</p>
       </div>
     </article>
     <article class="news-card" data-animate>
-      <div class="news-card__img">
-        <img src="https://images.unsplash.com/photo-1571266028243-e68f7b2a1b8a?w=560&h=420&fit=crop" alt="撮影日" loading="lazy">
-      </div>
+      <a href="./20220308-photo-day/" class="news-card__img">
+        <img src="https://images.unsplash.com/photo-1571266028243-e68f7b2a1b8a?w=560&h=420&fit=crop" alt="SUISEI STUDIO プロモーション撮影風景" loading="lazy" decoding="async">
+      </a>
       <div class="news-card__body">
-        <time class="news-card__date">2022.03.08</time>
-        <h2 class="news-card__title">SUISEIスタジオ 撮影日</h2>
+        <time class="news-card__date" datetime="2022-03-08">2022.03.08</time>
+        <h2 class="news-card__title"><a href="./20220308-photo-day/" class="news-card__title-link">SUISEIスタジオ 撮影日</a></h2>
         <p class="news-card__text">SUISEIスタジオのプロモーション撮影を行いました。新しい写真はウェブサイトやSNSで順次公開いたします。</p>
       </div>
     </article>
@@ -96,22 +144,22 @@
 <footer class="page-footer">
   <div class="page-footer__inner">
     <div class="page-footer__nav">
-      <a href="../" class="page-footer__logo">SUISEI STUDIO</a>
+      <a href="../" class="page-footer__logo" lang="en">SUISEI STUDIO</a>
       <ul class="page-footer__links">
-        <li><a href="../#studio">STUDIO</a></li>
-        <li><a href="./">NEWS</a></li>
-        <li><a href="../riyou/">GUIDE</a></li>
-        <li><a href="../#faq">FAQ</a></li>
+        <li><a href="../#studio" lang="en">STUDIO</a></li>
+        <li><a href="./" lang="en">NEWS</a></li>
+        <li><a href="../riyou/" lang="en">GUIDE</a></li>
+        <li><a href="../#faq" lang="en">FAQ</a></li>
       </ul>
     </div>
     <div class="page-footer__info">
       <p>〒573-1197 大阪府枚方市中宮東之町6-15 Cometaビル</p>
-      <a href="https://www.instagram.com/suiseidancestudio/" target="_blank" rel="noopener">INSTAGRAM</a>
+      <a href="https://www.instagram.com/suiseidancestudio/" target="_blank" rel="noopener" lang="en">INSTAGRAM</a>
     </div>
-    <p class="page-footer__copy">&copy; SUISEI STUDIO</p>
+    <p class="page-footer__copy" lang="en">&copy; SUISEI STUDIO</p>
   </div>
 </footer>
 
-<script src="../assets/js/main.js"></script>
+<script src="../assets/js/main.js" defer></script>
 </body>
 </html>
