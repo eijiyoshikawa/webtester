@@ -1,0 +1,58 @@
+{
+  "scheduled": [
+    {
+      "date": "2026-06-15",
+      "slug": "summer-dance-intensive",
+      "title": "夏休みダンス強化｜サマー集中練習プランの組み方",
+      "category": "C",
+      "image": "https://images.unsplash.com/photo-1508700929628-666bc8bd84ea?w=1200&h=630&fit=crop",
+      "image_alt": "夏休みのダンス集中練習",
+      "description": "夏休みの長期休暇をダンス上達に活かすための、週次集中練習プランを解説。スタジオ・自宅・公園の使い分けで効率的に伸ばすコツを紹介。"
+    },
+    {
+      "date": "2026-06-15",
+      "slug": "hirakata-station-dance-spots",
+      "title": "枚方市駅周辺のダンス練習スポット完全ガイド",
+      "category": "A",
+      "image": "https://images.unsplash.com/photo-1601925260368-ae2f83cf8b7f?w=1200&h=630&fit=crop",
+      "image_alt": "枚方市駅周辺のダンス練習スポット",
+      "description": "枚方市駅から徒歩圏内でダンス練習ができる場所を、レンタルスタジオ・公共施設・屋外スペースまで網羅的にまとめました。"
+    },
+    {
+      "date": "2026-07-15",
+      "slug": "mirror-practice-guide",
+      "title": "ダンス上達のための鏡稽古完全ガイド｜鏡の使い方で伸びが変わる",
+      "category": "B",
+      "image": "https://images.unsplash.com/photo-1601925260368-ae2f83cf8b7f?w=1200&h=630&fit=crop",
+      "image_alt": "鏡を使ったダンス練習",
+      "description": "鏡を使ったダンス練習を効果的に行うためのテクニックを、初心者から経験者まで実践できる形で解説します。"
+    },
+    {
+      "date": "2026-07-15",
+      "slug": "solo-vs-group-studio",
+      "title": "個人練習用 vs グループ練習用｜ダンススタジオの選び方の違い",
+      "category": "D",
+      "image": "https://images.unsplash.com/photo-1508700929628-666bc8bd84ea?w=1200&h=630&fit=crop",
+      "image_alt": "個人練習とグループ練習のスタジオ比較",
+      "description": "個人練習に向いているスタジオと、グループ練習に向いているスタジオの違いを5つの観点から比較。目的に合った選び方を解説します。"
+    },
+    {
+      "date": "2026-08-15",
+      "slug": "kitakawachi-dance-studios",
+      "title": "北河内エリアのダンススタジオまとめ｜枚方・寝屋川・交野",
+      "category": "A",
+      "image": "https://images.unsplash.com/photo-1508700929628-666bc8bd84ea?w=1200&h=630&fit=crop",
+      "image_alt": "北河内エリアのダンススタジオ",
+      "description": "枚方・寝屋川・交野を含む北河内エリアでダンス練習ができるレンタルスタジオの特徴と選び方を、エリア別にまとめました。"
+    },
+    {
+      "date": "2026-08-15",
+      "slug": "halloween-photo-studio",
+      "title": "ハロウィン撮影をダンススタジオでやるアイデア集",
+      "category": "C",
+      "image": "https://images.unsplash.com/photo-1540224871915-bc8ffb782bdf?w=1200&h=630&fit=crop",
+      "image_alt": "ハロウィン撮影のスタジオ",
+      "description": "ハロウィンの仮装写真・動画をダンススタジオで撮るためのアイデアと、照明・構図のコツを解説します。"
+    }
+  ]
+}

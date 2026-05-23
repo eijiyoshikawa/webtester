@@ -172,4 +172,96 @@
     <xhtml:link rel="alternate" hreflang="es" href="https://www.suiseistudio.com/es/info/20220308-photo-day/"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://www.suiseistudio.com/info/20220308-photo-day/"/>
   </url>
+  <url>
+    <loc>https://www.suiseistudio.com/blog/</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://www.suiseistudio.com/blog/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.suiseistudio.com/blog/"/>
+  </url>
+  <url>
+    <loc>https://www.suiseistudio.com/blog/hirakata-rental-studios/</loc>
+    <lastmod>2026-05-23</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://www.suiseistudio.com/blog/hirakata-rental-studios/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.suiseistudio.com/blog/hirakata-rental-studios/"/>
+  </url>
+  <url>
+    <loc>https://www.suiseistudio.com/blog/keihan-line-dance-spots/</loc>
+    <lastmod>2026-05-23</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://www.suiseistudio.com/blog/keihan-line-dance-spots/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.suiseistudio.com/blog/keihan-line-dance-spots/"/>
+  </url>
+  <url>
+    <loc>https://www.suiseistudio.com/blog/hirakata-student-discount-studios/</loc>
+    <lastmod>2026-05-23</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://www.suiseistudio.com/blog/hirakata-student-discount-studios/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.suiseistudio.com/blog/hirakata-student-discount-studios/"/>
+  </url>
+  <url>
+    <loc>https://www.suiseistudio.com/blog/beginner-dance-30day-plan/</loc>
+    <lastmod>2026-05-23</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://www.suiseistudio.com/blog/beginner-dance-30day-plan/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.suiseistudio.com/blog/beginner-dance-30day-plan/"/>
+  </url>
+  <url>
+    <loc>https://www.suiseistudio.com/blog/tiktok-dance-shoot-tips/</loc>
+    <lastmod>2026-05-23</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://www.suiseistudio.com/blog/tiktok-dance-shoot-tips/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.suiseistudio.com/blog/tiktok-dance-shoot-tips/"/>
+  </url>
+  <url>
+    <loc>https://www.suiseistudio.com/blog/heel-dance-practice-tips/</loc>
+    <lastmod>2026-05-23</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://www.suiseistudio.com/blog/heel-dance-practice-tips/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.suiseistudio.com/blog/heel-dance-practice-tips/"/>
+  </url>
+  <url>
+    <loc>https://www.suiseistudio.com/blog/culture-festival-dance-schedule/</loc>
+    <lastmod>2026-05-23</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://www.suiseistudio.com/blog/culture-festival-dance-schedule/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.suiseistudio.com/blog/culture-festival-dance-schedule/"/>
+  </url>
+  <url>
+    <loc>https://www.suiseistudio.com/blog/spring-dance-debut-guide/</loc>
+    <lastmod>2026-05-23</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://www.suiseistudio.com/blog/spring-dance-debut-guide/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.suiseistudio.com/blog/spring-dance-debut-guide/"/>
+  </url>
+  <url>
+    <loc>https://www.suiseistudio.com/blog/karaoke-vs-dance-studio/</loc>
+    <lastmod>2026-05-23</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://www.suiseistudio.com/blog/karaoke-vs-dance-studio/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.suiseistudio.com/blog/karaoke-vs-dance-studio/"/>
+  </url>
+  <url>
+    <loc>https://www.suiseistudio.com/blog/osaka-dance-studio-price-guide/</loc>
+    <lastmod>2026-05-23</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://www.suiseistudio.com/blog/osaka-dance-studio-price-guide/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.suiseistudio.com/blog/osaka-dance-studio-price-guide/"/>
+  </url>
+  <url>
+    <loc>https://www.suiseistudio.com/author/suisei-team/</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.4</priority>
+  </url>
 </urlset>

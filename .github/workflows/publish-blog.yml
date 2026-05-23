@@ -1,0 +1,64 @@
+name: Publish scheduled blog articles
+
+on:
+  schedule:
+    # 毎月15日 00:00 UTC (= 09:00 JST) に実行
+    - cron: '0 0 15 * *'
+  workflow_dispatch:
+    # 手動実行も可能
+    inputs:
+      target_date:
+        description: '公開対象日 (YYYY-MM-DD)。未指定なら今日。'
+        required: false
+        type: string
+
+permissions:
+  contents: write
+
+jobs:
+  publish:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+        with:
+          ref: corp/suisei
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+
+      - name: Publish today's scheduled articles
+        id: publish
+        run: |
+          set -e
+          TODAY="${{ github.event.inputs.target_date }}"
+          if [ -z "$TODAY" ]; then
+            TODAY=$(date -u +%Y-%m-%d)
+          fi
+          echo "Target date: $TODAY"
+
+          SCHED_DIR=".scheduled/$TODAY"
+          if [ ! -d "$SCHED_DIR" ]; then
+            echo "No scheduled articles for $TODAY"
+            echo "published=0" >> "$GITHUB_OUTPUT"
+            exit 0
+          fi
+
+          python3 .github/scripts/publish_articles.py "$TODAY"
+          echo "published=1" >> "$GITHUB_OUTPUT"
+
+      - name: Commit and push
+        if: steps.publish.outputs.published == '1'
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add -A
+          if git diff --cached --quiet; then
+            echo "No changes to commit"
+            exit 0
+          fi
+          TODAY=$(date -u +%Y-%m-%d)
+          git commit -m "blog: publish scheduled articles ($TODAY)"
+          git push origin corp/suisei
