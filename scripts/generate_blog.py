@@ -156,6 +156,9 @@ def article_html(article, depth, is_scheduled, all_articles):
 </head>
 <body>
 
+<div class="cursor"></div>
+<div class="cursor-follower"></div>
+
 <div class="orbs" aria-hidden="true">
   <div class="orb orb--1"></div>
   <div class="orb orb--2"></div>
