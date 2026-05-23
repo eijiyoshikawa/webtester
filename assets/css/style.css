@@ -1567,3 +1567,32 @@ img { display: block; max-width: 100%; }
   .article { padding: 40px 20px 80px; }
   .article__title { font-size: 22px; }
 }
+
+/* --- Mobile Menu Language Switcher --- */
+.mobile-menu__lang {
+  margin-top: 16px;
+  padding-top: 24px;
+  border-top: 1px solid rgba(255,255,255,0.1);
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  list-style: none;
+}
+.mobile-menu__lang-link {
+  font-family: "Space Grotesk", sans-serif;
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: #666;
+  text-decoration: none;
+  transition: color 0.3s;
+}
+.mobile-menu__lang-link:hover {
+  color: #fff;
+}
+.mobile-menu__lang-link--active {
+  color: #fff;
+  border-bottom: 1px solid #fff;
+  padding-bottom: 2px;
+}
