@@ -1609,3 +1609,37 @@ img { display: block; max-width: 100%; }
   border-bottom: 1px solid #fff;
   padding-bottom: 2px;
 }
+
+/* --- Nav Language Switcher (PC) --- */
+.nav__actions {
+  display: flex;
+  align-items: center;
+  gap: 24px;
+}
+.nav__lang {
+  display: flex;
+  list-style: none;
+  gap: 14px;
+  align-items: center;
+}
+.nav__lang-link {
+  font-family: "Space Grotesk", sans-serif;
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 0.2em;
+  color: #666;
+  text-decoration: none;
+  padding: 4px 0;
+  transition: color 0.3s;
+}
+.nav__lang-link:hover {
+  color: #fff;
+}
+.nav__lang-link--active {
+  color: #fff;
+  border-bottom: 1px solid #fff;
+}
+@media (max-width: 1024px) {
+  .nav__lang { display: none; }
+  .nav__actions { gap: 0; }
+}
