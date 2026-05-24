@@ -53,6 +53,168 @@
       "image": "https://images.unsplash.com/photo-1509248961158-e54f6934749c?w=1200&h=630&fit=crop&q=80&auto=format",
       "image_alt": "ハロウィン撮影のスタジオ",
       "description": "ハロウィンの仮装写真・動画をダンススタジオで撮るためのアイデアと、照明・構図のコツを解説します。"
+    },
+    {
+      "date": "2026-09-15",
+      "slug": "memorize-choreography-efficiently",
+      "title": "振り入れ・振り覚えの効率を上げる練習法｜5ステップで2倍速習得",
+      "category": "B",
+      "image": "https://images.unsplash.com/photo-1532074205216-d0e1f4b87368?w=1200&h=630&fit=crop&q=80&auto=format",
+      "image_alt": "ダンスの振り入れを練習するシーン",
+      "description": "ダンスの振付を効率よく覚えるための5ステップ練習法を解説。全体把握→区切り→反復→鏡確認→動画録画のサイクルで習得速度が大きく変わります。"
+    },
+    {
+      "date": "2026-09-15",
+      "slug": "monthly-vs-hourly-studio",
+      "title": "月額制ダンススタジオ vs 時間貸し｜頻度別にどちらがお得か",
+      "category": "D",
+      "image": "https://images.unsplash.com/photo-1511671782779-c97d3d27a1d4?w=1200&h=630&fit=crop&q=80&auto=format",
+      "image_alt": "ダンススタジオの月額制と時間貸しの比較イメージ",
+      "description": "月額制ダンススタジオと時間貸しレンタルスタジオを、料金・頻度・自由度で比較。利用頻度別にどちらがお得かを試算します。"
+    },
+    {
+      "date": "2026-10-15",
+      "slug": "kuzuha-dance-environment",
+      "title": "樟葉駅エリアのダンス練習環境を徹底解説",
+      "category": "A",
+      "image": "https://images.unsplash.com/photo-1521823721777-3c8a6f6e3dc4?w=1200&h=630&fit=crop&q=80&auto=format",
+      "image_alt": "樟葉駅エリアのダンス練習スポット",
+      "description": "京阪本線の樟葉駅周辺でダンス練習ができるスポットを徹底解説。レンタルスタジオ・公共施設・屋外スペースの特徴と使い分けを紹介します。"
+    },
+    {
+      "date": "2026-10-15",
+      "slug": "year-end-recital-1month-plan",
+      "title": "年末発表会・成果発表のための1か月集中練習プラン",
+      "category": "C",
+      "image": "https://images.unsplash.com/photo-1516280440614-37939bbacd81?w=1200&h=630&fit=crop&q=80&auto=format",
+      "image_alt": "年末発表会に向けた集中練習",
+      "description": "年末発表会や成果発表会に向けた1か月の集中練習プランを紹介。週次・日次メニュー、衣装合わせ、リハーサルまでを具体的に解説します。"
+    },
+    {
+      "date": "2026-11-15",
+      "slug": "beginner-5-walls",
+      "title": "ダンス初心者がぶつかる5つの壁と、その乗り越え方",
+      "category": "B",
+      "image": "https://images.unsplash.com/photo-1503342217505-b0a15ec3261c?w=1200&h=630&fit=crop&q=80&auto=format",
+      "image_alt": "ダンス初心者の練習風景",
+      "description": "ダンスを始めた人の多くがぶつかる5つの壁（リズム・暗記・体力・自信・継続）と、それぞれの乗り越え方を実践的に解説します。"
+    },
+    {
+      "date": "2026-11-15",
+      "slug": "studio-selection-checklist-10",
+      "title": "ダンススタジオ選びでチェックすべき10項目｜失敗しない完全ガイド",
+      "category": "D",
+      "image": "https://images.unsplash.com/photo-1574680096145-d05b474e2155?w=1200&h=630&fit=crop&q=80&auto=format",
+      "image_alt": "ダンススタジオの設備をチェックする様子",
+      "description": "ダンスレンタルスタジオを選ぶ際に必ず確認すべき10項目を解説。料金・設備・予約・アクセス・規約まで、失敗しないためのチェックリストです。"
+    },
+    {
+      "date": "2026-12-15",
+      "slug": "hirakata-dance-communities",
+      "title": "枚方ダンスサークル・チームのよくある活動場所と探し方",
+      "category": "A",
+      "image": "https://images.unsplash.com/photo-1547036967-23d11aacaee0?w=1200&h=630&fit=crop&q=80&auto=format",
+      "image_alt": "枚方のダンスチームの活動風景",
+      "description": "枚方エリアのダンスサークル・チームがよく活動している場所を、学生・社会人別に紹介。仲間を探す方法も合わせて解説します。"
+    },
+    {
+      "date": "2026-12-15",
+      "slug": "new-year-dance-start",
+      "title": "新年から始めるダンス｜1月スタートのメリットと続けるコツ",
+      "category": "C",
+      "image": "https://images.unsplash.com/photo-1554284126-aa88f22d8b74?w=1200&h=630&fit=crop&q=80&auto=format",
+      "image_alt": "新年からダンスを始める人のスタジオ風景",
+      "description": "新年・1月からダンスを始めるメリットと、3か月続けるための具体的なコツを解説。年始の目標設定にダンスを取り入れる方法を紹介します。"
+    },
+    {
+      "date": "2027-01-15",
+      "slug": "sns-dance-video-tips",
+      "title": "撮影特化｜SNS映えするダンス動画の撮り方とアプリ別最適化",
+      "category": "B",
+      "image": "https://images.unsplash.com/photo-1518972559570-7cc1309f3229?w=1200&h=630&fit=crop&q=80&auto=format",
+      "image_alt": "SNS用ダンス動画の撮影セットアップ",
+      "description": "TikTok・Instagram Reels・YouTube ShortsそれぞれのSNSに最適化したダンス動画の撮り方を、構図・編集・投稿タイミングまで解説。"
+    },
+    {
+      "date": "2027-01-15",
+      "slug": "private-vs-group-lesson",
+      "title": "プライベートレッスン vs グループレッスン｜自分に合うのはどっち？",
+      "category": "D",
+      "image": "https://images.unsplash.com/photo-1518406439569-fea0c9b16ad9?w=1200&h=630&fit=crop&q=80&auto=format",
+      "image_alt": "プライベートレッスンとグループレッスンの比較",
+      "description": "ダンスのプライベートレッスンとグループレッスンを、料金・上達速度・モチベーションの3軸で比較。目的別に最適な選び方を解説します。"
+    },
+    {
+      "date": "2027-02-15",
+      "slug": "makino-gotenyama-dance-spots",
+      "title": "牧野・御殿山エリアのダンス練習スポット完全ガイド",
+      "category": "A",
+      "image": "https://images.unsplash.com/photo-1518609878373-06d740f60d8b?w=1200&h=630&fit=crop&q=80&auto=format",
+      "image_alt": "牧野・御殿山エリアの練習スポット",
+      "description": "京阪本線の牧野駅・御殿山駅周辺でダンス練習ができる場所を徹底解説。閑静な住宅街エリアの練習事情と、近隣スタジオへのアクセスを紹介します。"
+    },
+    {
+      "date": "2027-02-15",
+      "slug": "graduation-season-video",
+      "title": "卒業シーズン｜ダンス動画を撮るためのスタジオ活用ガイド",
+      "category": "C",
+      "image": "https://images.unsplash.com/photo-1523289333742-be1143f6b766?w=1200&h=630&fit=crop&q=80&auto=format",
+      "image_alt": "卒業シーズンのダンス撮影",
+      "description": "卒業シーズンの記念動画・SNS動画をダンススタジオで撮影するためのアイデアと、構図・照明・編集のコツを解説します。"
+    },
+    {
+      "date": "2027-03-15",
+      "slug": "dance-genre-practice-points",
+      "title": "ストリートダンスのジャンル別練習ポイント｜HIPHOP/JAZZ/LOCK/POP",
+      "category": "B",
+      "image": "https://images.unsplash.com/photo-1505764706515-aa95265c5abc?w=1200&h=630&fit=crop&q=80&auto=format",
+      "image_alt": "ジャンル別ダンス練習",
+      "description": "ストリートダンスの主要4ジャンル（HIPHOP・JAZZ・LOCK・POP）それぞれの基礎と練習ポイントを解説。自分に合うジャンル選びの参考にも。"
+    },
+    {
+      "date": "2027-03-15",
+      "slug": "studio-equipment-check-points",
+      "title": "ダンススタジオの設備でチェックすべき音響・床・鏡の見極め方",
+      "category": "D",
+      "image": "https://images.unsplash.com/photo-1493676304819-0d7a8d026dcf?w=1200&h=630&fit=crop&q=80&auto=format",
+      "image_alt": "ダンススタジオの設備チェック",
+      "description": "ダンスレンタルスタジオの3大設備「音響・床・鏡」のチェックポイントを、内覧時・写真確認時のポイントとともに解説します。"
+    },
+    {
+      "date": "2027-04-15",
+      "slug": "hirakata-dance-battles-contests",
+      "title": "枚方近辺のダンスバトル・コンテスト情報まとめ",
+      "category": "A",
+      "image": "https://images.unsplash.com/photo-1469854523086-cc02fe5d8800?w=1200&h=630&fit=crop&q=80&auto=format",
+      "image_alt": "ダンスバトル・コンテストの会場",
+      "description": "枚方・大阪近辺で開催されているダンスバトル・コンテストの情報をまとめ。参加方法、観戦の楽しみ方、出場に向けた練習のコツを紹介します。"
+    },
+    {
+      "date": "2027-04-15",
+      "slug": "gw-dance-intensive-camp",
+      "title": "GW・連休のダンス集中合宿アイデア｜10日間で集中的にレベルアップ",
+      "category": "C",
+      "image": "https://images.unsplash.com/photo-1530549387789-4c1017266635?w=1200&h=630&fit=crop&q=80&auto=format",
+      "image_alt": "GW集中練習の様子",
+      "description": "GWやお盆などの連休を活用したダンス集中合宿のアイデアを紹介。10日間のスケジュール例と、休息・栄養・モチベ管理のコツも解説します。"
+    },
+    {
+      "date": "2027-05-15",
+      "slug": "home-vs-studio-practice",
+      "title": "自宅練習 vs スタジオ練習｜効果的な組み合わせ方",
+      "category": "B",
+      "image": "https://images.unsplash.com/photo-1517022812141-23620dba5c23?w=1200&h=630&fit=crop&q=80&auto=format",
+      "image_alt": "自宅とスタジオでの練習",
+      "description": "ダンスの自宅練習とスタジオ練習それぞれの役割と、最適な組み合わせ方を解説。週次の理想スケジュール例も紹介します。"
+    },
+    {
+      "date": "2027-05-15",
+      "slug": "instructor-view-studio-choice",
+      "title": "ダンスインストラクター視点で見る、レンタルスタジオの選び方",
+      "category": "D",
+      "image": "https://images.unsplash.com/photo-1564507592333-c60657eea523?w=1200&h=630&fit=crop&q=80&auto=format",
+      "image_alt": "インストラクター視点でのスタジオ選び",
+      "description": "ダンスインストラクターがレッスン場所として選ぶレンタルスタジオの基準を解説。生徒目線では気づきにくいプロの視点を共有します。"
     }
   ]
 }
