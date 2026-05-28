@@ -185,7 +185,10 @@ section{padding:120px 0;position:relative}
 .price-card{padding:40px 32px;border:1px solid var(--border);border-radius:var(--radius);background:#ffffff;position:relative;transition:transform .3s,box-shadow .3s;box-shadow:var(--shadow-sm)}
 .price-card:hover{transform:translateY(-6px);box-shadow:var(--shadow-md)}
 .price-card.popular{border:2px solid transparent;background:linear-gradient(#ffffff,#ffffff) padding-box,var(--grad) border-box;box-shadow:var(--shadow-lg)}
+.price-card.featured{border:2px solid transparent;background:linear-gradient(#ffffff,#ffffff) padding-box,linear-gradient(135deg,#06b6d4 0%,#8b5cf6 100%) border-box;box-shadow:0 16px 40px rgba(6,182,212,0.15),0 4px 14px rgba(15,15,30,0.06)}
 .popular-badge{position:absolute;top:-13px;left:50%;transform:translateX(-50%);background:var(--grad);color:#ffffff;font-size:0.7rem;font-weight:800;padding:6px 22px;border-radius:999px;white-space:nowrap;letter-spacing:0.06em;box-shadow:0 4px 14px rgba(217,70,239,0.32)}
+.featured-badge{position:absolute;top:-13px;left:50%;transform:translateX(-50%);background:linear-gradient(135deg,#06b6d4 0%,#0ea5e9 100%);color:#ffffff;font-size:0.7rem;font-weight:800;padding:6px 22px;border-radius:999px;white-space:nowrap;letter-spacing:0.06em;box-shadow:0 4px 14px rgba(6,182,212,0.32)}
+.price-highlight{display:inline-block;background:rgba(6,182,212,0.08);color:var(--accent-2);font-size:0.72rem;font-weight:700;padding:5px 12px;border-radius:8px;margin-bottom:12px;letter-spacing:0.02em;border:1px solid rgba(6,182,212,0.18)}
 .price-card h3{font-size:1.15rem;font-weight:800;letter-spacing:0.02em;color:var(--text)}
 .price-tag{margin:20px 0 4px;display:flex;align-items:baseline;justify-content:center;gap:4px}
 .price-tag .num{font-size:2.8rem;font-weight:900;background:var(--grad);-webkit-background-clip:text;background-clip:text;-webkit-text-fill-color:transparent;letter-spacing:-0.03em;line-height:1}
@@ -198,6 +201,8 @@ section{padding:120px 0;position:relative}
 .price-btn:hover{border-color:var(--primary);background:var(--bg-2)}
 .popular .price-btn{background:var(--grad);color:#ffffff;border-color:transparent;box-shadow:0 4px 14px rgba(217,70,239,0.25)}
 .popular .price-btn:hover{transform:translateY(-1px);box-shadow:0 8px 22px rgba(217,70,239,0.35);background:var(--grad)}
+.featured .price-btn{background:linear-gradient(135deg,#06b6d4 0%,#0ea5e9 100%);color:#ffffff;border-color:transparent;box-shadow:0 4px 14px rgba(6,182,212,0.25)}
+.featured .price-btn:hover{transform:translateY(-1px);box-shadow:0 8px 22px rgba(6,182,212,0.35)}
 
 .custom-plan{border:1px solid var(--border);border-radius:var(--radius);padding:48px 40px;text-align:center;max-width:780px;margin:0 auto;background:#ffffff;position:relative;overflow:hidden;box-shadow:var(--shadow-md)}
 .custom-plan::before{content:'';position:absolute;inset:0;background:var(--grad-faint);pointer-events:none}
@@ -211,6 +216,23 @@ section{padding:120px 0;position:relative}
 @media(max-width:600px){.custom-features{grid-template-columns:1fr}}
 .custom-features div{display:flex;align-items:flex-start;gap:10px}
 .custom-features div::before{content:'';flex-shrink:0;width:16px;height:16px;border-radius:50%;background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16' fill='none'%3E%3Cpath d='M3.5 8.5l3 3 6-6.5' stroke='%2306b6d4' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E");background-repeat:no-repeat;background-position:center;background-size:contain;margin-top:3px}
+
+/* Modules (個別導入) */
+.modules-intro{text-align:center;max-width:680px;margin:0 auto 36px;color:var(--muted);font-size:0.95rem;line-height:1.85}
+.modules-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:14px;margin-bottom:32px}
+.module-card{padding:24px 22px;border:1px solid var(--border);border-radius:var(--radius);background:#ffffff;display:flex;flex-direction:column;gap:10px;transition:transform .3s,border-color .3s,box-shadow .3s;box-shadow:var(--shadow-sm)}
+.module-card:hover{transform:translateY(-3px);border-color:var(--border-strong);box-shadow:var(--shadow-md)}
+.module-head{display:flex;align-items:center;gap:12px}
+.module-icon{width:38px;height:38px;border-radius:10px;display:inline-flex;align-items:center;justify-content:center;font-size:1.1rem;background:var(--grad-soft);border:1px solid rgba(217,70,239,0.18);flex-shrink:0}
+.module-name{font-size:0.98rem;font-weight:800;color:var(--text);line-height:1.4}
+.module-desc{color:var(--muted);font-size:0.85rem;line-height:1.7;flex:1}
+.module-foot{display:flex;align-items:baseline;justify-content:space-between;gap:10px;padding-top:12px;border-top:1px solid var(--border);margin-top:6px}
+.module-price{font-size:0.95rem;font-weight:800;background:var(--grad);-webkit-background-clip:text;background-clip:text;-webkit-text-fill-color:transparent}
+.module-price .unit{font-size:0.72rem;font-weight:600;color:var(--muted);-webkit-text-fill-color:var(--muted);margin-left:2px}
+.module-link{font-size:0.78rem;font-weight:700;color:var(--accent-2);display:inline-flex;align-items:center;gap:4px;transition:transform .2s}
+.module-link:hover{transform:translateX(2px)}
+.module-badge{display:inline-block;font-size:0.62rem;font-weight:800;padding:2px 8px;border-radius:6px;letter-spacing:0.04em;background:var(--grad);color:#ffffff;margin-left:6px;vertical-align:middle}
+.modules-note{text-align:center;color:var(--muted-2);font-size:0.82rem;margin-top:18px}
 
 /* Campaign */
 .campaign-box{border-radius:var(--radius-lg);padding:48px 40px;max-width:720px;margin:32px auto 0;text-align:center;position:relative;overflow:hidden;background:linear-gradient(135deg,rgba(217,70,239,0.06) 0%,rgba(6,182,212,0.05) 100%);border:1.5px dashed rgba(217,70,239,0.32)}
@@ -400,6 +422,7 @@ footer{background:#ffffff;border-top:1px solid var(--border);padding:48px 0 24px
     <div class="nav-links">
       <a href="#features">機能</a>
       <a href="#pricing">料金</a>
+      <a href="#modules">個別導入</a>
       <a href="#voice">導入実績</a>
       <a href="#faq">よくある質問</a>
       <a href="https://lin.ee/StrRAnU" target="_blank" rel="noopener" class="nav-cta">LINEで相談</a>
@@ -596,17 +619,21 @@ footer{background:#ffffff;border-top:1px solid var(--border);padding:48px 0 24px
         </ul>
         <button class="price-btn" onclick="document.getElementById('contact').scrollIntoView({behavior:'smooth'})">このプランを相談</button>
       </div>
-      <div class="price-card reveal">
+      <div class="price-card featured reveal">
+        <div class="featured-badge">複数拠点オーナー推奨</div>
         <h3>Pro</h3>
         <div class="price-tag"><span class="num">19,800</span><span class="unit">円/月</span></div>
         <div class="price-note">税別 / 3拠点まで</div>
+        <div class="price-highlight">1拠点あたり実質 6,600円〜/月</div>
         <ul>
           <li>Standardの全機能</li>
-          <li>最大3拠点 対応</li>
-          <li>優先サポート</li>
-          <li>月次レポート</li>
+          <li>最大3拠点 一括管理</li>
+          <li>拠点横断の売上・予約レポート</li>
+          <li>優先サポート（平日12時間）</li>
+          <li>月次レポート自動配信</li>
+          <li>運営代行・運用相談 込み</li>
         </ul>
-        <button class="price-btn" onclick="document.getElementById('contact').scrollIntoView({behavior:'smooth'})">このプランを相談</button>
+        <button class="price-btn" onclick="document.getElementById('contact').scrollIntoView({behavior:'smooth'})">Proプランを相談</button>
       </div>
     </div>
     <div class="custom-plan reveal">
@@ -623,6 +650,116 @@ footer{background:#ffffff;border-top:1px solid var(--border);padding:48px 0 24px
       </div>
       <button class="price-btn" style="max-width:300px;margin:8px auto 0" onclick="document.getElementById('contact').scrollIntoView({behavior:'smooth'})">カスタムプランを相談</button>
     </div>
+  </div>
+</section>
+
+<section id="modules">
+  <div class="container">
+    <div class="section-head reveal">
+      <span class="section-label">Modules</span>
+      <h2>必要なシステムだけ、個別導入も可能</h2>
+      <p>パッケージプランが合わない場合は、機能単位での導入もできます。<br>御社の運営フローに合わせて、必要なシステムだけを選んでください。</p>
+    </div>
+    <div class="modules-grid">
+
+      <div class="module-card reveal">
+        <div class="module-head">
+          <div class="module-icon">📅</div>
+          <div class="module-name">予約受付システム</div>
+        </div>
+        <p class="module-desc">24時間自動予約受付・Googleカレンダー連動・自動メール送信。スタジオ運営の基盤機能。</p>
+        <div class="module-foot">
+          <div class="module-price">3,980<span class="unit">円/月〜</span></div>
+          <a href="#contact" class="module-link">詳細を相談 →</a>
+        </div>
+      </div>
+
+      <div class="module-card reveal">
+        <div class="module-head">
+          <div class="module-icon">💴</div>
+          <div class="module-name">キャンセル料管理</div>
+        </div>
+        <p class="module-desc">日数に応じた料率で自動計算し、お客様に即時請求。回収業務を全自動化。</p>
+        <div class="module-foot">
+          <div class="module-price">+2,000<span class="unit">円/月</span></div>
+          <a href="#contact" class="module-link">詳細を相談 →</a>
+        </div>
+      </div>
+
+      <div class="module-card reveal">
+        <div class="module-head">
+          <div class="module-icon">⚠️</div>
+          <div class="module-name">未払い催促システム<span class="module-badge">業界初</span></div>
+        </div>
+        <p class="module-desc">未払いの自動検出・催促・予約ブロック・150%増額ルールまで完全自動化。</p>
+        <div class="module-foot">
+          <div class="module-price">+2,500<span class="unit">円/月</span></div>
+          <a href="#contact" class="module-link">詳細を相談 →</a>
+        </div>
+      </div>
+
+      <div class="module-card reveal">
+        <div class="module-head">
+          <div class="module-icon">🔐</div>
+          <div class="module-name">スマートロック連携</div>
+        </div>
+        <p class="module-desc">予約当日に解錠パスコードを自動発行。完全無人運営を実現します。</p>
+        <div class="module-foot">
+          <div class="module-price">+2,000<span class="unit">円/月</span></div>
+          <a href="#contact" class="module-link">詳細を相談 →</a>
+        </div>
+      </div>
+
+      <div class="module-card reveal">
+        <div class="module-head">
+          <div class="module-icon">✉️</div>
+          <div class="module-name">メール自動送信</div>
+        </div>
+        <p class="module-desc">予約確定・リマインダー・キャンセル確認・請求・催促の6種類を自動送信。</p>
+        <div class="module-foot">
+          <div class="module-price">+1,500<span class="unit">円/月</span></div>
+          <a href="#contact" class="module-link">詳細を相談 →</a>
+        </div>
+      </div>
+
+      <div class="module-card reveal">
+        <div class="module-head">
+          <div class="module-icon">🪪</div>
+          <div class="module-name">本人確認・顧客管理</div>
+        </div>
+        <p class="module-desc">メール認証＋身分証アップロードで会員認証。不正利用を防止します。</p>
+        <div class="module-foot">
+          <div class="module-price">+1,500<span class="unit">円/月</span></div>
+          <a href="#contact" class="module-link">詳細を相談 →</a>
+        </div>
+      </div>
+
+      <div class="module-card reveal">
+        <div class="module-head">
+          <div class="module-icon">📊</div>
+          <div class="module-name">管理ダッシュボード</div>
+        </div>
+        <p class="module-desc">会員・予約・売上・未払い・臨時休業をスマホから一元管理。</p>
+        <div class="module-foot">
+          <div class="module-price">+1,000<span class="unit">円/月</span></div>
+          <a href="#contact" class="module-link">詳細を相談 →</a>
+        </div>
+      </div>
+
+      <div class="module-card reveal">
+        <div class="module-head">
+          <div class="module-icon">🌐</div>
+          <div class="module-name">外部予約サイト連携</div>
+        </div>
+        <p class="module-desc">スペースマーケット等の外部予約と自社予約を統合管理。</p>
+        <div class="module-foot">
+          <div class="module-price">要相談</div>
+          <a href="#contact" class="module-link">詳細を相談 →</a>
+        </div>
+      </div>
+
+    </div>
+    <p class="modules-note">※価格はすべて税別。2つ以上の組み合わせ導入はパッケージプランがお得です。</p>
   </div>
 </section>
 
