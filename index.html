@@ -10,8 +10,15 @@
 <meta property="og:description" content="予約・キャンセル料・スマートロック・未払い催促まで自動化。月額3,980円〜、最短3日で導入。">
 <meta property="og:type" content="website">
 <meta property="og:url" content="https://reserva-photo.vercel.app/">
+<meta property="og:image" content="https://reserva-photo.vercel.app/og.png">
+<meta property="og:site_name" content="RESERVA SPACE">
 <meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="RESERVA SPACE｜スタジオ運営を完全自動化する予約管理SaaS">
+<meta name="twitter:description" content="予約・キャンセル料・スマートロック・未払い催促まで自動化。月額3,980円〜、最短3日で導入。">
+<meta name="twitter:image" content="https://reserva-photo.vercel.app/og.png">
 <link rel="canonical" href="https://reserva-photo.vercel.app/">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Cdefs%3E%3ClinearGradient id='g' x1='0%25' y1='0%25' x2='100%25' y2='100%25'%3E%3Cstop offset='0%25' stop-color='%23d946ef'/%3E%3Cstop offset='50%25' stop-color='%238b5cf6'/%3E%3Cstop offset='100%25' stop-color='%2306b6d4'/%3E%3C/linearGradient%3E%3C/defs%3E%3Crect width='64' height='64' rx='14' fill='url(%23g)'/%3E%3Ctext x='32' y='44' font-family='Inter,sans-serif' font-size='34' font-weight='900' fill='%23ffffff' text-anchor='middle'%3ER%3C/text%3E%3C/svg%3E">
+<link rel="apple-touch-icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 180 180'%3E%3Cdefs%3E%3ClinearGradient id='g' x1='0%25' y1='0%25' x2='100%25' y2='100%25'%3E%3Cstop offset='0%25' stop-color='%23d946ef'/%3E%3Cstop offset='50%25' stop-color='%238b5cf6'/%3E%3Cstop offset='100%25' stop-color='%2306b6d4'/%3E%3C/linearGradient%3E%3C/defs%3E%3Crect width='180' height='180' rx='40' fill='url(%23g)'/%3E%3Ctext x='90' y='124' font-family='Inter,sans-serif' font-size='96' font-weight='900' fill='%23ffffff' text-anchor='middle'%3ER%3C/text%3E%3C/svg%3E">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=Noto+Sans+JP:wght@400;500;700;800;900&display=swap" rel="stylesheet">
@@ -274,9 +281,13 @@ section{padding:120px 0;position:relative}
 
 /* Footer */
 footer{background:#ffffff;border-top:1px solid var(--border);padding:48px 0 24px;color:var(--muted)}
-.footer-inner{display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:20px}
+.footer-inner{display:flex;justify-content:space-between;align-items:flex-start;flex-wrap:wrap;gap:20px}
 .footer-brand{font-weight:900;letter-spacing:0.18em;background:var(--grad);-webkit-background-clip:text;background-clip:text;-webkit-text-fill-color:transparent;font-size:0.95rem}
 .footer-meta{font-size:0.78rem;color:var(--muted-2)}
+.footer-links{display:flex;flex-wrap:wrap;gap:18px;font-size:0.8rem;margin-top:8px}
+.footer-links a{color:var(--muted);text-decoration:none;transition:color .2s}
+.footer-links a:hover{color:var(--text)}
+.footer-right{text-align:right;display:flex;flex-direction:column;align-items:flex-end;gap:6px}
 
 /* Reveal */
 .reveal{opacity:0;transform:translateY(24px);transition:opacity .8s ease,transform .8s ease}
@@ -411,6 +422,67 @@ footer{background:#ffffff;border-top:1px solid var(--border);padding:48px 0 24px
   .reveal{opacity:1;transform:none}
 }
 </style>
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "Organization",
+      "@id": "https://reserva-photo.vercel.app/#organization",
+      "name": "三慧経営顧問株式会社",
+      "url": "https://skma.asia/",
+      "email": "info@skma.asia",
+      "sameAs": ["https://lin.ee/StrRAnU"]
+    },
+    {
+      "@type": "WebSite",
+      "@id": "https://reserva-photo.vercel.app/#website",
+      "url": "https://reserva-photo.vercel.app/",
+      "name": "RESERVA SPACE",
+      "inLanguage": "ja",
+      "publisher": {"@id": "https://reserva-photo.vercel.app/#organization"}
+    },
+    {
+      "@type": "SoftwareApplication",
+      "name": "RESERVA SPACE",
+      "applicationCategory": "BusinessApplication",
+      "operatingSystem": "Web",
+      "description": "フォトスタジオ・撮影スタジオ運営の業務を月50時間以上削減する予約管理SaaS。予約受付・キャンセル料・スマートロック・未払い催促まで完全自動化。",
+      "url": "https://reserva-photo.vercel.app/",
+      "publisher": {"@id": "https://reserva-photo.vercel.app/#organization"},
+      "offers": [
+        {"@type":"Offer","name":"Light","price":"3980","priceCurrency":"JPY","priceSpecification":{"@type":"UnitPriceSpecification","price":"3980","priceCurrency":"JPY","unitText":"MONTH"}},
+        {"@type":"Offer","name":"Standard","price":"8980","priceCurrency":"JPY","priceSpecification":{"@type":"UnitPriceSpecification","price":"8980","priceCurrency":"JPY","unitText":"MONTH"}},
+        {"@type":"Offer","name":"Pro","price":"19800","priceCurrency":"JPY","priceSpecification":{"@type":"UnitPriceSpecification","price":"19800","priceCurrency":"JPY","unitText":"MONTH"}}
+      ]
+    },
+    {
+      "@type": "FAQPage",
+      "mainEntity": [
+        {"@type":"Question","name":"導入までに何日かかりますか？","acceptedAnswer":{"@type":"Answer","text":"ヒアリング後、最短3日で稼働可能です。料金体系の複雑さやスマートロックの種類によって、もう少しお時間をいただくこともあります。"}},
+        {"@type":"Question","name":"初期費用はかかりますか？","acceptedAnswer":{"@type":"Answer","text":"初期費用は0円です。月額料金のみでスタートできます。Standardプラン以上のご契約には、Webサイト制作（150,000円相当）を無料で付帯しています。"}},
+        {"@type":"Question","name":"既存のスペースマーケット等とも併用できますか？","acceptedAnswer":{"@type":"Answer","text":"はい、可能です。外部サイトでの予約は管理画面に手動登録することで、自社予約と統合してカレンダー管理できます。"}},
+        {"@type":"Question","name":"スマートロックはどの製品に対応していますか？","acceptedAnswer":{"@type":"Answer","text":"主要なスマートロック製品に対応しています。導入前のヒアリングで、お使いの製品に対応可能かを確認させていただきます。"}},
+        {"@type":"Question","name":"解約はいつでもできますか？","acceptedAnswer":{"@type":"Answer","text":"月単位でのご契約となり、いつでも解約可能です。長期契約による縛りはありません。（カスタムプランのみ12ヶ月契約）"}},
+        {"@type":"Question","name":"大阪以外でも導入できますか？","acceptedAnswer":{"@type":"Answer","text":"はい、可能です。クラウド型サービスのため、全国どこでもご利用いただけます。リモートでの導入サポートも実施しています。"}}
+      ]
+    }
+  ]
+}
+</script>
+
+<!-- Google Analytics 4 (GA4) - 計測IDを設定してから有効化してください -->
+<!--
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXXXXX"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-XXXXXXXXXX');
+</script>
+-->
+
 </head>
 <body>
 
@@ -829,8 +901,17 @@ footer{background:#ffffff;border-top:1px solid var(--border);padding:48px 0 24px
 <footer>
   <div class="container">
     <div class="footer-inner">
-      <div class="footer-brand">RESERVA SPACE</div>
-      <div class="footer-meta">&copy; 2026 RESERVA SPACE by <a href="https://skma.asia/" target="_blank" rel="noopener" style="color:inherit;text-decoration:underline;text-underline-offset:3px;text-decoration-color:rgba(15,15,30,0.18)">三慧経営顧問株式会社</a>. All Rights Reserved.</div>
+      <div>
+        <div class="footer-brand">RESERVA SPACE</div>
+        <div class="footer-links">
+          <a href="/tokushoho/">特定商取引法に基づく表記</a>
+          <a href="/privacy/">プライバシーポリシー</a>
+          <a href="/terms/">利用規約</a>
+        </div>
+      </div>
+      <div class="footer-right">
+        <div class="footer-meta">&copy; 2026 RESERVA SPACE by <a href="https://skma.asia/" target="_blank" rel="noopener" style="color:inherit;text-decoration:underline;text-underline-offset:3px;text-decoration-color:rgba(15,15,30,0.18)">三慧経営顧問株式会社</a>. All Rights Reserved.</div>
+      </div>
     </div>
   </div>
 </footer>
