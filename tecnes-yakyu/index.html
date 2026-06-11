@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>TECNES 野球部｜テクネス野球部 公式サイト</title>
+<meta name="description" content="テクネス野球部の公式サイト。チーム紹介、試合日程・結果、メンバー、入部・スポンサーのお問い合わせはこちらから。">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Oswald:wght@400;500;600;700&family=Noto+Sans+JP:wght@400;500;700;900&display=swap" rel="stylesheet">
+<style>
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+:root{
+  --navy:#0d1b2a;
+  --navy-2:#16263a;
+  --red:#d7263d;
+  --gold:#f2b705;
+  --white:#f7f7f5;
+  --muted:#8da2b5;
+  --line:rgba(255,255,255,0.12);
+}
+body{font-family:'Noto Sans JP',sans-serif;background:var(--navy);color:var(--white);line-height:1.9;-webkit-font-smoothing:antialiased;overflow-x:hidden}
+img{max-width:100%;display:block}
+a{text-decoration:none;color:inherit}
+.en{font-family:'Oswald',sans-serif;letter-spacing:.06em}
+.inner{max-width:1080px;margin:0 auto;padding:0 24px}
+section{padding:96px 0}
+.sec_ttl{margin-bottom:48px}
+.sec_ttl .en{font-size:44px;font-weight:700;line-height:1.1;color:var(--white)}
+.sec_ttl .ja{color:var(--red);font-weight:700;font-size:14px;letter-spacing:.2em;margin-top:6px}
+.sec_ttl .bar{width:56px;height:4px;background:linear-gradient(90deg,var(--red),var(--gold));margin-top:16px}
+
+/* header */
+header{position:fixed;top:0;left:0;right:0;z-index:100;background:rgba(13,27,42,.92);backdrop-filter:blur(8px);border-bottom:1px solid var(--line)}
+.header_inner{max-width:1080px;margin:0 auto;padding:14px 24px;display:flex;align-items:center;justify-content:space-between}
+.logo{display:flex;align-items:baseline;gap:10px}
+.logo .mark{font-size:24px;font-weight:700;color:var(--white)}
+.logo .mark span{color:var(--red)}
+.logo .sub{font-size:11px;color:var(--muted);letter-spacing:.15em}
+nav ul{display:flex;gap:28px;list-style:none}
+nav a{font-size:13px;font-weight:600;letter-spacing:.12em;color:var(--white);transition:color .2s}
+nav a:hover{color:var(--gold)}
+@media(max-width:768px){nav{display:none}}
+
+/* hero */
+.hero{min-height:100vh;display:flex;align-items:center;position:relative;overflow:hidden;background:
+  radial-gradient(ellipse at 80% 20%,rgba(215,38,61,.25) 0%,transparent 55%),
+  radial-gradient(ellipse at 10% 90%,rgba(242,183,5,.12) 0%,transparent 50%),
+  var(--navy)}
+.hero::before{content:'';position:absolute;inset:0;background-image:repeating-linear-gradient(115deg,transparent 0,transparent 120px,rgba(255,255,255,.025) 120px,rgba(255,255,255,.025) 122px)}
+.hero_inner{position:relative;z-index:1;padding-top:80px}
+.hero .tagline{color:var(--gold);font-weight:700;letter-spacing:.3em;font-size:14px;margin-bottom:16px}
+.hero h1{font-size:clamp(48px,9vw,104px);font-weight:700;line-height:1.05}
+.hero h1 .accent{color:var(--red)}
+.hero .lead{margin-top:24px;font-size:16px;color:var(--muted);max-width:560px}
+.hero .cta_wrap{margin-top:40px;display:flex;gap:16px;flex-wrap:wrap}
+.btn{display:inline-block;padding:14px 40px;font-weight:700;font-size:14px;letter-spacing:.15em;border-radius:4px;transition:opacity .2s,transform .2s}
+.btn:hover{opacity:.85;transform:translateY(-2px)}
+.btn_primary{background:linear-gradient(90deg,var(--red),#a31226);color:#fff}
+.btn_ghost{border:1px solid var(--line);color:var(--white)}
+.hero .bg_num{position:absolute;right:-2%;bottom:-6%;font-size:clamp(200px,38vw,460px);font-weight:700;color:rgba(255,255,255,.04);line-height:1;pointer-events:none}
+
+/* about */
+.about_grid{display:grid;grid-template-columns:1fr 1fr;gap:48px;align-items:start}
+.about_grid p{color:#cdd8e2;font-size:15px}
+.about_grid p + p{margin-top:16px}
+.stats{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}
+.stat{background:var(--navy-2);border:1px solid var(--line);border-radius:8px;padding:24px 12px;text-align:center}
+.stat .num{font-size:36px;font-weight:700;color:var(--gold);line-height:1.2}
+.stat .label{font-size:12px;color:var(--muted);margin-top:6px}
+@media(max-width:768px){.about_grid{grid-template-columns:1fr}}
+
+/* schedule */
+.schedule{background:var(--navy-2)}
+.game{display:grid;grid-template-columns:120px 1fr auto;gap:20px;align-items:center;padding:22px 8px;border-bottom:1px solid var(--line)}
+.game:first-of-type{border-top:1px solid var(--line)}
+.game .date{font-weight:600;font-size:18px;color:var(--gold)}
+.game .vs{font-weight:700;font-size:16px}
+.game .place{font-size:13px;color:var(--muted)}
+.game .tag{font-size:11px;font-weight:700;letter-spacing:.1em;padding:6px 14px;border-radius:999px;border:1px solid var(--red);color:var(--red);white-space:nowrap}
+.game .tag.win{border-color:var(--gold);color:var(--gold)}
+@media(max-width:600px){.game{grid-template-columns:1fr;gap:6px}}
+
+/* members */
+.member_grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(220px,1fr));gap:20px}
+.member{background:var(--navy-2);border:1px solid var(--line);border-radius:8px;padding:28px 20px;position:relative;overflow:hidden}
+.member::after{content:'';position:absolute;top:0;left:0;width:100%;height:3px;background:linear-gradient(90deg,var(--red),var(--gold))}
+.member .pos{font-size:11px;font-weight:700;letter-spacing:.2em;color:var(--red)}
+.member .name{font-size:20px;font-weight:700;margin-top:6px}
+.member .num{position:absolute;right:14px;bottom:6px;font-size:52px;font-weight:700;color:rgba(255,255,255,.07);line-height:1}
+.member .note{font-size:12px;color:var(--muted);margin-top:8px}
+
+/* recruit / contact */
+.recruit_box{background:linear-gradient(135deg,rgba(215,38,61,.18),rgba(242,183,5,.1));border:1px solid var(--line);border-radius:12px;padding:64px 32px;text-align:center}
+.recruit_box h3{font-size:28px;font-weight:900}
+.recruit_box p{color:#cdd8e2;margin:16px auto 32px;max-width:560px;font-size:15px}
+
+footer{border-top:1px solid var(--line);padding:32px 0;text-align:center}
+footer .copy{font-size:12px;color:var(--muted);letter-spacing:.1em}
+</style>
+</head>
+<body>
+
+<header>
+<div class="header_inner">
+<a href="#top" class="logo"><span class="mark en">TECNES<span> BASEBALL</span></span><span class="sub en">CLUB</span></a>
+<nav><ul class="en">
+<li><a href="#about">ABOUT</a></li>
+<li><a href="#schedule">SCHEDULE</a></li>
+<li><a href="#members">MEMBERS</a></li>
+<li><a href="#recruit">RECRUIT</a></li>
+</ul></nav>
+</div>
+</header>
+
+<div class="hero" id="top">
+<div class="inner hero_inner">
+<p class="tagline en">TECNES BASEBALL CLUB OFFICIAL SITE</p>
+<h1 class="en">PLAY HARD,<br><span class="accent">WIN TOGETHER.</span></h1>
+<p class="lead">テクネス野球部は、野球を本気で楽しむ仲間が集まるクラブチームです。週末の試合と練習を中心に、初心者から経験者まで全員でグラウンドを駆け回っています。</p>
+<div class="cta_wrap">
+<a href="#recruit" class="btn btn_primary en">JOIN US</a>
+<a href="#schedule" class="btn btn_ghost en">SCHEDULE</a>
+</div>
+</div>
+<div class="bg_num en">9</div>
+</div>
+
+<section id="about">
+<div class="inner">
+<div class="sec_ttl">
+<h2 class="en">ABOUT</h2>
+<p class="ja">チーム紹介</p>
+<div class="bar"></div>
+</div>
+<div class="about_grid">
+<div>
+<p>テクネス野球部は、「本気で楽しむ」をモットーに活動する草野球チームです。勝利を目指して真剣に取り組みながらも、野球を楽しむ気持ちを何より大切にしています。</p>
+<p>毎週末の練習・試合のほか、シーズンオフにはバーベキューや忘年会などのイベントも開催。野球を通じて世代や職種を越えた仲間とつながれるチームです。</p>
+</div>
+<div class="stats">
+<div class="stat"><div class="num en">20+</div><div class="label">所属メンバー</div></div>
+<div class="stat"><div class="num en">30</div><div class="label">年間試合数</div></div>
+<div class="stat"><div class="num en">SAT</div><div class="label">主な活動日（週末）</div></div>
+</div>
+</div>
+</div>
+</section>
+
+<section class="schedule" id="schedule">
+<div class="inner">
+<div class="sec_ttl">
+<h2 class="en">SCHEDULE &amp; RESULTS</h2>
+<p class="ja">試合日程・結果</p>
+<div class="bar"></div>
+</div>
+<div class="game">
+<div class="date en">2026.06.21</div>
+<div><div class="vs">vs サンプルファイターズ</div><div class="place">市民球場A　9:00 プレイボール</div></div>
+<div class="tag en">UPCOMING</div>
+</div>
+<div class="game">
+<div class="date en">2026.07.05</div>
+<div><div class="vs">vs リバーサイドスターズ</div><div class="place">河川敷グラウンド第2　13:00 プレイボール</div></div>
+<div class="tag en">UPCOMING</div>
+</div>
+<div class="game">
+<div class="date en">2026.05.24</div>
+<div><div class="vs">vs イーストブレーブス</div><div class="place">市民球場B</div></div>
+<div class="tag win en">WIN 7-3</div>
+</div>
+</div>
+</section>
+
+<section id="members">
+<div class="inner">
+<div class="sec_ttl">
+<h2 class="en">MEMBERS</h2>
+<p class="ja">メンバー紹介</p>
+<div class="bar"></div>
+</div>
+<div class="member_grid">
+<div class="member"><p class="pos en">MANAGER / 監督</p><p class="name">山田 太郎</p><p class="note">チーム創設メンバー。座右の銘は「全力疾走」。</p><span class="num en">30</span></div>
+<div class="member"><p class="pos en">PITCHER / 投手</p><p class="name">佐藤 一郎</p><p class="note">エース。決め球はスライダー。</p><span class="num en">18</span></div>
+<div class="member"><p class="pos en">CATCHER / 捕手</p><p class="name">鈴木 次郎</p><p class="note">扇の要。強肩が自慢。</p><span class="num en">2</span></div>
+<div class="member"><p class="pos en">OUTFIELDER / 外野手</p><p class="name">高橋 三郎</p><p class="note">俊足巧打のリードオフマン。</p><span class="num en">7</span></div>
+</div>
+</div>
+</section>
+
+<section id="recruit">
+<div class="inner">
+<div class="recruit_box">
+<h3>メンバー募集中！</h3>
+<p>経験・年齢は問いません。「野球がしたい」その気持ちがあれば大歓迎です。見学・体験参加はいつでも受け付けていますので、お気軽にご連絡ください。</p>
+<a href="mailto:info@example.com" class="btn btn_primary en">CONTACT US</a>
+</div>
+</div>
+</section>
+
+<footer>
+<p class="copy en">&copy; TECNES BASEBALL CLUB. All Rights Reserved.</p>
+</footer>
+
+</body>
+</html>
