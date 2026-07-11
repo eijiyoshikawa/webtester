@@ -1083,7 +1083,7 @@ img { display: block; max-width: 100%; }
 
 /* --- News Page --- */
 .news-page {
-  padding: 32px 40px 120px;
+  padding: 80px 40px 120px;
   z-index: 1;
   position: relative;
 }
